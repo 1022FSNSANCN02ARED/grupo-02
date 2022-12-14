@@ -14,7 +14,7 @@ const app = express();
 const PORT=3000;
 
 //CONFIG PUBLIC FOLDER
-app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"../public")))
 
 //GETS
 app.get("/",(req,res) => {
