@@ -1,3 +1,8 @@
+//ANTES DE CUALQUIER CAMBIO EN EL ARCHIVO APP.JS CONSULTAR CON EL GRUPO 
+//IMPORTANTE
+
+////////////////////////////////////////////////////////////////////////
+
 //EXPORTS
 const path = require('path');
 
@@ -9,7 +14,7 @@ const app = express();
 const PORT=3000;
 
 //CONFIG PUBLIC FOLDER
-app.use(express.static(path.join(__dirname,"../pulic")))
+app.use(express.static(path.join(__dirname,"public")))
 
 //GETS
 app.get("/",(req,res) => {
