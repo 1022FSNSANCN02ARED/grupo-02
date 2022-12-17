@@ -1,3 +1,4 @@
-h1{
-    color:red;
-}
+@import url("components/normalize.css");
+@import url("components/header.css");  /*Lau, pablo*/
+@import url("components/main.css");   /*melina, ruben*/
+@import url("components/footer.css");  /*axel*/
