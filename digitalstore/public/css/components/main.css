@@ -5,6 +5,9 @@
 .vw-90 {
     width: 90vw;
 }
+.wp-90{
+    width: 90%;
+}
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -12,7 +15,9 @@
 .flex {
     display: flex;
 }
-
+.justify-center-{
+    justify-content: center;
+}
 .flex-wrap {
     flex-wrap: wrap;
 }
