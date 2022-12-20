@@ -3,7 +3,7 @@ DESCRIPCION DE LA PAGINA:
 El sitio estara dedicado a ventas de productos de Hardware de PC. Carrito de compras para usuarios regristrados. Listado de productos por categoria. Pantalla principal con los productos mas vendidos, promociones. Venta online de hardware.
 
 
--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 INTEGRANTES:
 
@@ -20,7 +20,7 @@ Soy Ruben, tengo 38 años. Me interesa la programación de páginas web, desarro
 Axel Riera: Tengo 30 años, trabajo de tecnico en un local de informatica. Reparando pcs, impresoras, colocando camaras e internet. Vivo en La Emilia. Estoy retomando el area de la programacion despues de varios años. Mi objetivo actual es poder finalizar este curso e intentar meterme en el mercado laboral de la programacion.  
 
 
-----------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
 
 PAGINAS:
 
