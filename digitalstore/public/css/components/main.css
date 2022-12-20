@@ -1,2 +1,21 @@
 @import url("variables.css");
+.p-1 {
+    padding: 8px;
+}
+.vw-90 {
+    width: 90vw;
+}
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.flex {
+    display: flex;
+}
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.gap {
+    gap: 10px;
+}
