@@ -4,15 +4,66 @@ header{
     width: 100vw;
 }
 
-nav{
+.nav-principal{
     background-color: var(--naranja);
+    padding: 10px 0;
+    
+}
+
+.nav-ul{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;  
+    margin: 20px 0;
+}
+.nav-li{
+width: 100%;
+text-align: center;
+padding: 5px;
+font-weight: bold;
+}
+.nav-li a{
+color: black;
 }
 
 nav ul{
     display: flex;
     justify-content: space-around;
+    padding: 10px 0;
     
 }
+
+.nav-ul{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;  
+    margin: 20px 0;
+}
+.nav-li{
+width: 100%;
+text-align: center;
+padding: 5px;
+font-weight: bold;
+}
+.nav-li a{
+color: black;
+}
+
+.nav-div{
+display: flex;
+justify-content: center;
+
+}
+.nav-div i{
+background-color: #e4e4e4;
+padding: 10px;
+color: var(--negro);
+font-size: x-large;
+border-radius: 10px;
+}
+
 
 .nav-primary{
     width: 100%;
