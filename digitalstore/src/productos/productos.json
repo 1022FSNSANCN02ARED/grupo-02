@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "celular",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 2,
+        "nombre": "Cafetera express",
+        "precio": 10000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 3,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 4,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 5,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 6,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 7,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 8,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 9,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    },
+    {
+        "id": 10,
+        "nombre": "Samsung j1",
+        "precio": 50000,
+        "categoria": "Android",
+        "img":"samsungj1.jpg",
+        "descripcion": "Este es un celular de Android",
+        "oferta": true,
+        "porcentaje": 15
+    }
+]
