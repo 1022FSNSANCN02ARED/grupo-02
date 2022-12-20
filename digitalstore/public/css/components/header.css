@@ -93,6 +93,7 @@ border-radius: 10px;
     width: 80%;
     font-size: 16px;
     outline: none;
+    height: 100%;
 }
 
 .serch-bar label{
@@ -100,6 +101,7 @@ border-radius: 10px;
     padding: 10px;
     border-radius: 0 10px 10px 0;
     border-left: none;
+    height: 100%;
 }
 .btn-login{
     padding: 10px;
