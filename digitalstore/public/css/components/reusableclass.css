@@ -19,3 +19,7 @@
 .fz-16{
     font-size: 16px;
 }
+
+.show{
+    display: none;
+}
