@@ -1,2 +1,25 @@
 @import url("variables.css");
 
+.w-100{
+    width: 100%;
+}
+.footer-principal{
+    background-color: var(--naranja);
+    bottom:0;
+    padding: 3% 0%;
+}
+
+.centrado{
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align:center;
+    margin-bottom: 10px;
+}
+
+.iconos{
+    font-size: 25px;
+    margin-bottom: 0px;
+}
+.iconos i {
+    margin-left: 5px;
+}
