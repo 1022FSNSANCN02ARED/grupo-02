@@ -7,6 +7,7 @@ header{
 nav{
     background-color: var(--naranja);
 }
+
 nav ul{
     display: flex;
     justify-content: space-around;
@@ -15,4 +16,60 @@ nav ul{
 
 .nav-primary{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-img{
+    width: 50%;
+}
+
+.serch-bar{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 20px ;
+    justify-content: center;
+    align-items: center;
+}
+
+.serch-bar input{
+    border: 1px solid var(--naranja);
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    outline: none;
+}
+
+.serch-bar label{
+    border: 1px solid var(--naranja);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+}
+.btn-login{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--naranja);
+    margin: 0 20px;
+}
+
+.btn-login a{
+    color: var(--blanco);
+    font-size: 20px;
+}
+
+.btn-tienda{
+    border: 1px solid var(--naranja);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-tienda a{
+    color: var(--negro);
+    font-size: 20px;
 }
