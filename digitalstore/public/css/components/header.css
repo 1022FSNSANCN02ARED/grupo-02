@@ -4,3 +4,11 @@ header{
     width: 100vw;
 }
 
+nav{
+    background-color: var(--naranja);
+}
+nav ul{
+    display: flex;
+    
+}
+
