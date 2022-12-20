@@ -9,6 +9,10 @@ nav{
 }
 nav ul{
     display: flex;
+    justify-content: space-around;
     
 }
 
+.nav-primary{
+    width: 100%;
+}
