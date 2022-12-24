@@ -9,8 +9,7 @@
     width: 90%;
 }
 .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 .flex {
     display: flex;

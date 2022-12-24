@@ -1,10 +1,11 @@
 @import url("variables.css");
 
 header{
-    width: 100vw;
+    width: 100%;
 }
 
 .nav-principal{
+    width: 100%;
     background-color: var(--naranja);
     padding: 10px 0;
     border-bottom: 2px solid var(--naranja-oscuro);
@@ -16,6 +17,7 @@ header{
     align-items: center;  
     margin: 20px 0;
 }
+
 .nav-li{
 width: 100%;
 text-align: center;
