@@ -149,3 +149,59 @@ border-radius: 10px;
 #nav-buttons-laptop{
     display: none;
 }
+
+
+@media (min-width:481px) {
+    #nav-buttons-laptop{
+        display: flex;
+    }
+    
+    #nav-buttons-phone{
+        display: none;
+    }
+
+    .btn-tienda,
+    .btn-login{
+        background-color: var(--naranja);
+    }
+
+    .btn-login a{
+        color: var(--blanco);
+    }
+
+    .btn-tienda a{
+        color: var(--blanco);
+    }
+}
+
+@media (min-width:768px) {
+    #menu-button{
+        display: none;
+    }
+    .nav-links{
+        border: none;
+    }
+    .nav-li{
+        width: 25%;
+    }
+    .nav-ul{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width:px) {
+    #menu-button{
+        display: none;
+    }
+    .nav-links{
+        border: none;
+    }
+    .nav-li{
+        width: 25%;
+    }
+    .nav-ul{
+        margin: 0;
+        padding: 0;
+    }
+}
