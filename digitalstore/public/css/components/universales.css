@@ -20,6 +20,10 @@
     font-size: 16px;
 }
 
-.show{
-    display: none;
+
+@media (max-width:768px) {
+    
+    .show{
+        display: none;
+    }
 }

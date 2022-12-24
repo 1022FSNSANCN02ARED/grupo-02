@@ -180,9 +180,11 @@ border-radius: 10px;
     }
     .nav-links{
         border: none;
+        margin: 0;
     }
     .nav-li{
         width: 25%;
+        text-align: center;
     }
     .nav-ul{
         margin: 0;
