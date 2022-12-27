@@ -214,6 +214,17 @@ border-radius: 10px;
     
     .btn-tienda{
         width: 30%;
+        background-color: var(--blanco);
+    }
+    .btn-tienda a{
+        color: var(--negro);
+        font-size: 25px;
+    }
+    .btn-tienda a:hover{
+        color: var(--naranja);
+        padding: 10px;
+        border: solid 1px var(--naranja-oscuro);
+        border-radius: 10px;
     }
 
     #menu-button{
@@ -232,4 +243,15 @@ border-radius: 10px;
         padding: 0;
     }
 
+}
+
+
+/* PUBLICIDAD HOME */
+
+.banner-home{
+    width: 100%;
+}
+.banner-home img{
+    width: 100%;
+    
 }
