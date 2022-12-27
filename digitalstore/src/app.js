@@ -23,6 +23,10 @@ app.get("/",(req,res) => {
 app.get("/login",(req,res) => {
     res.sendFile(path.join(__dirname,"../views/login.html"))
 })
+app.get("/producto/:id",(req,res) => {
+    res.sendFile(path.join(__dirname,"../views/producto.html"))
+    console.log()
+})
 
 //LISTEN 
 app.listen(PORT,()=> {
