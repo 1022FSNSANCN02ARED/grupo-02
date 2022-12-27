@@ -1,4 +1,14 @@
 @import url("variables.css");
+main h1{
+    background-color: var(--gris-claro);
+}
+main h3{
+    color: var(--naranja);
+   
+}
+.br-1{
+    border-radius: 10px;
+}
 .p-1 {
     padding: 10px;
 }
@@ -13,6 +23,9 @@
 }
 .mx-auto {
     margin: 0 auto;
+}
+.mx-1{
+    margin:10px;
 }
 .flex {
     display: flex;
@@ -47,5 +60,17 @@
 .w-card-30{
     width: 23%;
 }
+.text-center{
+    text-align: center;
+}
+.boton-enviar{
+    background-color: var(--naranja);
+    padding:5px;
+    transition: all 1000ms;
+}
 
-
+.boton-enviar:hover{
+    background-color: var(--naranja-oscuro) ;
+    border-radius: 10px;
+    font-weight:bold;
+}
