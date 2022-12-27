@@ -22,7 +22,6 @@
 
 
 @media (max-width:1024px) {
-    
     .show{
         display: none;
     }
@@ -61,7 +60,6 @@
 .gap {
     gap: 14px;
 }
-
 
 .w-100{
     width: 100%;

@@ -1,11 +1,11 @@
 //ANTES DE CUALQUIER CAMBIO EN EL ARCHIVO APP.JS CONSULTAR CON EL GRUPO 
 //IMPORTANTE
 
+// EXPRESS
 ////////////////////////////////////////////////////////////////////////
 
 //EXPORTS
 const path = require('path');
-
 //INIT EXPRESS
 const express = require('express');
 const app = express();
@@ -22,10 +22,6 @@ app.get("/",(req,res) => {
 })
 app.get("/login",(req,res) => {
     res.sendFile(path.join(__dirname,"../views/login.html"))
-})
-app.get("/producto/:id",(req,res) => {
-    res.sendFile(path.join(__dirname,"../views/producto.html"))
-    console.log()
 })
 
 //LISTEN 
