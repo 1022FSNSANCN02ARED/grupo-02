@@ -1,11 +1,11 @@
 //ANTES DE CUALQUIER CAMBIO EN EL ARCHIVO APP.JS CONSULTAR CON EL GRUPO 
 //IMPORTANTE
 
+// EXPRESS
 ////////////////////////////////////////////////////////////////////////
 
 //EXPORTS
 const path = require('path');
-
 //INIT EXPRESS
 const express = require('express');
 const app = express();

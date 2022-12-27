@@ -1,44 +1,14 @@
 @import url("variables.css");
 main h1{
     background-color: var(--gris-claro);
+    font-size: 20px;
 }
 main h3{
     color: var(--naranja);
+    font-size: 16px;
    
 }
-.br-1{
-    border-radius: 10px;
-}
-.p-1 {
-    padding: 10px;
-}
-.vw-90 {
-    width: 90vw;
-}
-.wp-90{
-    width: 90%;
-}
-.wp-80{
-    width: 80%;
-}
-.mx-auto {
-    margin: 0 auto;
-}
-.mx-1{
-    margin:10px;
-}
-.flex {
-    display: flex;
-}
-.justify-center-{
-    justify-content: center;
-}
-.flex-wrap {
-    flex-wrap: wrap;
-}
-.gap {
-    gap: 14px;
-}
+
 .border-radius-100:hover{
     border-radius: 100%;
     box-shadow: 0 0 7px rgba(122, 122, 122, 0.582);
@@ -51,21 +21,11 @@ main h3{
     cursor: grab;
     transform: scale(1.1);
 }
-.w-30{
-    width: 30%;
-}
-.w-45{
-    width: 45%;
-}
-.w-card-30{
-    width: 23%;
-}
-.text-center{
-    text-align: center;
-}
+
 .boton-enviar{
     background-color: var(--naranja);
     padding:5px;
+    font-size: 20px;
     transition: all 1000ms;
 }
 
@@ -73,5 +33,6 @@ main h3{
     background-color: var(--naranja-oscuro) ;
     border-radius: 10px;
     font-weight:bold;
+
 }
 

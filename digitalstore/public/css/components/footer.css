@@ -1,15 +1,13 @@
 @import url("variables.css");
 
-.w-100{
-    width: 100%;
-}
 .footer-principal{
     background-color: var(--naranja);
     bottom:0;
     padding: 3% 0%;
 }
 
-.centrado{
+.caja-footer{
+    width: 100%;
     padding-left: 20%;
     padding-right: 20%;
     text-align:center;
@@ -17,10 +15,55 @@
 }
 
 .iconos{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
     font-size: 25px;
     margin-bottom: 0px;
 }
 .iconos i {
     margin-left: 5px;
 }
+<<<<<<< HEAD
 
+=======
+.iconos a{
+    display: none;
+    color: black;
+  }
+
+@media (min-width: 769px){
+    /*laptop*/
+      .footer-principal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .caja-footer{
+        width: 39%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .iconos{
+        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: column;
+      }
+      .contenedor-links a{
+        display: flex;
+        font-size: 20px;
+      }
+      .iconos i{
+        margin-right: 8px;
+        margin-left: 0px;
+        }
+       .contenedor-links{
+        padding-bottom: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+       }    
+}
+>>>>>>> c2810aac8be6b5c215a2712049399cf24d22b6ad
