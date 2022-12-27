@@ -1,8 +1,5 @@
 @import url("variables.css");
 
-.w-100{
-    width: 100%;
-}
 .footer-principal{
     background-color: var(--naranja);
     bottom:0;
