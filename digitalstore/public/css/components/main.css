@@ -1,9 +1,11 @@
 @import url("variables.css");
 main h1{
     background-color: var(--gris-claro);
+    font-size: 20px;
 }
 main h3{
     color: var(--naranja);
+    font-size: 16px;
    
 }
 
@@ -23,6 +25,7 @@ main h3{
 .boton-enviar{
     background-color: var(--naranja);
     padding:5px;
+    font-size: 20px;
     transition: all 1000ms;
 }
 
@@ -30,4 +33,6 @@ main h3{
     background-color: var(--naranja-oscuro) ;
     border-radius: 10px;
     font-weight:bold;
+
 }
+
