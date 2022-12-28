@@ -28,6 +28,10 @@ app.get("/register", (req,res) => {
     res.sendFile(path.join(__dirname,"../views/register.html"))
 })
 
+app.get("/carrito", (req,res) => {
+    res.sendFile(path.join(__dirname,"../views/carrito.html"))
+})
+
 //LISTEN 
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)

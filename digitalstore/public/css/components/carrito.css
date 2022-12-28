@@ -1,0 +1,17 @@
+@import url("variables.css");
+
+.contenedor-carrito{
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+.section-carrito{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.w-90{
+    width: 90%;
+}
