@@ -17,7 +17,7 @@
 
     <!-- LAUTARO Y PABLO -->
     <header>
-        
+
         <div class="nav-primary">
             <img class="nav-img" src="/img/logo.png"></img>
             <div class="serch-bar">
@@ -34,7 +34,7 @@
             <div class="nav-div" id="menu-button">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="nav-links show">   
+            <div class="nav-links show">
                 <ul class="nav-ul">
                     <li class="nav-li"><a href="">Productos</a></li>
                     <li class="nav-li"><a href="">Ofertas</a></li>
@@ -46,36 +46,44 @@
                     <button class="btn-tienda"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></button>
                 </div>
             </div>
-            
-            
+
+
         </nav>
 
     </header>
 
     <main>
+        <div class="h2-div">
+            <h2 class="h2-carrito">CARRITO DE COMPRAS</h2>
+        </div>
 
-        <h2>CARRITO DE COMPRAS</h2>
-        
+
         <section class="section-carrito">
-           
-                <article class="w-90 p-1 border-1 contenedor-carrito">
-                    <img src="img/productos/memoria-team.jpg" class="wp-80 border-radius-10">
-                    <h4>Auriculares-Redragon</h4>
-                    <p>$5999</p>
-                </article>
-            
-            <article class="w-90 p-1 contenedor-carrito">
-                <h3>Envio</h3>
-               <input type="text" name="forma-Pago">
-               <label for="">Ingresa tu codigo postal para calcular el envio</label>
-            
+
+            <article class="w-90 p-1 border-1 contenedor-carrito">
+                <img src="img/productos/memoria-team.jpg" class="wp-80 border-radius-10 img-carrito">
+                <h4>Auriculares-Redragon</h4>
+                <p>$5999</p>
+                <div class="div-sumatoria">
+                    <input type="button" id="btnRestar" value="-1">
+                    <p id="msgContador">0</p>
+                    <input type="button" id="btnSumar" value="+1">
+
+                </div>
             </article>
+
+            <div class="w-90 p-1 div-envio">
+                <h3 class="h3-article">Envio</h3>
+                <input type="number" name="forma-Pago" class="number-envio">
+                <label for="" class="label-envio">Ingresa tu codigo postal para calcular el envio</label>
+
+            </div>
             <article class="w-90 p-1 contenedor-carrito">
                 <h3>Forma de pago</h3>
-               <input type="radio" name="forma-Pago">
-               <label for="">Deposito o transferencia bancaria</label>
-               <input type="radio" name="forma-Pago">
-               <label for="">Mercado pago - Tarjetas online, PagoFacil, RapiPago</label>
+                <input type="radio" name="forma-Pago">
+                <label for="">Deposito o transferencia bancaria</label>
+                <input type="radio" name="forma-Pago">
+                <label for="">Mercado pago - Tarjetas online, PagoFacil, RapiPago</label>
                 <p>Total:</p>
                 <p>30000</p>
             </article>
@@ -88,12 +96,14 @@
 
         <div class="caja-footer">
             <h3>AYUDA</h3>
-            <p>Lorem ipsum dolorrr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <p>Lorem ipsum dolorrr sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua</p>
         </div>
 
         <div class="caja-footer">
             <h3>¿QUIENES SOMOS?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua</p>
         </div>
 
         <div class="iconos">
@@ -108,7 +118,7 @@
             </div>
         </div>
 
-</footer>
+    </footer>
 
     <!-- SCRIPTS -->
     <script src="/script/index.js"></script>

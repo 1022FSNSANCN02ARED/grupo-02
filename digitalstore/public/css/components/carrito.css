@@ -4,7 +4,11 @@
     border: 2px solid black;
     border-radius: 8px;
     margin-bottom: 1em;
+   text-align: center;
+   flex-wrap: wrap;
+   flex-direction: column;
 }
+
 .section-carrito{
     display: flex;
     align-items: center;
@@ -14,4 +18,73 @@
 
 .w-90{
     width: 90%;
+}
+
+.h2-div{
+    
+    text-align: center;
+    padding: 15px 0;
+
+}
+
+img-carrito{
+    width: 100%;
+}
+
+.div-sumatoria{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+    
+}
+.div-sumatoria p{
+    margin: 0 10px;
+    padding: 0 2px;
+    border: 1px solid rgba(0, 0, 0, 0.521);
+    border-radius: 3px;
+    justify-content: center;
+    background-color: var(--naranja);
+    
+
+}
+.div-sumatoria input{
+   background-color: black;
+   font-size: large;
+   color: white;
+   padding: 1px;
+   border: 1px solid var(--naranja);
+
+}
+#msgContador{
+    font-size: x-large;
+}
+.contenedor-carrito input{
+    text-align: center;
+    width: 100%;
+    flex-wrap: wrap;    
+
+}
+
+.div-envio{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+    text-align: center;
+}
+
+.h3-article{
+    width: 100%;
+}
+
+.label-envio{
+    width: 100%;
+}
+
+.number-envio{
+    text-align: center;
 }
