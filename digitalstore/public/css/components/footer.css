@@ -29,6 +29,24 @@
     color: black;
   }
 
+button:visited{
+    color:black;
+}
+.btn-contactanos{
+  background-color: white;
+  padding: 5px;
+  margin-top: 4px;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+.btn-contactanos a{
+  color: black;
+}
+
+.contenedor-links{
+  margin: 0px 8px;
+}
 @media (min-width: 769px){
     /*laptop*/
       .footer-principal{
