@@ -5,6 +5,11 @@
     
    
 }
+.main-login{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 .div-img{
     width: 100%;
