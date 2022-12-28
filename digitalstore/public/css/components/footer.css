@@ -2,8 +2,6 @@
 
 .footer-principal{
     background-color: var(--naranja);
-    position: absolute;
-    bottom:0;
     padding: 3% 0%;
 }
 
