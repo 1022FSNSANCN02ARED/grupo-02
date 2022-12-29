@@ -98,5 +98,71 @@
         "descripcion": "Este es un teclado inalambrico ",
         "oferta": true,
         "porcentaje": 10
+    },
+
+        {
+        "id": 11,
+        "nombre": "Monitor LG Leg 19' 19M38A-B VGA",
+        "precio": 38700,
+        "categoria": "Monitores",
+        "img":"monitorlg.jpg",
+        "descripcion": "Este es un monitor LG ",
+        "oferta": true,
+        "porcentaje": 10
+    },
+
+        {
+        "id": 12,
+        "nombre": "Monitor Sansung 19' A330N HDMI",
+        "precio": 43240,
+        "categoria": "Monitores",
+        "img":"monitor_sansung.jpg",
+        "descripcion": "Este es un monitor Sansung ",
+        "oferta": false,
+        "porcentaje": 0
+    },
+
+     {
+        "id": 13,
+        "nombre": "Cooler CPU Deepcool UP551 ARGB",
+        "precio": 6000,
+        "categoria": "Coolers",
+        "img":"monitor_sansung.jpg",
+        "descripcion": "Este es un cooler tradicional",
+        "oferta": false,
+        "porcentaje": 0
+    },
+
+         {
+        "id": 14,
+        "nombre": "Cooler CPU Master Hyper 212 ARGB",
+        "precio": 16400,
+        "categoria": "Coolers",
+        "img":"coolermax.jpg",
+        "descripcion": "Este es un cooler premium ",
+        "oferta": true,
+        "porcentaje": 15
+    },
+
+            {
+        "id": 15,
+        "nombre": "Tablet Sansung Galaxy tabA7 Lite Silver SM-T220N",
+        "precio": 45180,
+        "categoria": "Tablet",
+        "img":"tablet1.jpg",
+        "descripcion": "Esta es una tablet A7 Lite",
+        "oferta": false,
+        "porcentaje": 0
+    },
+
+            {
+        "id": 16,
+        "nombre": "Tablet Sansung Galaxy tabA8 wifi Dark Grey SM-X200N",
+        "precio": 72960,
+        "categoria": "Tablets",
+        "img":"tablet2.jpg",
+        "descripcion": "Esta es una tablet A8 Dark",
+        "oferta": true,
+        "porcentaje": 15
     }
 ]
