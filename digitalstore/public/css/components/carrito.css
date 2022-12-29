@@ -27,7 +27,7 @@
 
 }
 
-img-carrito{
+.img-carrito{
     width: 100%;
 }
 
@@ -62,7 +62,7 @@ img-carrito{
 }
 .contenedor-carrito input{
     text-align: center;
-    width: 100%;
+    width: 60%;
     flex-wrap: wrap;    
 
 }
@@ -87,4 +87,7 @@ img-carrito{
 
 .number-envio{
     text-align: center;
+}
+.w-60{
+    width: 60%;
 }
