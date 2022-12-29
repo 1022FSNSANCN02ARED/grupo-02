@@ -12,6 +12,9 @@ main h3{
     height: 200px;
     width: 200px;
 }
+.descuento_article{
+        color:var(--naranja)
+}
 
 .border-radius-100:hover{
     border-radius: 100%;
