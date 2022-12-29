@@ -32,6 +32,15 @@ app.get("/carrito", (req,res) => {
     res.sendFile(path.join(__dirname,"../views/carrito.html"))
 })
 
+/*se agrega pedido de respuesta a pagina de ayuda*/
+app.get("/ayuda", (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/ayuda.html"));
+});
+
+/*se agrega pedido de respuesta a pagina de contacto*/
+app.get("/contacto", (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/contacto.html"));
+});
 //LISTEN 
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)
