@@ -25,21 +25,44 @@
 }
 
 .iconos a{
-    display: none;
     color: black;
-  }
+}
+.contenedor-links p{
+  display: none;
+}
+.iconos .facebook:hover{
+  color:#3b5998;
+  transition: color, 0.2s;
+}
+
+.iconos .instagram:hover{
+  color:#dd2a7b; 
+  transition: color, 0.2s;
+}
+
+.iconos .twitter:hover{
+  color: #0fa3dd;
+  transition: color, 0.2s;
+}
 
 button:visited{
     color:black;
 }
 .btn-contactanos{
-  background-color: white;
+  background-color: var(--naranja);
   padding: 5px;
   margin-top: 4px;
   font-size: 20px;
   border: 1px solid black;
   border-radius: 8px;
 }
+
+.btn-contactanos:hover{
+  opacity: 0.8;
+  background-color: white;
+  transition: color, 0.5s;
+}
+
 .btn-contactanos a{
   color: black;
 }
@@ -66,9 +89,8 @@ button:visited{
         align-content: center;
         flex-direction: column;
       }
-      .contenedor-links a{
+      .contenedor-links p{
         display: flex;
-        font-size: 20px;
       }
       .iconos i{
         margin-right: 8px;
