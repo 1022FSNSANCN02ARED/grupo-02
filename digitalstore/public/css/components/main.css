@@ -8,6 +8,10 @@ main h3{
     font-size: 16px;
    
 }
+.articulo{
+    height: 200px;
+    width: 200px;
+}
 
 .border-radius-100:hover{
     border-radius: 100%;
