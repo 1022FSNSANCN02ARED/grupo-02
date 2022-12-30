@@ -97,6 +97,9 @@
     }
 }
 @media (min-width:1080px) {
+    .container-categories form{
+        display: flex;
+    }
     .item-producto{
         width: 25%;
     }
@@ -106,12 +109,20 @@
         width: 100%;
     }
     .container-categories{
+        background-color: var(--gris-claro);
         width: 20%;
-        margin-top: 30px;
-        padding: 0 15px;
-        gap: 20px;
     }
+
+    .desplegable{
+        background:none;
+        cursor:auto;
+    }
+    .desplegable i{
+        display: none;
+    }
+
     .container-categories form{
+        border: none;
         gap: 20px;
     }
     .container-products{

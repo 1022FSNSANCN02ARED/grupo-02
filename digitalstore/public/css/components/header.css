@@ -186,6 +186,7 @@ border-radius: 10px;
 
     .nav-primary{
         align-items: center;
+        margin: 0;
     }
 
     .nav-img{
