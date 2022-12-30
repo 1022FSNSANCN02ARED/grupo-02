@@ -40,6 +40,7 @@ main h3{
     background-color: var(--naranja-oscuro) ;
     border-radius: 10px;
     font-weight:bold;
+    border: solid black
 
 }
 @media(min-width: 769px){
