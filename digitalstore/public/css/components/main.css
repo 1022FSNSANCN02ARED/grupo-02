@@ -9,20 +9,30 @@ main h1{
     font-size: 16px;
    
 }
+
 .contenedor-comentario{
     height: 30vh;
    
     max-width: 30em;
     
 }
-.articulo{
+.section-card {
+    display: flex;
+    flex-direction: column;
+}
+.section-card article{
+    width: 80%;
+}
+/*.articulo{
     height: 200px;
     width: 200px;
-}
+}*/
 .descuento_article{
     color:var(--naranja)
 }
-
+article h4{
+    display: none;
+}
 .border-radius-100:hover{
     border-radius: 50%;
     box-shadow: 0 0 7px rgba(122, 122, 122, 0.582);
@@ -50,6 +60,15 @@ main h1{
     border: solid black
 
 }
-@media(min-width: 769px){
-
+@media(min-width: 469px){
+    article h4{
+        display: block;
+    }
+    .section-card {
+        flex-direction: row;
+    }
+    .section-card article{
+        width: 250px;
+        
+    }
 }
