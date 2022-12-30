@@ -3,7 +3,8 @@ main h1{
     background-color: var(--gris-claro);
     font-size: 20px;
 }
-main h3{
+.main-ayuda h3,
+.main-ayuda h4{
     color: var(--naranja);
     font-size: 16px;
    
