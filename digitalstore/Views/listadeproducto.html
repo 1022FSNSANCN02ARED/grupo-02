@@ -73,15 +73,18 @@
 
     <main class="main-listado">
         <section class="container-categories">
-            <h3>Categorias</h3>
-            <form action="/">
+            <div class="desplegable">
+                <h3>Categorias</h3>
+                <i class="fa-solid fa-sort-down"></i>
+            </div>
+            <form action="/" id="categorias-form" class="show-cat">
                 <label><input type="checkbox" id="cbox1" value="cat1"> En descuento (15)</label>
                 <label><input type="checkbox" id="cbox2" value="cat1"> Auriculares (4)</label>
                 <label><input type="checkbox" id="cbox3" value="cat1"> Teclados (5)</label>
                 <label><input type="checkbox" id="cbox4" value="cat1"> Pantallas (1)</label>
                 <label><input type="checkbox" id="cbox5" value="cat1"> CPU (8)</label>
                 <label><input type="checkbox" id="cbox6" value="cat1"> Memorias (6)</label>
-                <input type="submit">
+                <input type="submit" value="Filtrar">
             </form>
         </section>
         <section class="container-products">  
