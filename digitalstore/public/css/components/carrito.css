@@ -1,12 +1,27 @@
 @import url("variables.css");
 
+.main-carrito{
+    background-color: var(--gris-claro);
+}
+
 .contenedor-carrito{
-    border: 2px solid black;
+    
     border-radius: 8px;
     margin-bottom: 1em;
    text-align: center;
    flex-wrap: wrap;
    flex-direction: column;
+   background-color: white;
+   box-shadow: 0 0 5px black;
+
+}
+.contenedor-carrito a input{
+   background-color: black;
+   color: white;
+   padding: 10px;
+   border: 1px solid var(--naranja);
+   width: 100px;
+   font-size: 20px;
 }
 
 .section-carrito{
@@ -90,4 +105,24 @@
 }
 .w-60{
     width: 60%;
+}
+
+.radio-carrito{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.radio-carrito input{
+    width: 5%;
+    margin-left: 0px;
+    justify-content: flex-start;
+    
+}
+.radio-carrito label{
+    width: 95%;
+    margin-left: 0px;
+    justify-content: flex-start;
+    
 }
