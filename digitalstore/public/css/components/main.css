@@ -9,6 +9,12 @@ main h1{
     font-size: 16px;
    
 }
+.contenedor-comentario{
+    height: 30vh;
+   
+    max-width: 30em;
+    
+}
 .articulo{
     height: 200px;
     width: 200px;
