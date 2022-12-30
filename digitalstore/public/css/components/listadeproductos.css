@@ -1,0 +1,40 @@
+@import url("./variables.css");
+
+.main-listado{
+    display: flex;
+    width: 100%;
+}
+
+.container-categories form,
+.container-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container-categories{
+    width: 25%;
+    padding: 0 10px ;
+    border-right: 2px solid var(--gris-claro);
+}
+
+.container-products{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    row-gap: 20px;
+}
+
+.item-producto{
+    width: 25%;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.item-producto:hover{
+    box-shadow: 0 0 5px rgba(32, 32, 32, 0.4);
+}

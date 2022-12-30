@@ -41,6 +41,13 @@ app.get("/ayuda", (req, res) => {
 app.get("/contacto", (req, res) => {
   res.sendFile(path.join(__dirname, "../views/contacto.html"));
 });
+
+
+app.get("/productos", (req, res) => {
+  res.sendFile(path.join(__dirname, "../views/listadeproducto.html"));
+});
+
+
 //LISTEN 
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)

@@ -13,11 +13,11 @@ main h3{
     width: 200px;
 }
 .descuento_article{
-        color:var(--naranja)
+    color:var(--naranja)
 }
 
 .border-radius-100:hover{
-    border-radius: 100%;
+    border-radius: 50%;
     box-shadow: 0 0 7px rgba(122, 122, 122, 0.582);
     cursor: grab;
 }
