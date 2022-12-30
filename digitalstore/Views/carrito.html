@@ -52,7 +52,7 @@
 
     </header>
 
-    <main>
+    <main class="main-carrito">
         <div class="h2-div">
             <h2 class="h2-carrito">CARRITO DE COMPRAS</h2>
         </div>
@@ -72,21 +72,24 @@
                 </div>
             </article>
 
-            <div class="w-90 p-1 div-envio">
-                <h3 class="h3-article">Envio</h3>
-                <input type="number" name="forma-Pago" class="number-envio">
-                <label for="" class="label-envio">Ingresa tu codigo postal para calcular el envio</label>
-
-            </div>
+           
             <article class="w-90 p-1 contenedor-carrito">
                 <h3>Forma de pago</h3>
-                <input type="radio" name="forma-Pago">
-                <label for="">Deposito o transferencia bancaria</label>
-                <input type="radio" name="forma-Pago">
+
+                <div class="radio-carrito">
+                     <input type="radio" name="forma-Pago">
+                    <label for="">Deposito o transferencia bancaria</label>
+                </div>
+
+                <div class="radio-carrito">
+                    <input type="radio" name="forma-Pago" >
                 <label for="">Mercado pago - Tarjetas online, PagoFacil, RapiPago</label>
+                </div>
+
+                
                 <p>Total:</p>
                 <p>30000</p>
-                <a href=""><input type="submit" value="Comprar" ></a>
+                <a href=""><input type="submit" value="Comprar"></a>
             </article>
         </section>
     </main>
@@ -94,7 +97,7 @@
 
     <!-- AXEL -->
     <footer class="footer-principal w-100">
-       
+
         <div class="caja-footer">
             <h3>AYUDA</h3>
             <p>Si queres hacernos comentarios o sugerencias.</p>
