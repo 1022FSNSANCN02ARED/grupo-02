@@ -2,6 +2,7 @@
 
 .main-listado{
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
@@ -9,25 +10,59 @@
 .container-categories{
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 .container-categories{
-    width: 25%;
-    padding: 0 10px ;
-    border-right: 2px solid var(--gris-claro);
+    width: 100%;
+    
+}
+
+.desplegable{
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--naranja);
+    color: var(--negro);
+    cursor: pointer;
+}
+
+.desplegable h3{
+    color: var(--negro);
+}
+
+.container-categories form{
+    display: none;
+    flex-direction: column;
+    padding: 10px 15px;
+    background-color: var(--gris-claro);
+    border-bottom: 2px solid rgb(204, 204, 204);
+}
+
+.show-cat{
+    display: flex !important;
+}
+
+.container-categories form input[type="submit"]{
+    margin: 15px auto 0 0;
+    padding: 10px 15px;
+    background-color: var(--naranja);
+    border: none;
+    border-radius: 10px;
+    color: var(--blanco);
+    font-weight: bold;
 }
 
 .container-products{
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 15px;
     row-gap: 20px;
 }
 
 .item-producto{
-    width: 25%;
+    width: 90%;
     padding: 15px;
     border-radius: 5px;
     cursor: pointer;
@@ -35,6 +70,56 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+.item-producto h4{
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.item-producto img{
+    margin: 0 auto;
+}
+
 .item-producto:hover{
     box-shadow: 0 0 5px rgba(32, 32, 32, 0.4);
+}
+
+
+
+@media (min-width:481px) {
+    .item-producto{
+        width: 50%;
+    }
+}
+@media (min-width:768px) {
+    .item-producto{
+        width: 33%;
+    }
+}
+@media (min-width:1080px) {
+    .item-producto{
+        width: 25%;
+    }
+    .main-listado{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .container-categories{
+        width: 20%;
+        margin-top: 30px;
+        padding: 0 15px;
+        gap: 20px;
+    }
+    .container-categories form{
+        gap: 20px;
+    }
+    .container-products{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+        row-gap: 20px;
+    }
 }
