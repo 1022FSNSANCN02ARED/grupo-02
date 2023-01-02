@@ -35,3 +35,6 @@ Visualizacion de los productos. Detalles descripcion.
 https://digitalesalmundo.com/
 Listado de producto aparte de la pagina main, y edicion del perfil.
 
+---------------------------------------------------------------------------------------------------------------
+ENALECE AL TABLERO DE TRABAJO >TRELLO:
+https://trello.com/b/3AHO3mfl/proyecto-integrador-final

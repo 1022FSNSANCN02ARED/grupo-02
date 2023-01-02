@@ -18,7 +18,7 @@ main h1{
 }
 .section-card {
     display: flex;
-    flex-direction: column;
+    /*saco flex direction:flex-column xq tira los elementos al margen izaquierdo*/
 }
 .section-card article{
     width: 80%;
