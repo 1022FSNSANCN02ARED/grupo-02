@@ -78,16 +78,17 @@ button:visited{
         justify-content: space-between;
       }
       .caja-footer{
-        width: 39%;
+        width: 33%;
         padding-left: 0;
         padding-right: 0;
       }
       .iconos{
-        width: 20%;
+        width: 27%;
         display: flex;
         flex-wrap: wrap;
-        align-content: center;
+        padding-right: 60px;
         flex-direction: column;
+        align-items: flex-end;
       }
       .contenedor-links p{
         display: flex;
