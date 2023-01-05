@@ -39,4 +39,6 @@ Listado de producto aparte de la pagina main, y edicion del perfil.
 ENLACE AL TABLERO DE TRABAJO >TRELLO:
 https://trello.com/b/3AHO3mfl/proyecto-integrador-final
 
+https://trello.com/invite/b/3AHO3mfl/ATTIad9bab0d1f5bd17a1b9ae5477eafaf85392E1219/proyecto-integrador-final
+
 
