@@ -3,7 +3,8 @@
 
 // EXPRESS
 ////////////////////////////////////////////////////////////////////////
-
+//ROUTERS
+const mainRouter = require("./routers/main-router");
 //EXPORTS
 const path = require('path');
 //INIT EXPRESS
@@ -17,11 +18,11 @@ const PORT=3000;
 app.use(express.static(path.join(__dirname,"../public")))
 //PLANTILLA EJS
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./views"));
+app.set("views", path.join(__dirname, "../views"));
 //GETS
-app.get("/",(req,res) => {
-    res.sendFile(path.join(__dirname,"../views/index.html"))
-})
+//app.get("/",(req,res) => {
+//    res.sendFile(path.join(__dirname,"../views/index.html"))
+//})
 app.get("/login",(req,res) => {
     res.sendFile(path.join(__dirname,"../views/login.html"))
 })
@@ -54,3 +55,5 @@ app.get("/productos", (req, res) => {
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)
 })
+//App.use de routers
+app.use(mainRouter);
