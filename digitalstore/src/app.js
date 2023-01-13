@@ -15,7 +15,9 @@ const PORT=3000;
 
 //CONFIG PUBLIC FOLDER
 app.use(express.static(path.join(__dirname,"../public")))
-
+//PLANTILLA EJS
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "./views"));
 //GETS
 app.get("/",(req,res) => {
     res.sendFile(path.join(__dirname,"../views/index.html"))
