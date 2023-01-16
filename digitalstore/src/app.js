@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname,"../public")))
 
 //PLANTILLA EJS
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../Views"));
+app.set("views", path.join(__dirname, "./views"));
 
 //LISTEN 
 app.listen(PORT,()=> {
