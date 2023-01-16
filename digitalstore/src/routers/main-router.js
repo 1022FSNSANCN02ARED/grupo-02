@@ -1,6 +1,6 @@
 const {Router} = require("express");
-const mainController = require("../controllers/main-controller");
 const router = Router();
+const mainController = require("../controllers/main-controller");
 
 router.get("/", mainController.index);
 router.get("/register", mainController.register);
@@ -10,4 +10,5 @@ router.get("/contacto", mainController.contacto);
 router.get("/productos", mainController.producto);
 router.get("/lista-producto", mainController.listaProducto);
 router.get("/carrito", mainController.carrito);
+
 module.exports = router;
