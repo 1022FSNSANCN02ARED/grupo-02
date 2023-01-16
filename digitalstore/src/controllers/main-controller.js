@@ -200,5 +200,8 @@ module.exports = {
     },
     listaProducto: (req,res)=>{
         res.render("listaProducto")
+    },
+    agregarProducto: (req,res)=>{
+        res.render("agregarProducto")
     }
 }
