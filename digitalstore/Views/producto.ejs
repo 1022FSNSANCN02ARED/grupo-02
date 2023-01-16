@@ -15,8 +15,30 @@
      <!-- LAUTARO Y PABLO -->
      <%- include("partials/header")%>
 
-<!-- MAIN DE PRODUCTOS DIGITAL STORE -->
-    <%- include("partials/main")%>
+    <!-- MAIN DE PRODUCTOS DIGITAL STORE -->
+    <main class="main-detail">
+        <div class="img-detail">
+            <img src="/img/productos/<%=producto.img%> " alt="<%= producto.categoria %> ">
+        </div>
+        <div class="detail-product">
+            <h2><%= producto.nombre %> </h2>
+            <div class="detail-categoria">
+                <p><%= producto.categoria %> </p>
+            </div>
+            <p class="detail-precio">$<%= producto.precio %> </p>
+            <% if (producto.oferta) { %>
+                <p class="detail-oferta"><%= producto.porcentaje %>%OFF</p>
+            <% } %>
+            <div class="detail-boton">
+                <button >Agregar al carrito</button>
+            </div>
+        </div>
+        <div>
+            <h3>Descripcion</h3>
+            <p class="detail-descripcion"><%= producto.descripcion %> </p>
+        </div>
+        
+    </main>
 
 
     <!-- AXEL -->
