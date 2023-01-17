@@ -50,7 +50,7 @@ article h4{
     background-color: var(--naranja);
     padding:5px;
     font-size: 20px;
-    transition: all 1000ms;
+    transition: all 250ms;
 }
 
 .boton-enviar:hover{
