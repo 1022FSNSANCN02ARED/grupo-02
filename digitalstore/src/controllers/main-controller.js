@@ -190,18 +190,5 @@ module.exports = {
     },
     carrito: (req,res)=>{
         res.render("carrito")           
-    },
-    producto: (req,res)=>{
-        const id = req.params.id;
-        const producto = buscarProd(id);
-        res.render("producto",{
-            producto
-        })
-    },
-    listaProducto: (req,res)=>{
-        res.render("listaProducto")
-    },
-    agregarProducto: (req,res)=>{
-        res.render("agregarProducto")
     }
 }
