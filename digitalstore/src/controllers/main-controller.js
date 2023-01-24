@@ -168,7 +168,7 @@ const productos=[
 ]
 
 function buscarProd(id){
-    const producto = productos.find(plato=>plato.id==id)
+    const producto = productos.find(p=>p.id==id)
     return producto;
 }
 

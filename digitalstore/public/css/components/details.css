@@ -52,7 +52,7 @@
     align-items: center;
 }
 .detail-boton button{
-    margin: 0 auto 10px auto;
+    margin-left: 10px;
     background-color: var(--naranja);
     padding: 10px;
     font-weight: bold;
