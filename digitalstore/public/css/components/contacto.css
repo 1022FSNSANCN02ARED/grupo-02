@@ -1,0 +1,38 @@
+.label-contacto{
+    width: 100%;
+    font-size: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    
+}
+
+.form-login-contacto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--bg);
+}
+.input-contacto{
+    font-size: 25px;
+    width: 80%;
+    text-align: center;
+    margin: 10px auto;
+    border-radius: 10px;
+
+
+}
+.comentario-contacto{
+
+    width: 80%;
+    height: 100px;
+    margin: auto;
+}
+.submit-contacto{
+    background-color: black;
+    color: white;
+    width: 30%;
+    margin: 10px auto;
+    font-size: 20px;
+    border-radius: 15px;
+}
