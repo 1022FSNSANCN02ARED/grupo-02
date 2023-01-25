@@ -1,13 +1,16 @@
 
 //EXPORTS
 const path = require('path');
-
 //INIT EXPRESS
 const express = require('express');
 const app = express();
 
 //EXPRESS CONFIG
 const PORT=3000;
+
+//MIDDLEWARES
+app.use(express.urlencoded({ extended: true })); //sin esto express no detecta los <forms>
+app.use(express.json());
 
 
 //ROUTERS
@@ -22,8 +25,7 @@ app.use(express.static(path.join(__dirname,"../public")))
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
-//DETECTAR FORMS
-app.use(express.urlencoded({ extended: false }));
+
 
 //LISTEN 
 app.listen(PORT,()=> {

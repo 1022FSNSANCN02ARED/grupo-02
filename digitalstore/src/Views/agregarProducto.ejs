@@ -16,30 +16,30 @@
   <%- include("partials/header")%>
   <main class="main-login">
 
-    <form action="/products" method="POST" class="form-login">
+    <form action="/products" method="post" class="form-login" enctype="application/x-www-form-urlencoded">
 
-        <label for="" class="w-60">Nombre del producto</label>
-        <input type="text" class="w-60" placeholder="Ingrese nombre del producto" name="nombre">
-        <label for="" class="w-60">Descripcion</label>
-        <input type="text" class="w-60" placeholder="Ingrese descripcion" name="descripcion">
-        <label for="" class="w-60">Categoria</label>
-        <select class="w-60" name="categoria" > 
-            <Option value="categoria"> Auriculares </Option>
-            <Option value="categoria"> Teclados </Option>
-            <Option value="categoria"> Pantallas </Option>
-            <Option value="categoria"> CPU </Option>
-            <Option value="categoria"> Memorias </Option>
+        <label for="nombre" class="w-60">Nombre del producto</label>
+        <input type="text" class="w-60" placeholder="Ingrese nombre del producto" name="nombre" id="nombre">
+        <label for="descripcion" class="w-60" >Descripcion</label>
+        <input type="text" class="w-60" placeholder="Ingrese descripcion" name="descripcion" id="descripcion">
+        <label for="categoria" class="w-60">Categoria</label>
+        <select class="w-60" name="categoria" id="categoria"> 
+            <Option value="Auriculares"> Auriculares </Option>
+            <Option value="Teclados"> Teclados </Option>
+            <Option value="Pantallas"> Pantallas </Option>
+            <Option value="CPU"> CPU </Option>
+            <Option value="Memorias"> Memorias </Option>
         </select>
         <div>
           <label for="descuento">Descuento</label>
-          <input type="number" name="descuento">
+          <input type="number" name="descuento" id="descuento">
         </div>
     
-        <label for="" class="w-60">Precio</label>
-        <input type="text" class="w-60" placeholder="Ingrese precio" name="precio">
+        <label for="precio" class="w-60">Precio</label>
+        <input type="text" class="w-60" placeholder="Ingrese precio" name="precio" id="precio">
 
-        <a href="" class="w-100"><input type="submit" class="boton-enviar"></a>
-        <a href="" class="w-100"><input type="reset" value="Limpiar datos" class="boton-enviar"></a>
+        <input type="submit" class="boton-enviar">
+        <input type="reset" value="Limpiar datos" class="boton-enviar">
     </form>
 
 </main>

@@ -16,17 +16,22 @@ module.exports={
         res.render("agregarProducto")
     },
     addProducts: (req,res)=>{
-        // const product = {
-        //     id:Date.now(),
-        //     nombre:req.body.nombre,
-        //     descripcion:req.body.descripcion,
-        //     precio:req.body.precio,
-        //     categoria:req.body.categoria,
-        //     img:"default-img.png",
-        //     oferta:false,
-        //     porcentaje:req.body.porcentaje
-        // }
-        res.send(req.body)
+        if(!req.body) {
+            return res.status(400).json({error: 'No hay datos'});
+        }
+        const product = {
+            id:Date.now(),
+            nombre:req.body.nombre,
+            precio:Number(req.body.precio),
+            categoria:req.body.categoria,
+            img:"default-img.png",
+            descripcion:req.body.descripcion,
+            oferta:Number(req.body.descuento) != 0 ? true:false,
+            descuento:Number(req.body.descuento)
+        }
+        
+        products.saveProduct(product);
+        res.redirect("/products");
     }
     
 }
