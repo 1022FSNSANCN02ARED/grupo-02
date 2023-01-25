@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "nodemon src/app.js"
+    "start": "nodemon src/app.js"
   },
   "dependencies": {
     "ejs": "^3.1.8",
