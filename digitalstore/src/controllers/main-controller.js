@@ -1,8 +1,9 @@
 const products = require('../products/products');
 module.exports = {
     index: (req,res) =>{
+        const productsOfert = products.getProductsOferta()
         res.render("index",{
-            allProducts:products.getProducts()
+            productsOfert
         })
     },
     register: (req,res)=> {
@@ -19,5 +20,6 @@ module.exports = {
     },
     carrito: (req,res)=>{
         res.render("carrito")           
-    }
+    },
+
 }
