@@ -12,6 +12,7 @@
     flex-direction: column;
     text-align: center;
     background-color: var(--bg);
+    padding: 50px
 }
 .input-contacto{
     font-size: 25px;
