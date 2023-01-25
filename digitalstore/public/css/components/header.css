@@ -72,11 +72,13 @@ border-radius: 10px;
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .nav-img{
     padding: 10px 0;
-    width: 50%;
+    width: 60%;
+    
 }
 
 

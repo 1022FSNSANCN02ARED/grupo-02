@@ -12,12 +12,20 @@
     padding: 50%;
 }
 
+.center{
+    text-align: center;
+}
+
 .p-100{
     padding: 100%;
 }
 
 .fz-16{
     font-size: 16px;
+}
+.margin-bottom{
+
+    margin-bottom: 30px;
 }
 
 
@@ -38,9 +46,12 @@
 }
 .wp-90{
     width: 90%;
+    margin: auto;
+
 }
 .wp-80{
     width: 80%;
+    ;
 }
 .mx-auto {
     margin: 0 auto;
@@ -65,14 +76,30 @@
     width: 100%;
 }
 
+.border-index:hover{
+    border-radius: 10px;
+    box-shadow: black 0 0 10px;
+}
+
+.magin-auto{
+    margin: auto;
+    text-align: center
+    ;
+}
+
+
 .w-30{
-    width: 30%;
+    width: 150px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
 }
 .w-45{
     width: 45%;
 }
 .w-card-30{
-    width: 23%;
+    width: 5%;
 }
 .text-center{
     text-align: center;
