@@ -29,6 +29,15 @@
 }
 
 
+.categorias-index{
+    text-align: center;
+    background-color: var(--negro);
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+
 @media (max-width:1024px) {
     .show{
         display: none;
