@@ -77,8 +77,10 @@ border-radius: 10px;
 
 .nav-img{
     padding: 10px 0;
-    width: 60%;
-    
+    width: 30%;
+}
+.nav-img img{
+    width: 100%;
 }
 
 
@@ -156,7 +158,23 @@ border-radius: 10px;
 
 @media (min-width:768px) {
 
+    .nav-primary{
+        align-items: center;
+    }
+
+    .nav-img{
+        padding: 10px 0;
+        width: 20%;
+    }
+    .nav-img img{
+        width: 100%;
+    }
     
+    .serch-bar{
+        width: 70%;
+        max-height: 70px;
+        margin-top: 20px;
+    }
 
     #nav-buttons-laptop{
         display: flex;
@@ -182,16 +200,23 @@ border-radius: 10px;
 
 @media (min-width:1024px) {
 
+    .nav-img {
+        width: 20%;
+    }
+
+    .nav-img img{
+        width: 60%;
+    }
+
     .nav-primary{
         align-items: center;
         margin: 0;
     }
 
-  
-
     .serch-bar{
         width: 50%;
         height: 70px;
+        margin-top: 0;
     }
     .serch-bar label{
         display: flex;
