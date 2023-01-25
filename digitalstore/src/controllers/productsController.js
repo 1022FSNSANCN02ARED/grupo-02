@@ -12,7 +12,21 @@ module.exports={
     listProducts: (req,res)=>{
         res.render("listProducts")
     },
-    addProducts: (req,res)=>{
+    addProductsForm: (req,res)=>{
         res.render("agregarProducto")
+    },
+    addProducts: (req,res)=>{
+        const product = {
+            id:Date.now(),
+            nombre:req.body.nombre,
+            descripcion:req.body.descripcion,
+            precio:req.body.precio,
+            categoria:req.body.categoria,
+            img:"default-img.png",
+            oferta:false,
+            porcentaje:req.body.porcentaje
+        }
+        res.send(product)
     }
+    
 }
