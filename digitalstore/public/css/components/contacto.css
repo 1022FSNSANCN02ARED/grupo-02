@@ -7,12 +7,23 @@
     
 }
 
+.contenedor-contacto{
+    width: 90%;
+    margin: 10px auto;
+    
+    ;
+}
+
 .form-login-contacto{
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: var(--bg);
-    padding: 50px
+    background-color: var(--naranja);
+    padding: 10px;
+    border-radius: 25px;
+    box-shadow: black 0 0 10px;
+
+
 }
 .input-contacto{
     font-size: 25px;

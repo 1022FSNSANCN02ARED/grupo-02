@@ -168,5 +168,15 @@
         "descripcion": "asdasdasda",
         "oferta": false,
         "descuento": 0
+    },
+    {
+        "id": 1674650378067,
+        "nombre": "lsadasmd",
+        "precio": 15000,
+        "categoria": "CPU",
+        "img": "default-img.png",
+        "descripcion": "lasjdlaskd",
+        "oferta": false,
+        "descuento": 0
     }
 ]
