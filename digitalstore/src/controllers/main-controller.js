@@ -1,6 +1,9 @@
+const products = require('../products/products');
 module.exports = {
     index: (req,res) =>{
-        res.render("index")
+        res.render("index",{
+            allProducts:products.getProducts()
+        })
     },
     register: (req,res)=> {
         res.render("register")

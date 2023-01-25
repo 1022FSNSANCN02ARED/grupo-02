@@ -14,36 +14,53 @@
 <body>
   <!-- LAUTARO Y PABLO -->
   <%- include("partials/header")%>
-  <main class="main-login">
+  <main class="main-form">
 
-    <form action="/products" method="post" class="form-login" enctype="multipart/form-data"">
+    <form action="/products" method="post" class="form-add" enctype="multipart/form-data"">
 
-        <label for="nombre" class="w-60">Nombre del producto</label>
-        <input type="text" class="w-60" placeholder="Ingrese nombre del producto" name="nombre" id="nombre">
+        <div class="item-content-form name-form">
+            <label for="nombre" class="label-form">Nombre del producto</label>
+            <input type="text" class="input-nombre" placeholder="Ingrese nombre del producto" name="nombre" id="nombre">
+        </div>
 
-        <label for="categoria" class="w-60">Categoria</label>
-        <select class="w-60" name="categoria" id="categoria"> 
-            <Option value="Auriculares"> Auriculares </Option>
-            <Option value="Teclados"> Teclados </Option>
-            <Option value="Pantallas"> Pantallas </Option>
-            <Option value="CPU"> CPU </Option>
-            <Option value="Memorias"> Memorias </Option>
-        </select>
+        <div class="item-content-form price-form">
+            <label for="precio" class="label-form">Precio</label>
+            <input type="number" class="input-number" placeholder="Ingrese precio" name="precio" id="precio">
+        </div>
 
-        <label for="precio" class="w-60">Precio</label>
-        <input type="text" class="w-60" placeholder="Ingrese precio" name="precio" id="precio">
+        <div class="item-content-form price-form">
+            <label for="descuento" class="label-form">Descuento</label>
+            <input type="number" name="descuento" id="descuento" class="input-label" placeholder="Ej: 0%">
+        </div>
 
-        <label for="descuento">Descuento</label>
-        <input type="number" name="descuento" id="descuento">
+        <div class="item-content-form category-form">
+            <label for="categoria" class="label-form">Categoria</label>
+            <select class="input-select" name="categoria" id="categoria"> 
+                <Option class="option-form" value="Auriculares"> Auriculares </Option>
+                <Option class="option-form" value="Teclados"> Teclados </Option>
+                <Option class="option-form" value="Pantallas"> Pantallas </Option>
+                <Option class="option-form" value="CPU"> CPU </Option>
+                <Option class="option-form" value="Memorias"> Memorias </Option>
+            </select>
+        </div>
 
-        <label for="image" class="w-60" >Imagen del producto</label>
-        <input type="file" class="w-60" name="image" id="image" accept="image/*">
+        <div class="item-content-form file-form">
+            <label for="image" class="label-form" >Imagen del producto</label>
+            <input type="file" class="input-file" name="image" id="image" accept="image/*">
+        </div>
 
-        <label for="descripcion" class="w-60" >Descripcion</label>
-        <input type="text" class="w-60" placeholder="Ingrese descripcion" name="descripcion" id="descripcion">
 
-        <input type="submit" class="boton-enviar">
-        <input type="reset" value="Limpiar datos" class="boton-enviar">
+        <div class="item-content-form area-form">
+            <label for="descripcion" class="label-form" >Descripcion</label>
+            <textarea type="text" class="input-textarea" placeholder="Ingrese descripcion" name="descripcion" id="descripcion"></textarea>
+        </div>
+
+
+        <div class="item-content-form button-form">
+            <input type="submit" class="button-form-submit">
+            <input type="reset" value="Limpiar datos" class="button-form-reset">
+        </div>
+
     </form>
 
 </main>
@@ -53,7 +70,6 @@
   <!-- SCRIPTS -->
   <script src="/script/index.js"></script>
   <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
-
 
 </body>
 </html>
