@@ -1,0 +1,48 @@
+@import url("variables.css");
+
+.form-add{
+    display: flex;
+    width: 90%;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.label-form{
+    font-size: 18px;
+}
+
+.item-content-form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.name-form{
+    width: 100%;
+}
+
+.price-form{
+    width:20%
+}
+
+.category-form{
+    width: 20%;
+}
+
+.file-form{
+    width: 25% ;
+}
+
+.area-form{
+    width: 100%;
+}
+
+.area-form textarea{
+    min-height: 100px;
+}
+
+.button-form{
+    width: 100%;
+    display: flex;
+}

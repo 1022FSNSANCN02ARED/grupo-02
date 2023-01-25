@@ -158,25 +158,5 @@
         "descripcion": "Esta es una tablet A8 Dark",
         "oferta": true,
         "descuento": 15
-    },
-    {
-        "id": 1674619393344,
-        "nombre": "Pablo ",
-        "precio": 555,
-        "categoria": "Teclados",
-        "img": "default-img.png",
-        "descripcion": "asdasdasda",
-        "oferta": false,
-        "descuento": 0
-    },
-    {
-        "id": 1674650378067,
-        "nombre": "lsadasmd",
-        "precio": 15000,
-        "categoria": "CPU",
-        "img": "default-img.png",
-        "descripcion": "lasjdlaskd",
-        "oferta": false,
-        "descuento": 0
     }
 ]
