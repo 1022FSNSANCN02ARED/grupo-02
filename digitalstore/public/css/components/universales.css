@@ -28,6 +28,10 @@
     margin-bottom: 30px;
 }
 
+.text-decoration-none{
+    text-decoration: none;
+}
+
 
 .categorias-index{
     text-align: center;
@@ -54,8 +58,10 @@
     width: 90vw;
 }
 .wp-90{
-    width: 90%;
+    width: 135px;
+    height: 120px;
     margin: auto;
+    
 
 }
 .wp-80{
@@ -100,10 +106,14 @@
 .w-30{
     width: 150px;
     text-align: center;
-    justify-content: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
+.w-30 a {
+color: black;
+}
+
 .w-45{
     width: 45%;
 }
