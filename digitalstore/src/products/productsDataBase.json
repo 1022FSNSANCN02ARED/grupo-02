@@ -158,5 +158,15 @@
         "descripcion": "Esta es una tablet A8 Dark",
         "oferta": true,
         "descuento": 15
+    },
+    {
+        "id": 1674694109505,
+        "nombre": "ferrari",
+        "precio": 60000,
+        "categoria": "Pantallas",
+        "img": "image-1674694109499.jpg",
+        "descripcion": "ferrari de juguete",
+        "oferta": true,
+        "descuento": 50
     }
 ]
