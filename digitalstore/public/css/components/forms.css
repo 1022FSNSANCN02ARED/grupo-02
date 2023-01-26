@@ -1,21 +1,32 @@
 @import url("variables.css");
 
+
+.main-form{
+    background-color: var(--gris-claro);
+    padding: 50px 0;
+}
+
 .form-add{
     display: flex;
     width: 90%;
-    margin: 50px auto;
+    margin:0 auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: var(--blanco);
     flex-wrap: wrap;
     gap: 2%;
 }
 
 .label-form{
     font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .item-content-form{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 .name-form{
@@ -23,15 +34,15 @@
 }
 
 .price-form{
-    width:20%
+    width:100%
 }
 
 .category-form{
-    width: 20%;
+    width: 100%;
 }
 
 .file-form{
-    width: 25% ;
+    width: 100%;
 }
 
 .area-form{
@@ -42,7 +53,57 @@
     min-height: 100px;
 }
 
+.button-form-content{
+    width: 100%;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+
 .button-form{
     width: 100%;
-    display: flex;
+    background-color: var(--naranja);
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+
+}
+
+
+select,
+textarea,
+.item-content-form > input{
+    border: none;
+    border: 2px solid var(--gris-oscuro);
+    padding: 10px;
+    border-radius: 7px;
+    outline-color:var(--naranja) ;
+    font-family: 'Ralewey', Arial, Helvetica, sans-serif;
+}
+
+.form-title{
+    padding: 10px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+@media (min-width:480px){
+    .price-form{
+        width:49%
+    }
+    .button-form-content{
+        flex-direction: row;
+        gap: 5%;
+    }   
+    .button-form{
+        width: 42.5%;
+    }
+}
+@media (min-width:1024px){
+    .price-form{
+        width:32%;
+    }
+    .category-form{
+        width: 32%;
+    }
 }
