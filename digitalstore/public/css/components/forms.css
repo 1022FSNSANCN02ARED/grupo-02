@@ -101,6 +101,7 @@ textarea,
         width: 42.5%;
     }
 }
+
 @media (min-width:1024px){
     .price-form{
         width:32%;
