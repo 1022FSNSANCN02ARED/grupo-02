@@ -5,21 +5,19 @@ main h2{
     font-size: 20px;
     margin: 30px auto 0px 90px;
     text-transform: uppercase;
-
-
 }
 
 .main-ayuda h3,
 .main-ayuda h4{
     color: var(--naranja);
     font-size: 16px;
-   
 }
 
 .section-card {
     display: flex;
     /*saco flex direction:flex-column xq tira los elementos al margen izaquierdo*/
 }
+
 .section-card article{
     width: 80%;
 }
