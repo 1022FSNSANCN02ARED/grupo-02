@@ -38,9 +38,7 @@ module.exports = {
     },
     getProductsOferta() {
         const products = this.getProducts();
-
         const productsOfert = products.filter(oferta => oferta.oferta == true)
-
         return productsOfert;
     }
 }

@@ -3,7 +3,8 @@ module.exports = {
     index: (req,res) =>{
         const productsOfert = products.getProductsOferta()
         res.render("index",{
-            productsOfert
+            productsOfert,
+            nombre:"lautaro"
         })
     },
     register: (req,res)=> {
