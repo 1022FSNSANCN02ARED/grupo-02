@@ -11,3 +11,9 @@ const catHam = document.querySelector("#categorias-form");
 catBtn.addEventListener("click", () => {
     catHam.classList.toggle("show-cat");
 });
+
+
+const products = document.getElementById("product-item");
+products.addEventListener("click",(e) => {
+    window.location.href = "/products";
+})

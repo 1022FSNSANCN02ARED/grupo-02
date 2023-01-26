@@ -1,8 +1,14 @@
 @import url("variables.css");
-main h1{
+
+main h2{
     background-color: var(--gris-claro);
     font-size: 20px;
+    margin: 30px auto 0px 90px;
+    text-transform: uppercase;
+
+
 }
+
 .main-ayuda h3,
 .main-ayuda h4{
     color: var(--naranja);
@@ -10,12 +16,6 @@ main h1{
    
 }
 
-.contenedor-comentario{
-    height: 30vh;
-   
-    max-width: 30em;
-    
-}
 .section-card {
     display: flex;
     /*saco flex direction:flex-column xq tira los elementos al margen izaquierdo*/
@@ -28,11 +28,10 @@ main h1{
     width: 200px;
 }*/
 .descuento_article{
-    color:var(--naranja)
+    color:var(--naranja);
+    text-decoration: none;
 }
-article h4{
-    display: none;
-}
+
 .border-radius-100:hover{
     border-radius: 50%;
     box-shadow: 0 0 7px rgba(122, 122, 122, 0.582);
@@ -60,6 +59,31 @@ article h4{
     border: solid black
 
 }
+
+.categoria-main a{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: var(--negro);
+}
+
+.categoria-main-container{
+    padding-bottom: 50px;
+    border-bottom: 2px solid var(--gris-oscuro);
+    margin: 30px 60px;
+}
+
+.categoria-main a div{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 190px;   
+    border-radius: 50%; 
+    background-color: var(--blanco);
+    margin-bottom: 20px;
+}
+
 @media(min-width: 469px){
     article h4{
         display: block;

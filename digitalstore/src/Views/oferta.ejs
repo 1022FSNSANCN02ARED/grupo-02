@@ -15,14 +15,15 @@
 
 <body>
     <%- include("partials/header")%>
+    
+    <main class="section-card p-1 mx-auto flex flex-wrap gap justify-center center bg-grey">
+        <%- include ("partials/ofertaProductos.ejs") %> 
+      
+    </main>
 
-        <main>
-            <%- include('partials/ofertaProductos') %>
-        </main>
-
-        <%- include("partials/footer")%>
-        <script src="/script/index.js"></script>
-        <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
+    <%- include("partials/footer")%>
+    <script src="/script/index.js"></script>
+    <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

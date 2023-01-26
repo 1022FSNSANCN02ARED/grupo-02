@@ -38,11 +38,14 @@
 
 
 .categorias-index{
-    text-align: center;
-    background-color: var(--negro);
-    border-radius: 10px;
+    border-radius: 50px;
     font-size: 25px;
-    color: white;
+    color: var(--negro);
+}
+
+.border-index{
+    border-radius: 50%;
+    
 }
 
 
@@ -81,9 +84,14 @@
 .flex {
     display: flex;
 }
-.justify-center-{
+.justify-center{
     justify-content: center;
 }
+
+.justify-sa{
+    justify-content: space-around;
+}
+
 .flex-wrap {
     flex-wrap: wrap;
 }
@@ -95,10 +103,7 @@
     width: 100%;
 }
 
-.border-index:hover{
-    border-radius: 10px;
-    box-shadow: black 0 0 10px;
-}
+
 
 .magin-auto{
     margin: auto;
@@ -126,4 +131,7 @@ color: black;
 }
 .text-center{
     text-align: center;
+}
+.bg-grey{
+    background-color: var(--gris-claro);
 }

@@ -11,6 +11,7 @@ module.exports={
     },
     listProducts: (req,res)=>{
         const allProducts= products.getProducts()
+        
         res.render("listProducts",{
             allProducts,
         })
@@ -27,7 +28,7 @@ module.exports={
             nombre:req.body.nombre,
             precio:Number(req.body.precio),
             categoria:req.body.categoria,
-            image:req.file ? req.file.filename:"default-img.png",
+            img:req.file ? req.file.filename:"default-image.png",
             descripcion:req.body.descripcion,
             oferta:Number(req.body.descuento) != 0 ? true:false,
             descuento:Number(req.body.descuento)

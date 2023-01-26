@@ -1,25 +1,36 @@
 @import url("variables.css");
 
 .footer-principal{
-    background-color: var(--naranja);
-    padding: 3% 0%;
+  background-color: var(--naranja);
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
 }
 
 .caja-footer{
     width: 100%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding: 10px 20px;
     text-align:center;
     margin-bottom: 10px;
 }
 
 .iconos{
+  width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-decoration: none;
     font-size: 25px;
     margin-bottom: 0px;
 }
+
+.iconos div{
+  margin-top: 5px;
+  display: flex;
+}
+
 .iconos i {
     margin-left: 5px;
 }
@@ -51,7 +62,7 @@ button:visited{
 .btn-contactanos{
   background-color: var(--naranja);
   padding: 5px;
-  margin-top: 4px;
+  margin-top: 10px;
   font-size: 20px;
   border: 1px solid black;
   border-radius: 8px;
@@ -72,24 +83,19 @@ button:visited{
 }
 @media (min-width: 769px){
     /*laptop*/
-      .footer-principal{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
       .caja-footer{
-        width: 33%;
+        width: 32%;
         padding-left: 0;
         padding-right: 0;
       }
       .iconos{
-        width: 27%;
+        width: 32%;
         display: flex;
-        flex-wrap: wrap;
-        padding-right: 60px;
         flex-direction: column;
-        align-items: flex-end;
+        flex-wrap: wrap;
+        align-items: center;
       }
+      
       .contenedor-links p{
         display: flex;
       }
