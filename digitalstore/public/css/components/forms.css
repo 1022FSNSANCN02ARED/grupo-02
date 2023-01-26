@@ -1,66 +1,67 @@
 @import url("variables.css");
 
 
-.main-form{
+.main-form {
     background-color: var(--gris-claro);
     padding: 50px 0;
 }
 
-.form-add{
+.form-add {
     display: flex;
     width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
     padding: 30px;
     border-radius: 5px;
     background-color: var(--blanco);
+    box-shadow: black 0 0 5px;
     flex-wrap: wrap;
     gap: 2%;
 }
 
-.label-form{
+.label-form {
     font-size: 18px;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.item-content-form{
+.item-content-form {
     display: flex;
     flex-direction: column;
     margin: 10px 0;
 }
 
-.name-form{
+.name-form {
     width: 100%;
 }
 
-.price-form{
-    width:100%
+.price-form {
+    width: 100%
 }
 
-.category-form{
+.category-form {
     width: 100%;
 }
 
-.file-form{
+.file-form {
     width: 100%;
 }
 
-.area-form{
+.area-form {
     width: 100%;
 }
 
-.area-form textarea{
+.area-form textarea {
     min-height: 100px;
 }
 
-.button-form-content{
+.button-form-content {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 10px;
 }
 
 
-.button-form{
+.button-form {
     width: 100%;
     background-color: var(--naranja);
     border: none;
@@ -72,40 +73,52 @@
 
 select,
 textarea,
-.item-content-form > input{
+.item-content-form>input {
     border: none;
     border: 2px solid var(--gris-oscuro);
     padding: 10px;
     border-radius: 7px;
-    outline-color:var(--naranja) ;
+    outline-color: var(--naranja);
     font-family: 'Ralewey', Arial, Helvetica, sans-serif;
 }
 
-.form-title{
-    padding: 10px;
-    font-size: 40px;
+.form-title {
+    text-align: center;
     text-transform: uppercase;
-    margin: 0;
-    background: none;
+    background-color: white;
+    margin: auto;
+    font-size: xx-large;
+    width: 100%;
+    margin: 20px auto;
 }
 
-@media (min-width:480px){
-    .price-form{
-        width:49%
+@media (min-width:480px) {
+    .price-form {
+        width: 49%
     }
-    .button-form-content{
+
+    .button-form-content {
         flex-direction: row;
         gap: 5%;
-    }   
-    .button-form{
+    }
+
+    .button-form {
         width: 42.5%;
     }
 }
+
+<<<<<<< HEAD
 @media (min-width:1024px){
     .price-form{
         width:32%;
+=======
+@media (min-width:1024px) {
+    .price-form {
+        width: 32%;
+>>>>>>> 117c65b686ef053a27df2bbd07c3c3076abaff02
     }
-    .category-form{
+
+    .category-form {
         width: 32%;
     }
 }
