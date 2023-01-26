@@ -1,12 +1,14 @@
 
 <% productsOfert.forEach(product => { %>
     <a href="/products/details/ <%= product.id %>" class="font-black-center">
-        <article class="item-producto" id="product-item">
-        <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
+        <article class="item-producto product-article" id="product-item">
+        <div class="div-imagen-producto">
+            <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
+        </div>
         <div class="item-products-text">
             
             <% if (product.oferta) {%>
-                <div style="display: flex;gap: 5px;">
+                <div style="display: flex;gap: 5px;" class="descuento">
                     <p style="text-decoration: line-through;">
                         $<%= product.precio %> 
                     </p>

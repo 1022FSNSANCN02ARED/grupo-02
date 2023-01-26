@@ -4,3 +4,13 @@
     display: flex;
     flex-direction: column;
 }
+
+.product-articule{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.descuento{
+    justify-content: center;
+}
