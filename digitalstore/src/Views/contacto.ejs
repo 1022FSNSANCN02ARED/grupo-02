@@ -17,36 +17,89 @@
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
 
-    <main class="main-contacto">
-    <!--MAIN DE PAGINA DE CONTACTO-->
+        <main class="main-form">
 
-    <div class="contenedor-contacto">
-       
-        <form action="/" class="form-login-contacto">
+            <form action="/products" method="post" class="form-add" enctype="multipart/form-data"">
     
-            <label for="" class="label-contacto">Nombre:</label>
-            <input type="text" class="input-contacto" placeholder="Ingrese su nombre">
-           
-            <label for="" class="label-contacto">Email:</label>
-            <input type="email" class="input-contacto" placeholder="Ingrese su e-mail" >
+            <h2 class=" form-title">Contactanos</h2>
 
-            <textarea class="comentario-contacto" placeholder="Haga aqui sus comentarios"></textarea>
 
-            <input type="submit" class="submit-contacto">
-    
-    
-    
-        </form>
+                <div class="item-content-form price-form">
+                    <label for="precio" class="label-form">Nombre</label>
+                    <input type="text" class="input-nombre" placeholder="Ingrese su nombre" name="nombrbe" id="nombre">
+                </div>
 
-    </main>
+                <div class="item-content-form price-form">
+                    <label for="descuento" class="label-form">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" class="input-label"
+                        placeholder="Ingrese su apellido">
+                </div>
 
-    <!-- AXEL -->
-    <%- include("partials/footer")%>
-    
-    <!-- SCRIPTS -->
-    <script src="/script/index.js"></script>
-    <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
-    
-    </body>
-    
-    </html>
+                <div class="item-content-form category-form">
+                    <label for="localidad" class="label-form">Localidad</label>
+                    <select class="input-select" name="categoria" id="categoria">
+                        <Option class="option-form" value="Auriculares"> Buenos Aires</Option>
+                        <Option class="option-form" value="Teclados"> Ciudad Autónoma de Buenos Aires</Option>
+                        <Option class="option-form" value="Pantallas"> Catamarca </Option>
+                        <Option class="option-form" value="CPU"> Chaco </Option>
+                        <Option class="option-form" value="Memorias">Chubut </Option>
+                        <Option class="option-form" value="Auriculares"> Córdoba</Option>
+                        <Option class="option-form" value="Teclados"> Corrientes</Option>
+                        <Option class="option-form" value="Pantallas"> Entre Ríos</Option>
+                        <Option class="option-form" value="CPU"> Formosa </Option>
+                        <Option class="option-form" value="Memorias">Jujuy </Option>
+                        <Option class="option-form" value="Auriculares"> La Pampa</Option>
+                        <Option class="option-form" value="Teclados"> La Rioja</Option>
+                        <Option class="option-form" value="Pantallas"> Mendoza </Option>
+                        <Option class="option-form" value="CPU"> Misiones </Option>
+                        <Option class="option-form" value="Memorias">Neuquén </Option>
+                        <Option class="option-form" value="Auriculares"> Río Negro</Option>
+                        <Option class="option-form" value="Teclados"> Salta</Option>
+                        <Option class="option-form" value="Pantallas"> San Juan </Option>
+                        <Option class="option-form" value="CPU"> San Luis</Option>
+                        <Option class="option-form" value="Memorias">Santa Cruz</Option>
+                        <Option class="option-form" value="Auriculares"> Santa Fe</Option>
+                        <Option class="option-form" value="Teclados"> Santiago del Estero</Option>
+                        <Option class="option-form" value="Pantallas"> Tierra del Fuego, Antártida e Islas del Atlántico
+                            Sur</Option>
+                        <Option class="option-form" value="CPU"> Tucumán</Option>
+
+                    </select>
+                </div>
+
+                <div class="item-content-form file-form">
+                    <label for="image" class="label-form">Email</label>
+                    <input type="email" class="input-file" name="email" id="email">
+                </div>
+                <div class="item-content-form file-form">
+                    <label for="image" class="label-form">Motivo</label>
+                    <input type="text" class="input-file" name="motivo" id="motivo" placeholder='Ej: "Quiero comprar productos por mayor"'>
+                </div>
+
+
+                <div class="item-content-form area-form">
+                    <label for="descripcion" class="label-form">Mensaje</label>
+                    <textarea type="text" class="input-textarea" placeholder="Escriba aquí su mensaje" name="mensaje"
+                        id="mensaje"></textarea>
+                </div>
+
+
+                <div class="item-content-form button-form-content">
+                    <input type="submit" class="button-form">
+                    <input type="reset" value="Limpiar datos" class="button-form">
+                </div>
+
+            </form>
+
+        </main>
+
+        <!-- AXEL -->
+        <%- include("partials/footer")%>
+
+            <!-- SCRIPTS -->
+            <script src="/script/index.js"></script>
+            <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
