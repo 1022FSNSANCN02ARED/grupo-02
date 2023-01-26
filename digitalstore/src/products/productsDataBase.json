@@ -168,25 +168,5 @@
         "descripcion": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Redragon H260 HYLAS no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.\r\n\r\nEl formato perfecto para vos\r\nAl ser headset podrás escuchar tu música preferida, mantener llamadas telefónicas y jugar en línea desde tu PC sin perderte ningún detalle.",
         "oferta": false,
         "descuento": 0
-    },
-    {
-        "id": 1674696468501,
-        "nombre": "",
-        "precio": 0,
-        "categoria": "Auriculares",
-        "img": "default-image.png",
-        "descripcion": "",
-        "oferta": false,
-        "descuento": 0
-    },
-    {
-        "id": 1674696496738,
-        "nombre": "",
-        "precio": 0,
-        "categoria": "Auriculares",
-        "img": "default-image.png",
-        "descripcion": "",
-        "oferta": false,
-        "descuento": 0
     }
 ]

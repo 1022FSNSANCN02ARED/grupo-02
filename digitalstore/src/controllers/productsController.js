@@ -11,6 +11,7 @@ module.exports={
     },
     listProducts: (req,res)=>{
         const allProducts= products.getProducts()
+        
         res.render("listProducts",{
             allProducts,
         })

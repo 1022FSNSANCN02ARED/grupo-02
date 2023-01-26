@@ -28,11 +28,10 @@ main h1{
     width: 200px;
 }*/
 .descuento_article{
-    color:var(--naranja)
+    color:var(--naranja);
+    text-decoration: none;
 }
-article h4{
-    display: none;
-}
+
 .border-radius-100:hover{
     border-radius: 50%;
     box-shadow: 0 0 7px rgba(122, 122, 122, 0.582);
