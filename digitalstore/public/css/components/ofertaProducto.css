@@ -1,0 +1,7 @@
+.font-black-center{
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

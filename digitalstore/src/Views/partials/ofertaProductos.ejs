@@ -1,7 +1,7 @@
 
 <% productsOfert.forEach(product => { %>
-    
-    <article class="item-producto" id="product-item">
+    <a href="/products/details/ <%= product.id %>" class="font-black-center">
+        <article class="item-producto" id="product-item">
         <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
         <div class="item-products-text">
             
@@ -28,6 +28,8 @@
             <h4><%= product.nombre %></h4>
         </div>
     </article>
+    </a>
+    
      
 <% }) %>
 
