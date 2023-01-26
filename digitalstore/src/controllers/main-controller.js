@@ -21,5 +21,11 @@ module.exports = {
     carrito: (req,res)=>{
         res.render("carrito")           
     },
+    oferta: (req,res)=>{
+        const productsOfert = products.getProductsOferta()
+        res.render("oferta",{
+            productsOfert
+        })           
+    },
 
 }
