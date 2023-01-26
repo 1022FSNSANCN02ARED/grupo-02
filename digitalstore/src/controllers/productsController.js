@@ -9,6 +9,7 @@ module.exports={
             producto
         })
     },
+    
     listProducts: (req,res)=>{
         const allProducts= products.getProducts()
         

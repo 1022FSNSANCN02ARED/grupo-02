@@ -107,15 +107,9 @@ textarea,
     }
 }
 
-<<<<<<< HEAD
-@media (min-width:1024px){
-    .price-form{
-        width:32%;
-=======
 @media (min-width:1024px) {
     .price-form {
         width: 32%;
->>>>>>> 117c65b686ef053a27df2bbd07c3c3076abaff02
     }
 
     .category-form {

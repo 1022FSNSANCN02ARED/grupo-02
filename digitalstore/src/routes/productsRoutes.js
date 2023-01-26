@@ -25,4 +25,5 @@ router.get("/", productsController.listProducts);
 router.get("/add", productsController.addProductsForm);
 router.post("/",upload.single("image"), productsController.addProducts);
 
+
 module.exports = router

@@ -40,5 +40,11 @@ module.exports = {
         const products = this.getProducts();
         const productsOfert = products.filter(oferta => oferta.oferta == true)
         return productsOfert;
+    },
+    getProductTeclado() {
+        const products = this.getProducts();
+        const productsTeclado = products.filter(categoria => categoria.categoria == "Teclados")
+        return productsTeclado;
     }
+    
 }
