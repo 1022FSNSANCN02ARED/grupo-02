@@ -28,11 +28,11 @@
                 <h3 style="text-align: center;width: 100%;">Filtrar productos</h3>
                 <i class="fa-solid fa-sort-down"></i>
             </div>
-            <form action="products/filter" id="categorias-form" enctype="application/x-www-form-urlencoded">
+            <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded" method="post">
                 <div class="ofert-container">
                     <p>Oferta<i class="fa-solid fa-tag"></i></p>
                     <label class="switch">
-                        <input type="checkbox" checked>
+                        <input type="checkbox" name="off" checked>
                         <span class="slider round"></span>
                     </label>
                     
@@ -40,13 +40,14 @@
                 <div class="filters">
                     <h3>Categorias</h3>
                     <div class="filters-container">
-                        <label><input type="checkbox" id="cbox1" value="cat1"> Auriculares</label>
-                        <label><input type="checkbox" id="cbox2" value="cat2"> Teclados</label>
-                        <label><input type="checkbox" id="cbox3" value="cat3"> Pantallas</label>
-                        <label><input type="checkbox" id="cbox4" value="cat4"> Gabinetes</label>
-                        <label><input type="checkbox" id="cbox5" value="cat5"> Memorias</label>
+                        <label><input type="checkbox" value="auriculares" name="auriculares"> Auriculares</label>
+                        <label><input type="checkbox"  value="teclados" name="teclados"> Teclados</label>
+                        <label><input type="checkbox" value="pantallas" name="pantallas"> Pantallas</label>
+                        <label><input type="checkbox" value="gabinetes" name="gabinetes"> Gabinetes</label>
+                        <label><input type="checkbox" value="memorias" name="memorias"> Memorias</label>
+                        <label><input type="checkbox" value="motherboard" name="motherboard"> Motherboard</label>
                     </div>
-                    <input type="submit" name="submit">
+                    <input type="submit">
                 </div>
             </form>
         </section>
