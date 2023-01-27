@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 15px;
-    row-gap: 200px;
+    row-gap: 50px;
     background-color: var(--gris-claro);
     
 }
