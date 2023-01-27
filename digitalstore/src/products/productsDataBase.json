@@ -198,5 +198,13 @@
         "descripcion": "",
         "oferta": false,
         "descuento": 0
+    },
+    {
+        "id": 1674764358783,
+        "precio": null,
+        "categoria": "Buenos Aires",
+        "img": "default-image.png",
+        "oferta": true,
+        "descuento": null
     }
 ]
