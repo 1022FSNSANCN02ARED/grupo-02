@@ -1,12 +1,17 @@
 <% allProducts.forEach(product=> { %>
-
-    <article class="item-producto product-article" id="product-item" >
-        <a href="/products/details/ <%= product.id %>" class="font-black-center">
-            <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
+    
+        <article class="item-producto product-article" id="product-item">
+            <a href="/products/details/ <%= product.id %>" class="font-black-center2">
+             <div class="div-imagen-producto">
+                <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
+            </div>
+            </a>
+           
+            <a href="/products/details/ <%= product.id %>" class="font-black-center2">
             <div class="item-products-text">
 
                 <% if (product.oferta) {%>
-                    <div style="display: flex;gap: 5px;"class="descuento">
+                    <div style="display: flex;gap: 5px;" class="descuento">
                         <p style="text-decoration: line-through;">
                             $<%= product.precio %>
                         </p>
@@ -30,8 +35,8 @@
                                 </h4>
             </div>
         </a>
-    </article>
-
+        </article>
+    
 
 
     <% }) %>

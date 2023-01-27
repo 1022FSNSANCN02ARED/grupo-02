@@ -5,6 +5,10 @@
 
 }
 
+.centrar-producto{
+    margin: auto;
+}
+
 .img-detail {
     width: 80%;
     display: flex;

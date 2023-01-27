@@ -1,16 +1,37 @@
-.font-black-center{
+.font-black-center {
     color: black;
-    text-align: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+.font-black-center2 {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
 }
 
-.product-articule{
+.product-articule {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.descuento{
+.descuento {
     justify-content: center;
+}
+
+.div-imagen-producto {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.imagen-producto {
+   
+   text-align: center;
+}
+
+.item-products-text {
+    height: 50%;
 }

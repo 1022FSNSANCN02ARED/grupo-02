@@ -1,7 +1,10 @@
 <% productTeclado.forEach(product => { %>
     
     <article class="item-producto" id="product-item">
-        <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10">
+        <div class="div-imagen-producto">
+           <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10"> 
+        </div>
+        
         <div class="item-products-text">
             
             <% if (product.oferta) {%>

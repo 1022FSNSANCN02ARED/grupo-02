@@ -69,7 +69,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: var(--blanco);
     height: 350px;
     transition: all .6s;
