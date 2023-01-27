@@ -56,7 +56,7 @@
                 </article>
                 <article class="categoria-main">
 
-                        <a href="/products">
+                        <a href="/teclados">
                             <div><img src="img\productos\teclado.png" class="wp-90 "></div>
                             <h3>Teclados</h3>
                         </a>
@@ -67,7 +67,9 @@
             <h2 class="categorias-index">Ofertas del mes ...</h2>
             <section class="section-card p-1 mx-auto flex flex-wrap gap justify-center">
 
-                <%- include ("partials/ofertaProductos.ejs") %> 
+                <% productsOfert.forEach(product => { %>
+                    <%- include("products/productCard",{product})  %> 
+                <% }) %>
                 
             </section>
 

@@ -9,11 +9,12 @@ module.exports={
             producto
         })
     },
+    
     listProducts: (req,res)=>{
-        const allProducts= products.getProducts()
+        const listProducts= products.getProducts()
         
         res.render("listProducts",{
-            allProducts,
+            listProducts,
         })
     },
     addProductsForm: (req,res)=>{
@@ -36,5 +37,8 @@ module.exports={
         
         products.saveProduct(product);
         res.redirect("/products");
+    },
+    filterProducts: (req,res) => {
+        res.send(req.body)
     }
 }
