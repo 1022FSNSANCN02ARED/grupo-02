@@ -45,22 +45,22 @@ module.exports = {
         const products = this.getProducts();
         const teclados = products.filter(producto => producto.categoria == "Teclados");
         const auriculares = products.filter(producto => producto.categoria == "Auriculares");
-        const pantallas = products.filter(producto => producto.categoria == "Monitores");
+        const monitores = products.filter(producto => producto.categoria == "Monitores");
         const gabinetes = products.filter(producto => producto.categoria == "Gabinetes");
         const memorias = products.filter(producto => producto.categoria == "Memorias");
         const motherboard = products.filter(producto => producto.categoria == "Motherboard");
 
         let listProducts=[];
         if(obj.hasOwnProperty('Teclados')){
-            return producto.categoria == "Teclados"
+            listProducts.push(teclados)
         }
         if(obj.hasOwnProperty('Monitores')){
-            return producto.categoria == "Teclados"
+            listProducts.push(monitores)
         }
         
 
         
-        return productsList;
+        return listProducts;
     }
     
 }
