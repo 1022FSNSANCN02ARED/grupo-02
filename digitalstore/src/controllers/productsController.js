@@ -41,16 +41,19 @@ module.exports={
 
         let listProducts;
         const filter = req.body;
-        if(filter.lenght!=0){
+        console.log(Object.entries(filter).length )
+        console.log(filter)
+        if(Object.entries(filter).length >0){
             listProducts= products.getProductsFilter(filter)
+            console.log("MOSTRANDO FILTRO")
         }
         else{
-            listProducts= products.getProducts()
+            listProducts= products.getProducts();
+            console.log("MOSTRANDO TDO")
         }
-        // res.render("listProducts",{
-        //     listProducts,
-        // }) 
-        res.send(listProducts);
+        res.render("listProducts",{
+            listProducts,
+        }) 
         
     }
 }
