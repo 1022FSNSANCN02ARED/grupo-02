@@ -48,6 +48,14 @@
     
 }
 
+.h50{
+    height: 50%;
+}
+.w100{
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (max-width:1024px) {
     .show{
@@ -75,6 +83,7 @@
     width: 80%;
     ;
 }
+
 .mx-auto {
     margin: 0 auto;
 }
