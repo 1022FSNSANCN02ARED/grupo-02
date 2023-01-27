@@ -19,7 +19,8 @@ const upload=multer({
     storage,
 })
 
-router.get("/details/:id", productsController.products);
+router.get("/:id", productsController.products);
+router.get("/filter", productsController.filterProducts);
 router.get("/", productsController.listProducts);
 
 router.get("/add", productsController.addProductsForm);

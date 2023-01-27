@@ -37,5 +37,8 @@ module.exports={
         
         products.saveProduct(product);
         res.redirect("/products");
+    },
+    filterProducts: (req,res) => {
+        res.send(req.body)
     }
 }

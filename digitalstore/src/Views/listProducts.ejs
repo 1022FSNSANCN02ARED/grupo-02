@@ -25,17 +25,29 @@
     <main class="main-listado">
         <section class="container-categories">
             <div class="desplegable">
-                <h3>Categorias</h3>
+                <h3 style="text-align: center;width: 100%;">Filtrar productos</h3>
                 <i class="fa-solid fa-sort-down"></i>
             </div>
-            <form action="/" id="categorias-form" class="">
-                <label><input type="checkbox" id="cbox1" value="cat1"> En descuento (15)</label>
-                <label><input type="checkbox" id="cbox2" value="cat1"> Auriculares (4)</label>
-                <label><input type="checkbox" id="cbox3" value="cat1"> Teclados (5)</label>
-                <label><input type="checkbox" id="cbox4" value="cat1"> Pantallas (1)</label>
-                <label><input type="checkbox" id="cbox5" value="cat1"> CPU (8)</label>
-                <label><input type="checkbox" id="cbox6" value="cat1"> Memorias (6)</label>
-                <input type="submit" value="Filtrar">
+            <form action="products/filter" id="categorias-form" enctype="application/x-www-form-urlencoded">
+                <div class="ofert-container">
+                    <p>Oferta<i class="fa-solid fa-tag"></i></p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    
+                </div>
+                <div class="filters">
+                    <h3>Categorias</h3>
+                    <div class="filters-container">
+                        <label><input type="checkbox" id="cbox1" value="cat1"> Auriculares</label>
+                        <label><input type="checkbox" id="cbox2" value="cat2"> Teclados</label>
+                        <label><input type="checkbox" id="cbox3" value="cat3"> Pantallas</label>
+                        <label><input type="checkbox" id="cbox4" value="cat4"> Gabinetes</label>
+                        <label><input type="checkbox" id="cbox5" value="cat5"> Memorias</label>
+                    </div>
+                    <input type="submit" name="submit">
+                </div>
             </form>
         </section>
         <section class="container-products">
