@@ -247,6 +247,16 @@ input:checked + .slider:before {
         padding-top: 20px;
     }
 
+    .h50img{
+
+        height: 50%;
+        text-align: center;
+    }
+    .h50img img{
+
+        margin: auto;
+    }
+
     .desplegable{
         background:none;
         cursor:auto;
