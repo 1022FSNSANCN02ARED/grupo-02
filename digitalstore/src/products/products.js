@@ -42,6 +42,9 @@ module.exports = {
         return productsOfert;
     },
     getProductsFilter(obj) {
+
+        console.log(obj)
+
         const products = this.getProducts();
         const teclados = products.filter(producto => producto.categoria == "Teclados");
         const auriculares = products.filter(producto => producto.categoria == "Auriculares");
@@ -51,16 +54,32 @@ module.exports = {
         const motherboard = products.filter(producto => producto.categoria == "Motherboard");
 
         let listProducts=[];
-        if(obj.hasOwnProperty('Teclados')){
-            listProducts.push(teclados)
+        if(obj.hasOwnProperty('teclados')){
+            listProducts=listProducts.concat(teclados)
         }
-        if(obj.hasOwnProperty('Monitores')){
-            listProducts.push(monitores)
+        if(obj.hasOwnProperty('monitores')){
+            listProducts=listProducts.concat(monitores)
         }
-        
-
-        
+        if(obj.hasOwnProperty('motherboard')){
+            listProducts=listProducts.concat(motherboard)
+        }
+        if(obj.hasOwnProperty('gabinetes')){
+            listProducts=listProducts.concat(gabinetes)
+        }
+        if(obj.hasOwnProperty('auriculares')){
+            listProducts=listProducts.concat(auriculares)
+        }
+        if(obj.hasOwnProperty('memorias')){
+            listProducts=listProducts.concat(memorias)
+        }
+        if(obj.hasOwnProperty('off')){
+            if(Object.entries(obj).length==1){
+                listProducts=products.filter(producto => producto.oferta == true);
+            }
+            else{
+                listProducts=listProducts.filter(producto => producto.oferta == true);
+            }
+        }
         return listProducts;
     }
-    
 }
