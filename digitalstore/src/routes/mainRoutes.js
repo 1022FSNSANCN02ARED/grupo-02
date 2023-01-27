@@ -9,6 +9,8 @@ router.get("/ayuda", mainController.ayuda);
 router.get("/contacto", mainController.contacto);
 router.get("/carrito", mainController.carrito);
 router.get("/oferta", mainController.oferta);
+router.get("/teclado", mainController.teclado);
+
 
 const productsRoutes = require('./productsRoutes');
 router.use("/products", productsRoutes);

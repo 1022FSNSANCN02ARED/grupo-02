@@ -28,5 +28,11 @@ module.exports = {
             productsOfert
         })           
     },
+    teclados: (req,res)=>{
+        const productsOfert = products.getProductsTeclados()
+        res.render("teclados",{
+            productsOfert
+        })           
+    },
 
 }
