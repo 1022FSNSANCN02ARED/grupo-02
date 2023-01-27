@@ -74,7 +74,7 @@
 }
 .slide-control:hover {
     background: rgba(0, 0, 0, 0.8);
-    color: #f09308;
+    color: var(--naranja) ;
     display: block;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .slide-circulo:hover {
-    color: #f18e0c;
+    color: var(--naranja);
 }
 
 #slide-1:checked ~ .control-1 ~ .slide-indicador 
@@ -120,5 +120,5 @@
                   li:nth-child(2) .slide-circulo,
 #slide-3:checked ~ .control-3 ~ .slide-indicador 
                   li:nth-child(3) .slide-circulo {
-                color: #e07a05;
+                color: var(--naranja);
 }
