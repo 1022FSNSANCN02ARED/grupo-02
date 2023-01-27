@@ -51,7 +51,9 @@
             </form>
         </section>
         <section class="container-products">
-            <%- include ("partials/allProducts.ejs") %> 
+            <% listProducts.forEach(product => { %>
+                <%- include ("products/productCard.ejs",{product}) %> 
+            <% }) %>
         </section>
     </main>
 

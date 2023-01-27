@@ -11,10 +11,10 @@ module.exports={
     },
     
     listProducts: (req,res)=>{
-        const allProducts= products.getProducts()
+        const listProducts= products.getProducts()
         
         res.render("listProducts",{
-            allProducts,
+            listProducts,
         })
     },
     addProductsForm: (req,res)=>{
