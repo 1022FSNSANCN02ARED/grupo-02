@@ -20,12 +20,13 @@ const upload=multer({
     storage,
 })
 
-router.get("/:id", productsController.products);
-router.get("/filter", productsController.filterProducts);
+router.get("/detail/:id", productsController.productDetail);
 router.get("/", productsController.listProducts);
 
 router.get("/add", productsController.addProductsForm);
-router.post("/",upload.single("image"), productsController.addProducts);
+router.post("/add",upload.single("image"), productsController.addProducts);
+
+router.post("/", productsController.filterProducts);
 
 
 module.exports = router

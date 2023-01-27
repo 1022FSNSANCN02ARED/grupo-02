@@ -1,7 +1,7 @@
 const products = require('../products/products');
 
 module.exports={
-    products: (req,res)=>{
+    productDetail: (req,res)=>{
         const id = req.params.id;
         const allProducts = products.getProducts();
         const producto = allProducts.find((obj) => obj.id==id)
@@ -12,7 +12,6 @@ module.exports={
     
     listProducts: (req,res)=>{
         const listProducts= products.getProducts()
-        
         res.render("listProducts",{
             listProducts,
         })
@@ -39,6 +38,19 @@ module.exports={
         res.redirect("/products");
     },
     filterProducts: (req,res) => {
-        res.send(req.body)
+
+        let listProducts;
+        const filter = req.body;
+        if(filter.lenght!=0){
+            listProducts= products.getProductsFilter(filter)
+        }
+        else{
+            listProducts= products.getProducts()
+        }
+        // res.render("listProducts",{
+        //     listProducts,
+        // }) 
+        res.send(listProducts);
+        
     }
 }
