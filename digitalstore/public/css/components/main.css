@@ -18,8 +18,8 @@ main h2{
     /*saco flex direction:flex-column xq tira los elementos al margen izaquierdo*/
 }
 
-.section-card article{
-    width: 80%;
+.section-card a{
+    width: 90%;
 }
 /*.articulo{
     height: 200px;
@@ -95,8 +95,8 @@ main h2{
     .section-card {
         flex-direction: row;
     }
-    .section-card article{
-        width: 250px;
+    .section-card a{
+        width: 270px;
         
     }
 }

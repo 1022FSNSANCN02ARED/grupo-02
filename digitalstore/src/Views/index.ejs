@@ -67,7 +67,9 @@
             <h2 class="categorias-index">Ofertas del mes ...</h2>
             <section class="section-card p-1 mx-auto flex flex-wrap gap justify-center">
 
-                <%- include ("partials/ofertaProductos.ejs") %> 
+                <% productsOfert.forEach(product => { %>
+                    <%- include("products/productCard",{product})  %> 
+                <% }) %>
                 
             </section>
 
