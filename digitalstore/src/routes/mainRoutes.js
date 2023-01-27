@@ -15,6 +15,6 @@ router.get("/teclados", mainController.teclados);
 const productsRoutes = require('./productsRoutes');
 router.use("/products", productsRoutes);
 //agregar la ruta hacia /users
-router.use("/users",usersRoutes)// marco que enrutador atendera /users
+//router.use("/users",usersRoutes)// marco que enrutador atendera /users>>EN DESARROLLO COMENTA PARA NO DAR ERRORES
 
 module.exports = router;
