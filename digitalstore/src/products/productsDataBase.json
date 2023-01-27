@@ -190,21 +190,25 @@
         "descuento": 0
     },
     {
-        "id": 1674744674240,
-        "nombre": "",
-        "precio": 0,
+        "id": 1674694480727,
+        "nombre": "Redragon H260 HYLAS H260W-RGB",
+        "precio": 8850,
         "categoria": "Auriculares",
-        "img": "default-image.png",
-        "descripcion": "",
+        "img": "image-1674694480722.jpg",
+        "descripcion": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Redragon H260 HYLAS no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.\r\n\r\nEl formato perfecto para vos\r\nAl ser headset podrás escuchar tu música preferida, mantener llamadas telefónicas y jugar en línea desde tu PC sin perderte ningún detalle.",
         "oferta": false,
         "descuento": 0
     },
     {
-        "id": 1674764358783,
-        "precio": null,
-        "categoria": "Buenos Aires",
-        "img": "default-image.png",
-        "oferta": true,
-        "descuento": null
+        "id": 1674694480728,
+        "nombre": "Redragon H260 HYLAS H260W-RGB",
+        "precio": 8850,
+        "categoria": "Auriculares",
+        "img": "image-1674694480722.jpg",
+        "descripcion": "¡Experimentá la adrenalina de sumergirte en la escena de otra manera! Tener auriculares específicos para jugar cambia completamente tu experiencia en cada partida. Con los Redragon H260 HYLAS no te perdés ningún detalle y escuchás el audio tal y como fue diseñado por los creadores.\r\n\r\nEl formato perfecto para vos\r\nAl ser headset podrás escuchar tu música preferida, mantener llamadas telefónicas y jugar en línea desde tu PC sin perderte ningún detalle.",
+        "oferta": false,
+        "descuento": 0
     }
+
+    
 ]

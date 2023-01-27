@@ -55,7 +55,7 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 15px;
-    row-gap: 20px;
+    row-gap: 200px;
     background-color: var(--gris-claro);
     
 }
@@ -224,8 +224,16 @@ input:checked + .slider:before {
         border: none;
     }
 
+    .container-products{
+        gap: 0%;
+        display: flex;
+        justify-content: space-around;
+        justify-content: flex-start;
+    }
+
     .item-producto-container{
-        width: 23.5%;
+        width: 23%;
+        margin: 8px;
     }
 
     .main-listado{
