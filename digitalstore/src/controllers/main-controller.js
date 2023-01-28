@@ -1,4 +1,5 @@
 const products = require('../products/products');
+
 module.exports = {
     index: (req,res) =>{
         const productsOfert = products.getProductsOferta()
@@ -23,9 +24,9 @@ module.exports = {
         res.render("carrito")           
     },
     oferta: (req,res)=>{
-        const productsOfert = products.getProductsOferta()
+        const ofertProducts = products.getProductsOferta();
         res.render("oferta",{
-            productsOfert
+            ofertProducts
         })           
     },
     teclados: (req,res)=>{

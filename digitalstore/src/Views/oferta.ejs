@@ -17,8 +17,9 @@
     <%- include("partials/header")%>
     
     <main class="section-card p-1 mx-auto flex flex-wrap gap justify-center center bg-grey">
-        <%- include ("partials/ofertaProductos.ejs") %> 
-      
+        <% ofertProducts.forEach(product => { %>
+            <%- include("products/productCard",{product})  %> 
+        <% }) %>
     </main>
 
     <%- include("partials/footer")%>
