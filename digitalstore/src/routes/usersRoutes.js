@@ -5,13 +5,9 @@ const usersController = require("../controllers/usersController");
 
 const path = require("path");
 
-const multer = require("multer");
-
-
-
-
-
-
 //ESPECIFICAR RUTAS>
+
+router.get("/add", usersController.addUsersForm);
+router.post("/add", usersController.addUsers);
 
 module.exports = router;
