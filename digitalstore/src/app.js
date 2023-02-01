@@ -1,7 +1,9 @@
 
 //EXPORTS
 const path = require('path');
+
 //INIT EXPRESS
+
 const express = require('express');
 const app = express();
 
@@ -25,9 +27,7 @@ app.use(express.static(path.join(__dirname,"../public")))
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
-
-
-//LISTEN 
+//LISTEN
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)
 })
