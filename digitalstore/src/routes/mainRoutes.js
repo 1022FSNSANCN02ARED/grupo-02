@@ -11,7 +11,6 @@ router.get("/ayuda", mainController.ayuda);
 router.get("/contacto", mainController.contacto);
 router.get("/carrito", mainController.carrito);
 router.get("/oferta", mainController.oferta);
-router.get("/teclados", mainController.teclados);
 
 
 const productsRoutes = require('./productsRoutes');
