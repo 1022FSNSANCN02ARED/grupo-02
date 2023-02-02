@@ -33,5 +33,5 @@ app.listen(PORT,()=> {
 })
 //ERROR404
 app.use((req,res,next)=>{
-    res.status(404).send('Lo siento, la pagina no existe')
+    res.status(404).render('error404')
 });
