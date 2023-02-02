@@ -1,40 +1,8 @@
+
 .body-error{
     text-align: center;
-    background-image: url(../../img/logoo.gif);
+    background-image: url('/img/error.jpg');
+    background-size: 100vw, 100vh;
 }
 
-.div-h1-error{
-    margin-top: 100px;
-background-color: orange;
-color: white;
 
-}
-.div-h1-error h1{
-    font-size: 60px;
-}
-.div-h2-error{
-background-color: orange;
-color: white;
-
-}
-.div-h2-error h2{
-font-size: 40px;
-}
-
-.volver-error{
-    background-color: black;
-    margin-top: 50px;
-}
-.volver-error h4{
-    font-size: 30px; 
-    background-color: aliceblue;
-    width: 50%;
-    margin: auto;
-    border-radius: 20px;
-    
-   
-}
-.volver-error h4 a{
-    
-    color: black;
-}
