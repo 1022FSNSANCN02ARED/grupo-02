@@ -1,8 +1,23 @@
 
 .body-error{
     text-align: center;
-    background-image: url('/img/error.jpg');
-    background-size: 100vw, 100vh;
+   background-color: rgb(255, 174, 0);
+}
+
+.h1-error{
+    margin-top: 30vh;
+    font-size: 500%;
+}
+.h1-error h1{
+    color: white;
+   
+}
+.h2-error{
+ 
+}
+.h2-error h2{
+    color: white;
+    font-size: xx-large;
 }
 
 
