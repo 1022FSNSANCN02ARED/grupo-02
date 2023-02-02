@@ -33,5 +33,5 @@ app.listen(PORT,()=> {
 })
 //ERROR404
 app.use((req,res,next)=>{
-    res.status(404).send(`<a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a><br><h4>Lo siento, la pagina no existe, <a href="/">Digital Store</a></h4>`)
+    res.status(404).render('error404')
 });

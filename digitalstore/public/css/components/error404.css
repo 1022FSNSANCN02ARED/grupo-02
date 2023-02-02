@@ -1,0 +1,22 @@
+.body-error{
+    text-align: center;
+    background-image: url(../../img/logoo.gif);
+}
+
+.div-h1-error{
+    margin-top: 100px;
+background-color: orange;
+color: white;
+
+}
+.div-h1-error h1{
+    font-size: 60px;
+}
+.div-h2-error{
+background-color: orange;
+color: white;
+
+}
+.div-h2-error h2{
+font-size: 40px;
+}
