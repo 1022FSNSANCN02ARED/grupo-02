@@ -31,5 +31,7 @@ app.set("views", path.join(__dirname, "./views"));
 app.listen(PORT,()=> {
     console.log("Server start on http://localhost:"+PORT)
 })
-
-
+//ERROR404
+app.use((req,res,next)=>{
+    res.status(404).send('Lo siento, la pagina no existe')
+});
