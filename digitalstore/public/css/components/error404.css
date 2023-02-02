@@ -20,3 +20,21 @@ color: white;
 .div-h2-error h2{
 font-size: 40px;
 }
+
+.volver-error{
+    background-color: black;
+    margin-top: 50px;
+}
+.volver-error h4{
+    font-size: 30px; 
+    background-color: aliceblue;
+    width: 50%;
+    margin: auto;
+    border-radius: 20px;
+    
+   
+}
+.volver-error h4 a{
+    
+    color: black;
+}
