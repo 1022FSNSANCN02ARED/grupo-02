@@ -40,3 +40,6 @@ module.exports = {
     fs.writeFileSync(usersFilePath, usersFileContent, "utf-8");
   },
 };
+
+
+console.log (module.exports.getUsers())

@@ -18,11 +18,11 @@ addUsersForm: (req,res)=>{
       };
 
       users.saveUser(user);
-    
-      res.redirect("/users");
-    },
+      console.log (user);
+      res.send("USUARIO REGISTRADO");
 
-      
+    },
+     
 
 //BUSCAR USUARIO
     /*products.search(product):(req,res)=>{

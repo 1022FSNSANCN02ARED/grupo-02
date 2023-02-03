@@ -58,12 +58,13 @@ main h2{
 
 }
 
-.categoria-main a{
+.categoria-main .contenedor-categoria{
     display: flex;
     flex-direction: column;
     text-align: center;
     color: var(--negro);
 }
+
 
 .categoria-main-container{
     padding-bottom: 50px;
@@ -71,7 +72,7 @@ main h2{
     margin: 30px 60px;
 }
 
-.categoria-main a div{  
+.categoria-main .contenedor-categoria div{  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,12 +81,25 @@ main h2{
     border-radius: 10%; 
     background-color: var(--blanco);
     margin-bottom: 20px;
+    position: relative;
     
 }
 .categoria-main a div:hover{  
    box-shadow: black 0 0 2px;
     transition: all .5s;
     
+}
+.categoria-main input{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    border: none;
+    background: none;
+}
+.contenedor-categoria img{
+    position: relative;
+ 
+    z-index: 0;
 }
 
 @media(min-width: 469px){
