@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DIGITAL STORE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="shortcut icon" href="/img/icon.png">
+    </head>
+<body>
+  <!-- LAUTARO Y PABLO -->
+  <%- include("partials/header")%>
+  <main class="main-form">
+
+    <form action="/products/add" method="post" class="form-add" enctype="multipart/form-data"">
+
+        <h2 class="form-title">Nuevo producto</h2>
+
+        <div class="item-content-form name-form">
+            <label for="nombre" class="label-form">Nombre del producto</label>
+            <input type="text" class="input-nombre" placeholder="Ingrese nombre del producto" name="nombre" id="nombre">
+        </div>
+
+        <div class="item-content-form price-form">
+            <label for="precio" class="label-form">Precio</label>
+            <input type="number" class="input-number" placeholder="Ingrese precio" name="precio" id="precio">
+        </div>
+
+        <div class="item-content-form price-form">
+            <label for="descuento" class="label-form">Descuento</label>
+            <input type="number" name="descuento" id="descuento" class="input-label" placeholder="Ej: 0%">
+        </div>
+
+        <div class="item-content-form category-form">
+            <label for="categoria" class="label-form">Categoria</label>
+            <select class="input-select" name="categoria" id="categoria"> 
+                <Option class="option-form" value="Auriculares"> Auriculares </Option>
+                <Option class="option-form" value="Teclados"> Teclados </Option>
+                <Option class="option-form" value="Pantallas"> Pantallas </Option>
+                <Option class="option-form" value="CPU"> CPU </Option>
+                <Option class="option-form" value="Memorias"> Memorias </Option>
+            </select>
+        </div>
+
+        <div class="item-content-form file-form">
+            <label for="image" class="label-form" >Imagen del producto</label>
+            <input type="file" class="input-file" name="image" id="image" accept="image/*">
+        </div>
+
+
+        <div class="item-content-form area-form">
+            <label for="descripcion" class="label-form" >Descripcion</label>
+            <textarea type="text" class="input-textarea" placeholder="Ingrese descripcion" name="descripcion" id="descripcion"></textarea>
+        </div>
+
+
+        <div class="item-content-form button-form-content">
+            <input type="submit" class="button-form">
+            <input type="reset" value="Limpiar datos" class="button-form">
+        </div>
+
+    </form>
+
+</main>
+
+  <!-- AXEL -->
+  <%- include("partials/footer")%>
+  <!-- SCRIPTS -->
+  <script src="/script/index.js"></script>
+  <script src="https://kit.fontawesome.com/1c41280639.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

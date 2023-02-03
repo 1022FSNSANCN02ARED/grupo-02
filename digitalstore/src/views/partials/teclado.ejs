@@ -1,0 +1,35 @@
+<% productTeclado.forEach(product => { %>
+    
+    <article class="item-producto" id="product-item">
+        <div class="div-imagen-producto">
+           <img src="img/productos/<%= product.img %> " class="wp-80 border-radius-10"> 
+        </div>
+        
+        <div class="item-products-text">
+            
+            <% if (product.oferta) {%>
+                <div style="display: flex;gap: 5px;">
+                    <p style="text-decoration: line-through;">
+                        $<%= product.precio %> 
+                    </p>
+                    <p class="descuento_article" style="text-decoration:none;">
+                        <%= product.descuento %>%OFF
+                    </p>
+                </div>
+                <p style="font-size: 20px; font-weight: bold;">
+                    $<%=product.precio - ((product.descuento / 100)* product.precio) %>
+                </p>
+            <% } %>
+
+            <% if (!product.oferta) {%>
+                <p style="font-size: 20px; font-weight: bold;">
+                    $<%= product.precio %>
+                </p>
+            <% } %>
+
+            <h4><%= product.nombre %></h4>
+        </div>
+    </article>
+     
+<% }) %>
+
