@@ -7,7 +7,7 @@ const path = require('path');
 
 
 const multer  = require('multer');
-const { getProductTeclado } = require("../products/products");
+const { getProductTeclado } = require("../data/products");
 
 const storage= multer.diskStorage({
     destination:path.join(__dirname,"../../public/img/productos"),

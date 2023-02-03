@@ -1,4 +1,4 @@
-const users = require('../users/users'); //requiero el array de usuarios parseado
+const users = require('../data/users'); //requiero el array de usuarios parseado
 module.exports={
 addUsersForm: (req,res)=>{
         res.render("register")
