@@ -1,3 +1,4 @@
+const { getUsers } = require('../data/users');
 const users = require('../data/users'); //requiero el array de usuarios parseado
 module.exports={
 addUsersForm: (req,res)=>{
@@ -22,7 +23,10 @@ addUsersForm: (req,res)=>{
       res.send("USUARIO REGISTRADO");
 
     },
-     
+    listUsers: (req,res)=>{
+      const allUsers = users.getUsers();
+      res.render("panelDeControl", {allUsers,});
+  }
 
 //BUSCAR USUARIO
     /*products.search(product):(req,res)=>{

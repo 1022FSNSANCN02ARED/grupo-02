@@ -28,5 +28,5 @@ module.exports = {
         res.render("oferta",{
             ofertProducts
         })           
-    }
+    },
 }
