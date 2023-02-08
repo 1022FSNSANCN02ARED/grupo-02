@@ -54,7 +54,7 @@
         "nombre": "Memoria Team DDR4 8GB 3200Mhz T-Force Night Hawk White RGB",
         "precio": 40100,
         "categoria": "Memorias",
-        "img":"memoria-team.jpg",
+        "img": "memoria-team.jpg",
         "descripcion": "Este es una memoria RAM marca Team",
         "oferta": false,
         "descuento": 0
@@ -209,6 +209,5 @@
         "oferta": false,
         "descuento": 0
     }
-
-    
+   
 ]
