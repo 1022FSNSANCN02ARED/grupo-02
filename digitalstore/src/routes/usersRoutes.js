@@ -10,4 +10,6 @@ const path = require("path");
 router.get("/add", usersController.addUsersForm);
 router.post("/add", usersController.addUsers);
 
+router.get("/panel", usersController.listUsers);
+
 module.exports = router;

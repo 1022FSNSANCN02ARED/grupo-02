@@ -12,7 +12,6 @@ router.get("/contacto", mainController.contacto);
 router.get("/carrito", mainController.carrito);
 router.get("/oferta", mainController.oferta);
 
-
 const productsRoutes = require('./productsRoutes');
 router.use("/products", productsRoutes);
 

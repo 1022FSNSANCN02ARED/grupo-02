@@ -1,0 +1,39 @@
+main{
+    
+    height: 100vh;
+}
+.user-card{
+    border: solid 2px black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 5px;
+    margin: 10px;
+    width: 80%;
+    align-items: center;
+    background-color: var(--gris);
+    
+}
+.user-card input{
+    width: 100%;
+    background-color: var(--naranja);
+    margin-top: 2px;
+    border: none;
+    border-radius: 3px;
+}
+.user-card p{
+    width: 100%;
+    font-size: 12px;
+}
+.user-contenedor{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media(min-width: 469px){
+    .user-card{
+        width: 20%;
+    }
+}
