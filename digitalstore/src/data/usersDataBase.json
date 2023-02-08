@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "nombre": "Gilda",
+        "last_name": "Daniellot",
+        "email": "gdaniellot0@businessinsider.com",
+        "usuario": "gdaniellot0",
+        "contraseña": "TUD9TvSkdN"
+    },
+    {
+        "id": 2,
+        "nombre": "Sibel",
+        "last_name": "Pinchos",
+        "email": "sskeeles1@blogspot.com",
+        "usuario": "sskeeles1",
+        "contraseña": "oiSErHsssT"
+    },
+    {
+        "id": 3,
+        "nombre": "Beatriz",
+        "last_name": "Boldison",
+        "email": "bboldison2@ifeng.com",
+        "usuario": "bboldison2",
+        "contraseña": "73XbLB0x"
+    },
+    {
+        "id": 4,
+        "nombre": "Chloette",
+        "last_name": "Schenfisch",
+        "email": "cschenfisch3@eepurl.com",
+        "usuario": "cschenfisch3",
+        "contraseña": "fcnm9jcauy0o"
+    },
+    {
+        "id": 5,
+        "nombre": "Saxe",
+        "last_name": "Frances",
+        "email": "sfrances4@cisco.com",
+        "usuario": "sfrances4",
+        "contraseña": "nzSj3jXbYzFP"
+
+    },
+    {
+        "id": 1675458092185,
+        "name": "Axel",
+        "last_name": "Riera",
+        "email": "axelriera@gmail.com",
+        "usuario": "",
+        "password": ""
+    },
+    {
+        "id": 1675689745740,
+        "name": "Melina",
+        "last_name": "Leonardi",
+        "email": "melina61285@gmail.com",
+        "usuario": "melinal",
+        "password": "12345"
+
+    }
+]

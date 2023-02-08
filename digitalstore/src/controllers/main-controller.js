@@ -1,4 +1,4 @@
-const products = require('../products/products');
+const products = require('../data/products');
 
 module.exports = {
     index: (req,res) =>{
@@ -28,5 +28,5 @@ module.exports = {
         res.render("oferta",{
             ofertProducts
         })           
-    }
+    },
 }

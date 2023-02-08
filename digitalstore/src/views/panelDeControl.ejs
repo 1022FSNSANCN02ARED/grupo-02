@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <main>  
+
+        <h1>USUARIOS</h1>
+
+
+        <div class="user-contenedor">
+            
+                <% allUsers.forEach(user => { %>
+                 <div class="user-card">
+                        <p class="usuario" >
+                        NOMBRE
+                        </p>
+                        <p class="usuario" >
+                            <%= user.nombre %>
+                        </p>
+                        <p class="usuario" >
+                            <%= user.last_name %>
+                        </p>
+                        <p class="usuario" >
+                            <%= user.email %>
+                        </p>
+                        <p class="usuario" >
+                            <%= user.usuario %>
+                        </p>
+                        <input type="submit" value="Editar">
+                        <input type="submit" value="Eliminar">
+                    </div>
+                    <p style="font-size: 20px; font-weight: bold;">
+            
+                    </p>
+                <% }) %>
+            
+        </div>
+
+
+
+    </main>
+    <%- include("partials/footer") %>
+</body>
+</html>
