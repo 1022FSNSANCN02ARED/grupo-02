@@ -4,6 +4,10 @@ header{
     width: 100%;
 }
 
+.header-partial{
+    background-color: white;
+}
+
 .nav-principal{
     width: 100%;
     background-color: var(--naranja);
