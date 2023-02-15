@@ -4,7 +4,6 @@
 <head>
 
     <%- include("partials/head") %>
-    
 </head>
 
 <body>
@@ -12,86 +11,99 @@
     <%- include("partials/header") %>
 
         <div class="banner-home">
-            <a href="https://api.whatsapp.com/send?phone=+5401164899142&text=Hola, Necesito mas información sobre la publicidad!">
-              <img src="/img/anuncios/anuncie-aqui1.webp" alt="imagen publicitaria" class="banner-home">  
+            <a
+                href="https://api.whatsapp.com/send?phone=+5401164899142&text=Hola, Necesito mas información sobre la publicidad!">
+                <img src="/img/anuncios/anuncie-aqui1.webp" alt="imagen publicitaria" class="banner-home">
             </a>
         </div>
         <!-- MELINA Y RUBEN -->
         <main class="p-1 mx-auto bg-grey ">
             <section>
-                <%- include("partials/carruselUno")%> 
+                <%- include("partials/carruselUno")%>
             </section>
 
             <section class="mx-auto  flex flex-wrap gap justify-sa categoria-main-container">
                 <!--Carrusel con imagenes en circulo-->
-             
-                    <article class="categoria-main">
-                        <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded" method="post">
+
+                <article class="categoria-main">
+                    <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded"
+                        method="post">
                         <div class="contenedor-categoria">
-                            <div><img src="img/productos/auriculares-redragon.jpg" class="wp-90 ">
-                                <input type="submit" value="" name="auriculares"></div>
+                            <div>
+                                <img src="img/productos/auriculares-redragon.jpg" class="wp-90 ">
+                                <input type="submit" value="" name="auriculares">
+                            </div>
 
                             <h3>Auriculares</h3>
-                            
-                        </div>
-                    </article>
-                    <article class="categoria-main">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/memoria-team.jpg" class="wp-90 ">
-                                <input type="submit" value="" name="memorias"></div>
 
-                            <h3>Memorias RAM</h3>
-                            
                         </div>
-                    
-                    </article>
-                    <article class="categoria-main ">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/motherasrock.jpg" class="wp-90 ">
-                                <input type="submit" value="" name="motherboard"></div>
+                </article>
+                <article class="categoria-main">
+                    <div class="contenedor-categoria">
+                        <div><img src="img/productos/memoria-team.jpg" class="wp-90 ">
+                            <input type="submit" value="" name="memorias">
+                        </div>
 
-                            <h3>Motherboard</h3>
-                            
-                        </div>
-                    
-                    </article>
-                    <article class="categoria-main">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/gabinete.png" class="wp-90 ">
-                                <input type="submit" value="" name="gabinetes"></div>
+                        <h3>Memorias RAM</h3>
 
-                            <h3>Gabinetes</h3>
-                            
-                        </div>
-                    </article>
-                    <article class="categoria-main">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/teclado.png" class="wp-90 ">
-                                <input type="submit" value="" name="teclados"></div>
+                    </div>
 
-                            <h3>Teclados</h3>
-                            
+                </article>
+                <article class="categoria-main ">
+                    <div class="contenedor-categoria">
+                        <div><img src="img/productos/motherasrock.jpg" class="wp-90 ">
+                            <input type="submit" value="" name="motherboard">
                         </div>
-                    </article>
+
+                        <h3>Motherboard</h3>
+
+                    </div>
+
+                </article>
+                <article class="categoria-main">
+                    <div class="contenedor-categoria">
+                        <div><img src="img/productos/gabinete.png" class="wp-90 ">
+                            <input type="submit" value="" name="gabinetes">
+                        </div>
+
+                        <h3>Gabinetes</h3>
+
+                    </div>
+                </article>
+                <article class="categoria-main">
+                    <div class="contenedor-categoria">
+                        <div><img src="img/productos/teclado.png" class="wp-90 ">
+                            <input type="submit" value="" name="teclados">
+                        </div>
+
+                        <h3>Teclados</h3>
+
+                    </div>
+                </article>
                 </form>
             </section>
+            <div class="div-categorias-index">
+                <h2 class="categorias-index">Ofertas</h2>
+            </div>
 
-            <h2 class="categorias-index">Ofertas del mes ...</h2>
             <section class="section-card p-1 mx-auto flex flex-wrap gap justify-center">
 
-                <% productsOfert.forEach(product => { %>
-                    <%- include("products/productCard",{product})  %> 
-                <% }) %>
-                
+                <% productsOfert.forEach(product=> { %>
+                    <%- include("products/productCard",{product}) %>
+                        <% }) %>
+
             </section>
 
         </main>
 
 
         <!-- AXEL -->
+
         <%- include("partials/footer") %>
 
-            
+
+
+
 </body>
 
 </html>

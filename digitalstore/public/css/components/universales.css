@@ -36,11 +36,17 @@
     text-decoration: none;
 }
 
+.div-categorias-index{
+    width: 100%;
+}
+
 
 .categorias-index{
     border-radius: 50px;
     font-size: 25px;
     color: var(--negro);
+    text-align: center;
+    margin: auto;
 }
 
 .border-index{
