@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--gris-claro);
+    height: 60vh;
 }
 
 .div-img{
@@ -28,7 +29,7 @@
     text-align: center;
     align-items: center;
     margin-top: 50px;
-    background-color: var(--naranja);
+    background-color: white;
     padding: 10px;
     margin: auto;
     margin-bottom: 20px;
@@ -36,6 +37,11 @@
     margin-top: 20px;
 
 }
+
+
+
+
+
 .form-login input{
    width: 60%;
    padding: 5px;
@@ -49,8 +55,8 @@
    padding: 5px;
    margin: 5px 0;
    border-radius: 5px;
-   background-color: var(--gris-claro) ;
-   border: none;
+   background-color:white;
+   
   
    
 }
@@ -71,6 +77,51 @@ width: 100%;
         background-color: var(--gris-claro);
     }
 }
+@media (min-width: 768px){
+    .label-login{
+    font-size: x-large;
+    }
+
+    .input-login{
+        font-size: large;
+      
+    }
+
+    .form-login {
+   
+        padding: 50px;
+        border-radius: 6px;
+      
+       
+        
+     }
+    .form-login input{
+   
+        padding: 5px;
+        margin: 5px 0;
+        border-radius: 5px ;
+        background-color:white;
+        border: 2px solid gray;
+        
+       
+        
+     }
+     .boton-enviar-login{
+        cursor: pointer;
+        
+     }
+     .boton-enviar-login:hover{
+        background-color: var(--naranja);
+        transition: 0.5s;
+     }
+
+     .registrate-login{
+        margin-top: 30px;
+     }
+}
+
+
+
 
 
 
