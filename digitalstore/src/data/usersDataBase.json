@@ -38,5 +38,13 @@
         "email": "sfrances4@cisco.com",
         "usuario": "sfrances4",
         "contraseña": "nzSj3jXbYzFP"
+    },
+    {
+        "id": 1675813317482,
+        "name": "Axel",
+        "last_name": "Riera",
+        "email": "axelriera@gmail.com",
+        "usuario": "trivaxel",
+        "password": "asd"
     }
 ]
