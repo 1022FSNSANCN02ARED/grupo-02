@@ -4,11 +4,9 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    
-   
 }
+
 .main-login{
-    
     display: flex;
     flex-direction: column;
     background-color: var(--gris-claro);
@@ -66,7 +64,13 @@ width: 100%;
 }
 
 
-
+@media (min-width: 480px){
+    .body-login{
+        height: 100vh;
+        position: relative;
+        background-color: var(--gris-claro);
+    }
+}
 
 
 

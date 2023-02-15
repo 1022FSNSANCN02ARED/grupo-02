@@ -8,6 +8,15 @@
   gap: 2%;
 }
 
+.footer-principal-corto{
+  background-color: var(--naranja);
+  padding: 30px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+
+}
+
 .caja-footer{
     width: 100%;
     padding: 10px 20px;
@@ -109,4 +118,8 @@ button:visited{
         flex-wrap: wrap;
         justify-content: center;
        }    
+       .footer-principal-corto{
+        position: absolute;
+        bottom: 0;
+       }
 }

@@ -38,7 +38,6 @@
         "email": "sfrances4@cisco.com",
         "usuario": "sfrances4",
         "contraseña": "nzSj3jXbYzFP"
-<<<<<<< HEAD
     },
     {
         "id": 1675813317482,
@@ -47,25 +46,13 @@
         "email": "axelriera@gmail.com",
         "usuario": "trivaxel",
         "password": "asd"
-=======
-
     },
     {
-        "id": 1675458092185,
+        "id": 1676469999317,
         "name": "Axel",
         "last_name": "Riera",
         "email": "axelriera@gmail.com",
-        "usuario": "",
-        "password": ""
-    },
-    {
-        "id": 1675689745740,
-        "name": "Melina",
-        "last_name": "Leonardi",
-        "email": "melina61285@gmail.com",
-        "usuario": "melinal",
-        "password": "12345"
-
->>>>>>> 4f7a81525cad8ab842d9a27cc99b2a6fd09b3042
+        "usuario": "USER",
+        "password": "PASS"
     }
 ]
