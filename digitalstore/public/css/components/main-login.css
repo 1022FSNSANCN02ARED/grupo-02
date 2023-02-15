@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--gris-claro);
-    height: 60vh;
+    
 }
 
 .div-img{
@@ -95,6 +95,12 @@ width: 100%;
        
         
      }
+     .main-login{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--gris-claro);
+        height: 60vh;
+    }
     .form-login input{
    
         padding: 5px;
@@ -112,7 +118,7 @@ width: 100%;
      }
      .boton-enviar-login:hover{
         background-color: var(--naranja);
-        transition: 0.5s;
+        transition: 0.3s;
      }
 
      .registrate-login{
