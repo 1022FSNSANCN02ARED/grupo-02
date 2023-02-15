@@ -119,7 +119,6 @@ button:visited{
         justify-content: center;
        }    
        .footer-principal-corto{
-        position: absolute;
-        bottom: 0;
+        position: relative;
        }
 }
