@@ -1,28 +1,27 @@
-
-
-.contenedor{
+.contenedor {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.main-login{
+.main-login {
     display: flex;
     flex-direction: column;
     background-color: var(--gris-claro);
-    
+
 }
 
-.div-img{
+.div-img {
     width: 100%;
     padding: 50px;
 }
-.img-logo{
+
+.img-logo {
     width: 100%;
 }
 
 
-.form-login{
+.form-login {
     display: flex;
     width: 80%;
     flex-direction: column;
@@ -42,99 +41,113 @@
 
 
 
-.form-login input{
-   width: 60%;
-   padding: 5px;
-   margin: 5px 0;
-  
-   
+.form-login input {
+    width: 60%;
+    padding: 5px;
+    margin: 5px 0;
+
+
 }
 
-.form-login input{
-   
-   padding: 5px;
-   margin: 5px 0;
-   border-radius: 5px;
-   background-color:white;
-   
-  
-   
+.form-login input {
+
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: white;
+
+
+
 }
 
-.w-60{
+.w-60 {
     width: 60%;
 }
-.w-100{
-width: 100%;
+
+.w-100 {
+    width: 100%;
 
 }
 
 
-@media (min-width: 480px){
-    .body-login{
+@media (min-width: 480px) {
+    .body-login {
         background-color: var(--gris-claro);
-    }
-}
-@media (min-width: 768px){
-    .label-login{
-    font-size: x-large;
-    font-weight: bold;
+
     }
 
-    .input-login{
+
+}
+
+@media (min-width: 768px) {
+    .label-login {
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .input-login {
         font-size: large;
-      
+
     }
 
     .form-login {
-   
         padding: 50px;
         border-radius: 6px;
-      
-       
-        
-     }
-     .main-login{
-        display: flex;
-        flex-direction: column;
+    }
+
+    .main-login {
         background-color: var(--gris-claro);
     }
-    .form-login input{
-   
+
+    .form-login input {
         padding: 5px;
         margin: 5px 0;
-        border-radius: 5px ;
-        background-color:white;
+        border-radius: 5px;
+        background-color: white;
         border: 2px solid gray;
-        
-       
-        
-     }
-     .boton-enviar-login{
+    }
+
+    .boton-enviar-login {
         cursor: pointer;
-        
-     }
-     .boton-enviar-login:hover{
+    }
+
+    .boton-enviar-login:hover {
         background-color: var(--naranja);
         transition: 0.3s;
-     }
+    }
 
-     .registrate-login{
+    .registrate-login {
         margin-top: 30px;
         color: black;
-     }
-     .rojo-login{
+    }
+
+    .rojo-login {
         color: red;
-     }
+    }
+
+    .footer-principal-corto{
+        position: relative;
+    }
 }
 
 
+@media (min-width: 1020px) {
+    .footer-principal-corto {
+
+        position: 100vh;
+        position: absolute;
+        bottom: 0;
 
 
+    }
+}
+@media (min-width: 1366px) {
+    .footer-principal-corto {
+
+        position: 100vh;
+        position: absolute;
+        bottom: 0;
 
 
-
-
-
-
-
+    }
+}
