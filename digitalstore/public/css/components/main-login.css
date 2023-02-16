@@ -132,19 +132,27 @@
 
 
 @media (min-width: 1020px) {
+    .footer-principal-corto {    
+        position: absolute;
+        bottom: -50px;
+        
+    }
+   
+}
+@media (min-width: 1366px) {
     .footer-principal-corto {
 
-        position: 100vh;
-        position: absolute;
+       
+        position: relative;
         bottom: 0;
 
 
     }
 }
-@media (min-width: 1366px) {
+@media (min-width: 1600px) {
     .footer-principal-corto {
 
-        position: 100vh;
+       
         position: absolute;
         bottom: 0;
 
