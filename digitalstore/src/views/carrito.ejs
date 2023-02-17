@@ -19,19 +19,10 @@
 
 
         <section class="section-carrito">
-
-            <article class=" p-1 contenedor-carrito">
-                <img src="img/productos/memoria-team.jpg" class="img-carrito">
-                <h4>Auriculares-Redragon</h4>
-                <p>$5999</p>
-                <div class="div-sumatoria">
-                    <input type="button" id="btnRestar" value="-1">
-                    <p id="msgContador">0</p>
-                    <input type="button" id="btnSumar" value="+1">
-
-                </div>
-            </article>
-
+            
+            <% carrito.forEach(product => { %>
+                <%- include('./products/productCarrito.ejs',{product}) %>
+            <% }) %>
            
             <article class=" p-1 contenedor-carrito">
                 <h3>Forma de pago</h3>

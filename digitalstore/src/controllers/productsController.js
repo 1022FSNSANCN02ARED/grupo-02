@@ -45,11 +45,9 @@ module.exports={
         console.log(filter)
         if(Object.entries(filter).length >0){
             listProducts= products.getProductsFilter(filter)
-            console.log("MOSTRANDO FILTRO")
         }
         else{
             listProducts= products.getProducts();
-            console.log("MOSTRANDO TDO")
         }
         res.render("listProducts",{
             listProducts,
