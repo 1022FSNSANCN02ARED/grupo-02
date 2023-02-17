@@ -3,8 +3,11 @@
     "start": "nodemon src/app.js"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
+    "express-session": "^1.17.3",
     "express-validator": "^6.14.3",
     "multer": "^1.4.5-lts.1"
   },

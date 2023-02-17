@@ -95,10 +95,10 @@ main h2{
     width: 90%;
     border: none;
     background: none;
+    cursor:pointer;
 }
 .contenedor-categoria img{
     position: relative;
- 
     z-index: 0;
 }
 
@@ -112,5 +112,17 @@ main h2{
     .section-card a{
         width: 270px;
         
+    }
+}
+.marquee{
+    color: var(--naranja);
+    animation: mar 10s ease-in-out 0s normal infinite none;
+    transition: 2.5s;
+    scroll-behavior: smooth;
+}
+@keyframes mar {
+    50%{
+        transform: translateX(100px);
+        color: var(--naranja-oscuro);
     }
 }
