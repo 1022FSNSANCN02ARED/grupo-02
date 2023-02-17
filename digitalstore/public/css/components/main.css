@@ -116,6 +116,7 @@ main h2{
 }
 .div-marquee{
     width: 90%;
+    margin: auto auto;
 }
 .marquee{
     color: var(--naranja);
