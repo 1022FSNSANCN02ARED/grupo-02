@@ -114,3 +114,22 @@ main h2{
         
     }
 }
+.div-marquee{
+    width: 90%;
+    margin: auto auto;
+}
+.marquee{
+    color: var(--naranja);
+    animation: mar 10s ease-in-out 0s normal infinite none;
+    transition: 2.5s;
+    scroll-behavior: smooth;
+}
+@keyframes mar {
+    50%{
+        transform: translateX(100px);
+        color: var(--naranja-oscuro);
+    }
+    80%{
+        color: white;
+    }
+}

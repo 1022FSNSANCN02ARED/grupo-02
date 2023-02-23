@@ -12,4 +12,5 @@ router.post("/add", usersController.addUsers);
 
 router.get("/panel", usersController.listUsers);
 
+router.get("/:id/carrito", usersController.userCarrito);
 module.exports = router;

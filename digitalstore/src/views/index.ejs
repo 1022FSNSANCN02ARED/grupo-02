@@ -19,10 +19,9 @@
 
             <section class="mx-auto  flex flex-wrap gap justify-sa categoria-main-container">
                 <!--Carrusel con imagenes en circulo-->
-
-                <article class="categoria-main">
-                    <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded"
-                        method="post">
+             
+                    <article class="categoria-main">
+                        <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded" method="post">
                         <div class="contenedor-categoria">
                             <div>
                                 <img src="img/productos/auriculares-redragon.jpg" class="wp-90 ">
@@ -39,27 +38,25 @@
                             <input type="submit" value="" name="memorias">
                         </div>
 
-                        <h3>Memorias RAM</h3>
-
-                    </div>
-
-                </article>
-                <article class="categoria-main ">
-                    <div class="contenedor-categoria">
-                        <div><img src="img/productos/motherasrock.jpg" class="wp-90 ">
-                            <input type="submit" value="" name="motherboard">
+                            <h3>Memorias RAM</h3>
+                            
                         </div>
+                    
+                    </article>
+                    <article class="categoria-main ">
+                        <div class="contenedor-categoria">
+                            <div><img src="img/productos/motherasrock.jpg" class="wp-90 ">
+                                <input type="submit" value="" name="motherboard"></div>
 
-                        <h3>Motherboard</h3>
-
-                    </div>
-
-                </article>
-                <article class="categoria-main">
-                    <div class="contenedor-categoria">
-                        <div><img src="img/productos/gabinete.png" class="wp-90 ">
-                            <input type="submit" value="" name="gabinetes">
+                            <h3>Motherboard</h3>
+                            
                         </div>
+                    
+                    </article>
+                    <article class="categoria-main">
+                        <div class="contenedor-categoria">
+                            <div><img src="img/productos/gabinete.png" class="wp-90 ">
+                                <input type="submit" value="" name="gabinetes"></div>
 
                         <h3>Gabinetes</h3>
 
@@ -88,7 +85,11 @@
                         <% }) %>
 
             </section>
-
+            <section>
+                <%- include("partials/marquesina")%>
+               
+            </section>
+           
         </main>
 
 
@@ -96,9 +97,7 @@
 
         <%- include("partials/footer") %>
 
-
-
-
+            
 </body>
 
 </html>

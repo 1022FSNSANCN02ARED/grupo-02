@@ -5,7 +5,8 @@
         "last_name": "Daniellot",
         "email": "gdaniellot0@businessinsider.com",
         "usuario": "gdaniellot0",
-        "contraseña": "TUD9TvSkdN"
+        "contraseña": "TUD9TvSkdN",
+        "saveCarrito":[]
     },
     {
         "id": 2,
@@ -13,7 +14,8 @@
         "last_name": "Pinchos",
         "email": "sskeeles1@blogspot.com",
         "usuario": "sskeeles1",
-        "contraseña": "oiSErHsssT"
+        "contraseña": "oiSErHsssT",
+        "saveCarrito":[]
     },
     {
         "id": 3,
@@ -21,7 +23,8 @@
         "last_name": "Boldison",
         "email": "bboldison2@ifeng.com",
         "usuario": "bboldison2",
-        "contraseña": "73XbLB0x"
+        "contraseña": "73XbLB0x",
+        "saveCarrito":[]
     },
     {
         "id": 4,
@@ -29,7 +32,8 @@
         "last_name": "Schenfisch",
         "email": "cschenfisch3@eepurl.com",
         "usuario": "cschenfisch3",
-        "contraseña": "fcnm9jcauy0o"
+        "contraseña": "fcnm9jcauy0o",
+        "saveCarrito":[]
     },
     {
         "id": 5,
@@ -37,7 +41,8 @@
         "last_name": "Frances",
         "email": "sfrances4@cisco.com",
         "usuario": "sfrances4",
-        "contraseña": "nzSj3jXbYzFP"
+        "contraseña": "nzSj3jXbYzFP",
+        "saveCarrito":[]
     },
     {
         "id": 1675813317482,
@@ -45,7 +50,8 @@
         "last_name": "Riera",
         "email": "axelriera@gmail.com",
         "usuario": "trivaxel",
-        "password": "asd"
+        "password": "asd",
+        "saveCarrito":[]
     },
     {
         "id": 1676469999317,
@@ -53,6 +59,7 @@
         "last_name": "Riera",
         "email": "axelriera@gmail.com",
         "usuario": "USER",
-        "password": "PASS"
+        "password": "PASS",
+        "saveCarrito":[]
     }
 ]
