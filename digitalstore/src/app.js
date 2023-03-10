@@ -1,4 +1,3 @@
-
 //EXPORTS
 const path = require('path');
 
@@ -14,11 +13,9 @@ const PORT=3000;
 app.use(express.urlencoded({ extended: true })); //sin esto express no detecta los <forms>
 app.use(express.json());
 
-
 //ROUTERS
 const mainRoutes = require("./routes/mainRoutes");
 app.use("/",mainRoutes);
-
 
 //CONFIG PUBLIC FOLDER
 app.use(express.static(path.join(__dirname,"../public")))
