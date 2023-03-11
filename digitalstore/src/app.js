@@ -11,7 +11,7 @@ const app = express();
 const PORT=3000;
 
 //MIDDLEWARES
-app.use(express.urlencoded({ extended: true })); //sin esto express no detecta los <forms>
+app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
 
 
