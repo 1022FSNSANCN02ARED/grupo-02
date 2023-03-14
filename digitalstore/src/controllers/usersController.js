@@ -26,14 +26,15 @@ module.exports = {
       };
 
             users.saveUser(user);
-            res.send("USUARIO REGISTRADO");
+            //res.send("USUARIO REGISTRADO");
+            res.redirect('/')
     }else{
      
       //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
         res.render("register", {
            errores: errores.mapped(),
            old:req.body
-           });
+        });
      
     }
 

@@ -1,17 +1,13 @@
-const{body} =require('express-validator');//requerimos validator
+//const{body} =require('express-validator');//requerimos validator
 const { Router } = require("express");
 const router = Router();
 const path = require ('path');
 
 const usersController = require("../controllers/usersController");
 const multer = require('multer');
-
+const validaciones = require("../middlewares/validator");
 const storage = multer.diskStorage({
 //limito la carga de la imagen de perfil solo a .jpeg y .png
-
-
-
-
     destination: path.join(__dirname,"../../public/img/usuarios"),
     
 
@@ -26,7 +22,7 @@ const upload = multer({
   storage,
 })
 
-
+/*
 const validaciones = [
   body("nombre")
     .notEmpty()
@@ -88,7 +84,7 @@ const validaciones = [
   })
 
 ]
-
+*/
 
 
 //ESPECIFICAR RUTAS>
