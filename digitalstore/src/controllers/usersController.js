@@ -22,11 +22,12 @@ module.exports = {
         email: req.body.email,
         usuario: req.body.usuario,
         password: req.body.contraseña,
-       
+        avatar: req.file ? req.file.filename : "usuario.png",
+        //no se porque no carga la imagen (filename)
       };
 
             users.saveUser(user);
-            //res.send("USUARIO REGISTRADO");
+            // res.send("USUARIO REGISTRADO");
             res.redirect('/')
     }else{
      

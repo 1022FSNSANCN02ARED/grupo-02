@@ -28,6 +28,7 @@ module.exports = {
         users[x].email = user.email;
         users[x].usuario = user.usuario;
         users[x].password = user.password;
+        
       }
     }
     const usersFileContent = JSON.stringify(users, null, 4);
