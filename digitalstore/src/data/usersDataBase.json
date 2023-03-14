@@ -138,19 +138,5 @@
         "last_name": "alber",
         "email": "alber@alber.com",
         "usuario": "alber"
-    },
-    {
-        "id": 1678807532302,
-        "name": "huan",
-        "last_name": "li",
-        "email": "li@li.com",
-        "usuario": "li"
-    },
-    {
-        "id": 1678810932641,
-        "name": "gustav",
-        "last_name": "klem",
-        "email": "klem@klem.is",
-        "usuario": "li"
     }
 ]

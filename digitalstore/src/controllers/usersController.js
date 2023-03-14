@@ -62,4 +62,18 @@ module.exports = {
       carrito,
     });
   },
+  deleteUser: (req, res) => {
+    const id = req.params.id;
+    const idNum= Number(id); 
+    const user = users.findByField("id", idNum);
+    res.render("userDelete", {user
+    }
+)},
+  destroyUser: (req, res) => {
+    const id = req.params.id;
+    const idNum= Number(id); 
+    users.deleteUser(idNum);
+    const allUsers = users.getUsers();
+    res.render("panelDeControl", {allUsers})
+   }
 };

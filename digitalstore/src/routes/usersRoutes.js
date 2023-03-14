@@ -96,4 +96,8 @@ router.post("/add", upload.single('imageuser'), validaciones,  usersController.a
 router.get("/panel", usersController.listUsers);
 
 router.get("/:id/carrito", usersController.userCarrito);
+
+router.get("/panel/:id", usersController.deleteUser);
+router.post("/panel/:id", usersController.destroyUser);
+
 module.exports = router;
