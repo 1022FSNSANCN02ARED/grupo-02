@@ -10,12 +10,6 @@ module.exports = {
         const products = JSON.parse(productsFileContent);
         return products
     },
-    saveProduct(product) {
-        const products = this.getProducts();
-        products.push(product);
-        const productsFileContent = JSON.stringify(products, null, 4);
-        fs.writeFileSync(productsFilePath, productsFileContent, "utf-8");
-    },
     updateProduct(product) {
         const products = this.getProducts();
         for (let x = 1; x < products.length; x++) {
