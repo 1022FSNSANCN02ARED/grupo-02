@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+   
 
 <head>
 
@@ -13,23 +14,62 @@
         <!-- LAUTARO Y PABLO -->
         <main class="main-login">
             <div class="contenedor">
+<!-- 1°PREGUNTO SI EN LAS VARIABLES QUE SE ENVIARON A LA VISTA (LOCALS), si EXISTE LA VARIABLE ERRORES -->
 
-
-            <form action="/users/add" class="form-login" method="post" >
+                        
+            <form action="/users/add" class="form-login" method= "post" enctype="multipart/form-data" >
 
                 <label for="" class="w-60">Nombre</label>
-                <input type="text" class="w-60" name="nombre" placeholder="Ingrese su nombre. Ej: Juan">
+                <input type="text" class="w-60" name="nombre" placeholder="Ingrese su nombre. Ej: Juan" value="<%= locals.old && old.nombre ? old.nombre : '' %>">
+
+                <% if (locals.errores && errores.nombre ) { %>
+                    <div class ='feedback is-danger'>
+                        <%= errores.nombre.msg %>
+                    </div>
+                <% } %>
+
                 <label for="" class="w-60">Apellido</label>
-                <input type="text" class="w-60" name="apellido" placeholder="Ingrese su apellido. Ej: Lopez">
+                <input type="text" class="w-60" name="apellido" placeholder="Ingrese su apellido. Ej: Lopez" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
+
+                <% if (locals.errores && errores.apellido ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.apellido.msg %>
+                    </div>
+                    <% } %>
+
+
                 <label for="" class="w-60">Usuario</label>
-                <input type="text" class="w-60" name="usuario" placeholder="Ingrese un nombre de usuario">
+                <input type="text" class="w-60" name="usuario" placeholder="Ingrese un nombre de usuario" value ="<%= locals.old && old.usuario ? old.usuario : '' %>">
+
+                <% if (locals.errores && errores.usuario ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.usuario.msg %>
+                    </div>
+                    <% } %>
+
+
                 <label for="" class="w-60">Contraseña</label>
                 <input type="password" class="w-60" name="contraseña" placeholder="Ingrese una contraseña">
-                <label for="" class="w-60">Confirmar contraseña</label>
-                <input type="password" class="w-60" placeholder="Confirme la contraseña ingresada anteriormente">
-                <label for="" class="w-60">Email</label>
-                <input type="email" class="w-60" name="email" placeholder="Ingrese su e-mail. Ej: usuario@usuario.com">
 
+                <label for="" class="w-60">Email</label>
+                <input type="email" class="w-60" name="email" placeholder="Ingrese su e-mail. Ej: usuario@usuario.com" value="<%= locals.old && old.email ? old.email : '' %>">
+
+                <% if (locals.errores && errores.email ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.email.msg %>
+                    </div>
+                    <% } %>
+
+
+                <label for="image" class="label-form">Imagen del perfil</label>
+                <input type="file" class="input-file" name="imageuser" id="imageuser" accept="image/*">
+
+                <% if (locals.errores && errores.imageuser) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.imageuser.msg %>
+                    </div>
+                    <% } %>
+               
                 <a href="" class="w-100"><input type="submit" class="boton-enviar"></a>
                 
                 <a href="" class="w-100"><input type="reset" value="Limpiar datos" class="boton-enviar"></a>
@@ -39,14 +79,7 @@
     </main>
 
     <!-- AXEL -->
-<<<<<<< HEAD
    <%- include("partials/footer")%>
-=======
-    <footer class="footer-login">
-        <%- include("partials/footerPaginaCorta")%>
-    </footer>
-   
->>>>>>> 6de73085a7b4d06db51410392f119684b42c67b8
    
 
 </body>

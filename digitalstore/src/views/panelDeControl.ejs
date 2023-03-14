@@ -5,7 +5,7 @@
 </head>
 <body>
     <%- include("partials/header") %>
-    <main>  
+    <main class="main-panel">  
 
         <h1>USUARIOS</h1>
 
@@ -14,9 +14,6 @@
             
                 <% allUsers.forEach(user => { %>
                  <div class="user-card">
-                        <p class="usuario" >
-                        NOMBRE
-                        </p>
                         <p class="usuario" >
                             <%= user.nombre %>
                         </p>

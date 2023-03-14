@@ -1,0 +1,141 @@
+MICRODESAFIO 1
+
+INSERT INTO genres (name, ranking, active) VALUES ("Investigacion", 13, 1);
+
+UPDATE genres SET name ="Investigación Cientifica" WHERE id = 19;
+
+DELETE FROM genres WHERE id = 19;
+
+SELECT * FROM movies;
+
+SELECT first_name, last_name, rating FROM actors;
+
+
+SELECT title AS "español" from series;
+
+-----------------------------------
+MICRODESAFIO2
+SELECT first_name, last_name FROM actors WHERE rating > 7.5;
+
+
+SELECT title, rating, awards FROM movies WHERE rating > 7.5 AND awards > 2;
+
+SELECT title, rating FROM movies ORDER BY rating ASC;
+------------------------------------
+ MICRODESAFIO3
+SELECT title FROM movies LIMIT 3;
+
+SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
+
+SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5 OFFSET 5;
+
+SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5 OFFSET 5;
+
+SELECT first_name, last_name from actors LIMIT 10;
+
+SELECT first_name, last_name from actors LIMIT 10 OFFSET 30;
+
+------------------------------------
+MICRODESAFIO4
+
+SELECT title, rating FROM movies WHERE title LIKE "Harry Potter%";
+
+SELECT first_name, last_name FROM actors WHERE first_name LIKE "Sam%";
+
+
+SELECT title, release_date FROM movies WHERE release_date BETWEEN "2004-01-01" AND "2008-12-31";
+--------------------------------------
+PLAYGROUND> ´practica de consultas
+SELECT titulo FROM albumes WHERE titulo = "Big Ones";
+SELECT titulo FROM albumes WHERE titulo = "Big Ones";
+SELECT * FROM `albumes`
+SELECT titulo FROM albumes;
+SELECT * FROM `albumes`
+SELECT * FROM `albumes` ORDER BY `albumes`.`id_artista` ASC
+SELECT titulo FROM albumes;
+SELECT * FROM albumes;
+SELECT titulo FROM albumes WHERE id = 5;
+SELECT * FROM `albumes`
+INSERT INTO albumes (titulo) VALUES ("Big One");
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+DELETE FROM albumes WHERE id = 0;
+SELECT * FROM `albumes`
+SELECT titulo FROM albumes WHERE id = 5;
+SELECT * FROM `albumes`
+SELECT titulo FROM albumes WHERE id = 5;
+SELECT titulo FROM albumes WHERE id=5;
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+SELECT * FROM `albumes`
+SELECT titulo FROM albumes;
+SELECT titulo from albumes WHERE id=5;
+SELECT * FROM `clientes`
+SELECT * FROM `clientes`
+SELECT primer_nombre, telefono from clientes;
+SELECT * FROM `clientes`
+select telefono from clientes where id =2;
+SELECT * FROM `clientes`
+select telefono from clientes where id =2;
+SELECT * FROM `actors`
+--------------
+
+SELECT * FROM `clientes`
+SELECT primer_nombre FROM clientes;
+SELECT * FROM `clientes`
+SELECT * FROM `clientes`
+SELECT primer_nombre FROM clientes WHERE pais = "USA";
+SELECT primer_nombre, pais FROM clientes WHERE pais ="USA";
+SELECT primer_nombre FROM clientes WHERE pais ="USA" AND primer_nombre = "Michelle";
+SELECT * FROM `canciones`
+SELECT nombre, milisegundos FROM canciones WHERE milisegundos >= 200000 AND <=300000
+SELECT nombre, milisegundos FROM canciones WHERE milisegundos >= 200000 AND milisegundos <=300000;
+SELECT nombre FROM canciones WHERE milisegundos >= 200000 AND milisegundos <=300000;
+SELECT * FROM `clientes`
+SELECT * FROM clientes WHERE pais = "Spain" OR pais = "Argentina";
+SELECT * FROM `generos`
+select nombre from generos ORDER by nombre asc;
+SELECT * FROM `clientes`
+select primer_nombre from clientes ORDER BY pais desc and ciudad
+select primer_nombre FROM clientes ORDER BY pais DESC AND ciudad
+SELECT primer_nombre FROM clientes ORDER BY pais DESC, ciudad;
+SELECT primer_nombre, pais, ciudad from clientes ORDER by pais DESC, ciudad;
+SELECT * FROM `generos`
+SELECT * FROM `generos`
+SELECT nombre FROM generos ORDER BY nombre;
+SELECT * FROM generos ORDER BY nombre;
+SELECT * FROM `generos`
+SELECT * FROM `generos`
+SELECT nombre FROM generos ORDER BY nombre;
+SELECT * FROM `clientes`
+SELECT primer_nombre FROM clientes WHERE pais ="USA";
+-----------------------------
+SELECT * FROM canciones ORDER BY milisegundos DESC LIMIT 3;
+SELECT * FROM `canciones`
+SELECT * FROM canciones ORDER BY nombre LIMIT 5 OFFSET 5;
+SELECT * FROM canciones ORDER BY nombre;
+SELECT * FROM canciones ORDER BY nombre;
+SELECT * FROM canciones ORDER BY nombre;
+SELECT * FROM canciones ORDER BY `canciones`.`nombre` DESC
+SELECT * FROM canciones ORDER BY `canciones`.`nombre` ASC
+SELECT * FROM canciones ORDER BY `canciones`.`nombre` DESC
+SELECT * FROM canciones ORDER BY `canciones`.`nombre` ASC
+SELECT * FROM canciones ORDER BY nombre ASC;
+SELECT * FROM canciones ORDER BY nombre LIMIT 5 OFFSET 5;
+SELECT nombre AS 'nombres_de_medios' FROM tipos_de_medio;
+---------------------------
+SELECT CONCAT ("La canción", nombre, "fue compuesta por", compositor)
+SELECT CONCAT ("La canción", nombre, "fue compuesta por", compositor) from canciones;
+SELECT CONCAT ("La canción", " ", nombre, " ", "fue compuesta por", " ", compositor) from canciones;
+SELECT CONCAT ("La canción", " ", nombre, " ", "fue compuesta por", " ", compositor) from canciones;
+SELECT * FROM `canciones`
+SELECT CONCAT ("La canción", " ", nombre, " ", "fue compuesta por", " ", compositor) from canciones;
+SELECT * FROM `facturas`
+SELECT * FROM facturas ORDER BY fecha_factura DESC WHERE id_cliente = 2
+SELECT * FROM facturas WHERE id_cliente = 2 ORDER BY fecha_factura DESC;
+SELECT * FROM facturas WHERE id_cliente = 2 ORDER BY DATE_FORMAT(fecha_factura DESC, '%m')
+Expandir Reconsultar Editar Explicar Perfilando Agregar a favoritos Base de datos : musimundos Fecha y hora la consulta : 17:2:24
+SELECT * FROM facturas WHERE id_cliente = 2 ORDER BY fecha_factura DESC;

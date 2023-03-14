@@ -1,4 +1,3 @@
-
 //EXPORTS
 const path = require('path');
 
@@ -6,19 +5,32 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
+//session-middlewares
+const session = require('express-session');
+const cookies = require('cookie-parser');
+//********************************//
+const userLogger = require("./middlewares/userLogger");
 
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+
+app.use(userLogger);
+//******************************** */
 //EXPRESS CONFIG
 const PORT=3000;
 
 //MIDDLEWARES
-app.use(express.urlencoded({ extended: true })); //sin esto express no detecta los <forms>
+app.use(express.urlencoded({ extended: false })); 
 app.use(express.json());
-
 
 //ROUTERS
 const mainRoutes = require("./routes/mainRoutes");
 app.use("/",mainRoutes);
-
 
 //CONFIG PUBLIC FOLDER
 app.use(express.static(path.join(__dirname,"../public")))

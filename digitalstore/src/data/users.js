@@ -39,6 +39,11 @@ module.exports = {
     const usersFileContent = JSON.stringify(newUsers, null, 4);
     fs.writeFileSync(usersFilePath, usersFileContent, "utf-8");
   },
+  findByField(field, text) {
+		let allUsers = this.getUsers();
+		let userFound = allUsers.find(oneUser => oneUser[field] === text);
+		return userFound;
+	},
 };
 
 

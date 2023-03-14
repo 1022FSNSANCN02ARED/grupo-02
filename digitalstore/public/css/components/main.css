@@ -114,6 +114,10 @@ main h2{
         
     }
 }
+.div-marquee{
+    width: 90%;
+    margin: auto auto;
+}
 .marquee{
     color: var(--naranja);
     animation: mar 10s ease-in-out 0s normal infinite none;
@@ -124,5 +128,8 @@ main h2{
     50%{
         transform: translateX(100px);
         color: var(--naranja-oscuro);
+    }
+    80%{
+        color: white;
     }
 }

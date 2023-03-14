@@ -1,0 +1,8 @@
+.feedback {
+        margin-top:.25 rem;
+        font-size: .9 rem;
+}
+
+.feedback.is-danger {
+    color: var(--danger-color);
+}
