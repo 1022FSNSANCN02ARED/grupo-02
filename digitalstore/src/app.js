@@ -5,7 +5,22 @@ const path = require('path');
 
 const express = require('express');
 const app = express();
+//session-middlewares
+const session = require('express-session');
+const cookies = require('cookie-parser');
+//********************************//
+const userLogger = require("./middlewares/userLogger");
 
+app.use(session({
+	secret: "Shhh, It's a secret",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+
+app.use(userLogger);
+//******************************** */
 //EXPRESS CONFIG
 const PORT=3000;
 
