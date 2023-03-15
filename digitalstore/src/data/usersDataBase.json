@@ -133,7 +133,31 @@
         "last_name": "kjhkjhkhj",
         "email": "mmm@gmail.com",
         "usuario": "jhkjhkhjv"
+    },
+    {
+        "id": 1678899578746,
+        "name": "gladys",
+        "last_name": "Alvarez",
+        "email": "irene@gmail.com",
+        "usuario": "gla",
+        "avatar": "image-1678899578731.jpeg"
+    },
+    {
+        "id": 1678901959743,
+        "name": "cristian",
+        "last_name": "ledesma",
+        "email": "morzaledesma@gmail.com",
+        "usuario": "morza",
+        "password": "12345",
+        "avatar": "image-1678901959715.jpeg"
+    },
+    {
+        "id": 1678902935580,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautaro@gmail.com",
+        "usuario": "lauti",
+        "password": "$2a$10$64iB/PPNDyjGHIRSxOef9ul3s4oHhbVlkaJOF.G9ISqOe2mCLqM5W",
+        "avatar": "image-1678902935536.jpeg"
     }
- 
-
 ]
