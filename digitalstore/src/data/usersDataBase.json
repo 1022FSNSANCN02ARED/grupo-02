@@ -92,5 +92,21 @@
         "email": "sergio_elpanzaledesma@gmail.com",
         "usuario": "panza",
         "avatar": "usuario.png"
+    },
+    {
+        "id": 1678882370691,
+        "name": "patricia",
+        "last_name": "gutierrez",
+        "email": "pato@hotmail.com",
+        "usuario": "pato",
+        "avatar": "image-1678882370666.jpeg"
+    },
+    {
+        "id": 1678884414219,
+        "name": "irene",
+        "last_name": "tissera",
+        "email": "irene@gmail.com",
+        "usuario": "hache",
+        "avatar": "image-1678884414181.jpeg"
     }
 ]

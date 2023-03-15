@@ -7,8 +7,11 @@ const usersController = require("../controllers/usersController");
 const multer = require('multer');
 const validaciones = require("../middlewares/validator");
 
+
 const storage = multer.diskStorage({
-//limito la carga de la imagen de perfil solo a .jpeg y .png
+
+
+
     destination: path.join(__dirname,"../../public/img/usuarios"),
     
 
