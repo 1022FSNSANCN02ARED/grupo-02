@@ -48,4 +48,4 @@ module.exports = {
 };
 
 
-console.log (module.exports.getUsers())
+console.log (module.exports.findByField("id", 5))

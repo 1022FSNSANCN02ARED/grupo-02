@@ -86,27 +86,69 @@
         "avatar": "image-1678824915774.jpeg"
     },
     {
+<<<<<<< HEAD
+        "id": 1678483544487,
+        "name": "Luciano",
+        "last_name": "Leonardi",
+        "email": "copete@ternium.com",
+        "usuario": "copete"
+    },
+    {
+        "id": 1678483974803,
+        "name": "Tomas",
+        "last_name": "Herrera",
+        "email": "tomasherrera@gmail.com",
+        "usuario": "naranja"
+    },
+    {
+        "id": 1678484092447,
+        "name": "pepito",
+        "last_name": "rodriguez",
+        "email": "pepitorodriguez@gmail.com",
+        "usuario": "pera"
+    },
+    {
+        "id": 1678484231980,
+        "name": "Susana",
+        "last_name": "Gimenez",
+        "email": "susana@hotmail.com",
+        "usuario": "holasusana"
+    },
+    {
+        "id": 1678485003776,
+        "name": "Carlos",
+        "last_name": "Ledesma",
+        "email": "carlosledesma_14@gmail.com",
+        "usuario": "carlitos"
+    },
+    {
+        "id": 1678492214752,
+        "name": "Ruben",
+        "last_name": "Romero",
+        "email": "pepitorodriguez@gmail.com",
+        "usuario": "ruben"
+    },
+    {
+        "id": 1678493462013,
+        "name": "jhvkjvk",
+        "last_name": "kjhkjhkhj",
+        "email": "mmm@gmail.com",
+        "usuario": "jhkjhkhjv"
+    },
+    {
+        "id": 1678807206010,
+        "name": "pedro",
+        "last_name": "alber",
+        "email": "alber@alber.com",
+        "usuario": "alber"
+=======
         "id": 1678825209239,
         "name": "sergio",
         "last_name": "ledesma",
         "email": "sergio_elpanzaledesma@gmail.com",
         "usuario": "panza",
         "avatar": "usuario.png"
-    },
-    {
-        "id": 1678882370691,
-        "name": "patricia",
-        "last_name": "gutierrez",
-        "email": "pato@hotmail.com",
-        "usuario": "pato",
-        "avatar": "image-1678882370666.jpeg"
-    },
-    {
-        "id": 1678884414219,
-        "name": "irene",
-        "last_name": "tissera",
-        "email": "irene@gmail.com",
-        "usuario": "hache",
-        "avatar": "image-1678884414181.jpeg"
+>>>>>>> c600a4dda7207f05b1c14b731627728b53c2c082
     }
+
 ]
