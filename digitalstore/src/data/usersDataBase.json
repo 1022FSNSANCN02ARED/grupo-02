@@ -63,25 +63,27 @@
         "saveCarrito": []
     },
     {
-        "id": 1678473786705,
+        "id": 1678824214456,
         "name": "Melina",
         "last_name": "Leonardi",
         "email": "melina61285@gmail.com",
         "usuario": "melinal"
     },
     {
-        "id": 1678474043319,
+        "id": 1678824540609,
         "name": "Tiziano",
         "last_name": "Ledesma",
         "email": "tiziano@gmail.com",
-        "usuario": "titi"
+        "usuario": "titi",
+        "avatar": "image-1678824540592.jpeg"
     },
     {
-        "id": 1678479755490,
+        "id": 1678824915794,
         "name": "Ignacio",
         "last_name": "Ledesma",
         "email": "nacholedesma@gmail.com",
-        "usuario": "Nacho"
+        "usuario": "nacho",
+        "avatar": "image-1678824915774.jpeg"
     },
     {
         "id": 1678483544487,
@@ -133,24 +135,29 @@
         "usuario": "jhkjhkhjv"
     },
     {
-        "id": 1678807206010,
-        "name": "pedro",
-        "last_name": "alber",
-        "email": "alber@alber.com",
-        "usuario": "alber"
+        "id": 1678899578746,
+        "name": "gladys",
+        "last_name": "Alvarez",
+        "email": "irene@gmail.com",
+        "usuario": "gla",
+        "avatar": "image-1678899578731.jpeg"
     },
     {
-        "id": 1678807532302,
-        "name": "huan",
-        "last_name": "li",
-        "email": "li@li.com",
-        "usuario": "li"
+        "id": 1678901959743,
+        "name": "cristian",
+        "last_name": "ledesma",
+        "email": "morzaledesma@gmail.com",
+        "usuario": "morza",
+        "password": "12345",
+        "avatar": "image-1678901959715.jpeg"
     },
     {
-        "id": 1678810932641,
-        "name": "gustav",
-        "last_name": "klem",
-        "email": "klem@klem.is",
-        "usuario": "li"
+        "id": 1678902935580,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautaro@gmail.com",
+        "usuario": "lauti",
+        "password": "$2a$10$64iB/PPNDyjGHIRSxOef9ul3s4oHhbVlkaJOF.G9ISqOe2mCLqM5W",
+        "avatar": "image-1678902935536.jpeg"
     }
 ]

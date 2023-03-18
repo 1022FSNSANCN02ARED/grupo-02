@@ -7,8 +7,11 @@ const usersController = require("../controllers/usersController");
 const multer = require('multer');
 const validaciones = require("../middlewares/validator");
 
+
 const storage = multer.diskStorage({
-//limito la carga de la imagen de perfil solo a .jpeg y .png
+
+
+
     destination: path.join(__dirname,"../../public/img/usuarios"),
     
 
@@ -96,4 +99,8 @@ router.post("/add", upload.single('avatar'), validaciones,  usersController.addU
 router.get("/panel", usersController.listUsers);
 
 router.get("/:id/carrito", usersController.userCarrito);
+
+router.get("/panel/:id", usersController.deleteUser);
+router.post("/panel/:id", usersController.destroyUser);
+
 module.exports = router;

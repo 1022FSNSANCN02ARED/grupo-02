@@ -38,11 +38,12 @@ const validaciones = [
   
       let file = req.file;
   
-      let acceptedExtensions = ['.jpg', '.png'];
+      let acceptedExtensions = ['.jpg', '.png', '.jpeg'];
   
       if (!file) {//cuando no el usuario no cargo la imagen de perfil
-  
-        throw new Error('Tienes que subir una imagen de perfil');
+        //no muestra error de validacion ya que estipula que si el usuario no cargo imagen de perfil se cargue la que esta por default(usuario.jpeg)
+        
+        // throw new Error('Tienes que subir una imagen de perfil');
       } else {//cuando el usuario si cargo la imagen de perfil
   
       let fileExtension = path.extname(file.originalname);
@@ -50,7 +51,9 @@ const validaciones = [
       if (!acceptedExtensions.includes(fileExtension)) {
               throw new Error(
                 "Los formatos de imagen permitidos son:  " + acceptedExtensions
-              );
+                          );
+
+                          
               
   
       }

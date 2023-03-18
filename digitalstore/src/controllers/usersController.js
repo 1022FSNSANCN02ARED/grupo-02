@@ -1,4 +1,5 @@
 const { validationResult } = require("express-validator"); //requerimos validator
+const bcryptjs = require ('bcryptjs');
 
 const { getUsers } = require("../data/users");
 const users = require("../data/users"); //requiero el array de usuarios parseado
@@ -14,6 +15,27 @@ module.exports = {
        //-----
     if(errores.isEmpty()){
            
+    //sino hay errores, pregunto si el email con el que intentan rehistrar existe en la db (validacion a mano). NO DEBE HABER DOS USUARIOS CON UN MISMO EMAIL
+
+    let userInDB = users.findByField('email',req.body.email);
+
+    if (userInDB) {
+        return res.render ('register', {
+          errores: {
+
+            email:{
+                 msg: 'Este mail ya esta registrado'
+            
+                }
+          },
+            
+          old:req.body
+  
+        });
+
+    }
+
+
       const user = {
         //si la variable esta vacia no hay errores por lo tanto crea el usuario
         id: Date.now(),
@@ -21,12 +43,13 @@ module.exports = {
         last_name: req.body.apellido,
         email: req.body.email,
         usuario: req.body.usuario,
-        password: req.body.contraseña,
+        password: bcryptjs.hashSync(req.body.password, 10),
+        avatar: req.file ? req.file.filename : "usuario.jpeg",
        
       };
 
             users.saveUser(user);
-            //res.send("USUARIO REGISTRADO");
+            // res.send("USUARIO REGISTRADO");
             res.redirect('/')
     }else{
      
@@ -62,4 +85,18 @@ module.exports = {
       carrito,
     });
   },
+  deleteUser: (req, res) => {
+    const id = req.params.id;
+    const idNum= Number(id); 
+    const user = users.findByField("id", idNum);
+    res.render("userDelete", {user
+    }
+)},
+  destroyUser: (req, res) => {
+    const id = req.params.id;
+    const idNum= Number(id); 
+    users.deleteUser(idNum);
+    const allUsers = users.getUsers();
+    res.render("panelDeControl", {allUsers})
+   }
 };
