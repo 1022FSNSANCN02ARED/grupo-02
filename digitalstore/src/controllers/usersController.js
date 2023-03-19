@@ -1,4 +1,5 @@
 const { validationResult } = require("express-validator"); //requerimos validator
+const bcryptjs = require ('bcryptjs');
 
 const { getUsers } = require("../data/users");
 const users = require("../data/users"); //requiero el array de usuarios parseado
@@ -10,10 +11,31 @@ module.exports = {
   },
 
   addUsers: (req, res) => {
-    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){
            
+    //sino hay errores, pregunto si el email con el que intentan rehistrar existe en la db (validacion a mano). NO DEBE HABER DOS USUARIOS CON UN MISMO EMAIL
+
+    let userInDB = users.findByField('email',req.body.email);
+
+    if (userInDB) {
+        return res.render ('register', {
+          errores: {
+
+            email:{
+                 msg: 'Este mail ya esta registrado'
+            
+                }
+          },
+            
+          old:req.body
+  
+        });
+
+    }
+
+
       const user = {
         //si la variable esta vacia no hay errores por lo tanto crea el usuario
         id: Date.now(),
@@ -21,14 +43,14 @@ module.exports = {
         last_name: req.body.apellido,
         email: req.body.email,
         usuario: req.body.usuario,
-        password: req.body.contraseña,
-        avatar: req.file ? req.file.filename : "usuario.png",
-        //no se porque no carga la imagen (filename)
+        password: bcryptjs.hashSync(req.body.password, 10),
+        avatar: req.file ? req.file.filename : "usuario.jpeg",
+       
       };
 
             users.saveUser(user);
             // res.send("USUARIO REGISTRADO");
-            res.redirect('/')
+            res.redirect('/login')
     }else{
      
       //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
@@ -38,6 +60,9 @@ module.exports = {
         });
      
     }
+
+   
+
 
  
   },
@@ -76,5 +101,60 @@ module.exports = {
     users.deleteUser(idNum);
     const allUsers = users.getUsers();
     res.render("panelDeControl", {allUsers})
+   },
+
+   login: (req, res) => { 
+    console.log (req.session)
+      return  res.render('login');
+   },
+
+   loginProcess: (req, res) => {
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
+       //-----
+    if(errores.isEmpty()){
+      // si errores esta vacio
+      //si los campos del form fueron completados, busco en los modelos  de DB el email que se ingreso en el body del request (form)
+      let userToLogin = users.findByField("email", req.body.emailLogin);
+      // res.send (userToLogin)
+      if (userToLogin){// si el usuario buscado existe en la DB
+      // res.send (userToLogin)
+          let isOkThePassword =bcryptjs.compareSync(req.body.passwordLogin, userToLogin.password); //comparo si la contraseña ingresada en el req.body de password es ugual a la que se encontro en la DB >> ME DEVUELVE TRUE O FALSE
+
+          if (isOkThePassword){
+            // return res.send ('OK, puedes ingresar')
+            //redirijo al panel de control del usuario logueado
+            return res.render ('profile')
+          }
+            return res.render("login", {
+              errores: {
+                passwordLogin: {
+                  msg: "La contraseña es incorrecta",
+                },
+              },
+            });
+
+      }
+      //SI NO EXISTE MUESTRO UN MENS EN EL RESPONSE (se valida manualmente )Y REDIRIJO AL LOGIN
+
+            return res.render('login', {
+              errores: {
+                  emailLogin: {
+                    msg: 'No se encuentra este email en nuestra base de datos',
+                       old: req.body,
+                  }
+              }
+            });
+
+
+    } else {
+          res.render("login", {
+          errores: errores.mapped(),
+          old: req.body,
+    });
+
    }
-};
+
+
+
+}
+}

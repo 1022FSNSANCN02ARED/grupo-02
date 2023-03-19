@@ -140,5 +140,58 @@
         "last_name": "alber",
         "email": "alber@alber.com",
         "usuario": "alber"
+},
+    {
+        "id": 1678899578746,
+        "name": "gladys",
+        "last_name": "Alvarez",
+        "email": "irene@gmail.com",
+        "usuario": "gla",
+        "avatar": "image-1678899578731.jpeg"
+    },
+    {
+        "id": 1678901959743,
+        "name": "cristian",
+        "last_name": "ledesma",
+        "email": "morzaledesma@gmail.com",
+        "usuario": "morza",
+        "password": "12345",
+        "avatar": "image-1678901959715.jpeg"
+    },
+    {
+        "id": 1678902935580,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautaro@gmail.com",
+        "usuario": "lauti",
+        "password": "$2a$10$64iB/PPNDyjGHIRSxOef9ul3s4oHhbVlkaJOF.G9ISqOe2mCLqM5W",
+        "avatar": "image-1678902935536.jpeg"
+    },
+    {
+        "id": 1678908574337,
+        "name": "lucas",
+        "last_name": "salvatierra",
+        "email": "lucas@gmail.com",
+        "usuario": "lucas",
+        "password": "$2a$10$MvWKNKKnTP16huJjW3PbJuzVDEFPKWYmORY5pXdKRhwcJ4SGJpUwe",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1678908713561,
+        "name": "ezequiel",
+        "last_name": "ledesma",
+        "email": "ezequiel@gmail.com",
+        "usuario": "papa",
+        "password": "$2a$10$t1DSGWHgIjR0BP6MeRQLDu3Wn/A8C6IcI9SRXyAN2JsPOV2VbRfom",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679254417314,
+        "name": "ana",
+        "last_name": "avalos",
+        "email": "ana@gmail.com",
+        "usuario": "ana",
+        "password": "$2a$10$3XosRhxtHJ4d1406VZjcJuAcx4K2ckiPDaIGHbDRc72W/ieLmQK.O",
+        "avatar": "usuario.jpeg"
     }
 ]
