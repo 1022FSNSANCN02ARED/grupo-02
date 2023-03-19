@@ -86,7 +86,6 @@
         "avatar": "image-1678824915774.jpeg"
     },
     {
-<<<<<<< HEAD
         "id": 1678483544487,
         "name": "Luciano",
         "last_name": "Leonardi",
@@ -141,13 +140,5 @@
         "last_name": "alber",
         "email": "alber@alber.com",
         "usuario": "alber"
-=======
-        "id": 1678825209239,
-        "name": "sergio",
-        "last_name": "ledesma",
-        "email": "sergio_elpanzaledesma@gmail.com",
-        "usuario": "panza",
-        "avatar": "usuario.png"
->>>>>>> c600a4dda7207f05b1c14b731627728b53c2c082
     }
 ]
