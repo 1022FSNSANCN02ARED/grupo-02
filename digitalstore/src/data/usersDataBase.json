@@ -159,5 +159,23 @@
         "usuario": "lauti",
         "password": "$2a$10$64iB/PPNDyjGHIRSxOef9ul3s4oHhbVlkaJOF.G9ISqOe2mCLqM5W",
         "avatar": "image-1678902935536.jpeg"
+    },
+    {
+        "id": 1678908574337,
+        "name": "lucas",
+        "last_name": "salvatierra",
+        "email": "lucas@gmail.com",
+        "usuario": "lucas",
+        "password": "$2a$10$MvWKNKKnTP16huJjW3PbJuzVDEFPKWYmORY5pXdKRhwcJ4SGJpUwe",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1678908713561,
+        "name": "ezequiel",
+        "last_name": "ledesma",
+        "email": "ezequiel@gmail.com",
+        "usuario": "papa",
+        "password": "$2a$10$t1DSGWHgIjR0BP6MeRQLDu3Wn/A8C6IcI9SRXyAN2JsPOV2VbRfom",
+        "avatar": "usuario.jpeg"
     }
 ]

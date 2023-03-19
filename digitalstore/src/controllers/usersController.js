@@ -11,7 +11,7 @@ module.exports = {
   },
 
   addUsers: (req, res) => {
-    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){
            
@@ -50,7 +50,7 @@ module.exports = {
 
             users.saveUser(user);
             // res.send("USUARIO REGISTRADO");
-            res.redirect('/')
+            res.redirect('/login')
     }else{
      
       //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
@@ -60,6 +60,9 @@ module.exports = {
         });
      
     }
+
+   
+
 
  
   },
@@ -98,5 +101,26 @@ module.exports = {
     users.deleteUser(idNum);
     const allUsers = users.getUsers();
     res.render("panelDeControl", {allUsers})
+   },
+
+   login: (req, res) => { 
+      return  res.render('login');
+   },
+
+   loginProcess: (req, res) => {
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
+       //-----
+    if(errores.isEmpty()){ // si errores esta vacio
+      res.send ('se hace el logueo del usuario')
+    }else{
+          res.render("login", {
+          errores: errores.mapped(),
+          old: req.body,
+    });
+
    }
-};
+
+
+
+}
+}

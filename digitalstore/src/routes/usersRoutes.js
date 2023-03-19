@@ -2,6 +2,7 @@
 const { Router } = require("express");
 const router = Router();
 const path = require ('path');
+const { body } = require("express-validator");
 
 const usersController = require("../controllers/usersController");
 const multer = require('multer');
@@ -26,33 +27,10 @@ const upload = multer({
   storage,
 })
 
-/*
-const validaciones = [
-  body("nombre")
-    .notEmpty()
-    .withMessage("El nombre no puede estar vacio")
-    .bail()
+//evaluaciones en el login
 
-    .isAlpha() //que solo sean caracteres alfabeticos
-    .withMessage("El nombre solo acepta caracteres alfabeticos"),
-
-  body("apellido")
-    .notEmpty()
-    .withMessage("El apellido no puede estar vacio")
-    .bail()
-
-    .isAlpha() //que solo sean caracteres alfabeticos
-    .withMessage("El apellido solo acepta caracteres alfabeticos"),
-
-  body("usuario")
-    .notEmpty()
-    .withMessage("El usuario no puede estar vacio")
-    .bail()
-
-    .isAlphanumeric()
-    .withMessage("El usuario debe contener caracteres alfanumericos"),
-
-  body("email")
+const validacionesLogin = [
+    body("emailLogin")
     .notEmpty()
     .withMessage("El mail no puede estar vacio")
     .bail()
@@ -60,41 +38,26 @@ const validaciones = [
     .isEmail()
     .withMessage("Formato de Email invalido"),
 
-  body("imageuser").custom((value, { req }) => {
+  body("passwordLogin")
+    .notEmpty()
+    .withMessage("La contraseña no puede estar vacio"),
 
-    let file = req.file;
-
-    let acceptedExtensions = ['.jpg', '.png'];
-
-    if (!file) {//cuando no el usuario no cargo la imagen de perfil
-
-      throw new Error('Tienes que subir una imagen de perfil');
-    } else {//cuando el usuario si cargo la imagen de perfil
-
-    let fileExtension = path.extname(file.originalname);
-    console.log(fileExtension);
-    if (!acceptedExtensions.includes(fileExtension)) {
-            throw new Error(
-              "Los formatos de imagen permitidos son:  " + acceptedExtensions
-            );
-            
-
-    }
-
-    }
-
-    return true;
-
-  })
+ 
 
 ]
-*/
 
+module.exports =validacionesLogin;
 
 //ESPECIFICAR RUTAS>
 
 router.get("/add", usersController.addUsersForm); //ruta del formulario para crear  ussuario
 router.post("/add", upload.single('imageuser'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
+
+//formulario de login
+router.get ('/login', usersController.login);
+
+//procesamiento de login
+router.post ('/login', validacionesLogin, usersController.loginProcess);
 
 router.get("/panel", usersController.listUsers);
 
@@ -102,5 +65,7 @@ router.get("/:id/carrito", usersController.userCarrito);
 
 router.get("/panel/:id", usersController.deleteUser);
 router.post("/panel/:id", usersController.destroyUser);
+
+
 
 module.exports = router;
