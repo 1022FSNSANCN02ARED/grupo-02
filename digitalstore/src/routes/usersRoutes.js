@@ -51,7 +51,7 @@ module.exports =validacionesLogin;
 //ESPECIFICAR RUTAS>
 
 router.get("/add", usersController.addUsersForm); //ruta del formulario para crear  ussuario
-router.post("/add", upload.single('imageuser'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
+router.post("/add", upload.single('avatar'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
 
 //formulario de login
 router.get ('/login', usersController.login);
