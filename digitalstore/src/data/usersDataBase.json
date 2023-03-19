@@ -177,5 +177,14 @@
         "usuario": "papa",
         "password": "$2a$10$t1DSGWHgIjR0BP6MeRQLDu3Wn/A8C6IcI9SRXyAN2JsPOV2VbRfom",
         "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679254417314,
+        "name": "ana",
+        "last_name": "avalos",
+        "email": "ana@gmail.com",
+        "usuario": "ana",
+        "password": "$2a$10$3XosRhxtHJ4d1406VZjcJuAcx4K2ckiPDaIGHbDRc72W/ieLmQK.O",
+        "avatar": "usuario.jpeg"
     }
 ]
