@@ -93,8 +93,9 @@ module.exports = {
     const idNum= Number(id); 
     const user = users.findByField("id", idNum);
     res.render("userDelete", {user
-    }
-)},
+      }
+    )
+  },
   destroyUser: (req, res) => {
     const id = req.params.id;
     const idNum= Number(id); 
@@ -104,9 +105,9 @@ module.exports = {
    },
 
    login: (req, res) => { 
-    console.log (req.session)
+      console.log (req.session)
       return  res.render('login');
-   },
+    },
 
    loginProcess: (req, res) => {
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)

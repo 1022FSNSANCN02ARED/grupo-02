@@ -7,15 +7,12 @@ const { body } = require("express-validator");
 const usersController = require("../controllers/usersController");
 const multer = require('multer');
 const validaciones = require("../middlewares/validator");
-
+const validacionesLogin = require("../middlewares/validatorLogin");
 
 const storage = multer.diskStorage({
 
-
-
     destination: path.join(__dirname,"../../public/img/usuarios"),
     
-
     filename:(req, file, cb) => {
       cb(null, "image-" + Date.now() + path.extname(file.originalname));
      
@@ -28,7 +25,7 @@ const upload = multer({
 })
 
 //evaluaciones en el login
-
+/*
 const validacionesLogin = [
     body("emailLogin")
     .notEmpty()
@@ -47,7 +44,7 @@ const validacionesLogin = [
 ]
 
 module.exports =validacionesLogin;
-
+*/
 //ESPECIFICAR RUTAS>
 
 router.get("/add", usersController.addUsersForm); //ruta del formulario para crear  ussuario
@@ -65,7 +62,5 @@ router.get("/:id/carrito", usersController.userCarrito);
 
 router.get("/panel/:id", usersController.deleteUser);
 router.post("/panel/:id", usersController.destroyUser);
-
-
 
 module.exports = router;
