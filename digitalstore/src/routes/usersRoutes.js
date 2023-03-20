@@ -1,12 +1,12 @@
-//const{body} =require('express-validator');//requerimos validator
 const { Router } = require("express");
 const router = Router();
 const path = require ('path');
-const { body } = require("express-validator");
-
+//requerimos los metodos del controlador usuario.
 const usersController = require("../controllers/usersController");
 const multer = require('multer');
+//validacion de formulario-usuario
 const validaciones = require("../middlewares/validator");
+//evaluaciones en el login
 const validacionesLogin = require("../middlewares/validatorLogin");
 
 const storage = multer.diskStorage({
@@ -24,27 +24,6 @@ const upload = multer({
   storage,
 })
 
-//evaluaciones en el login
-/*
-const validacionesLogin = [
-    body("emailLogin")
-    .notEmpty()
-    .withMessage("El mail no puede estar vacio")
-    .bail()
-
-    .isEmail()
-    .withMessage("Formato de Email invalido"),
-
-  body("passwordLogin")
-    .notEmpty()
-    .withMessage("La contraseña no puede estar vacio"),
-
- 
-
-]
-
-module.exports =validacionesLogin;
-*/
 //ESPECIFICAR RUTAS>
 
 router.get("/add", usersController.addUsersForm); //ruta del formulario para crear  ussuario
