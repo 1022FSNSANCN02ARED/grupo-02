@@ -140,7 +140,7 @@
         "last_name": "alber",
         "email": "alber@alber.com",
         "usuario": "alber"
-},
+    },
     {
         "id": 1678899578746,
         "name": "gladys",
@@ -192,6 +192,15 @@
         "email": "ana@gmail.com",
         "usuario": "ana",
         "password": "$2a$10$3XosRhxtHJ4d1406VZjcJuAcx4K2ckiPDaIGHbDRc72W/ieLmQK.O",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679437339742,
+        "name": "urs",
+        "last_name": "rre",
+        "email": "usur@usur.com",
+        "usuario": "urs",
+        "password": "$2a$10$WUgbY8A.8tV37qqi6HpFWux6UOofEY0RdLLpFDs.9Y/pshHo9hVZ2",
         "avatar": "usuario.jpeg"
     }
 ]

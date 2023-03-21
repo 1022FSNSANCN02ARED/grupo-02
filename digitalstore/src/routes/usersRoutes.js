@@ -8,7 +8,8 @@ const multer = require('multer');
 const validaciones = require("../middlewares/validator");
 //evaluaciones en el login
 const validacionesLogin = require("../middlewares/validatorLogin");
-
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 const storage = multer.diskStorage({
 
     destination: path.join(__dirname,"../../public/img/usuarios"),
@@ -30,12 +31,13 @@ router.get("/add", usersController.addUsersForm); //ruta del formulario para cre
 router.post("/add", upload.single('avatar'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
 
 //formulario de login
-router.get ('/login', usersController.login);
+router.get ('/login', guestMiddleware,usersController.login);
 
 //procesamiento de login
 router.post ('/login', validacionesLogin, usersController.loginProcess);
 
 router.get("/panel", usersController.listUsers);
+router.get('/profile/', authMiddleware, usersController.profile);
 
 router.get("/:id/carrito", usersController.userCarrito);
 
