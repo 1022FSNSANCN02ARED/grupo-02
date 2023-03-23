@@ -7,8 +7,30 @@
             <label><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></label>
         </div>
         <div class="nav-buttons" id="nav-buttons-laptop">
-            <button class="btn-login"><a href="/login"><i class="fa-solid fa-user"></i> Ingresá</a></button>
+
+           <!-- si estoy logueado solo muestro boton de carrito y salir -->
+           <% if (locals.isLogged) { %>
+             
             <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
+            <button class="btn-login"><a href= "/users/logout"><i class="fa-solid fa-right-to-bracket"></i> Salir</a></button>
+
+           Hola <%= locals.userLogged.name + ' ' + locals.userLogged.last_name %>
+
+        <img class="nav-img" src="/img/usuarios/<%= locals.userLogged.avatar %> ">
+
+        
+
+            
+            
+          
+
+            <% } else { %>
+
+            <!-- si no estoy logueado solo muestro boton de login -->
+            <button class="btn-login"><a href="/users/login"><i class="fa-solid fa-user"></i> Ingresá</a></button>
+
+            <% } %>
+
         </div>
     </div>
 

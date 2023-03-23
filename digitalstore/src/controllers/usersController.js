@@ -5,12 +5,15 @@ const { getUsers } = require("../data/users");
 const users = require("../data/users"); //requiero el array de usuarios parseado
 // const products = require("../data/products");
 
+
 module.exports = {
   addUsersForm: (req, res) => {
+   
     res.render("register");
   },
 
   addUsers: (req, res) => {
+   
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){
@@ -105,26 +108,39 @@ module.exports = {
    },
 
    login: (req, res) => { 
-      console.log (req.session)
+   
       return  res.render('login');
     },
 
    loginProcess: (req, res) => {
+     
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){
       // si errores esta vacio
       //si los campos del form fueron completados, busco en los modelos  de DB el email que se ingreso en el body del request (form)
+            
+
       let userToLogin = users.findByField("email", req.body.emailLogin);
       // res.send (userToLogin)
-      if (userToLogin){// si el usuario buscado existe en la DB
+      if (userToLogin) {// si el usuario buscado existe en la DB
       // res.send (userToLogin)
           let isOkThePassword =bcryptjs.compareSync(req.body.passwordLogin, userToLogin.password); //comparo si la contraseña ingresada en el req.body de password es ugual a la que se encontro en la DB >> ME DEVUELVE TRUE O FALSE
 
           if (isOkThePassword){
             // return res.send ('OK, puedes ingresar')
             //redirijo al panel de control del usuario logueado
-            return res.render ('profile')
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+
+            // console.log (req.session)
+         
+            //si el usuario quiere recordar el usuario creo la cookie guardando el email
+            if (req.body.remember) {
+              res.cookie("userEmail", req.body.emailLogin, {maxAge: (1000 * 60) * 2});
+            }
+
+            return res.redirect("/users/profile");
           }
             return res.render("login", {
               errores: {
@@ -153,9 +169,25 @@ module.exports = {
           old: req.body,
     });
 
+
    }
 
+  },
 
+  profile: (req, res)=>{
 
-}
+   
+    
+    return res.render ('profile',{
+      user: req.session.userLogged
+    });
+  },
+
+  logout: (req, res)=>{
+    res.clearCookie('userEmail');
+    req.session.destroy();
+    return res.redirect("/");
+
+  }
+
 }
