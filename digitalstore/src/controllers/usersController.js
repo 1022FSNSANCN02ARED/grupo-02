@@ -62,12 +62,7 @@ module.exports = {
            old:req.body
         });
      
-    }
-
-   
-
-
- 
+    } 
   },
   listUsers: (req, res) => {
     const allUsers = users.getUsers();
@@ -128,6 +123,12 @@ module.exports = {
           let isOkThePassword =bcryptjs.compareSync(req.body.passwordLogin, userToLogin.password); //comparo si la contraseña ingresada en el req.body de password es ugual a la que se encontro en la DB >> ME DEVUELVE TRUE O FALSE
 
           if (isOkThePassword){
+            delete userToLogin.password;
+				    req.session.userLogged = userToLogin;
+
+				    if(req.body.remember_user) {
+					    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				    }
             // return res.send ('OK, puedes ingresar')
             //redirijo al panel de control del usuario logueado
             delete userToLogin.password;
@@ -142,13 +143,13 @@ module.exports = {
 
             return res.redirect("/users/profile");
           }
-            return res.render("login", {
+          return res.render("login", {
               errores: {
                 passwordLogin: {
                   msg: "La contraseña es incorrecta",
                 },
               },
-            });
+          });
 
       }
       //SI NO EXISTE MUESTRO UN MENS EN EL RESPONSE (se valida manualmente )Y REDIRIJO AL LOGIN
@@ -172,22 +173,15 @@ module.exports = {
 
    }
 
-  },
-
-  profile: (req, res)=>{
-
-   
-    
-    return res.render ('profile',{
-      user: req.session.userLogged
-    });
-  },
-
-  logout: (req, res)=>{
-    res.clearCookie('userEmail');
-    req.session.destroy();
-    return res.redirect("/");
-
-  }
-
+},
+profile: (req, res) => {
+  return res.render('profile', {
+    user: req.session.userLogged
+  });
+},
+logout: (req, res) => {
+  res.clearCookie('userEmail');
+  req.session.destroy();
+  return res.redirect('/');
+}
 }
