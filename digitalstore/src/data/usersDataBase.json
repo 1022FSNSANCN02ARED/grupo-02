@@ -265,5 +265,14 @@
         "usuario": "geor",
         "password": "$2a$10$55XZXKB5CXX76X7ptv3UKecGEpm.yp60MG3Z871kpsq0ZgiTpj1FO",
         "avatar": "image-1679532255055.jpeg"
+    },
+    {
+        "id": 1679603486612,
+        "name": "nolose",
+        "last_name": "nolose",
+        "email": "nolose@hotmail.com",
+        "usuario": "nolose",
+        "password": "$2a$10$aRNu/Tf7MOoQ0G0EWuBuaOvRescBSAM7qG25t5xCkEsoITVnZnV9a",
+        "avatar": "image-1679603486539.jpeg"
     }
 ]
