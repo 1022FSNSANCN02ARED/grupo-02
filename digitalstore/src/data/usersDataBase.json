@@ -283,5 +283,23 @@
         "usuario": "lautaropedroza",
         "password": "$2a$10$jmKKn0b4Dsk5DICsrNA5aO/TjkE5KSPeHkONnaFfWlFJFe0I1IdNW",
         "avatar": "image-1679927837323.jpg"
+    },
+    {
+        "id": 1679934071535,
+        "name": "herika",
+        "last_name": "sierralta",
+        "email": "herika_14_@hotmail.com",
+        "usuario": "Heriquita",
+        "password": "$2a$10$VygpCouHXqYm6fJc77fbBOoXQLEyBuA/vG4vjKyoxPSzsAJkWIlFe",
+        "avatar": "image-1679934071493.jpg"
+    },
+    {
+        "id": 1679951541548,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "a@b.com",
+        "usuario": "asdas",
+        "password": "$2a$10$aj8XKvG8lAzSoTNrhdtY/.oeAzmFKNkqa4Akf3kQFbq17bOcrGoe6",
+        "avatar": "usuario.jpeg"
     }
 ]
