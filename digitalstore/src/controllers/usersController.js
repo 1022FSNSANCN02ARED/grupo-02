@@ -141,7 +141,7 @@ module.exports = {
               res.cookie("userEmail", req.body.emailLogin, {maxAge: (1000 * 60) * 2});
             }
 
-            return res.redirect("/users/profile");
+            return res.redirect("/");
           }
           return res.render("login", {
               errores: {
