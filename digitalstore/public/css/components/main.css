@@ -129,4 +129,7 @@ main h2{
         transform: translateX(100px);
         color: var(--naranja-oscuro);
     }
+    80%{
+        color: white;
+    }
 }

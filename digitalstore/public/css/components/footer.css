@@ -24,12 +24,18 @@
     text-align:center;
     margin-bottom: 10px;
 }
+.caja-footer-botones{
+    width: 100%;
+    padding: 10px 20px;
+    text-align:center;
+    margin-bottom: 10px;
+}
 .logo-footer{
   width: 100%;
 }
 
 .img-footer{
-  width: 48%;
+  width: 38%;
 }
 
 .iconos{
@@ -99,6 +105,7 @@ button:visited{
 .copyright{
 
 }
+
 .contenedor-links{
   margin: 0px 8px;
 }
@@ -110,6 +117,14 @@ button:visited{
         padding-right: 0;
         display: flex;
         flex-direction: column;
+      }
+      .caja-footer-botones{
+        width: 48%;
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
       .iconos{
         width: 100%;
@@ -137,4 +152,7 @@ button:visited{
         position: absolute;
         bottom: 0;
        }
+       .img-footer{
+        width: 38%;
+      }
 }

@@ -5,7 +5,7 @@
 </head>
 <body>
     <%- include("partials/header") %>
-    <main>  
+    <main class="main-panel">  
 
         <h1>USUARIOS</h1>
 
@@ -14,9 +14,9 @@
             
                 <% allUsers.forEach(user => { %>
                  <div class="user-card">
-                        <p class="usuario" >
-                        NOMBRE
-                        </p>
+                    <p class="id" >
+                    <%= user.id %>
+                </p>
                         <p class="usuario" >
                             <%= user.nombre %>
                         </p>
@@ -29,8 +29,8 @@
                         <p class="usuario" >
                             <%= user.usuario %>
                         </p>
-                        <input type="submit" value="Editar">
-                        <input type="submit" value="Eliminar">
+                        <button><a href="/users/edit/<%= user.id %>">Editar</a></button>
+                        <button><a href="/users/panel/<%= user.id %>">Eliminar</a></button>
                     </div>
                     <p style="font-size: 20px; font-weight: bold;">
             

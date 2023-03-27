@@ -6,7 +6,7 @@
         "email": "gdaniellot0@businessinsider.com",
         "usuario": "gdaniellot0",
         "contraseña": "TUD9TvSkdN",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "email": "sskeeles1@blogspot.com",
         "usuario": "sskeeles1",
         "contraseña": "oiSErHsssT",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "email": "bboldison2@ifeng.com",
         "usuario": "bboldison2",
         "contraseña": "73XbLB0x",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 4,
@@ -33,7 +33,7 @@
         "email": "cschenfisch3@eepurl.com",
         "usuario": "cschenfisch3",
         "contraseña": "fcnm9jcauy0o",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 5,
@@ -42,7 +42,7 @@
         "email": "sfrances4@cisco.com",
         "usuario": "sfrances4",
         "contraseña": "nzSj3jXbYzFP",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 1675813317482,
@@ -51,7 +51,7 @@
         "email": "axelriera@gmail.com",
         "usuario": "trivaxel",
         "password": "asd",
-        "saveCarrito":[]
+        "saveCarrito": []
     },
     {
         "id": 1676469999317,
@@ -60,6 +60,122 @@
         "email": "axelriera@gmail.com",
         "usuario": "USER",
         "password": "PASS",
-        "saveCarrito":[]
+        "saveCarrito": []
+    },
+    {
+        "id": 1678824214456,
+        "name": "Melina",
+        "last_name": "Leonardi",
+        "email": "melina61285@gmail.com",
+        "usuario": "melinal"
+    },
+    {
+        "id": 1678824540609,
+        "name": "Tiziano",
+        "last_name": "Ledesma",
+        "email": "tiziano@gmail.com",
+        "usuario": "titi",
+        "avatar": "image-1678824540592.jpeg"
+    },
+    {
+        "id": 1678824915794,
+        "name": "Ignacio",
+        "last_name": "Ledesma",
+        "email": "nacholedesma@gmail.com",
+        "usuario": "nacho",
+        "avatar": "image-1678824915774.jpeg"
+    },
+    {
+        "id": 1678483544487,
+        "name": "Luciano",
+        "last_name": "Leonardi",
+        "email": "copete@ternium.com",
+        "usuario": "copete"
+    },
+    {
+        "id": 1678483974803,
+        "name": "Tomas",
+        "last_name": "Herrera",
+        "email": "tomasherrera@gmail.com",
+        "usuario": "naranja"
+    },
+    {
+        "id": 1678484092447,
+        "name": "pepito",
+        "last_name": "rodriguez",
+        "email": "pepitorodriguez@gmail.com",
+        "usuario": "pera"
+    },
+    {
+        "id": 1678484231980,
+        "name": "Susana",
+        "last_name": "Gimenez",
+        "email": "susana@hotmail.com",
+        "usuario": "holasusana"
+    },
+    {
+        "id": 1678485003776,
+        "name": "Carlos",
+        "last_name": "Ledesma",
+        "email": "carlosledesma_14@gmail.com",
+        "usuario": "carlitos"
+    },
+    {
+        "id": 1678492214752,
+        "name": "Ruben",
+        "last_name": "Romero",
+        "email": "pepitorodriguez@gmail.com",
+        "usuario": "ruben"
+    },
+    {
+        "id": 1678493462013,
+        "name": "jhvkjvk",
+        "last_name": "kjhkjhkhj",
+        "email": "mmm@gmail.com",
+        "usuario": "jhkjhkhjv"
+    },
+    {
+        "id": 1678899578746,
+        "name": "gladys",
+        "last_name": "Alvarez",
+        "email": "irene@gmail.com",
+        "usuario": "gla",
+        "avatar": "image-1678899578731.jpeg"
+    },
+    {
+        "id": 1678901959743,
+        "name": "cristian",
+        "last_name": "ledesma",
+        "email": "morzaledesma@gmail.com",
+        "usuario": "morza",
+        "password": "12345",
+        "avatar": "image-1678901959715.jpeg"
+    },
+    {
+        "id": 1678902935580,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautaro@gmail.com",
+        "usuario": "lauti",
+        "password": "$2a$10$64iB/PPNDyjGHIRSxOef9ul3s4oHhbVlkaJOF.G9ISqOe2mCLqM5W",
+        "avatar": "image-1678902935536.jpeg"
+    },
+    {
+        "id": 1678908574337,
+        "name": "lucas",
+        "last_name": "salvatierra",
+        "email": "lucas@gmail.com",
+        "usuario": "lucas",
+        "password": "$2a$10$MvWKNKKnTP16huJjW3PbJuzVDEFPKWYmORY5pXdKRhwcJ4SGJpUwe",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1678908713561,
+        "name": "ezequiel",
+        "last_name": "ledesma",
+        "email": "ezequiel@gmail.com",
+        "usuario": "papa",
+        "password": "$2a$10$t1DSGWHgIjR0BP6MeRQLDu3Wn/A8C6IcI9SRXyAN2JsPOV2VbRfom",
+        "avatar": "usuario.jpeg"
     }
 ]

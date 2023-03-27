@@ -28,6 +28,7 @@ module.exports = {
         users[x].email = user.email;
         users[x].usuario = user.usuario;
         users[x].password = user.password;
+        
       }
     }
     const usersFileContent = JSON.stringify(users, null, 4);
@@ -39,7 +40,14 @@ module.exports = {
     const usersFileContent = JSON.stringify(newUsers, null, 4);
     fs.writeFileSync(usersFilePath, usersFileContent, "utf-8");
   },
+  findByField(field, text) {
+		let allUsers = this.getUsers();
+		let userFound = allUsers.find(
+      oneUser => oneUser[field] === text
+    );
+		return userFound;
+	},
 };
 
 
-console.log (module.exports.getUsers())
+console.log (module.exports.findByField("id", 5))
