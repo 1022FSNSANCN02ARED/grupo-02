@@ -3,20 +3,43 @@
 
 <head>
     <%- include("partials/head") %>
+        <link rel="stylesheet" href="/digitalstore/public/css/index.css">
 </head>
 
 <body>
+
+
     <%- include("partials/header") %>
-        <main class="main-panel">
+        <main class="main-profile">
+            <div class="div-img-profile">
 
-    <h1>Hola <%= user.name + ' ' + user.last_name%></h1>
+                <img src="/img/usuarios/<%=user.avatar %> ">
+                <h1>
+                    <%= user.name + ' ' + user.last_name%>
+                </h1>
 
-    <img src="/img/usuarios/<%=user.avatar %> ">
+            </div>
 
-    <h2><%=user.email %></h2>
+            <div class="div-detalle-profile">
+                
 
 
-           
+
+                    <div class="div-detalle-profile-2">
+                        <h3> <a href="">Mis compras</a> </h3>
+                        <h3> <a href="">Favoritos</a> </h3>
+                        <h3> <a href="">Cambiar contraseña</a> </h3>
+                        <h3> <a href="">Cerrar sesión</a> </h3>
+                    </div>
+                
+
+
+
+
+
+
+
+            </div>
 
 
         </main>

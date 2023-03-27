@@ -7,6 +7,31 @@ header{
 .header-partial{
     background-color: white;
 }
+.usuario-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid gray;
+    border-radius: 20px;
+    padding: 7px;
+    width: 100%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+
+.usuario-header img{
+  width: 30px;
+}
+
+
+.nombre-header{
+  font-size:medium;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 .nav-principal{
     width: 100%;
