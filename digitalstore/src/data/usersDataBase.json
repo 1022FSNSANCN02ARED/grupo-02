@@ -135,6 +135,13 @@
         "usuario": "jhkjhkhjv"
     },
     {
+        "id": 1678807206010,
+        "name": "pedro",
+        "last_name": "alber",
+        "email": "alber@alber.com",
+        "usuario": "alber"
+    },
+    {
         "id": 1678899578746,
         "name": "gladys",
         "last_name": "Alvarez",
@@ -177,5 +184,95 @@
         "usuario": "papa",
         "password": "$2a$10$t1DSGWHgIjR0BP6MeRQLDu3Wn/A8C6IcI9SRXyAN2JsPOV2VbRfom",
         "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679254417314,
+        "name": "ana",
+        "last_name": "avalos",
+        "email": "ana@gmail.com",
+        "usuario": "ana",
+        "password": "$2a$10$3XosRhxtHJ4d1406VZjcJuAcx4K2ckiPDaIGHbDRc72W/ieLmQK.O",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679437339742,
+        "name": "urs",
+        "last_name": "rre",
+        "email": "usur@usur.com",
+        "usuario": "urs",
+        "password": "$2a$10$WUgbY8A.8tV37qqi6HpFWux6UOofEY0RdLLpFDs.9Y/pshHo9hVZ2",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679438920097,
+        "name": "mmmm",
+        "last_name": "mnmm",
+        "email": "kjbkjbb@gmail.com",
+        "usuario": "anibal",
+        "password": "$2a$10$iCiDt/AqH45aeJQ83.XdUuqNJbt6kvV3EhAAcnvLMk8CJSPa.uuMK",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679439196342,
+        "name": "anibal",
+        "last_name": "fernandez",
+        "email": "anibal@gmail.com",
+        "usuario": "anibal",
+        "password": "$2a$10$HDIKDAXWkdveUCo/oPis..wCscQiVYccjvHJqLkqs/0UFgbhHw6R.",
+        "avatar": "usuario.jpeg"
+    },
+    {
+        "id": 1679441293986,
+        "name": "carolina",
+        "last_name": "pagano",
+        "email": "carolina@gmail.com",
+        "usuario": "carolina",
+        "password": "$2a$10$TI56tmSB.5634/PN0/cuIeTR4CpuviWhZu6lt/rGYA4yPU5HQDd4a",
+        "avatar": "image-1679441293978.jpeg"
+    },
+    {
+        "id": 1679486161561,
+        "name": "lucas",
+        "last_name": "salvatierra",
+        "email": "lucass@gmail.com",
+        "usuario": "lucas",
+        "password": "$2a$10$DsfgMGNuLRiMVqifni5xXeH6FcJIiT81yMWjMSGssPv0e24aPcwQq",
+        "avatar": "image-1679486161553.jpeg"
+    },
+    {
+        "id": 1679486235995,
+        "name": "lucas",
+        "last_name": "salvatierra",
+        "email": "lucasss@gmail.com",
+        "usuario": "lucas",
+        "password": "$2a$10$UjP94eEebz9cYYxCf2cZiusGp.0klEGH.5UHC2sQQ.P2udJuh6zxC",
+        "avatar": "image-1679486235976.jpeg"
+    },
+    {
+        "id": 1679488185002,
+        "name": "anibal",
+        "last_name": "fernandez",
+        "email": "aniball@gmail.com",
+        "usuario": "lorena",
+        "password": "$2a$10$CDCcqb2Np5N/amwWLwMmo.IX7/Fe9f6bWoa5xwAY5/DVGVvOiVKdO",
+        "avatar": "image-1679488184991.jpeg"
+    },
+    {
+        "id": 1679532255065,
+        "name": "georgina",
+        "last_name": "barrios",
+        "email": "georgina@gmail.com",
+        "usuario": "geor",
+        "password": "$2a$10$55XZXKB5CXX76X7ptv3UKecGEpm.yp60MG3Z871kpsq0ZgiTpj1FO",
+        "avatar": "image-1679532255055.jpeg"
+    },
+    {
+        "id": 1679603486612,
+        "name": "nolose",
+        "last_name": "nolose",
+        "email": "nolose@hotmail.com",
+        "usuario": "nolose",
+        "password": "$2a$10$aRNu/Tf7MOoQ0G0EWuBuaOvRescBSAM7qG25t5xCkEsoITVnZnV9a",
+        "avatar": "image-1679603486539.jpeg"
     }
 ]

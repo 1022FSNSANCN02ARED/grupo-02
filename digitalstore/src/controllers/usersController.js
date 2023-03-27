@@ -5,12 +5,15 @@ const { getUsers } = require("../data/users");
 const users = require("../data/users"); //requiero el array de usuarios parseado
 // const products = require("../data/products");
 
+
 module.exports = {
   addUsersForm: (req, res) => {
+   
     res.render("register");
   },
 
   addUsers: (req, res) => {
+   
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){
@@ -59,12 +62,7 @@ module.exports = {
            old:req.body
         });
      
-    }
-
-   
-
-
- 
+    } 
   },
   listUsers: (req, res) => {
     const allUsers = users.getUsers();
@@ -93,8 +91,9 @@ module.exports = {
     const idNum= Number(id); 
     const user = users.findByField("id", idNum);
     res.render("userDelete", {user
-    }
-)},
+      }
+    )
+  },
   destroyUser: (req, res) => {
     const id = req.params.id;
     const idNum= Number(id); 
@@ -104,23 +103,85 @@ module.exports = {
    },
 
    login: (req, res) => { 
+   
       return  res.render('login');
-   },
+    },
 
    loginProcess: (req, res) => {
+     
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
-    if(errores.isEmpty()){ // si errores esta vacio
-      res.send ('se hace el logueo del usuario')
-    }else{
+    if(errores.isEmpty()){
+      // si errores esta vacio
+      //si los campos del form fueron completados, busco en los modelos  de DB el email que se ingreso en el body del request (form)
+            
+
+      let userToLogin = users.findByField("email", req.body.emailLogin);
+      // res.send (userToLogin)
+      if (userToLogin) {// si el usuario buscado existe en la DB
+      // res.send (userToLogin)
+          let isOkThePassword =bcryptjs.compareSync(req.body.passwordLogin, userToLogin.password); //comparo si la contraseña ingresada en el req.body de password es ugual a la que se encontro en la DB >> ME DEVUELVE TRUE O FALSE
+
+          if (isOkThePassword){
+            delete userToLogin.password;
+				    req.session.userLogged = userToLogin;
+
+				    if(req.body.remember_user) {
+					    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				    }
+            // return res.send ('OK, puedes ingresar')
+            //redirijo al panel de control del usuario logueado
+            delete userToLogin.password;
+            req.session.userLogged = userToLogin;
+
+            // console.log (req.session)
+         
+            //si el usuario quiere recordar el usuario creo la cookie guardando el email
+            if (req.body.remember) {
+              res.cookie("userEmail", req.body.emailLogin, {maxAge: (1000 * 60) * 2});
+            }
+
+            return res.redirect("/users/profile");
+          }
+          return res.render("login", {
+              errores: {
+                passwordLogin: {
+                  msg: "La contraseña es incorrecta",
+                },
+              },
+          });
+
+      }
+      //SI NO EXISTE MUESTRO UN MENS EN EL RESPONSE (se valida manualmente )Y REDIRIJO AL LOGIN
+
+            return res.render('login', {
+              errores: {
+                  emailLogin: {
+                    msg: 'No se encuentra este email en nuestra base de datos',
+                       old: req.body,
+                  }
+              }
+            });
+
+
+    } else {
           res.render("login", {
           errores: errores.mapped(),
           old: req.body,
     });
 
+
    }
 
-
-
+},
+profile: (req, res) => {
+  return res.render('profile', {
+    user: req.session.userLogged
+  });
+},
+logout: (req, res) => {
+  res.clearCookie('userEmail');
+  req.session.destroy();
+  return res.redirect('/');
 }
 }

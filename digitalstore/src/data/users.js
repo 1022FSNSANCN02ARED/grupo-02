@@ -50,4 +50,4 @@ module.exports = {
 };
 
 
-console.log (module.exports.findByField("id", 5))
+//console.log (module.exports.findByField("id", 5))
