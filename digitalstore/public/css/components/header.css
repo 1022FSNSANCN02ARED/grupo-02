@@ -19,11 +19,16 @@ header{
     margin-bottom: 10px;
     cursor: pointer;
     color: black;
+    
+
 }
 
 
 .usuario-header img{
-  width: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  
 }
 
 
@@ -31,6 +36,7 @@ header{
   font-size:medium;
   font-weight: bold;
   text-transform: uppercase;
+  margin-right: 5px;
 }
 
 .nav-principal{

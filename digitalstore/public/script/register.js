@@ -42,20 +42,17 @@ let contraseña1 = document.querySelector(".contraseñaInput1")
 let contraseña2 = document.querySelector(".contraseñaInput2")
 
 
-contraseña1.addEventListener("blur", function(){
-    if(contraseña1.value.length > 0 ){
-        contraseña1.style.backgroundColor = "#abf1ab "
-    } else{
-        contraseña1.style.backgroundColor = "red"
-    }
-})
+// 
 contraseña2.addEventListener("blur", function(){
     if(contraseña2.value.length > 0 && contraseña2.value === contraseña1.value){
         contraseña2.style.backgroundColor = "#abf1ab "
+        contraseña1.style.backgroundColor = "#abf1ab "
     } else{
         contraseña2.style.backgroundColor = "red"
+        contraseña1.style.backgroundColor = "red"
     }
 })
+
 
 
 //email

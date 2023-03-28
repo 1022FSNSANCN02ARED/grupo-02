@@ -4,10 +4,13 @@
     margin: auto;
     width: 100%;
     align-items: center;
+    background-color: var(--gris-claro);
+    
 }
 .div-img-profile img{
-   width: 60px;
-   height: 60px;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
 }
 .div-img-profile h1{
    font-size: medium;
@@ -38,12 +41,14 @@
         display: flex;
         justify-content: space-around;
         margin: auto;
-        width: 45%;
+        
         align-items: center;
+
     }
     .div-img-profile img{
        width: 250px;
        height: 250px;
+       border-radius: 10%;
     }
     .div-img-profile h1{
        font-size: 50px;
