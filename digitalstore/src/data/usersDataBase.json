@@ -276,15 +276,6 @@
         "avatar": "image-1679603486539.jpeg"
     },
     {
-        "id": 1680040108166,
-        "name": "lautaro",
-        "last_name": "pedroza",
-        "email": "lautimotoe99@gmail.com",
-        "usuario": "LautaroPedroza",
-        "password": "$2a$10$wQ3YxkuCdDY3gpkHHFRJSOU9a2sOkQE1k7BNomrn/c6tfjVKDWPmu",
-        "avatar": "image-1679962108034.jpg"
-    },
-    {
         "id": 1680020789171,
         "name": "lujan",
         "last_name": "asenjo",
@@ -310,5 +301,14 @@
         "usuario": "mari",
         "password": "$2a$10$dpWug.pYqmpd1IcVXhjDBOxxGsmh2LGN37A4oc1Xp23/o.J8IFlyC",
         "avatar": "image-1680023753438.jpeg"
-    } 
+    },
+    {
+        "id": 1680044030923,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautimotoe99@gmail.com",
+        "usuario": "lautaropedroza",
+        "password": "$2a$10$GQamMxbxsmbgOm3VYhbZV.8gaLehg3coR.faiBJAudZRf/Fzk/4bO",
+        "avatar": "image-1680044030645.png"
+    }
 ]
