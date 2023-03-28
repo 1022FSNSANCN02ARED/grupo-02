@@ -301,5 +301,14 @@
         "usuario": "mariana",
         "password": "$2a$10$mLDH3W01gFhDheM9LYRqf.1oRgM7ft.IqdPM8wZ4f3dQ6E8zRBkZe",
         "avatar": "usuario.jpeg"
-    }
+    },
+    {
+        "id": 1680023753460,
+        "name": "mariana",
+        "last_name": "lopez",
+        "email": "mari@gmail.com",
+        "usuario": "mari",
+        "password": "$2a$10$dpWug.pYqmpd1IcVXhjDBOxxGsmh2LGN37A4oc1Xp23/o.J8IFlyC",
+        "avatar": "image-1680023753438.jpeg"
+    } 
 ]
