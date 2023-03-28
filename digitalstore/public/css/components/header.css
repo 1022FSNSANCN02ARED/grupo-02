@@ -235,6 +235,61 @@ border-radius: 10px;
 
 @media (min-width:1024px) {
 
+    .div-desplegable-header{
+       z-index: 50;
+        position: fixed;
+        width: 400px;
+        height: 500px;
+        background-color: rgba(0, 0, 0, 0.747);
+        margin-left: 60vw;
+        margin-top: 26vw;
+        display: flex;
+        
+       
+       
+    }
+    .contenedorUsuarioHeader{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+    .imganduser{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 5%;
+        background-color: var(--naranja-oscuro);
+    }
+    .imgHeader{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .nombreHeader{
+        font-size: 200%;
+        text-transform: uppercase;
+    }
+
+    .cerrarDesplegable{
+        width:10%;
+        height: 100%;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+       cursor: pointer;
+        align-items: center;
+    }
+    .divDetalle{
+        margin-top: 20%;
+    }
+    .divDetalle h3{
+        margin: 10% 0;
+    }
+    .divDetalle h3 a{
+        color: white;
+    }
+
     .nav-img {
         width: 20%;
     }
