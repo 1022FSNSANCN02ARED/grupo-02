@@ -274,5 +274,14 @@
         "usuario": "nolose",
         "password": "$2a$10$aRNu/Tf7MOoQ0G0EWuBuaOvRescBSAM7qG25t5xCkEsoITVnZnV9a",
         "avatar": "image-1679603486539.jpeg"
+    },
+    {
+        "id": 1679962108113,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautimotoe99@gmail.com",
+        "usuario": "LautaroPedroza",
+        "password": "$2a$10$wQ3YxkuCdDY3gpkHHFRJSOU9a2sOkQE1k7BNomrn/c6tfjVKDWPmu",
+        "avatar": "image-1679962108034.jpg"
     }
 ]
