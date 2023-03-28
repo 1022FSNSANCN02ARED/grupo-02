@@ -123,11 +123,11 @@ module.exports = {
           let isOkThePassword =bcryptjs.compareSync(req.body.passwordLogin, userToLogin.password); //comparo si la contraseña ingresada en el req.body de password es ugual a la que se encontro en la DB >> ME DEVUELVE TRUE O FALSE
 
           if (isOkThePassword){
-            delete userToLogin.password;
+            delete userToLogin.password; 
 				    req.session.userLogged = userToLogin;
-
+          // creo la cookie con el usuario logueado
 				    if(req.body.remember_user) {
-					    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })// >2 minutos
 				    }
             // return res.send ('OK, puedes ingresar')
             //redirijo al panel de control del usuario logueado

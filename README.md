@@ -7,7 +7,7 @@ El sitio estara dedicado a ventas de productos de Hardware de PC. Carrito de com
 
 INTEGRANTES:
 
-PABLO CANDELA MEDINA : Me llamo Pablo Candela, tengo 19 años, actualmente me apodo Nassa pero pueden llamarme como quieran. Me gusta mucho el backend, pero se prácticamente fullstack y se algo Diseño grafico. Me gastaría realizar cualquier tarea que requiera de Lógica backend, pero también jugar con los estilos de la pagina (css). Estoy abierto a la mayoría de tareas.
+PABLO CANDELA MEDINA : Me llamo Pablo Candela, tengo 19 años, actualmente me apodo Nassa pero pueden llamarme como quieran. Me gusta mucho el backend, pero se prácticamente fullstack y se algo Diseño grafico. Me gustaría realizar cualquier tarea que requiera de Lógica backend, pero también jugar con los estilos de la pagina (css). Estoy abierto a la mayoría de tareas.
 
 Melina LEONARDI. Tengo 37 años, ama de casa con dos niños. Vivo en San Nicolás. Me he puesto de vuelta al ruedo con la programación y lo que tiene que ver con la tecnología. Mi meta es capacitarme y reintegrarme  al mercado laboral en cuanto al desarrollo web y auto convencerme de que cuando las cosas se quieren con esfuerzo se logran. Tengo mucho entusiasmo en aprender
 
@@ -40,5 +40,6 @@ ENLACE AL TABLERO DE TRABAJO >TRELLO:
 https://trello.com/b/3AHO3mfl/proyecto-integrador-final
 
 https://trello.com/invite/b/3AHO3mfl/ATTIad9bab0d1f5bd17a1b9ae5477eafaf85392E1219/proyecto-integrador-final
+
 
 
