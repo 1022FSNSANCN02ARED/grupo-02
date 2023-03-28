@@ -53,7 +53,7 @@ module.exports = {
 
             users.saveUser(user);
             // res.send("USUARIO REGISTRADO");
-            res.redirect('/login')
+            res.redirect('/')
     }else{
      
       //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
