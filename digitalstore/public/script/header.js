@@ -9,7 +9,7 @@ let cerrarDesplegable = document.querySelector(".cerrarDesplegable")
 usuario.addEventListener("click", function(e){
     e.preventDefault();
     desplegable.style.marginLeft = "0vw";
-    desplegable.style.transition = "margin-left 0.3s linear 0.5s"
+    desplegable.style.transition = "margin-left 0.2s linear 0.2s"
     
 })
 cerrarDesplegable.addEventListener("click", function(e){
