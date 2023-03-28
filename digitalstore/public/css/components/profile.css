@@ -4,7 +4,7 @@
     margin: auto;
     width: 100%;
     align-items: center;
-    background-color: var(--gris-claro);
+    background-color: v;
     
 }
 .div-img-profile img{
@@ -15,6 +15,9 @@
 .div-img-profile h1{
    font-size: medium;
    text-transform: uppercase;
+}
+.div-img-profile h2{
+  display: none;
 }
 
 
@@ -41,8 +44,9 @@
         display: flex;
         justify-content: space-around;
         margin: auto;
-        
+        background: linear-gradient(to right, #FF9D00, rgb(255, 255, 255));
         align-items: center;
+
 
     }
     .div-img-profile img{
@@ -53,6 +57,9 @@
     .div-img-profile h1{
        font-size: 50px;
        text-transform: uppercase;
+    }
+    .div-img-profile h2{
+       display: block;
     }
     
     
