@@ -153,23 +153,10 @@
         "id": 1678901959743,
         "name": "cristian",
         "last_name": "ledesma",
-<<<<<<< HEAD
+
         "email": "sergio_elpanzaledesma@gmail.com",
         "usuario": "panza",
         "avatar": "usuario.png"
-    },
-    {
-        "id": 1678832128689,
-        "name": "Pablo",
-        "last_name": "candela",
-        "email": "pablocandelamedina12@gmail.com",
-        "usuario": "pabloccandela",
-        "avatar": "usuario.png"
-=======
-        "email": "morzaledesma@gmail.com",
-        "usuario": "morza",
-        "password": "12345",
-        "avatar": "image-1678901959715.jpeg"
     },
     {
         "id": 1678902935580,
@@ -307,15 +294,6 @@
         "avatar": "usuario.jpeg"
     },
     {
-<<<<<<< HEAD
-        "id": 1680024295000,
-        "name": "ezequiel",
-        "last_name": "rodriguez",
-        "email": "eze@eze.com",
-        "usuario": "eze",
-        "password": "$2a$10$HLPqYg7rnAOW7xrErjNVguI0Adi2ohp1cqq3k5SUINdMybGWpB252",
-        "avatar": "image-1680024294706.png"
-=======
         "id": 1680023753460,
         "name": "mariana",
         "last_name": "lopez",
@@ -332,7 +310,5 @@
         "usuario": "lautaropedroza",
         "password": "$2a$10$GQamMxbxsmbgOm3VYhbZV.8gaLehg3coR.faiBJAudZRf/Fzk/4bO",
         "avatar": "image-1680044030645.png"
->>>>>>> 97bb10ab09bbed96ac201f1e0346235de03828d2
->>>>>>> 0dd41a012ef73f60796e3c3092e02914832cc076
     }
 ]
