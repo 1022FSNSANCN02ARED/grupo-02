@@ -20,20 +20,20 @@
             <form action = "/users/login" class="form-login" method="post">
 
                 <label for="" class="label-login">Email</label>
-                <input type="text" name = "emailLogin" class="input-login" placeholder="Ingrese e-mail para loguearse"  value="<%= locals.old && old.emailLogin ? old.emailLogin : '' %>">
+                <input type="text" name = "email" class="input-login" placeholder="Ingrese e-mail para loguearse"  value="<%= locals.old && old.emailLogin ? old.emailLogin : '' %>">
 
-                <% if (locals.errores && errores.emailLogin ) { %>
+                <% if (locals.errores && errores.email ) { %>
                     <div class='feedback is-danger'>
-                        <%= errores.emailLogin.msg %>
+                        <%= errores.email.msg %>
                     </div>
                     <% } %>
 
                 <label for="" class="label-login">Contraseña</label>
-                <input type="password" name = "passwordLogin"class="input-login" placeholder="Ingrese su contraseña">
+                <input type="password" name = "password"class="input-login" placeholder="Ingrese su contraseña">
 
-                <% if (locals.errores && errores.passwordLogin ) { %>
+                <% if (locals.errores && errores.password ) { %>
                     <div class='feedback is-danger'>
-                        <%= errores.passwordLogin.msg %>
+                        <%= errores.password.msg %>
                     </div>
                     <% } %>
 

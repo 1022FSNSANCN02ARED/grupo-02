@@ -22,12 +22,12 @@ const upload=multer({
 
 router.get("/detail/:id", productsController.productDetail);
 //router.get("/", productsController.listProducts);
-router.get("/", productsController.filterProducts);
+router.get("/", productsController.listProducts);
 
 router.get("/add", productsController.addProductsForm);
 router.post("/add",upload.single("image"), productsController.addProducts);
 
-router.post("/", productsController.filterProducts);
+//router.post("/", productsController.listProducts);
 
 
 module.exports = router

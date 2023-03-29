@@ -1,32 +1,32 @@
 <article class="item-producto-container" >
     <a href="/products/detail/<%= product.id %> " class="item-producto" id="product-item">
         <div class="div-imagen-producto">
-            <img src="img/productos/<%= product.img %> " class=" w100 border-radius-10 ">
+            <img src="img/productos/<%= product.image %> " class=" w100 border-radius-10 ">
         </div>
         
         <div class="item-products-text h50">
             
-            <% if (product.oferta) {%>
+            <% if (product.discount > 0) {%>
                 <div style="display: flex;gap: 5px;" class="center">
                     <p style="text-decoration: line-through;">
-                        $<%= product.precio %> 
+                        $<%= product.price %> 
                     </p>
                     <p class="descuento_article" style="text-decoration:none;">
-                        <%= product.descuento %>%OFF
+                        <%= product.discount %>%OFF
                     </p>
                 </div>
                 <p style="font-size: 20px; font-weight: bold;">
-                    $<%=product.precio - ((product.descuento / 100)* product.precio) %>
+                    $<%=product.price - ((product.discount / 100)* product.price) %>
                 </p>
             <% } %>
 
-            <% if (!product.oferta) {%>
+            <% if (product.discount==0) {%>
                 <p style="font-size: 20px; font-weight: bold;">
-                    $<%= product.precio %>
+                    $<%= product.price %>
                 </p>
             <% } %>
 
-            <h4><%= product.nombre %></h4>
+            <h4><%= product.name %></h4>
         </div>
     </a>
 </article>

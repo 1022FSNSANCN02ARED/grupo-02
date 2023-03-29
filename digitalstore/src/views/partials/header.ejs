@@ -1,47 +1,79 @@
 <header class="header-partial">
-        
+
     <div class="nav-primary">
-      <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
+        <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
         <div class="serch-bar">
             <input type="text" placeholder="Buscar productos y más..">
             <label><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></label>
         </div>
         <div class="nav-buttons" id="nav-buttons-laptop">
 
-           <!-- si estoy logueado solo muestro boton de carrito y salir -->
-           <% if (locals.isLogged) { %>
-             
-            <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
-            <button class="btn-login"><a href= "/users/logout"><i class="fa-solid fa-right-to-bracket"></i> Salir</a></button>
+            <!-- si estoy logueado solo muestro boton de carrito y salir -->
+            <% if (locals.isLogged) { %>
+
+                <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
+                <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i>
+                        Salir</a></button>
 
 
-            <div class="">
-                <a href="/users/profile" class="usuario-header">
-                    <div class="nombre-header">
-                  <%=locals.userLogged.usuario %>   
+                <div class="usuarioHeader">
+                    <a href="/users/profile" class="usuario-header">
+                        <div class="nombre-header">
+                            <%=locals.userLogged.usuario %>
+                        </div>
+
+                        <img class="img-user" src="/img/usuarios/<%= locals.userLogged.img %> ">
+                    </a>
+
+
                 </div>
-                
-                <img class="img-user" src="/img/usuarios/<%= locals.userLogged.avatar %> ">
-                </a>
-                
 
-            </div>
-           
+                <div class="div-desplegable-header">
 
-        
+                    <div class="cerrarDesplegable">
+                        >   
+                    </div>
 
-        
+                    <div class="contenedorUsuarioHeader">
+                        <div class="imganduser">
+                            <img class="imgHeader" src="/img/usuarios/<%= locals.userLogged.img %> ">
+                            <div class="nombreHeader">
+                                <%=locals.userLogged.userName %>
+                            </div>
 
-            
-            
-          
+                        </div>
 
-            <% } else { %>
 
-            <!-- si no estoy logueado solo muestro boton de login -->
-            <button class="btn-login"><a href="/users/login"><i class="fa-solid fa-user"></i> Ingresá</a></button>
+                        <div class="divDetalle">
+                            <h3> <a href="">Mis compras</a> </h3>
+                            <h3> <a href="">Favoritos</a> </h3>
+                            <h3> <a href="">Cambiar contraseña</a> </h3>
+                            <h3> <a href="">Cerrar sesión</a> </h3>
+                        </div>
 
-            <% } %>
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                <% } else { %>
+
+                    <!-- si no estoy logueado solo muestro boton de login -->
+                    <button class="btn-login"><a href="/users/login"><i class="fa-solid fa-user"></i>
+                            Ingresá</a></button>
+
+                    <% } %>
 
         </div>
     </div>
@@ -50,7 +82,7 @@
         <div class="nav-div" id="menu-button">
             <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="nav-links show">   
+        <div class="nav-links show">
             <ul class="nav-ul">
                 <li class="nav-li"><a href="/products">Productos</a></li>
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
@@ -62,11 +94,11 @@
                 <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
             </div>
         </div>
-        
-        
+
+
     </nav>
 
 
-    <script defer src="   /script/header.js"></script>
+    <script src="/script/header.js"></script>
 
 </header>

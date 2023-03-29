@@ -12,22 +12,25 @@
 
         <div class="user-contenedor">
             
-                <% allUsers.forEach(user => { %>
+                <% users.forEach(user => { %>
                  <div class="user-card">
                     <p class="id" >
                     <%= user.id %>
                 </p>
                         <p class="usuario" >
-                            <%= user.nombre %>
+                            <%= user.firstName %>
                         </p>
                         <p class="usuario" >
-                            <%= user.last_name %>
+                            <%= user.lastName %>
                         </p>
                         <p class="usuario" >
                             <%= user.email %>
                         </p>
                         <p class="usuario" >
-                            <%= user.usuario %>
+                            <%= user.userName %>
+                        </p>
+                        <p class="usuario" >
+                            <%= user.role.role %>
                         </p>
                         <button><a href="/users/edit/<%= user.id %>">Editar</a></button>
                         <button><a href="/users/panel/<%= user.id %>">Eliminar</a></button>
