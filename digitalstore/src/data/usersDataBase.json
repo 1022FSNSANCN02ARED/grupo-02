@@ -92,5 +92,13 @@
         "email": "sergio_elpanzaledesma@gmail.com",
         "usuario": "panza",
         "avatar": "usuario.png"
+    },
+    {
+        "id": 1678832128689,
+        "name": "Pablo",
+        "last_name": "candela",
+        "email": "pablocandelamedina12@gmail.com",
+        "usuario": "pabloccandela",
+        "avatar": "usuario.png"
     }
 ]

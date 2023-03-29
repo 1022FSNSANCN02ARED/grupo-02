@@ -46,23 +46,15 @@ const validaciones = [
         // throw new Error('Tienes que subir una imagen de perfil');
       } else {//cuando el usuario si cargo la imagen de perfil
   
-      let fileExtension = path.extname(file.originalname);
-      console.log(fileExtension);
-      if (!acceptedExtensions.includes(fileExtension)) {
-              throw new Error(
-                "Los formatos de imagen permitidos son:  " + acceptedExtensions
-                          );
-
-                          
-              
-  
+        let fileExtension = path.extname(file.originalname);
+        console.log(fileExtension);
+        if (!acceptedExtensions.includes(fileExtension)) {
+          throw new Error(
+            "Los formatos de imagen permitidos son:  " + acceptedExtensions
+          );
+        }
       }
-  
-      }
-  
       return true;
-  
     })
-  
 ]
 module.exports = validaciones;
