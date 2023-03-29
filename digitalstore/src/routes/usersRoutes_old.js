@@ -50,7 +50,4 @@ router.get("/:id/carrito", usersController.userCarrito);
 router.get("/panel/:id", usersController.deleteUser);
 router.post("/panel/:id", usersController.destroyUser);
 
-router.get("/edit/:id", usersController.edit);
-router.post("/update/:id", usersController.update);
-
 module.exports = router;

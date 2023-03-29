@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("partials/head") %>
+  </head>
+
+  <body>
+    <%- include("partials/header") %>
+    <form action="/users/update/<%= user.id %>?_method=PUT" method="POST">
+        <label for="title">Nombre </label>
+        <p><input type="text" name="firstName" id="" value="<%= user.firstName %>" required></p>
+        <label for="rating">Apellido </label>
+        <p><input type="text" name="lastName" id="" value="<%= user.lastName %>" required></p>
+        <label for="awards">Nombre de Usuario </label>
+        <p><input type="text" name="usuario" id="" value="<%= user.userName %>" required></p>
+        <label for="release_date">Email </label>
+        <p><input type="text" name="email" id="" value="<%= user.email %>" required></p>
+        <label for="length">Tipo de Usuario </label>
+        <p>
+            <select name="role" id="" required>
+                <% role.forEach(role => { %>
+                <option value="<%= role.id %>" <% if (user.role.id == role.id) { %><%= 'selected' %><% }; %>><%= role.role %></option>
+                <% }); %>
+            </select>
+        </p>
+        
+        <br>
+        <p> <button class="botonAgregar" type="submit">Actualizar</button>
+    
+        <a  class="botonVolver" href="/users/panela">Volver al Panel</a></p>
+    </form>
+    <p>
+
+    </p>
+
+</body>
+
+</html>
