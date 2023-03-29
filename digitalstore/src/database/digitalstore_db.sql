@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-03-2023 a las 23:31:16
+-- Tiempo de generación: 29-03-2023 a las 22:49:07
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -20,23 +20,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `digitalstore_db`
 --
-
+DROP DATABASE digitalstore_db;
+CREATE DATABASE digitalstore_db;
+USE digitalstore_db;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `brand`
+-- Estructura de tabla para la tabla `brands`
 --
 
-CREATE TABLE `brand` (
-  `id` int(10) NOT NULL,
+CREATE TABLE `brands` (
+  `id` bigint(10) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `brand`
+-- Volcado de datos para la tabla `brands`
 --
 
-INSERT INTO `brand` (`id`, `name`) VALUES
+INSERT INTO `brands` (`id`, `name`) VALUES
 (1, 'Redragon'),
 (2, 'HyperX'),
 (3, 'ASUS'),
@@ -56,7 +58,7 @@ INSERT INTO `brand` (`id`, `name`) VALUES
 
 CREATE TABLE `cart` (
   `id` int(10) NOT NULL,
-  `idUser` int(10) NOT NULL,
+  `idUser` bigint(10) NOT NULL,
   `date` date NOT NULL,
   `status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -78,19 +80,19 @@ CREATE TABLE `cartproduct` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `category`
+-- Estructura de tabla para la tabla `categories`
 --
 
-CREATE TABLE `category` (
-  `id` int(10) NOT NULL,
+CREATE TABLE `categories` (
+  `id` bigint(10) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Volcado de datos para la tabla `category`
+-- Volcado de datos para la tabla `categories`
 --
 
-INSERT INTO `category` (`id`, `name`) VALUES
+INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'Auriculares'),
 (2, 'Gabinetes'),
 (3, 'Memorias'),
@@ -107,12 +109,12 @@ INSERT INTO `category` (`id`, `name`) VALUES
 --
 
 CREATE TABLE `products` (
-  `id` int(10) NOT NULL,
+  `id` bigint(10) NOT NULL,
   `name` varchar(255) NOT NULL,
   `price` int(100) NOT NULL,
-  `idCategory` int(10) NOT NULL,
-  `descrption` text DEFAULT NULL,
-  `idBrand` int(10) NOT NULL,
+  `idCategory` bigint(10) NOT NULL,
+  `descrIption` text DEFAULT NULL,
+  `idBrand` bigint(10) NOT NULL,
   `image` varchar(255) NOT NULL,
   `discount` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -121,7 +123,7 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `price`, `idCategory`, `descrption`, `idBrand`, `image`, `discount`) VALUES
+INSERT INTO `products` (`id`, `name`, `price`, `idCategory`, `descrIption`, `idBrand`, `image`, `discount`) VALUES
 (1, 'Auriculares Redragon H120 Ares PC', 3850, 1, 'Este es un auricular para PC', 1, 'auriculares-redragon.jpg', 0),
 (2, 'Auriculares HyperX Cloud Flight Black Wireless', 25150, 1, 'Este es un auricular para PC', 2, 'auriculareshyperx.jpg', 15),
 (3, 'Gabinete ASUS ROG STRIX GX601 Helios Evangelion Edition ARGB', 138, 2, 'Este es un gabinete ASUS', 3, 'gabinete-asus.jpg', 10),
@@ -150,7 +152,7 @@ INSERT INTO `products` (`id`, `name`, `price`, `idCategory`, `descrption`, `idBr
 --
 
 CREATE TABLE `roles` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` bigint(10) UNSIGNED NOT NULL,
   `role` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -169,14 +171,14 @@ INSERT INTO `roles` (`id`, `role`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` bigint(10) NOT NULL,
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `userName` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
-  `idRole` int(10) UNSIGNED NOT NULL
+  `idRole` bigint(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -190,16 +192,18 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `password`, `ema
 (4, 'Chloette', 'Schenfisch', 'cschenfisch3', 'fcnm9jcauy0o', 'cschenfisch3@eepurl.com', '', 2),
 (5, 'Saxe', 'Frances', 'sfrances4', 'nzSj3jXbYzFP', 'sfrances4@cisco.com', '', 2),
 (6, 'Axel', 'Riera', 'USER', 'PASS', 'axelriera@gmail.com', '', 1),
-(7, 'Melina', 'Leonardi', 'melinal', 'melinal', 'melina61285@gmail.com', '', 1);
+(7, 'Melina', 'Leonardi', 'melinal', 'melinal', 'melina61285@gmail.com', '', 1),
+(1679532255065, 'georgina', 'barrios', 'geor', '$2a$10$55XZXKB5CXX76X7ptv3UKecGEpm.yp60MG3Z871kpsq0ZgiTpj1FO', 'georgina@gmail.com', 'image-1679532255055.jpeg', 1),
+(1680044030923, 'lautaro', 'pedroza', 'lautaropedroza', '$2a$10$GQamMxbxsmbgOm3VYhbZV.8gaLehg3coR.faiBJAudZRf/Fzk/4bO', 'lautimotoe99@gmail.com', 'image-1680044030645.png', 1);
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `brand`
+-- Indices de la tabla `brands`
 --
-ALTER TABLE `brand`
+ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -218,9 +222,9 @@ ALTER TABLE `cartproduct`
   ADD KEY `idProduct` (`idProduct`);
 
 --
--- Indices de la tabla `category`
+-- Indices de la tabla `categories`
 --
-ALTER TABLE `category`
+ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -228,7 +232,7 @@ ALTER TABLE `category`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idCategory` (`idCategory`),
+  ADD KEY `products_ibfk_1` (`idCategory`),
   ADD KEY `idBrand` (`idBrand`);
 
 --
@@ -242,17 +246,17 @@ ALTER TABLE `roles`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `idRole` (`idRole`);
+  ADD KEY `users_ibfk_1` (`idRole`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `brand`
+-- AUTO_INCREMENT de la tabla `brands`
 --
-ALTER TABLE `brand`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+ALTER TABLE `brands`
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `cart`
@@ -267,28 +271,28 @@ ALTER TABLE `cartproduct`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `category`
+-- AUTO_INCREMENT de la tabla `categories`
 --
-ALTER TABLE `category`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+ALTER TABLE `categories`
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1680122781246;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1680044030924;
 
 --
 -- Restricciones para tablas volcadas
@@ -298,22 +302,20 @@ ALTER TABLE `users`
 -- Filtros para la tabla `cart`
 --
 ALTER TABLE `cart`
-  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`idUser`) REFERENCES `users` (`id`);
 
 --
 -- Filtros para la tabla `cartproduct`
 --
 ALTER TABLE `cartproduct`
-  ADD CONSTRAINT `cartproduct_ibfk_1` FOREIGN KEY (`idCart`) REFERENCES `cart` (`id`),
-  ADD CONSTRAINT `cartproduct_ibfk_2` FOREIGN KEY (`idProduct`) REFERENCES `cart` (`id`);
+  ADD CONSTRAINT `cartproduct_ibfk_1` FOREIGN KEY (`idCart`) REFERENCES `cart` (`id`);
 
 --
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`idCategory`) REFERENCES `category` (`id`),
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`idBrand`) REFERENCES `brand` (`id`);
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`idCategory`) REFERENCES `categories` (`id`),
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`idBrand`) REFERENCES `brands` (`id`);
 
 --
 -- Filtros para la tabla `users`
