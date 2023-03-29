@@ -21,12 +21,16 @@ module.exports = {
         res.render("ayuda")
     },
     carrito: (req,res)=>{
-        res.render("carrito")           
+        res.render("carrito")
+                  
     },
     oferta: (req,res)=>{
         const ofertProducts = products.getProductsOferta();
-        res.render("oferta",{
-            ofertProducts
-        })           
+        res.render(
+          "oferta",
+          {
+            ofertProducts,
+          }
+        );           
     },
 }

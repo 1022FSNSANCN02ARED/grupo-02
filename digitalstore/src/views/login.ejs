@@ -17,14 +17,33 @@
 
         
       
-            <form action="/" class="form-login">
+            <form action = "/users/login" class="form-login" method="post">
 
-                <label for="" class="label-login">Usuario</label>
-                <input type="text" class="input-login" placeholder="Ingrese usuario o e-mail">
+                <label for="" class="label-login">Email</label>
+                <input type="text" name = "email" class="input-login" placeholder="Ingrese e-mail para loguearse"  value="<%= locals.old && old.emailLogin ? old.emailLogin : '' %>">
+
+                <% if (locals.errores && errores.email ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.email.msg %>
+                    </div>
+                    <% } %>
+
                 <label for="" class="label-login">Contraseña</label>
-                <input type="password" class="input-login" placeholder="Ingrese su contraseña">
+                <input type="password" name = "password"class="input-login" placeholder="Ingrese su contraseña">
 
+                <% if (locals.errores && errores.password ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.password.msg %>
+                    </div>
+                    <% } %>
+
+                <br>    
+                <label><input type="checkbox" id="remember" name="remember"> Recordar usuario </label><br>
                 <a href="" class="w-100  "><input type="submit" class="boton-enviar-login"></a>
+             
+                <br>
+               
+                <br>
                 <a href="/register" class="registrate-login"><p>Todavia no sos usuario? <p class="rojo-login">Registrate aca!</p> </p></a>
 
             </form>

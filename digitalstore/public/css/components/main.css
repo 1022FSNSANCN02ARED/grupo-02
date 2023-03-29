@@ -1,11 +1,11 @@
 @import url("variables.css");
 
-main h2{
+/* main h2{
     background-color: var(--gris-claro);
     font-size: 20px;
     margin: 30px auto 0px 90px;
     text-transform: uppercase;
-}
+} */
 
 .main-ayuda h3,
 .main-ayuda h4{

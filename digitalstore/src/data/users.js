@@ -42,10 +42,12 @@ module.exports = {
   },
   findByField(field, text) {
 		let allUsers = this.getUsers();
-		let userFound = allUsers.find(oneUser => oneUser[field] === text);
+		let userFound = allUsers.find(
+      oneUser => oneUser[field] === text
+    );
 		return userFound;
 	},
 };
 
 
-console.log (module.exports.getUsers())
+//console.log (module.exports.findByField("id", 5))

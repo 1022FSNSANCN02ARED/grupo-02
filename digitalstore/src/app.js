@@ -7,9 +7,11 @@ const express = require('express');
 const app = express();
 //session-middlewares
 const session = require('express-session');
-const cookies = require('cookie-parser');
 //********************************//
-const userLogger = require("./middlewares/userLogger");
+//const userLogger = require("./middlewares/userLogger");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const cookies = require('cookie-parser');
+
 
 app.use(session({
 	secret: "Shhh, It's a secret",
@@ -19,7 +21,12 @@ app.use(session({
 
 app.use(cookies());
 
-app.use(userLogger);
+
+
+app.use(userLoggedMiddleware);
+
+
+//app.use(userLogger);
 //******************************** */
 //EXPRESS CONFIG
 const PORT=3000;
