@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `digitalstore_db`
 --
-DROP DATABASE digitalstore_db;
+DROP DATABASE IF EXISTS digitalstore_db;
 CREATE DATABASE digitalstore_db;
 USE digitalstore_db;
 -- --------------------------------------------------------

@@ -1,12 +1,28 @@
 const products = require('../data/products');
+const db = require('../database/models');
+const { Op } = require("sequelize");
 
 module.exports = {
+/*
     index: (req,res) =>{
         const productsOfert = products.getProductsOferta()
         res.render("index",{
             productsOfert,
             nombre:"lautaro"
         })
+    },*/
+    index: (req,res) =>{
+            db.Product
+            .findAll({
+                where: {
+                    discount:{
+                        [Op.gt]: 0, 
+                    }
+                }
+            }) // force: true es para asegurar que se ejecute la acción
+            .then(productsOfert => {
+                return res.render('index', {productsOfert})})
+            .catch(error => res.send(error)) 
     },
     register: (req,res)=> {
         res.render("register")
@@ -25,12 +41,16 @@ module.exports = {
                   
     },
     oferta: (req,res)=>{
-        const ofertProducts = products.getProductsOferta();
-        res.render(
-          "oferta",
-          {
-            ofertProducts,
-          }
-        );           
+        db.Product
+        .findAll({
+            where: {
+                discount:{
+                    [Op.gt]: 0, 
+                }
+            }
+        }) // force: true es para asegurar que se ejecute la acción
+        .then(productsOfert => {
+            return res.render('oferta', {productsOfert})})
+        .catch(error => res.send(error)) 
     },
 }

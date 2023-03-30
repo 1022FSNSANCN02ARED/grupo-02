@@ -236,17 +236,14 @@ border-radius: 10px;
 @media (min-width:1024px) {
 
     .div-desplegable-header{
-       z-index: 50;
+       z-index: 3;
         position: fixed;
         width: 400px;
         height: 500px;
         background-color: rgba(0, 0, 0, 0.747);
-        margin-left: 60vw;
-        margin-top: 26vw;
+        right: -400px;
+        top: 0px;
         display: flex;
-        
-       
-       
     }
     .contenedorUsuarioHeader{
         text-align: center;
