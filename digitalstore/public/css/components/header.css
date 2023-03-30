@@ -240,23 +240,26 @@ border-radius: 10px;
         position: fixed;
         width: 400px;
         height: 500px;
-        background-color: rgba(0, 0, 0, 0.747);
+        background-color: rgba(0, 0, 0, 0.89);
         right: -400px;
         top: 0px;
         display: flex;
+        
     }
     .contenedorUsuarioHeader{
         text-align: center;
         display: flex;
         flex-direction: column;
         width: 90%;
+       
     }
     .imganduser{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 5%;
-        background-color: var(--naranja-oscuro);
+        background-color: var(--naranja);
+        color: white;
+
     }
     .imgHeader{
         width: 100px;
@@ -271,11 +274,13 @@ border-radius: 10px;
     .cerrarDesplegable{
         width:10%;
         height: 100%;
-        background-color: wheat;
+        background-color: rgba(128, 128, 128, 0.822);
         display: flex;
         justify-content: center;
        cursor: pointer;
         align-items: center;
+        color: white;
+        
     }
     .divDetalle{
         margin-top: 20%;
