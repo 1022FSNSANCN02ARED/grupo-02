@@ -1,10 +1,10 @@
 module.exports =
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "digitalstore_db",
-    "host": "127.0.0.1",
+    "username": "moondb_ds",
+    "password": "digitalstore123",
+    "database": "moondb_digitalstore",
+    "host": "mysql-moondb.alwaysdata.net",
     "dialect": "mysql"
   },
   "test": {
