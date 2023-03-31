@@ -15,7 +15,12 @@ usuario.addEventListener("click", function(e){
     
     
 })
-cerrarDesplegable.addEventListener("click", function(e){
+desplegable.addEventListener("mouseover", function(e){
+    e.preventDefault();
+    desplegable.style.right = "0px";
+    
+})
+desplegable.addEventListener("mouseout", function(e){
     e.preventDefault();
     desplegable.style.right = "-400px";
     

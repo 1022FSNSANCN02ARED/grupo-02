@@ -244,13 +244,16 @@ border-radius: 10px;
         right: -400px;
         top: 0px;
         display: flex;
+        border: 1px solid white;
+        border-radius: 5px;
         
     }
     .contenedorUsuarioHeader{
         text-align: center;
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
+    
        
     }
     .imganduser{
@@ -271,22 +274,28 @@ border-radius: 10px;
         text-transform: uppercase;
     }
 
-    .cerrarDesplegable{
-        width:10%;
-        height: 100%;
-        background-color: rgba(128, 128, 128, 0.822);
-        display: flex;
-        justify-content: center;
-       cursor: pointer;
-        align-items: center;
-        color: white;
-        
-    }
+    
     .divDetalle{
         margin-top: 20%;
     }
     .divDetalle h3{
-        margin: 10% 0;
+        padding: 10px;
+        width: 60%;
+        margin: 5% auto;
+        border-radius: 20px;
+    }
+    .divDetalle h3:hover{
+        background-color: var(--naranja-oscuro);
+        
+        
+        
+    }
+    .h3Cerrar a:hover{
+        background-color: var(--naranja-oscuro);
+        color: brown;
+        
+        
+        
     }
     .divDetalle h3 a{
         color: white;
