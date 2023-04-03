@@ -1,12 +1,19 @@
 const users = require("../data/users"); //requiero el array de usuarios parseado
+const db = require('../database/models');
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false; //seteo que no tengo ningun usuario en sesion
 
   let emailInCookie = req.cookies.userEmail; //tenemos a alguien en una cookie?
-  let userFromCookie = users.findByField("email", emailInCookie); //lo pude encontrar de la DB?
+ // let userFromCookie = users.findByField("email", emailInCookie); //lo pude encontrar de la DB?
 
-
+  let user = await db.User.findAll({
+    where: {
+      email: emailInCookie, 
+      }
+  });
+  
+  const userFromCookie = user[0].dataValues;
 
   if (userFromCookie){// SI ENCONTRE AL USUARIO LO PASO A SESION
         req.session.userLogged = userFromCookie;

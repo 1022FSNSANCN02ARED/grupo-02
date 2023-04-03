@@ -8,6 +8,77 @@ const users = require("../data/users"); //requiero el array de usuarios parseado
 
 
 module.exports = {
+
+  list: (req, res) => {
+    db.User.findAll({
+        include: ['role']
+    })
+        .then(users => {
+            res.render('panelDeControl', {users})
+        })
+},
+
+addUsersForm: (req, res) => {
+
+    res.render("register");
+},
+
+addUsers: async (req, res) => {
+   
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
+       //-----
+    if(errores.isEmpty()){
+           
+    //sino hay errores, pregunto si el email con el que intentan rehistrar existe en la db (validacion a mano). NO DEBE HABER DOS USUARIOS CON UN MISMO EMAIL
+
+    //let userInDB = users.findByField('email',req.body.email);
+    let userInDB = await db.User.findAll({
+        where: {
+          email: req.body.email, 
+          }
+    });
+    
+    if (userInDB.length>0) {
+        return res.render ('register', {
+          errores: {
+            email:{
+                 msg: 'Este mail ya esta registrado'
+            
+                }
+          },
+          old:req.body
+        });
+
+    }      
+    
+    db.User.create(
+        {   
+            id: Date.now(),
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            userName: req.body.userName,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            email: req.body.email,
+            idRole: 2, // 2 SERIA USUARIO REGULAR // PODEMOS VER COMO HACER PARA QUE CUANDO EL QUE ESTA LOGEADO ES ADMIN PUEDA ELEGIR.
+            img: req.file ? req.file.filename : "usuario.jpeg",
+        }
+    )
+    .then(()=> {
+        return res.redirect('/login')})            
+    .catch(error => res.send(error))
+               
+    }else{
+     
+      //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
+        res.render("register", {
+           errores: errores.mapped(),
+           old:req.body
+        });
+     
+    } 
+  },
+
+  /*
   addUsersForm: (req, res) => {
    
     res.render("register");
@@ -65,7 +136,7 @@ module.exports = {
      
     } 
   },
-
+*/
   //Lista usuarios cargados en la DB en el panel de control para administradores.
   listUsers: (req, res) => {
     db.User.findAll({
