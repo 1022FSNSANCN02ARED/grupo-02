@@ -153,7 +153,6 @@
         "id": 1678901959743,
         "name": "cristian",
         "last_name": "ledesma",
-
         "email": "sergio_elpanzaledesma@gmail.com",
         "usuario": "panza",
         "avatar": "usuario.png"
@@ -310,5 +309,14 @@
         "usuario": "lautaropedroza",
         "password": "$2a$10$GQamMxbxsmbgOm3VYhbZV.8gaLehg3coR.faiBJAudZRf/Fzk/4bO",
         "avatar": "image-1680044030645.png"
+    },
+    {
+        "id": 1680534357142,
+        "name": "lautaro",
+        "last_name": "pedroza",
+        "email": "lautimotoe9@gmail.com",
+        "usuario": "lautaropedroza",
+        "password": "$2a$10$3x0jQ0CgRqmGZ5bLlosP5uLvcHZhxPehuic5QbPDbgZhBU3dN62CK",
+        "avatar": "usuario.jpeg"
     }
 ]
