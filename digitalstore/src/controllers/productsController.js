@@ -1,5 +1,7 @@
+const { fn } = require('sequelize');
 const products = require('../data/products');
 const db = require('../database/models');
+const {Op} = require('sequelize')
 
 module.exports={
      productDetail: (req,res)=>{
@@ -10,7 +12,7 @@ module.exports={
             .then(producto => {
                 res.render("producto",{
                     producto,
-                })
+            })
         })
 
     },
@@ -23,15 +25,13 @@ module.exports={
             producto
         })
     },*/
-    listProducts: (req, res) => {
-        db.Product.findAll({
-            include: ['brand' ,'category']
+    listProducts: async (req, res) => {
+        const productos = await db.Product.findAll({include: ['brand' ,'category']})
+        const categorias = await db.Category.findAll();
+        res.render("listProducts",{
+            productos,
+            categorias
         })
-            .then(productos => {
-                res.render("listProducts",{
-                    productos,
-                })
-    })
     },
     /*
     listProducts: (req,res)=>{
@@ -97,21 +97,53 @@ module.exports={
         products.saveProduct(product);
         res.redirect("/products");
     },*/
-    filterProducts: (req,res) => {
-
-        let listProducts;
+    filterProducts: async (req,res) => {
+        const categorias = await db.Category.findAll();
         const filter = req.body;
-        console.log(Object.entries(filter).length )
-        console.log(filter)
+        let productos=[]
         if(Object.entries(filter).length >0){
-            listProducts= products.getProductsFilter(filter)
+            const props = Object.entries(filter).map((prop)=>{
+                return prop[1];
+            })
+            console.log(props)
+            
+            //separar si tiene on de oferta 
+
+            if(props[0]!="on"){
+                productos = await db.Product.findAll({
+                    include: ['brand' ,'category'],
+                    where:{
+                        idCategory:{
+                            [Op.or]:props
+                        }
+                    }
+                });
+            }else{
+                props.shift();
+                productos = await db.Product.findAll({
+                    include: ['brand' ,'category'],
+                    where:{
+                        idCategory:{
+                            [Op.or]:props
+                        },
+                        discount:{
+                            [Op.gt]:0
+                        }
+                    }
+                })
+            }
+
+            res.render('listProducts', {
+                productos,
+                categorias
+            })
         }
         else{
-            listProducts= products.getProducts();
+            res.render('listProducts', {
+                productos,
+                categorias
+            })
         }
-        res.render("listProducts",{
-            listProducts,
-        }) 
         
     }
 }

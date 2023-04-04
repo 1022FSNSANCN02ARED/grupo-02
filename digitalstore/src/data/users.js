@@ -1,4 +1,4 @@
-const users = require("../data/users");
+const users = require("./users");
 const fs = require("fs");
 const path = require("path");
 const usersFilePath = path.join(__dirname, "usersDataBase.json");

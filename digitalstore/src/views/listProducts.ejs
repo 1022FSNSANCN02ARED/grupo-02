@@ -11,9 +11,7 @@
 
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
-
     <!--MAIN-->
-
     <main class="main-listado">
         <section class="container-categories">
             <div class="desplegable">
@@ -32,12 +30,9 @@
                 <div class="filters">
                     <h3>Categorias</h3>
                     <div class="filters-container">
-                        <label><input type="checkbox" value="auriculares" name="auriculares"> Auriculares</label>
-                        <label><input type="checkbox"  value="teclados" name="teclados"> Teclados</label>
-                        <label><input type="checkbox" value="monitores" name="monitores"> Monitores</label>
-                        <label><input type="checkbox" value="gabinetes" name="gabinetes"> Gabinetes</label>
-                        <label><input type="checkbox" value="memorias" name="memorias"> Memorias</label>
-                        <label><input type="checkbox" value="motherboard" name="motherboard"> Motherboard</label>
+                        <% categorias.forEach(categoria => { %>
+                            <label><input type="checkbox" value="<%=categoria.id %>" name="<%= categoria.name %>"><%= categoria.name %></label>
+                        <% }) %>
                     </div>
                     <input type="submit">
                 </div>
@@ -52,7 +47,6 @@
 
     <!-- AXEL -->
     <%- include("partials/footer")%>
-    
    
 </body>
     
