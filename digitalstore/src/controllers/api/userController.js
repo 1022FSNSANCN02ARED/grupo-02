@@ -19,5 +19,15 @@ module.exports= {
             },
             data: rows,
         });
+    },
+    detail: async (req,res)=>{
+        const user = await User.findByPk(req.params.id);
+        res.json({
+            meta: {
+                status: !user ? 404 : 200,
+                url: req.orinalUrl
+            },
+            data: user
+        });
     }
 }
