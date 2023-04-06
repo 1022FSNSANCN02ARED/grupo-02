@@ -8,6 +8,8 @@ const app = express();
 //session-middlewares
 const session = require('express-session');
 //********************************//
+const logger = require('morgan');
+app.use(logger('dev'));
 //const userLogger = require("./middlewares/userLogger");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 const cookies = require('cookie-parser');
