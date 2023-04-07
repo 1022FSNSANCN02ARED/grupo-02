@@ -25,7 +25,13 @@ const validaciones = [
     .bail()
 
     .isAlphanumeric()
-    .withMessage("El usuario debe contener caracteres alfanumericos"),
+    .withMessage("El usuario debe contener caracteres alfanumericos")
+    .bail()
+
+
+    .isLength({ max: 13 })
+    .withMessage("El usuario no debe contener mas de 13 caracteres"),
+    
 
   body("email")
     .notEmpty()
