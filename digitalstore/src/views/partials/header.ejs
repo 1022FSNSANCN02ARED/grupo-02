@@ -11,7 +11,6 @@
             <!-- si estoy logueado solo muestro boton de carrito y salir -->
             <% if (locals.isLogged) { %>
 
-                <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
                 <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
                         <!-- Salir</a></button> -->
 
@@ -32,10 +31,12 @@
 
                     <div class="contenedorUsuarioHeader">
                         <div class="imganduser">
-                            <img class="imgHeader" src="/img/usuarios/<%= locals.userLogged.img %> ">
+                            <a href="/users/profile"><img class="imgHeader" src="/img/usuarios/<%= locals.userLogged.img %> "></a>
                             <div class="nombreHeader">
                                 <%=locals.userLogged.userName %>
                             </div>
+                          <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
+
 
                         </div>
 
