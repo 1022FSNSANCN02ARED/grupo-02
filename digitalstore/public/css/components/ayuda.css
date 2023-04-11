@@ -6,6 +6,10 @@
 
 @media (min-width: 1024px){
 
+   html{
+      scroll-behavior: smooth;
+   }
+
 
    .h1-ayuda{
       text-align: center;
@@ -45,10 +49,17 @@
       border-bottom: 2px solid var(--naranja);
       padding: 2%;
       cursor: pointer;
+      border-radius: 20px 20px 0 0;
    }
    .ul-ayuda li:hover {
       border-bottom: 2px solid var(--negro);
       background-color: var(--naranja);
+      
+
+   }
+   .ul-ayuda li:hover a {
+     color: white;
+      
 
    }
 
