@@ -103,13 +103,14 @@ module.exports={
         const categorias = await db.Category.findAll();
         const brands = await db.Brand.findAll();
         const filter = req.body;
+        console.log (filter);
         let productos=[]
         if(Object.entries(filter).length >0){
             const props = Object.entries(filter).map((prop)=>{
                 return prop[0];
             })
             //separar si tiene on de oferta 
-
+            console.log(props)
             const cat = await db.Category.findAll({
                 where:{
                     name:{ [Op.or]:
@@ -124,22 +125,40 @@ module.exports={
                     }
                 }
             })
-    
+            var brand = []
+            var catego = []
             if(marca){
-                var brand = marca[0].dataValues.id
+                for (let i = 0; i < marca.length; i++) {
+                    brand[i] = marca[i].dataValues.id;
+                }
+                //var brand = marca[0].dataValues.id
             }
-            if (cat){
-                var catego = cat[0].dataValues.id
+            else{
+                console.log("asd")
+                for (let i = 0; i < brands.length; i++) {
+                    brand[i] = brands[i].dataValues.id;
+                }
+            }        
+            
+            if (cat.length>0){
+                for (let i = 0; i < cat.length; i++) {
+                    catego[i] = cat[i].dataValues.id;
+                }
             }
-           
+                              
            
 
-            if(props[0]!="on"){
+            if(props[0]!="off"){
                 productos = await db.Product.findAll({
                     include: ['brand' ,'category'],
                     where:{
-                        idCategory: catego,
-                        idBrand: brand,//{
+                      
+                        idCategory: {
+                            [Op.or]:catego
+                        },
+                        idBrand:{
+                            [Op.or]:brand
+                        },//{
                            // [Op.or]: //props
                        // }
                     }
@@ -150,8 +169,12 @@ module.exports={
                     include: ['brand' ,'category'],
                     where:{
                         
-                        idCategory: catego,
-                        idBrand: brand,
+                        idCategory: {
+                            [Op.or]:catego
+                        },
+                        idBrand:{
+                            [Op.or]:brand
+                        },
                         /*
                         idCategory:{
                             [Op.or]:props
