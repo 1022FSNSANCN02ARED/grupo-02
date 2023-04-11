@@ -22,7 +22,7 @@ app.use(session({
 }));
 
 app.use(cookies());
-//*************************/
+//*Intercambio de Recursos de Origen Cruzado (CORS)*/
 const cors = require('cors');
 app.use(
 	cors({
