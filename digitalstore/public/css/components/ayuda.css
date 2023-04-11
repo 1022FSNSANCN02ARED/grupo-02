@@ -1,35 +1,55 @@
-.div-ayuda{
-    
-    text-align: center;
-    margin-top: 2%;
 
-    
-}
-.div-details-ayuda{
-    margin: 20px auto;
-    width: 80%;
-    
-}
-.div-details-ayuda h3{
-   font-size: x-large;
-}
-.div-details-ayuda details{
-   font-size: large;
-   cursor: pointer;
-}
-.div-details-ayuda details[open] summary::before{
-   content: '-';
-   margin-right: 5px;
-}
-.div-details-ayuda summary{
-   margin-bottom: 20px;
-   list-style: none;
-}
-.div-details-ayuda summary::before{
-  content: '+';
-  margin-right: 5px;
-}
-.div-details-ayuda summary:hover{
-  color: var(--naranja);
+
+
+
+
+
+@media (min-width: 1024px){
+
+
+   .h1-ayuda{
+      text-align: center;
+      margin-top: 2%;
+   }
+
+   .section-ayuda {
+      text-align: center;
+      margin-top: 5%;
+     
+   }
+   .section-ayuda h3 {
+      font-size: 40px;
+      margin-bottom: 3%;
+   }
+   .article-ayuda{
+      border: 2px solid gainsboro;
+      margin: 5% auto;
+      padding: 2%;
+      border-radius: 20px;
+      background-color: white;
+      width: 70%;
+      box-shadow: 0px 0px 20px var(--negro);
+
+
+   }
+   .navBar-ayuda{
+      background-color: white;
+      
+      
+   }
+   .ul-ayuda li a{
+      color: black;
+      
+   }
+   .ul-ayuda li {
+      border-bottom: 2px solid var(--naranja);
+      padding: 2%;
+      cursor: pointer;
+   }
+   .ul-ayuda li:hover {
+      border-bottom: 2px solid var(--negro);
+      background-color: var(--naranja);
+
+   }
 
 }

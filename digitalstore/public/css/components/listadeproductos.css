@@ -58,6 +58,7 @@
     padding: 15px;
     row-gap: 50px;
     background-color: var(--gris-claro);
+    margin: 0 auto;
     
 }
 
@@ -231,8 +232,7 @@ input:checked + .slider:before {
     .container-products{
         gap: 0%;
         display: flex;
-        justify-content: space-around;
-        justify-content: flex-start;
+    
     }
 
     .item-producto-container{

@@ -12,7 +12,7 @@
             <% if (locals.isLogged) { %>
 
                 <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
-                        <!-- Salir</a></button> -->
+                <!-- Salir</a></button> -->
 
 
                 <div class="usuarioHeader">
@@ -31,17 +31,27 @@
 
                     <div class="contenedorUsuarioHeader">
                         <div class="imganduser">
-                            <a href="/users/profile"><img class="imgHeader" src="/img/usuarios/<%= locals.userLogged.img %> "></a>
+                            <a href="/users/profile"><img class="imgHeader"
+                                    src="/img/usuarios/<%= locals.userLogged.img %> "></a>
                             <div class="nombreHeader">
                                 <%=locals.userLogged.userName %>
+                                   
                             </div>
-                          <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
+
 
 
                         </div>
 
 
                         <div class="divDetalle">
+
+                            <button class="btn-tienda">
+                                <a href="/carrito" >
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </a>
+                            </button>
+
+
                             <h3> <a href="">Mis compras</a> </h3>
                             <h3> <a href="">Favoritos</a> </h3>
                             <h3> <a href="">Cambiar contraseña</a> </h3>
