@@ -5,6 +5,7 @@ const user = document.querySelector(".usuario.header")
 
 menuBtn.addEventListener("click", () => {
     menuHam.classList.toggle("show");
+    
 });
 
 const catBtn = document.querySelector('.desplegable');

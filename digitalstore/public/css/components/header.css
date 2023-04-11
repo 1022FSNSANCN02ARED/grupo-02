@@ -189,6 +189,12 @@ border-radius: 10px;
 #nav-buttons-laptop{
     display: none;
 }
+.div-desplegable-header{
+    display: none;
+}
+.usuario-header{
+    display: none;
+}
 
 
 @media (min-width:768px) {

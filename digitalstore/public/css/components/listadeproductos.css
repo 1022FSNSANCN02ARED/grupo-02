@@ -38,6 +38,7 @@
 
 .show-cat{
     display: flex !important;
+   
 }
 
 .container-categories form input[type="submit"]{
@@ -188,6 +189,9 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.a-agregarProducto-listProduct{
+    display: none;
+}
 
 @media (min-width:481px) {
     .container-products{
@@ -263,5 +267,23 @@ input:checked + .slider:before {
     }
     .desplegable i{
         display: none;
+    }
+    .a-agregarProducto-listProduct{
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        padding: 20px 5px;
+        width: 90%;
+    }
+    .a-agregarProducto-listProduct input{
+        background-color: white;
+        color: var(--naranja);
+        font-weight: bold;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        width: 100%;
     }
 }
