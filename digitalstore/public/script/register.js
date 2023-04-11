@@ -18,6 +18,12 @@ window.addEventListener("load", function () {
     //     e.preventDefault()
     // })
 
+    
+
+ 
+
+
+
 
 
 
@@ -65,6 +71,7 @@ window.addEventListener("load", function () {
             usuarioInput.style.backgroundColor = "red"
         }
     })
+
 
     //contraseña 
 

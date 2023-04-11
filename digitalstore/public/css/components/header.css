@@ -240,12 +240,12 @@ border-radius: 10px;
         position: fixed;
         width: 400px;
         height: 500px;
-        background-color: rgba(0, 0, 0, 0.89);
         right: -400px;
-        top: 0px;
+        top: 0px;   
         display: flex;
-        border: 1px solid white;
-        border-radius: 5px;
+        border-radius: 20px;
+         background-color: rgba(0, 0, 0, 0.89);
+        
         
     }
     .contenedorUsuarioHeader{
@@ -262,6 +262,8 @@ border-radius: 10px;
         align-items: center;
         background-color: var(--naranja);
         color: white;
+        border-radius: 20px 0 0 0;
+        
 
     }
     .imgHeader{
