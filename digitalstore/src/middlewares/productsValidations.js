@@ -1,67 +1,70 @@
 const { body } = require("express-validator");
 const path = require("path");
-// editar validaciones de productos en base al validator de usuarios
-// const validacionesProductos = [
-//   //validaciones de register
-//   body("nombre")
-//     .notEmpty()
-//     .withMessage("El nombre no puede estar vacio")
-//     .bail()
 
-//     .isAlpha() //que solo sean caracteres alfabeticos
-//     .withMessage("El nombre solo acepta caracteres alfabeticos"),
+// validamos el formulario para agregar productos
 
-//   body("apellido")
-//     .notEmpty()
-//     .withMessage("El apellido no puede estar vacio")
-//     .bail()
+const validacionesProductos = [
+  //validaciones de register
+  body("name")
+    .notEmpty()
+    .withMessage("El nombre del producto no puede estar vacio")
+    .bail()
 
-//     .isAlpha() //que solo sean caracteres alfabeticos
-//     .withMessage("El apellido solo acepta caracteres alfabeticos"),
+    .isAlpha() //que solo sean caracteres alfabeticos
+    .withMessage("El nombre del producto solo acepta caracteres alfabeticos"),
 
-//   body("usuario")
-//     .notEmpty()
-//     .withMessage("El usuario no puede estar vacio")
-//     .bail()
+  body("price")
+    .notEmpty()
+    .withMessage("El precio no puede estar vacio")
+    .bail()
 
-//     .isAlphanumeric()
-//     .withMessage("El usuario debe contener caracteres alfanumericos")
-//     .bail()
+    .isNumeric() //que solo sean caracteres numericos
+    .withMessage("El precio solo acepta caracteres numericos"),
 
-//     .isLength({ max: 13 })
-//     .withMessage("El usuario no debe contener mas de 13 caracteres"),
+  body("discount")
+    .notEmpty()
+    .withMessage("El descuento no puede estar vacio")
+    .bail()
 
-//   body("email")
-//     .notEmpty()
-//     .withMessage("El mail no puede estar vacio")
-//     .bail()
+    .isNumeric() //que solo sean caracteres numericos
+    .withMessage("El precio solo acepta caracteres numericos"),
 
-//     .isEmail()
-//     .withMessage("Formato de Email invalido"),
+  body("description")
+    .notEmpty()
+    .withMessage("La descripcion del producto no puede estar vacia")
+    .bail()
 
-//   body("imageuser").custom((value, { req }) => {
-//     let file = req.file;
+    .isAlphanumeric()
+    .withMessage("La descripcion no puede tener caracteres especiales")
+    .bail()
 
-//     let acceptedExtensions = [".jpg", ".png", ".jpeg"];
+    .isLength({ max: 200 })
+    .withMessage("La descripcion no puede contener mas de 200 caracteres"),
 
-//     if (!file) {
-//       //cuando no el usuario no cargo la imagen de perfil
-//       //no muestra error de validacion ya que estipula que si el usuario no cargo imagen de perfil se cargue la que esta por default(usuario.jpeg)
-//       // throw new Error('Tienes que subir una imagen de perfil');
-//     } else {
-//       //cuando el usuario si cargo la imagen de perfil
+  //validamos la imagen que se carga del producto
 
-//       let fileExtension = path.extname(file.originalname);
-//       console.log(fileExtension);
-//       if (!acceptedExtensions.includes(fileExtension)) {
-//         throw new Error(
-//           "Los formatos de imagen permitidos son:  " + acceptedExtensions
-//         );
-//       }
-//     }
+  body("image").custom((value, { req }) => {
+    let file = req.file;
 
-//     return true;
-//   }),
-// ];
+    let acceptedExtensions = [".jpg", ".png", ".jpeg"];
 
-// module.exports = validaciones;
+    if (!file) {
+      //si no se cargo la imagen del producto no hago nada ya que se carga la imagen de producto por default
+      //    throw new Error('Tienes que subir una imagen de perfil');
+    } else {
+      //cuando el usuario si cargo la imagen del producto
+
+      let fileExtension = path.extname(file.originalname);
+      //   console.log(fileExtension);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        throw new Error(
+          "Los formatos de imagen permitidos son:  " + acceptedExtensions
+        );
+      }
+    }
+
+    return true;
+  }),
+];
+
+module.exports = validacionesProductos;

@@ -15,35 +15,64 @@
 
         <div class="item-content-form name-form">
             <label for="nombre" class="label-form">Nombre del producto</label>
-            <input type="text" class="input-nombre" placeholder="Ingrese nombre del producto" name="name" id="nombre">
+            <input type="text" class="input-nombre" placeholder="Ingrese nombre del producto" name="name" id="nombre" value="<%= locals.old && old.name ? old.name : '' %>">
+
+                <% if (locals.errores && errores.name ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.name.msg %>
+                    </div>
+                    <% } %>
+
+
         </div>
 
         <div class="item-content-form price-form">
             <label for="precio" class="label-form">Precio</label>
-            <input type="number" class="input-number" placeholder="Ingrese precio" name="price" id="precio">
+            <input type="number" class="input-number" placeholder="Ingrese precio" name="price" id="precio" value="<%= locals.old && old.price ? old.price : '' %>">
+
+            <% if (locals.errores && errores.price ) { %>
+                <div class='feedback is-danger'>
+                    <%= errores.price.msg %>
+                </div>
+                <% } %>
+
         </div>
 
         <div class="item-content-form price-form">
             <label for="descuento" class="label-form">Descuento</label>
-            <input type="number" name="discount" id="descuento" class="input-label" placeholder="Ej: 0%">
+            <input type="number" name="discount" id="descuento" class="input-label" placeholder="Ej: 0%" value="<%= locals.old && old.discount ? old.discount : '' %>">
+
+
+            <% if (locals.errores && errores.discount ) { %>
+                <div class='feedback is-danger'>
+                    <%= errores.discount.msg %>
+                </div>
+                <% } %>
+
         </div>
 
         <div class="item-content-form category-form">
             <label for="categoria" class="label-form">Categoria</label>
             <select name="idCategory" id="" required>
                 <option value="" disabled selected>- Seleccione categoria - </option>
-                <% categories.forEach(category => { %>
-                <option value="<%= category.id %>"><%= category.name %></option>
-                <% }); %>
+                <% categories.forEach(category=> { %>
+                    <option value="<%= category.id %>">
+                        <%= category.name %>
+                    </option>
+                    <% }); %>
             </select>
         </div>
+
+
         <div class="item-content-form category-form">
             <label for="idBrand" class="label-form">Marca</label>
             <select name="idBrand" id="" required>
                 <option value="" disabled selected>- Seleccione marca - </option>
-                <% brands.forEach(brand => { %>
-                <option value="<%= brand.id %>"><%= brand.name %></option>
-                <% }); %>
+                <% brands.forEach(brand=> { %>
+                    <option value="<%= brand.id %>">
+                        <%= brand.name %>
+                    </option>
+                    <% }); %>
             </select>
         </div>
 
@@ -51,12 +80,26 @@
         <div class="item-content-form file-form">
             <label for="image" class="label-form" >Imagen del producto</label>
             <input type="file" class="input-file" name="image" id="image" accept="image/*">
+
+            <% if (locals.errores && errores.image) { %>
+                <div class='feedback is-danger'>
+                    <%= errores.image.msg %>
+                </div>
+                <% } %>
+
         </div>
 
 
         <div class="item-content-form area-form">
             <label for="descripcion" class="label-form" >Descripcion</label>
-            <textarea type="text" class="input-textarea" placeholder="Ingrese descripcion" name="description" id="descripcion"></textarea>
+            <textarea type="text" class="input-textarea" placeholder="Ingrese descripcion" name="description" id="descripcion" value="<%= locals.old && old.description ? old.description : '' %>"></textarea>
+
+            <% if (locals.errores && errores.description) { %>
+                <div class='feedback is-danger'>
+                    <%= errores.description.msg %>
+                </div>
+                <% } %>
+
         </div>
 
 

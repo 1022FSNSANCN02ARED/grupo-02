@@ -127,7 +127,7 @@ addUsers: async (req, res) => {
             // res.send("USUARIO REGISTRADO");
             res.redirect('/login')
     }else{
-     
+     //ACA COMPARTO CON LA VISTA LA VARIABLE ERRORES>
       //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
         res.render("register", {
            errores: errores.mapped(),

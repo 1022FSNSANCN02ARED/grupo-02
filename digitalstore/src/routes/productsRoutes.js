@@ -1,12 +1,17 @@
 const {Router} = require("express");
 const router = Router();
 
+//validaciones para el formulario de agregar producto
+const validacionesProductos = require("../middlewares/productsValidations");
+
 const productsController = require('../controllers/productsController');
 
 const path = require('path');
 
 
 const multer  = require('multer');
+
+
 const { getProductTeclado } = require("../data/products");
 
 const storage= multer.diskStorage({
@@ -24,9 +29,16 @@ router.get("/detail/:id", productsController.productDetail);
 //router.get("/", productsController.listProducts);
 router.get("/", productsController.listProducts);
 router.post("/", productsController.filterProducts);
+//muestra form de agregar producto
 
 router.get("/add", productsController.addProductsForm);
-router.post("/add",upload.single("image"), productsController.addProducts);
+
+//procesa formulario de agregar producto
+router.post(
+  "/add",
+  upload.single("image"),
+  validacionesProductos, productsController.addProducts
+);
 
 
 module.exports = router
