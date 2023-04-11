@@ -67,11 +67,15 @@ module.exports = {
     //   return res.status(400).json({ error: "No hay datos" });
     // }
     //declaro la variable errores
-    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
 
+    const promCategories = db.Category.findAll();
+    const promBrands = db.Brand.findAll();
+
+
+    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
     if (errores.isEmpty()) {
       //si errores esta vacia, osea no hay errores agrega el producto a la db
-
+        
       db.Product.create({
         id: Date.now(),
         name: req.body.name,
@@ -87,11 +91,21 @@ module.exports = {
         })
         .catch((error) => res.send(error));
     } else {
+       
       //     //si errores no esta vacio vamos a hacer algo>ACA HAY ERRORES
-      res.render("agregarProducto", {
+     /* res.render("agregarProducto", {
         errores: errores.mapped(), //COMPARTO CON LA VISTA LA VARIABLE ERRORES
         old: req.body,
-      });
+      });*/
+      Promise.all([promCategories, promBrands])
+      .then(([categories, brands]) => {
+        return res.render("agregarProducto", {
+            errores: errores.mapped(), //COMPARTO CON LA VISTA LA VARIABLE ERRORES
+            old: req.body,
+           categories,
+            brands,
+        });
+      })
     }
   },
 
