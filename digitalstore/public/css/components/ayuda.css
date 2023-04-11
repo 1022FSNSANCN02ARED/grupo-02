@@ -116,11 +116,11 @@
    .article-ayuda{
       border: 2px solid gainsboro;
       margin: 5% auto;
-      padding: 2%;
+      padding: 2% ;
       border-radius: 20px;
       background-color: white;
-      width: 70%;
-      box-shadow: 0px 0px 10px var(--negro);
+      width: 60%;
+      box-shadow: 0px 0px 5px var(--negro);
 
 
    }
