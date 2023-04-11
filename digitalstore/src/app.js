@@ -22,9 +22,14 @@ app.use(session({
 }));
 
 app.use(cookies());
-
-
-
+//*************************/
+const cors = require('cors');
+app.use(
+	cors({
+	  origin: "*",
+	})
+);
+//****************************** */
 app.use(userLoggedMiddleware);
 
 
