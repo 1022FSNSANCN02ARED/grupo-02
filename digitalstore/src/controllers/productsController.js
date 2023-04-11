@@ -132,13 +132,13 @@ module.exports={
                     brand[i] = marca[i].dataValues.id;
                 }
                 //var brand = marca[0].dataValues.id
-            }
+            }/*
             else{
                 console.log("asd")
                 for (let i = 0; i < brands.length; i++) {
                     brand[i] = brands[i].dataValues.id;
                 }
-            }        
+            }  */      
             
             if (cat.length>0){
                 for (let i = 0; i < cat.length; i++) {
