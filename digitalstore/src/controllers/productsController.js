@@ -28,9 +28,11 @@ module.exports={
     listProducts: async (req, res) => {
         const productos = await db.Product.findAll({include: ['brand' ,'category']})
         const categorias = await db.Category.findAll();
+        const brands = await db.Brand.findAll();
         res.render("listProducts",{
             productos,
-            categorias
+            categorias,
+            brands
         })
     },
     /*
@@ -99,23 +101,47 @@ module.exports={
     },*/
     filterProducts: async (req,res) => {
         const categorias = await db.Category.findAll();
+        const brands = await db.Brand.findAll();
         const filter = req.body;
         let productos=[]
         if(Object.entries(filter).length >0){
             const props = Object.entries(filter).map((prop)=>{
-                return prop[1];
+                return prop[0];
             })
-            console.log(props)
-            
             //separar si tiene on de oferta 
+
+            const cat = await db.Category.findAll({
+                where:{
+                    name:{ [Op.or]:
+                        props
+                    }
+                }
+            })
+            const marca = await db.Brand.findAll({
+                where:{
+                    name:{ [Op.or]:
+                        props
+                    }
+                }
+            })
+    
+            if(marca){
+                var brand = marca[0].dataValues.id
+            }
+            if (cat){
+                var catego = cat[0].dataValues.id
+            }
+           
+           
 
             if(props[0]!="on"){
                 productos = await db.Product.findAll({
                     include: ['brand' ,'category'],
                     where:{
-                        idCategory:{
-                            [Op.or]:props
-                        }
+                        idCategory: catego,
+                        idBrand: brand,//{
+                           // [Op.or]: //props
+                       // }
                     }
                 });
             }else{
@@ -123,9 +149,13 @@ module.exports={
                 productos = await db.Product.findAll({
                     include: ['brand' ,'category'],
                     where:{
+                        
+                        idCategory: catego,
+                        idBrand: brand,
+                        /*
                         idCategory:{
                             [Op.or]:props
-                        },
+                        },*/
                         discount:{
                             [Op.gt]:0
                         }
@@ -135,13 +165,15 @@ module.exports={
 
             res.render('listProducts', {
                 productos,
-                categorias
+                categorias,
+                brands
             })
         }
         else{
             res.render('listProducts', {
                 productos,
-                categorias
+                categorias,
+                brands
             })
         }
         

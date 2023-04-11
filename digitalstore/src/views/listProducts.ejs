@@ -34,6 +34,12 @@
                             <label><input type="checkbox" value="<%=categoria.id %>" name="<%= categoria.name %>"><%= categoria.name %></label>
                         <% }) %>
                     </div>
+                    <h3>Marcas</h3>
+                    <div class="filters-container">
+                        <% brands.forEach(brand => { %>
+                            <label><input type="checkbox" value="<%=brand.id %>" name="<%= brand.name %>"><%= brand.name %></label>
+                        <% }) %>
+                    </div>
                     <input type="submit">
                 </div>
             </form>
