@@ -79,7 +79,7 @@
    .ul-ayuda a:hover {
       border-bottom: 2px solid var(--negro);
       background-color: var(--naranja);
-      
+      transition: 0.3s;
 
    }
    .ul-ayuda a:hover {
