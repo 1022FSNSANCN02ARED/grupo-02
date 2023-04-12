@@ -82,7 +82,7 @@
         <div class="item-content-form file-form">
             <label for="image" class="label-form" >Imagen del producto</label>
             <input type="file" class="input-file" name="image" id="image" accept="image/png, image/jpeg, image/jpg">
-            <p class="errorImagen"></p>
+            
             <% if (locals.errores && errores.image) { %>
                 <div class='feedback is-danger'>
                     <%= errores.image.msg %>

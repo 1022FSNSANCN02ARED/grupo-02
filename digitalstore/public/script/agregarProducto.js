@@ -13,8 +13,7 @@ window.addEventListener("load", () => {
     const errorPrecio = document.querySelector(".errorPrecio")
     const inputPrecio = document.querySelector(".input-number")
 
-    const imagen = document.querySelector(".input-file")
-    const errorImagen = document.querySelector(".errorImagen")
+    
 
 
 
@@ -29,10 +28,6 @@ window.addEventListener("load", () => {
             e.preventDefault()
             errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100"
             errorPrecio.style.color = "red"
-        } else if (imagen.value == 0){
-            e.preventDefault()
-            errorImagen.innerHTML = "Debe subir una imagen del producto"
-            errorImagen.style.color= "red"
         }
 
 
