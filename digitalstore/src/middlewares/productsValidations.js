@@ -8,10 +8,10 @@ const validacionesProductos = [
   body("name")
     .notEmpty()
     .withMessage("El nombre del producto no puede estar vacio")
-    .bail()
+    .bail(),
 
-    .isAlpha() //que solo sean caracteres alfabeticos
-    .withMessage("El nombre del producto solo acepta caracteres alfabeticos"),
+  // .isAlphanumeric() //que solo sean caracteres alfanumericos
+  // .withMessage("El nombre del producto solo acepta caracteres alfabeticos"),
 
   body("price")
     .notEmpty()
@@ -34,9 +34,9 @@ const validacionesProductos = [
     .withMessage("La descripcion del producto no puede estar vacia")
     .bail()
 
-    .isAlphanumeric()
-    .withMessage("La descripcion no puede tener caracteres especiales")
-    .bail()
+    // .isAlphanumeric()
+    // .withMessage("La descripcion no puede tener caracteres especiales")
+    // .bail()
 
     .isLength({ max: 200 })
     .withMessage("La descripcion no puede contener mas de 200 caracteres"),

@@ -54,6 +54,7 @@
         <div class="item-content-form category-form">
             <label for="categoria" class="label-form">Categoria</label>
             <select name="idCategory" id="" required>
+                
                 <option value="" disabled selected>- Seleccione categoria - </option>
                 <% categories.forEach(category=> { %>
                     <option value="<%= category.id %>">
@@ -79,7 +80,7 @@
 
         <div class="item-content-form file-form">
             <label for="image" class="label-form" >Imagen del producto</label>
-            <input type="file" class="input-file" name="image" id="image" accept="image/*">
+            <input type="file" class="input-file" name="image" id="image" accept="image/png, image/jpeg, image/jpg">
 
             <% if (locals.errores && errores.image) { %>
                 <div class='feedback is-danger'>
