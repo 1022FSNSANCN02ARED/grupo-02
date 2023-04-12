@@ -95,6 +95,7 @@ module.exports = {
         errores: errores.mapped(), //COMPARTO CON LA VISTA LA VARIABLE ERRORES
         old: req.body,
       });*/
+
       Promise.all([promCategories, promBrands]).then(([categories, brands]) => {
         return res.render("agregarProducto", {
           errores: errores.mapped(), //COMPARTO CON LA VISTA LA VARIABLE ERRORES

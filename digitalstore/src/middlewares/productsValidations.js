@@ -10,9 +10,6 @@ const validacionesProductos = [
     .withMessage("El nombre del producto no puede estar vacio")
     .bail(),
 
-  // .isAlphanumeric() //que solo sean caracteres alfanumericos
-  // .withMessage("El nombre del producto solo acepta caracteres alfabeticos"),
-
   body("price")
     .notEmpty()
     .withMessage("El precio no puede estar vacio")
@@ -26,20 +23,8 @@ const validacionesProductos = [
     .withMessage("El descuento no puede estar vacio")
     .bail()
 
-    .isNumeric() //que solo sean caracteres numericos
-    .withMessage("El precio solo acepta caracteres numericos"),
-
-  body("description")
-    .notEmpty()
-    .withMessage("La descripcion del producto no puede estar vacia")
-    .bail()
-
-    // .isAlphanumeric()
-    // .withMessage("La descripcion no puede tener caracteres especiales")
-    // .bail()
-
-    .isLength({ max: 200 })
-    .withMessage("La descripcion no puede contener mas de 200 caracteres"),
+    .isInt({ min: 0, max: 100 }) //que solo sean caracteres numericos del 0 al 100
+    .withMessage("El descuento solo acepta valores de 0 a 100 %"),
 
   //validamos la imagen que se carga del producto
 

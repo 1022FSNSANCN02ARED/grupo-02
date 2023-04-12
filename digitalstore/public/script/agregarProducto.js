@@ -1,92 +1,55 @@
 window.addEventListener("load", () => {
+  submitt = document.querySelector(".button-form");
 
+  const nombre = document.querySelector(".input-nombre");
+  const errorH2 = document.querySelector(".errorH2");
 
+  const errorPrecio = document.querySelector(".errorPrecio");
+  const inputPrecio = document.querySelector(".input-number");
 
-    submitt = document.querySelector(".button-form")
-    
+  const imagen = document.querySelector(".input-file");
+  const errorImagen = document.querySelector(".errorImagen");
 
+  submitt.addEventListener("click", function (e) {
+    if (nombre.value == 0) {
+      e.preventDefault();
+      errorH2.style.color = "red";
+      errorH2.innerHTML =
+        "El nombre del producto debe tener al menos 3 caracteres";
+    } else if (inputPrecio.value == 0) {
+      e.preventDefault();
+      errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100";
+      errorPrecio.style.color = "red";
+    } else if (imagen.value == 0) {
+      // LAU LA IMAGEN DEL PRODUCTO SI EL USUARIO NO LA INGRESA SE CARGA UNA POR DEFECTO ASI QUE NO DEBERIA TENER ERROR. EL ERROR POR BACK VALIDA LAS EXTENCIONES DE ESA IMAGEN DE PRODUCTO
+      e.preventDefault();
+      errorImagen.innerHTML = "Debe subir una imagen del producto";
+      errorImagen.style.color = "red";
+    }
+  });
 
+  //NOMBRE DE PRODUCTO
 
-    const nombre = document.querySelector(".input-nombre")
-    const errorH2 = document.querySelector(".errorH2")
+  nombre.addEventListener("blur", function () {
+    if (nombre.value.length < 3) {
+      errorH2.style.color = "red";
+      errorH2.innerHTML =
+        "El nombre del producto debe tener al menos 3 caracteres";
+    } else {
+      errorH2.innerHTML = "";
+    }
+  });
 
-    const errorPrecio = document.querySelector(".errorPrecio")
-    const inputPrecio = document.querySelector(".input-number")
+  //PRECIO DEL PRODUCTO
 
-    const imagen = document.querySelector(".input-file")
-    const errorImagen = document.querySelector(".errorImagen")
+  inputPrecio.addEventListener("keyup", function () {
+    if (inputPrecio.value.length >= 3) {
+      errorPrecio.innerHTML = "";
+    } else {
+      errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100";
+      errorPrecio.style.color = "red";
+    }
+  });
 
-
-
-    submitt.addEventListener("click", function (e) {
-
-
-        if (nombre.value == 0) {
-            e.preventDefault()
-            errorH2.style.color = "red"
-            errorH2.innerHTML = "El nombre del producto debe tener al menos 3 caracteres"
-        } else if (inputPrecio.value == 0){
-            e.preventDefault()
-            errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100"
-            errorPrecio.style.color = "red"
-        } else if (imagen.value == 0){
-            e.preventDefault()
-            errorImagen.innerHTML = "Debe subir una imagen del producto"
-            errorImagen.style.color= "red"
-        }
-
-
-    })
-
-
-
-
-
-
-
-    //NOMBRE DE PRODUCTO
-
-
-
-    nombre.addEventListener("blur", function () {
-        if (nombre.value.length < 3) {
-            errorH2.style.color = "red"
-            errorH2.innerHTML = "El nombre del producto debe tener al menos 3 caracteres"
-
-        } else {
-            errorH2.innerHTML = ""
-        }
-
-    })
- 
-
-    //PRECIO DEL PRODUCTO
-
-    inputPrecio.addEventListener("keyup", function () {
-        if (inputPrecio.value.length >= 3) {
-            errorPrecio.innerHTML = ""
-        } else {
-            errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100"
-            errorPrecio.style.color = "red"
-        }
-
-
-
-
-
-    })
-
-
-
-    //IMAGEN
-
-    
-
-
-
-
-
-
-
-
-})
+  //IMAGEN
+});
