@@ -1,14 +1,13 @@
 window.addEventListener("load", () => {
   submitt = document.querySelector(".button-form");
 
+  submitt = document.querySelector(".button-form");
+
   const nombre = document.querySelector(".input-nombre");
   const errorH2 = document.querySelector(".errorH2");
 
   const errorPrecio = document.querySelector(".errorPrecio");
   const inputPrecio = document.querySelector(".input-number");
-
-  const imagen = document.querySelector(".input-file");
-  const errorImagen = document.querySelector(".errorImagen");
 
   submitt.addEventListener("click", function (e) {
     if (nombre.value == 0) {
@@ -20,11 +19,6 @@ window.addEventListener("load", () => {
       e.preventDefault();
       errorPrecio.innerHTML = "El precio debe ser mayor o igual a $100";
       errorPrecio.style.color = "red";
-    } else if (imagen.value == 0) {
-      // LAU LA IMAGEN DEL PRODUCTO SI EL USUARIO NO LA INGRESA SE CARGA UNA POR DEFECTO ASI QUE NO DEBERIA TENER ERROR. EL ERROR POR BACK VALIDA LAS EXTENCIONES DE ESA IMAGEN DE PRODUCTO
-      e.preventDefault();
-      errorImagen.innerHTML = "Debe subir una imagen del producto";
-      errorImagen.style.color = "red";
     }
   });
 
