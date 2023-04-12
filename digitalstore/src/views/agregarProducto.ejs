@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="/script/agregarProducto.js"></script>
     <head>
         <%- include("partials/head") %>
 
@@ -11,21 +12,24 @@
 
     <form action="/products/add" method="post" class="form-add" enctype="multipart/form-data"">
 
-        <h2 class="form-title">Nuevo producto</h2>
+        <h2 class="form-title">Nuevo producto </h2>
 
         <div class="item-content-form name-form">
-            <label for="nombre" class="label-form">Nombre del producto</label>
+            <label for="nombre" class="label-form">Nombre del producto </label>
             <input type="text" class="input-nombre" placeholder="Ingrese nombre del producto" name="name" id="nombre">
+            <p class="errorH2"></p>
         </div>
 
         <div class="item-content-form price-form">
             <label for="precio" class="label-form">Precio</label>
+            
             <input type="number" class="input-number" placeholder="Ingrese precio" name="price" id="precio">
+            <p class="errorPrecio"></p>
         </div>
 
         <div class="item-content-form price-form">
             <label for="descuento" class="label-form">Descuento</label>
-            <input type="number" name="discount" id="descuento" class="input-label" placeholder="Ej: 0%">
+            <input type="number" name="discount" id="descuento" class="input-descuento" placeholder="Ej: 0%">
         </div>
 
         <div class="item-content-form category-form">
@@ -33,7 +37,7 @@
             <select name="idCategory" id="" required>
                 <option value="" disabled selected>- Seleccione categoria - </option>
                 <% categories.forEach(category => { %>
-                <option value="<%= category.id %>"><%= category.name %></option>
+                <option value="<%= category.id %>" class="opcion-categoria"><%= category.name %></option>
                 <% }); %>
             </select>
         </div>
@@ -51,6 +55,7 @@
         <div class="item-content-form file-form">
             <label for="image" class="label-form" >Imagen del producto</label>
             <input type="file" class="input-file" name="image" id="image" accept="image/*">
+            <p class="errorImagen"></p>
         </div>
 
 

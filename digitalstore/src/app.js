@@ -44,7 +44,7 @@ app.use("/",mainRoutes);
 //CONFIG PUBLIC FOLDER
 app.use(express.static(path.join(__dirname,"../public")))
 
-//TEMPLATE ENGINE
+//TEMPLATE ENGINEñ
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
