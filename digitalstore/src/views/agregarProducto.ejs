@@ -56,7 +56,7 @@
             <label for="categoria" class="label-form">Categoria</label>
             <select name="idCategory" id="" required>
                 
-                <option value="" disabled selected>- Seleccione categoria - </option>
+                <option value="" >- Seleccione categoria - </option> <!-- disabled selected eliminado despues del value-->
                 <% categories.forEach(category=> { %>
                     <option value="<%= category.id %>">
                         <%= category.name %>
@@ -69,7 +69,7 @@
         <div class="item-content-form category-form">
             <label for="idBrand" class="label-form">Marca</label>
             <select name="idBrand" id="" required>
-                <option value="" disabled selected>- Seleccione marca - </option>
+                <option value="">- Seleccione marca - </option><!-- disabled selected eliminado despues del value-->
                 <% brands.forEach(brand=> { %>
                     <option value="<%= brand.id %>">
                         <%= brand.name %>
