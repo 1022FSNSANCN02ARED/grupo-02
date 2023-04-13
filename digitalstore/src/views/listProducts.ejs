@@ -14,9 +14,18 @@
     <!--MAIN-->
     <main class="main-listado">
         <section class="container-categories">
+            <!-- ACA PONgo EL CONDICIONAL PARA QUE APAREZCA EL BOTON DE AGREGAR PRODUCTO SEGUN SE ESTE LOGUEADO O NO> USO MIDDLEWARE DE APLICACION (userLoggedMiddleware)-->
+
+          
+            <% if (locals.isLogged) { %>
+                              
+              
             <a href="/products/add" class="a-agregarProducto-listProduct">
-                <input type="submit"  value="Agregar producto">
+                <input type="submit" name="agregaProducto" value="Agregar producto" >
             </a>
+
+        <% } %>
+
 
             <div class="desplegable">
                 <h3 style="text-align: center;width: 100%;">Filtrar productos</h3>
@@ -47,11 +56,12 @@
                     <input type="submit">
                 </div>
             </form>
-                <!-- agrego boton provisorio para evaluar vista y validaciones para agregar producto -->            
                
-            
+        
+
         </section>
         
+        <!-- cards de productos -->
         <section class="container-products">
             <% productos.forEach(product => { %>
                 <%- include ("products/productCard.ejs",{product}) %> 

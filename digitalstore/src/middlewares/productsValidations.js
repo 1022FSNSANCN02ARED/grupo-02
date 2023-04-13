@@ -18,15 +18,7 @@ const validacionesProductos = [
     .isNumeric() //que solo sean caracteres numericos
     .withMessage("El precio solo acepta caracteres numericos"),
 
-  body("discount")
-    .notEmpty()
-    .withMessage("El descuento no puede estar vacio")
-    .bail()
-
-    .isInt({ min: 0, max: 100 }) //que solo sean caracteres numericos del 0 al 100
-    .withMessage("El descuento solo acepta valores de 0 a 100 %"),
-
-  //validamos la imagen que se carga del producto
+  //saque las validaciones a descuento ya que de ser que este vacio se toma como 0 al procesar el form
 
   body("image").custom((value, { req }) => {
     let file = req.file;
