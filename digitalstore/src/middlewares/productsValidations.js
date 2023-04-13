@@ -15,8 +15,10 @@ const validacionesProductos = [
     .withMessage("El precio no puede estar vacio")
     .bail()
 
-    .isNumeric() //que solo sean caracteres numericos
-    .withMessage("El precio solo acepta caracteres numericos"),
+    .isNumeric({ min: 100 }) //que solo sean caracteres numericos pero a partir de un minimo de 100
+    .withMessage(
+      "El precio solo acepta caracteres numericos y solo se acepta un minimo de 100"
+    ),
 
   //saque las validaciones a descuento ya que de ser que este vacio se toma como 0 al procesar el form
 
