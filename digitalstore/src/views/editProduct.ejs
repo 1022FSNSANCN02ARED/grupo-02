@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("partials/head") %>
+
+</head>
+<body>
+    <!-- LAUTARO Y PABLO -->
+    <%- include("partials/header")%>
+
+        <!-- MAIN DE PRODUCTOS DIGITAL STORE -->
+    <main class="main-detail">
+        <form action="/products/update/<%= product.id %>" class="" method="POST">
+            <div class="img-detail">
+                <img src="/img/productos/<%=product.image%> " alt="<%= product.category.name %> ">
+            </div>
+            <div class="detail-product">
+                <p><input type="text" name="name" id="" value="<%= product.name %>" required></p>
+                <div class="detail-categoria">
+                    <p>
+                        <select name="idCategory" id="" required>
+                            <% categories.forEach(categories => { %>
+                            <option value="<%= categories.id %>" <% if (product.idCategory == categories.id) { %><%= 'selected' %><% }; %>><%= categories.name %></option>
+                            <% }); %>
+                        </select>
+                    </p>
+                </div>
+                <div class="detail-categoria">
+                    <p>
+                        <select name="idBrand" id="" required>
+                            <% brands.forEach(brands => { %>
+                            <option value="<%= brands.id %>" <% if (product.idBrand == brands.id) { %><%= 'selected' %><% }; %>><%= brands.name %></option>
+                            <% }); %>
+                        </select>
+                    </p>
+                </div>
+                <div class="centrar-producto">
+                    <p class="detail-precio">
+                        Precio
+                        <input type="text" name="price" id="" value="<%= product.price %>" required>
+
+                    </p>
+                        <p class="detail-oferta">
+                            Discount
+                            <input type="text" name="discount" id="" value="<%= product.discount %>" required>
+
+                        </p>
+                </div>
+                <div class="descripcion-producto">
+                    <h3>Descripcion:</h3>
+                    <p class="detail-descripcion">
+                        <input type="text" name="description" id="" value="<%= product.description %>" required>
+                    </p>
+                </div>
+                
+                <div class="detail-boton">
+                   
+                    <button class="botonBorrar" type="submit">Editar Producto</button>
+                   
+                    
+                </div>
+            </form>  
+       
+
+    </main>
+
+
+    <!-- AXEL -->
+    <%- include("partials/footer") %>
+
+   
+
+</body>
+
+</html>

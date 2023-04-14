@@ -33,6 +33,12 @@ router.post("/", productsController.filterProducts);
 
 router.get("/add", productsController.addProductsForm);
 
+router.get("/delete/:id", productsController.deleteProduct);
+router.post("/destroy/:id", productsController.destroyProduct);
+
+router.get("/edit/:id", productsController.editProduct);
+router.post("/update/:id", productsController.updateProduct);
+
 //procesa formulario de agregar producto
 router.post(
   "/add",

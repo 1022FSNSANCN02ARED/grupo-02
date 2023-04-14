@@ -127,18 +127,73 @@ module.exports = {
         res.redirect("/products");
     },*/
 
+
+    deleteProduct: function (req,res) {
+      let productId = req.params.id;
+      db.Product
+      .findByPk(productId,{
+        include: ["category"]
+      })
+      .then(product => {
+            return res.render("deleteProduct", {product})})
+      .catch(error => res.send(error))   
+     },
+
+    destroyProduct: async function (req,res) {
+      let productId = req.params.id;
+      db.Product
+      .destroy({where: {id: productId}, force: true}) // force: true es para asegurar que se ejecute la acción
+      .then(()=>{
+          return res.redirect('/products')})
+      .catch(error => res.send(error)) 
+    },
+    
+    editProduct: async function(req,res) {
+      let productId = req.params.id;
+      
+      const categories = await db.Category.findAll();
+      const brands = await db.Brand.findAll();
+
+      db.Product
+      .findByPk(productId,{
+        include: ["category"]
+      })
+      .then(product => {
+            return res.render("editProduct", {product, categories, brands})})
+      .catch(error => res.send(error))   
+     },
+      
+  
+  
+  updateProduct: function (req,res) {
+      const productId = req.params.id;
+      db.Product.update(
+          {
+            name: req.body.firstName,
+            idBrand: req.body.idBrand,
+            idCategory: req.body.idCategory,
+            price: req.body.price,
+            discount: req.body.discount,
+            description: req.body.description,
+          },
+          {
+              where: {id: productId}
+          })
+          .then(()=> {
+              
+              return res.redirect('/products')})          
+          .catch(error => res.send(error))
+  },
   filterProducts: async (req, res) => {
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
     const filter = req.body;
-    console.log(filter);
     let productos = [];
     if (Object.entries(filter).length > 0) {
       const props = Object.entries(filter).map((prop) => {
         return prop[0];
       });
       //separar si tiene on de oferta
-      console.log(props);
       const cat = await db.Category.findAll({
         where: {
           name: { [Op.or]: props },

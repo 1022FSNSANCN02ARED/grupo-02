@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include("partials/head") %>
+
+</head>
+<body>
+    <!-- LAUTARO Y PABLO -->
+    <%- include("partials/header")%>
+
+        <!-- MAIN DE PRODUCTOS DIGITAL STORE -->
+    <main class="main-detail">
+       
+            <div class="img-detail">
+                <img src="/img/productos/<%=product.image%> " alt="<%= product.category.name %> ">
+            </div>
+            <div class="detail-product">
+                <h2>
+                    <%= product.name %>
+                </h2>
+                <div class="detail-categoria">
+                    <p>
+                        Categoria: <%= product.category.name %>
+                    </p>
+                </div>
+                <div class="centrar-producto">
+                    <p class="detail-precio">
+                        Precio: $<%= product.price %>
+                    </p>
+                    <% if (product.discount > 0) { %>
+                        <p class="detail-oferta">
+                            <%= product.discount%>%OFF
+                        </p>
+                    <% } %>
+                </div>
+                
+                <div class="detail-boton">
+                    <form action="/products/destroy/<%= product.id %>" class="" method="POST">
+                    <button class="botonBorrar" type="submit">Borrar Producto</button>
+                    </form>
+                    
+                </div>
+            
+       
+
+    </main>
+
+
+    <!-- AXEL -->
+    <%- include("partials/footer") %>
+
+   
+
+</body>
+
+</html>
