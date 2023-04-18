@@ -2,10 +2,10 @@
 
     <div class="nav-primary">
         <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
-        <div class="serch-bar">
-            <input type="text" placeholder="Buscar productos y más..">
-            <label><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></label>
-        </div>
+        <form action="/products" class="serch-bar" method="get">
+            <input type="search" placeholder="Buscar productos y más.." name="search" autocomplete="none">
+            <button><p><i class="fa-solid fa-magnifying-glass"></i></p></button>
+        </form>
         <div class="nav-buttons" id="nav-buttons-laptop">
 
             <!-- si estoy logueado  -->

@@ -25,11 +25,25 @@ module.exports = {
         })
     },*/
   listProducts: async (req, res) => {
-    const productos = await db.Product.findAll({
-      include: ["brand", "category"],
-    });
+    
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
+    let productos = []
+    if(req.query.search){
+      const search = req.query.search
+      productos = await db.Product.findAll({
+        include: ["brand", "category"],
+        where: {
+          name:{
+            [Op.like]:'%'+search+'%'
+          }
+        },
+      })
+    }else{
+      productos = await db.Product.findAll({
+        include: ["brand", "category"],
+      });
+    }
     res.render("listProducts", {
       productos,
       categorias,
@@ -266,6 +280,7 @@ module.exports = {
         categorias,
         brands,
       });
+
     } else {
       res.render("listProducts", {
         productos,
