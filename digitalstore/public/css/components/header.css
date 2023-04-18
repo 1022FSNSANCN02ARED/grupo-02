@@ -130,16 +130,17 @@ nav ul {
     height: 100%;
 }
 
-.serch-bar label {
+.serch-bar button {
     border: 1px solid var(--naranja);
     background-color: var(--naranja);
     padding: 10px;
     border-radius: 0 10px 10px 0;
     border-left: none;
     height: 100%;
+    cursor: pointer;
 }
 
-.serch-bar label a {
+.serch-bar button i {
     color: var(--blanco);
 }
 
