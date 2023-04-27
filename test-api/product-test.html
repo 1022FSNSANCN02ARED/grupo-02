@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api-Products</title>
+</head>
+
+<body>
+    <h1>Lista de Productos Digital-Store</h1>
+    <ul>
+
+    </ul>
+
+
+    <script type="text/javascript">
+
+        window.addEventListener('load', () => {
+            const list = document.querySelector("ul");
+
+            fetch("http://localhost:3000/api/products")
+                .then(response => response.json())
+                .then((data) => {
+                    console.log(data);
+                    const dt = data.data;
+                    for (let i = 0; i < dt.length; i++) {
+
+                        list.innerHTML += "<li>" + dt[i].name + " / " + '$' + dt[i].price  + "</li>";
+                    }
+                })
+
+        })
+
+    </script>
+</body>
+
+</html>

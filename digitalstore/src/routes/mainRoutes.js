@@ -19,7 +19,14 @@ router.use("/products", productsRoutes);
 const usersRoutes = require('./usersRoutes');
 router.use("/users", usersRoutes);
 
-//api//
+//api usuarios//
 const apiUserRouter = require('./api/userRoutes.js');
 router.use("/api/users",apiUserRouter);
 module.exports = router;
+
+//api productos//
+const apiProductRouter = require("./api/productRoutes.js");
+router.use("/api/products", apiProductRouter);
+module.exports = router;
+
+
