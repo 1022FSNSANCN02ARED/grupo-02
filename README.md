@@ -52,3 +52,7 @@ ENDPOINT DE PRODUCTOS
 localhost:3000/api/products (listado general de productos)
 localhost:3000/api/products/:id (Filtrado de un producto especifico)
 
+-----------------------------------------------------------------------------------------------------------------
+
+EXTRUCTURA DEL DASHBOARD Y DE COMPONENTES EN APP DE REACT DE DIGITAL STORE (UBICACION)
+\grupo-02\diseños
