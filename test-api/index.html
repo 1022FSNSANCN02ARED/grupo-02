@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Api-user</title>
 </head>
-<body>    
-        <h1>Lista de Usuarios-Digital-Store</h1>
-        <ul>
 
-        </ul>
-       
-       
+<body>
+    <h1>Lista de Usuarios-Digital-Store</h1>
+    <ul>
+
+    </ul>
+
+
     <script type="text/javascript">
-        
-        window.addEventListener('load',()=>{
+
+        window.addEventListener('load', () => {
             const list = document.querySelector("ul");
- 
+
+           
+
             fetch("http://localhost:3000/api/users")
-            .then(response => response.json())
-            .then((data)=>{
-                //console.log(data);
-                const dt = data.data;
-                for(let i = 0;i < dt.length;i++){
-                     
-                    list.innerHTML += "<li>"+dt[i].firstName+" / "+dt[i].email+"</li>";
-                }
-            })
-             
+
+                .then(response => response.json())
+                .then((data) => {
+                    //console.log(data);
+                    const dt = data.data;
+                    for (let i = 0; i < dt.length; i++) {
+
+                        list.innerHTML += "<li>" + dt[i].firstName + " / " + dt[i].email + "</li>";
+                    }
+                })
+
         })
-        
+
     </script>
 </body>
+
 </html>

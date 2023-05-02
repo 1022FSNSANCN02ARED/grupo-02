@@ -11,9 +11,10 @@ PABLO CANDELA MEDINA : Me llamo Pablo Candela, tengo 19 años, actualmente me ap
 
 Melina LEONARDI. Tengo 37 años, ama de casa con dos niños. Vivo en San Nicolás. Me he puesto de vuelta al ruedo con la programación y lo que tiene que ver con la tecnología. Mi meta es capacitarme y reintegrarme  al mercado laboral en cuanto al desarrollo web y auto convencerme de que cuando las cosas se quieren con esfuerzo se logran. Tengo mucho entusiasmo en aprender
 
-Lautaro Pedroza
-Me llamo Lautaro Pedroza, tengo 25 años, vivo en San Nicolas de los Arroyos, me gusta todo lo relacionado a la tecnología y programación.
-Mi meta es llegar a ser desarrollador Full Stack  y una vez logrado seguir perfeccionando. Una vez logrado espero ingresar al mercado laboral tecnológico.
+
+LAUTARO PEDROZA, tengo 26 años, vivo en San Nicolas de los Arroyos, me gusta todo lo relacionado a la tecnología y programación.
+Mi meta es llegar a trabajar como Programador, me gusta mucho lo que es el trabajo en equipo y me adapto a cualquier situación. Me gusta investigar y aprender cosas nuevas en todo momento
+
 
 Soy Ruben, tengo 38 años. Me interesa la programación de páginas web, desarrollo de juegos y servicios. Me gusta el trabajo en equipo y la división de tareas.  Mi objetivo es terminar con éxito el curso de full stack developer e integrarme a la industria tecnologica.
 
