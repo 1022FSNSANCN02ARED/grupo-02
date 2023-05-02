@@ -20,31 +20,31 @@
             <form action="/users/add" class="form-login" method= "post" enctype="multipart/form-data" >
 
                 <label for="" class="w-60">Nombre</label>
-                <input class="nombreInput" type="text" class="w-60" name="nombre" placeholder="Ingrese su nombre. Ej: Juan" value="<%= locals.old && old.nombre ? old.nombre : '' %>" >
+                <input class="nombreInput" type="text" class="w-60" name="firstName" placeholder="Ingrese su nombre. Ej: Juan" value="<%= locals.old && old.firstName ? old.firstName : '' %>" >
                 
 
-                <% if (locals.errores && errores.nombre ) { %>
+                <% if (locals.errores && errores.firstName ) { %>
                     <div class ='feedback is-danger'>
-                        <%= errores.nombre.msg %>
+                        <%= errores.firstName.msg %>
                     </div>
                 <% } %>
 
                 <label for="" class="w-60">Apellido</label>
-                <input class="apellidoInput" type="text" class="w-60" name="apellido" placeholder="Ingrese su apellido. Ej: Lopez" value="<%= locals.old && old.apellido ? old.apellido : '' %>">
+                <input class="apellidoInput" type="text" class="w-60" name="lastName" placeholder="Ingrese su apellido. Ej: Lopez" value="<%= locals.old && old.lastName ? old.lastName : '' %>">
 
-                <% if (locals.errores && errores.apellido ) { %>
+                <% if (locals.errores && errores.lastName ) { %>
                     <div class='feedback is-danger'>
-                        <%= errores.apellido.msg %>
+                        <%= errores.lastName.msg %>
                     </div>
                     <% } %>
 
 
                 <label for="" class="w-60">Usuario</label>
-                <input class="usuarioInput" type="text" class="w-60" name="usuario" placeholder="Ingrese un nombre de usuario" value ="<%= locals.old && old.usuario ? old.usuario : '' %>">
+                <input class="usuarioInput" type="text" class="w-60" name="userName" placeholder="Ingrese un nombre de usuario" value ="<%= locals.old && old.userName ? old.userName : '' %>">
 
-                <% if (locals.errores && errores.usuario ) { %>
+                <% if (locals.errores && errores.userName ) { %>
                     <div class='feedback is-danger'>
-                        <%= errores.usuario.msg %>
+                        <%= errores.userName.msg %>
                     </div>
                     <% } %>
 
@@ -65,13 +65,13 @@
 
 
                 <label for="image" class="label-form">Imagen del perfil</label>
-                <input type="file" class="input-file" name="imageuser" id="imageuser" accept="image/png, image/jpeg, image/jpg">
+                <input type="file" class="input-file" name="img" id="imageuser" accept="image/png, image/jpeg, image/jpg">
                   
 
 
-                <% if (locals.errores && errores.imageuser) { %>
+                <% if (locals.errores && errores.img) { %>
                     <div class='feedback is-danger'>
-                        <%= errores.imageuser.msg %>
+                        <%= errores.img.msg %>
                     </div>
                     <% } %>
                

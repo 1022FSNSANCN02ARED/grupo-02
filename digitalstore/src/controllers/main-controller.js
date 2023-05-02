@@ -36,10 +36,6 @@ module.exports = {
     ayuda: (req,res)=>{
         res.render("ayuda")
     },
-    carrito: (req,res)=>{
-        res.render("carrito")
-                  
-    },
     oferta: (req,res)=>{
         db.Product
         .findAll({
