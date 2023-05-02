@@ -30,7 +30,7 @@ const upload = multer({
 //ESPECIFICAR RUTAS>
 
 router.get("/add", guestMiddleware, usersController.addUsersForm); //ruta del formulario para crear  ussuario
-router.post("/add", upload.single('imageuser'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
+router.post("/add", upload.single('img'), validaciones,  usersController.addUsers);//ruta del procesamiento de formulario de creacion
 
 //formulario de login
 router.get("/login", guestMiddleware, usersController.login);
@@ -47,8 +47,8 @@ router.get('/profile/', authMiddleware, usersController.profile);
 
 router.get("/:id/carrito", usersController.userCarrito);
 
-router.get("/panel/:id", usersController.deleteUser);
-router.post("/panel/:id", usersController.destroyUser);
+router.get("/delete/:id", usersController.deleteUser);
+router.post("/destroy/:id", usersController.destroyUser);
 
 router.get("/edit/:id", usersController.edit);
 router.post("/update/:id", usersController.update);

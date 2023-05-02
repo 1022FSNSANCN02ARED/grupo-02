@@ -42,5 +42,18 @@ https://trello.com/b/3AHO3mfl/proyecto-integrador-final
 
 https://trello.com/invite/b/3AHO3mfl/ATTIad9bab0d1f5bd17a1b9ae5477eafaf85392E1219/proyecto-integrador-final
 
+---------------------------------------------------------------------------------------------------------------
+ENDPOINT DE USUARIOS
+localhost:3000/api/users (listado general de usuarios)
+localhost:3000/api/users/:id (Filtrado de un usuario especifico)
 
 
+-----------------------------------------------------------------------------------------------------------------
+ENDPOINT DE PRODUCTOS
+localhost:3000/api/products (listado general de productos)
+localhost:3000/api/products/:id (Filtrado de un producto especifico)
+
+-----------------------------------------------------------------------------------------------------------------
+
+EXTRUCTURA DEL DASHBOARD Y DE COMPONENTES EN APP DE REACT DE DIGITAL STORE (UBICACION)
+\grupo-02\diseños

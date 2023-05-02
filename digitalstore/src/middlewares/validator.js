@@ -3,7 +3,7 @@ const path = require ('path');
 
 const validaciones = [
   //validaciones de register
-  body("nombre")
+  body("firstName")
     .notEmpty()
     .withMessage("El nombre no puede estar vacio")
     .bail()
@@ -11,7 +11,7 @@ const validaciones = [
     .isAlpha() //que solo sean caracteres alfabeticos
     .withMessage("El nombre solo acepta caracteres alfabeticos"),
 
-  body("apellido")
+  body("lastName")
     .notEmpty()
     .withMessage("El apellido no puede estar vacio")
     .bail()
@@ -19,7 +19,7 @@ const validaciones = [
     .isAlpha() //que solo sean caracteres alfabeticos
     .withMessage("El apellido solo acepta caracteres alfabeticos"),
 
-  body("usuario")
+  body("userName")
     .notEmpty()
     .withMessage("El usuario no puede estar vacio")
     .bail()
@@ -41,7 +41,7 @@ const validaciones = [
     .isEmail()
     .withMessage("Formato de Email invalido"),
 
-  body("imageuser").custom((value, { req }) => {
+  body("img").custom((value, { req }) => {
     let file = req.file;
 
     let acceptedExtensions = [".jpg", ".png", ".jpeg"];
