@@ -12,112 +12,114 @@
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
 
-    <main class="main-carrito">
-        <div class="h2-div">
-            <h2 class="h2-carrito">CARRITO DE COMPRAS</h2>
-        </div>
+        <main class="main-carrito">
 
 
-        <section class="section-carrito">
-            
-            <%// carrito.forEach(product => { %>
-                <%-// include('./products/productCarrito.ejs',{product}) %>
-            <% //}) %>
-            <div class="flex-fill d-flex flex-column justify-content-between">
-                <% if (cart.length == 0) { %>
-                <div class="text-center p-5">No hay productos en su carrito</div>
-                <% } %>
-                <div>
-                    <% cart.forEach(item=>{%>
-                        <div class="d-flex">
-                            <div style="width: 80px">
-                            <img class="w-100" src="img/productos/<%= item.product.image %> " alt="" />
-                        </div>
-                        <div class="flex-fill">
-                            <h2 class="fs-4"
-                            ><a href="/products/detail/<%= item.product.id %>"
-                                ><%= item.product.name %></a
-                            ></h2
-                            >
-                            <p><%= item.product.price %></p>
-                            <form
-                            action="/carrito/carrito/delete/<%= item.product.id %>"
-                            method="post"
-                            >
-                            <button class="btn color-primary">Eliminar</button>
-                            </form>
-                        </div>
-                    <div class="d-flex align-items-center">
-                        <form
-                            action="/carrito/remove/<%= item.product.id  %>"
-                            method="post"
-                        >
-                            <button class="btn">
-                                <i class="fa-solid fa-minus"></i>
-                            </button>
-                        </form>
-                        <p class="fs-4 align-middle m-0 px-3"><%= item.count %></p>
-                        <form action="/carrito/add/<%= item.product.id  %>" method="post">
-                            <button class="btn">
-                                <i class="fa-solid fa-plus"></i>
-                            </button>
-                        </form>
-                    </div>
-                    <div class="text-end w-25">
-                        <p class="fs-4"
-                            >$ <%= (item.product.price * item.count) %></p
-                        >
-                    </div>
-                </div>
-                <% }) %>
-            </div>
-            <% if (cart.length > 0) { %>
-            <div>
-                <div class="d-flex w-100 justify-content-end">
-                    <div class="fs-3 m-0 pe-5">Total:</div>
-                    <div class="fs-3 m-0 text-end">$ <%= totalPrice %> </div>
-                </div>
-                <form
-                    class="d-flex w-100 justify-content-end p-3"
-                    action="/me/cart/buy"
-                    method="POST"
-                >
-                    <button class="btn btn-primary">Comprar</button>
-                </form>
-                <form action="/carrito/carrito/clear/" method="post">
-                    <button class="btn">
-                        Limpiar Carrito
-                    </button>
-                </form>
 
-            </div>
-            <% } %>
-        </div>
-            <article class=" p-1 contenedor-carrito">
-                <h3>Forma de pago</h3>
+            <section class="section-carrito">
 
-                <div class="radio-carrito">
-                     <input type="radio" name="forma-Pago">
-                    <label for="">Deposito o transferencia bancaria</label>
-                </div>
+                <% // carrito.forEach(product=> { %>
+                    <%- // include('./products/productCarrito.ejs',{product}) %>
+                        <% //}) %>
+                            <div class="contenedor1-carrito">
+                                <% if (cart.length==0) { %>
+                                    <div class="text-center p-5">No hay productos en su carrito</div>
+                                    <% } %>
+                                        <div class="contenedor-producto-carrito">
+                                            <% cart.forEach(item=>{%>
+                                                <div class="contenedor-producto">
+                                                    <div class="div-img-carrito">
+                                                        <img class="img-carrito"
+                                                            src="img/productos/<%= item.product.image %> " alt="" />
+                                                    </div>
+                                                    <div class="block">
+                                                        <div class="">
+                                                            <h2 class="nombre-producto"><a
+                                                                    href="/products/detail/<%= item.product.id %>">
+                                                                    <%= item.product.name %>
+                                                                </a></h2>
+                                                            <p class="precio-producto">
+                                                                $<%= item.product.price %>
+                                                            </p>
 
-                <div class="radio-carrito">
-                    <input type="radio" name="forma-Pago" >
-                <label for="">Mercado pago - Tarjetas online, PagoFacil, RapiPago</label>
-                </div>
+                                                        </div>
+                                                        <div class="contadores-carrito">
 
-                
-                <p>Total:</p>
-                <p>30000</p>
-                <a href=""><input type="submit" value="Comprar"></a>
-            </article>
-        </section>
-    </main>
+                                                            <form action="/carrito/remove/<%= item.product.id  %>"
+                                                                method="post">
+                                                                <button class="btn mas-menos">
+                                                                    <i class="fa-solid fa-minus"></i>
+                                                                </button>
+                                                            </form>
+                                                            <p class="numeroContador-carrito">
+                                                                <%= item.count %>
+                                                            </p>
+                                                            <form action="/carrito/add/<%= item.product.id  %>"
+                                                                method="post">
+                                                                <button class="btn mas-menos">
+                                                                    <i class="fa-solid fa-plus"></i>
+                                                                </button>
+                                                            </form>
+
+                                                        </div>
+                                                        <form action="/carrito/carrito/delete/<%= item.product.id %>"
+                                                            method="post">
+                                                            <button class="btn color-primary btn-eliminar"><i
+                                                                    class="fa-solid fa-trash"></i></button>
+                                                        </form>
+                                                        <div class="text-end w-25 precio">
+                                                            <p class="fs-4">$<%= (item.product.price * item.count) %>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <% }) %>
+                                        </div>
+                                        <% if (cart.length> 0) { %>
+                                            <div class="total">
+                                                <div class="d-flex w-100 justify-content-end totalyprecio">
+                                                    <div class="fs-3 m-0 pe-5">Total:</div>
+                                                    <div class="fs-3 m-0 text-end naranja">$<%= totalPrice %>
+                                                    </div>
+
+                                                </div>
+                                                <article class=" p-1 contenedor-carrito">
+                                                    <h3>Forma de pago</h3>
+
+                                                    <div class="radio-carrito">
+                                                        <input type="radio" name="forma-Pago">
+                                                        <label for="">Deposito o transferencia bancaria</label>
+                                                    </div>
+
+                                                    <div class="radio-carrito">
+                                                        <input type="radio" name="forma-Pago">
+                                                        <label for="">Mercado pago - Tarjetas online, PagoFacil,
+                                                            RapiPago</label>
+                                                    </div>
+
+                                                </article>
+                                                <form class="d-flex w-100 justify-content-end p-3" action="/me/cart/buy"
+                                                    method="POST">
+                                                    <button class="btn btn-primary comprar">Comprar</button>
+                                                </form>
+                                                <form action="/carrito/carrito/clear/" method="post">
+                                                    <button class="btn limpiar-carrito">
+                                                        Limpiar Carrito
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                            <% } %>
+                            </div>
+
+            </section>
+        </main>
 
 
-    <!-- AXEL -->
-    <%- include("partials/footer")%>
+        <!-- AXEL -->
+        <%- include("partials/footer")%>
 
-    </body>
+</body>
 
 </html>
