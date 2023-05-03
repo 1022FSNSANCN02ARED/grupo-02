@@ -282,6 +282,10 @@ module.exports = {
       });
 
     } else {
+
+       productos = await db.Product.findAll({
+        include: ["brand", "category"],
+      });
       res.render("listProducts", {
         productos,
         categorias,
