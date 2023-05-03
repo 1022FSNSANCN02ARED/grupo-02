@@ -285,11 +285,11 @@ nav ul {
         z-index: 3;
         position: fixed;
         width: 400px;
-        height: 500px;
+       
         right: -400px;
         top: 0px;
         display: flex;
-        border-radius: 20px;
+        
         background-color: rgba(0, 0, 0, 0.89);
 
 
@@ -330,7 +330,7 @@ nav ul {
         align-items: center;
         background-color: var(--naranja);
         color: white;
-        border-radius: 20px 0 0 0;
+        
         
 
 
@@ -377,7 +377,7 @@ nav ul {
 
 
     }
-
+    
     .divDetalle h3 a {
         color: white;
     }
