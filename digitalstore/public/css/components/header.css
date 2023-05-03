@@ -80,7 +80,9 @@ nav ul {
 
 .nav-div {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
 }
 
 .nav-div i {
@@ -143,6 +145,24 @@ nav ul {
 .serch-bar button i {
     color: var(--blanco);
 }
+.imganduser{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    background-color: white;
+}
+
+.nombreHeader{
+    width: 50%;
+    font-size: xx-large;
+    
+}
+.imgHeader{
+    width: 15%;
+    height: 40px;
+   
+}
 
 .nav-links {
     margin-top: 10px;
@@ -192,7 +212,9 @@ nav ul {
 @media (min-width:768px) {
   
     
-
+.none{
+    display: none;
+}
     .nav-primary {
         align-items: center;
     }
@@ -255,6 +277,9 @@ nav ul {
 
 }
 @media (min-width:1024px) {
+    .none{
+        display: none;
+    }
 
     .div-desplegable-header {
         z-index: 3;

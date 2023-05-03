@@ -4,7 +4,9 @@
         <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
         <form action="/products" class="serch-bar" method="get">
             <input type="search" placeholder="Buscar productos y más.." name="search" autocomplete="none">
-            <button><p><i class="fa-solid fa-magnifying-glass"></i></p></button>
+            <button>
+                <p><i class="fa-solid fa-magnifying-glass"></i></p>
+            </button>
         </form>
         <div class="nav-buttons" id="nav-buttons-laptop">
 
@@ -35,7 +37,7 @@
                                     src="/img/usuarios/<%= locals.userLogged.img %> "></a>
                             <div class="nombreHeader">
                                 <%=locals.userLogged.userName %>
-                                   
+
                             </div>
 
 
@@ -46,7 +48,7 @@
                         <div class="divDetalle">
 
                             <button class="btn-tienda">
-                                <a href="/carrito" >
+                                <a href="/carrito">
                                     <i class="fa-solid fa-cart-shopping"></i>
                                 </a>
                             </button>
@@ -88,7 +90,11 @@
     <nav class="nav-principal">
         <div class="nav-div" id="menu-button">
             <i class="fa-solid fa-bars"></i>
+            <img class="imgHeader"
+                src="/img/usuarios/<%= locals.userLogged.img %> ">
         </div>
+
+
         <div class="nav-links show">
             <ul class="nav-ul">
                 <li class="nav-li"><a href="/products">Productos</a></li>
@@ -96,10 +102,10 @@
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
             </ul>
-            <div class="nav-buttons" id="nav-buttons-phone">
-                <button class="btn-login"><a href="/login"><i class="fa-solid fa-user"></i> Login</a></button>
-                <button class="btn-tienda"><a href="/carrito"><i class="fa-solid fa-cart-shopping"></i></a></button>
-            </div>
+
+
+           
+
         </div>
 
 

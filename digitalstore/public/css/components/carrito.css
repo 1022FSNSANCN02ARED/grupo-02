@@ -248,5 +248,22 @@ color: var(--naranja);
     .div-img-carrito{
         width: 50%;
     }
+    .sin-producto{
+        margin-bottom: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
+    }
+    .sin-producto h4{
+        margin-top: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        
+        
+    }
     
 }
