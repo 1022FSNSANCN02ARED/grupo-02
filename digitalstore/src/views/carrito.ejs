@@ -23,7 +23,9 @@
                         <% //}) %>
                             <div class="contenedor1-carrito">
                                 <% if (cart.length==0) { %>
-                                    <div class="text-center p-5 sin-producto"><h4>No hay productos en su carrito</h4></div>
+                                    <div class="text-center p-5 sin-producto">
+                                        <h4>No hay productos en su carrito</h4>
+                                    </div>
                                     <% } %>
                                         <div class="contenedor-producto-carrito">
                                             <% cart.forEach(item=>{%>
@@ -43,7 +45,9 @@
                                                             </p>
 
                                                         </div>
-                                                        <div class="contadores-carrito">
+
+                                                        <div class="flex">
+                                                             <div class="contadores-carrito">
 
                                                             <form action="/carrito/remove/<%= item.product.id  %>"
                                                                 method="post">
@@ -61,16 +65,19 @@
                                                                 </button>
                                                             </form>
 
+                
+
+
                                                         </div>
-                                                        <form action="/carrito/carrito/delete/<%= item.product.id %>"
+                                                        <form class="form-tachito-carrito"
+                                                            action="/carrito/carrito/delete/<%= item.product.id %>"
                                                             method="post">
                                                             <button class="btn color-primary btn-eliminar"><i
                                                                     class="fa-solid fa-trash"></i></button>
                                                         </form>
-                                                        <div class="text-end w-25 precio">
-                                                            <p class="fs-4">$<%= (item.product.price * item.count) %>
-                                                            </p>
                                                         </div>
+                                                       
+
                                                     </div>
 
                                                 </div>
