@@ -24,7 +24,7 @@ addUsersForm: (req, res) => {
 },
 
 addUsers: async (req, res) => {
-   
+    
     let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
        //-----
     if(errores.isEmpty()){

@@ -7,7 +7,9 @@
   flex-wrap: wrap;
   gap: 2%;
   border-top: 3px solid var(--naranja-oscuro);
+
 }
+
 
 .footer-principal-corto{
   background-color: var(--naranja);
