@@ -1,54 +1,59 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
+/* fuente de iconos sidebar  */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet');
+
+.body{
+    font-family: 'Rubik', sans-serif;
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    padding:0;
+    margin:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+    background-color: white;
+    padding: 1rem 2rem;
+    border-bottom:  1px solid gray;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sidebar{
+    width: 14rem;
+    height: calc(100vh - 52px); 
+ 
+    border-right: 1px solid gray;
+    
+}
+.sidebar ul{
+    list-style: none;
+    padding: 1rem 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar li {
+    margin-bottom: 1rem;
 }
 
-/* estilos COPIADOS de index.css */
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.sidebar a {
+    text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+.w-100{
+    width: 100%;
 }
 
-/*fragmento de estilo original de app.css*/
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.flex{
+    display: flex;
+}
+
+.content{
+    width:100%;
+}
+
+.copyright{
+     text-align: center;
 }
