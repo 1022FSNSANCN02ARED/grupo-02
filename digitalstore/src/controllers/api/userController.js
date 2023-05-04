@@ -3,19 +3,19 @@ const { User }= require('../../database/models');
 module.exports= {
     list: async (req,res)=>{
        
-        await User.findAll()
-        .then((user)=>{
-            let resp = {
+        const users = await User.findAll()
+        users.forEach(user=>{
+            user.img = `http://localhost:3000/img/usuarios/${user.img}`
+        })
+        let resp = {
                 meta:{
                     status: 200,
-                    total: user.length,
+                    total: users.length,
                     url: 'api/users',
                 },
-                data: user,
+                data: users,
             }
             res.json(resp);
-        });
-       
         
     },
     detail: async (req,res)=>{
