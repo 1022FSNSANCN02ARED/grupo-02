@@ -106,15 +106,17 @@
 }
 
 .user-card-button-container{
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 100%;
     display: flex;
 }
 
 .user-card-button-container a{
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
     text-align: center;
     color: white;
+    font-weight: bold;
 }
 
 .button-edit{
@@ -125,6 +127,15 @@
     padding: .5rem;
     background-color: rgb(252, 51, 51);
 
+}
+
+
+
+.user-empty{
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: grey;
 }
 
 /* .user-card{
