@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoDigitalStore from "../images/logo_proyecto.jpg";
-
-
+import "./Sidebar.css";
 
 function Sidebar() {
   return (
@@ -20,8 +19,9 @@ function Sidebar() {
           <Link to="/products">
             <i class="fa-solid fa-gift"></i>
             <span>Productos</span>
+          
           </Link>
-
+        
         </li>
 
         <li>

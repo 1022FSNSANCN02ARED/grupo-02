@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap');
-/* fuente de iconos sidebar  */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet');
+
 
 .body{
     font-family: 'Rubik', sans-serif;
@@ -12,39 +11,10 @@
     margin:0;
 }
 
-.header{
-    background-color: white;
-    padding: 1rem 2rem;
-    border-bottom:  1px solid gray;
-    text-align: center;
-}
-
-.sidebar{
-    width: 14rem;
-    height: calc(100vh - 52px); 
- 
-    border-right: 1px solid gray;
-    
-}
-.sidebar ul{
-    list-style: none;
-    padding: 1rem 2rem;
-}
-
-.sidebar li {
-    margin-bottom: 1rem;
-}
-
-.sidebar a {
-    text-decoration: none;
-}
-
-
 
 .w-100{
     width: 100%;
 }
-
 
 .flex{
     display: flex;
@@ -54,6 +24,3 @@
     width:100%;
 }
 
-.copyright{
-     text-align: center;
-}
