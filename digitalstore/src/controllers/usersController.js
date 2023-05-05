@@ -4,20 +4,11 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { getUsers } = require("../data/users");
 const users = require("../data/users"); //requiero el array de usuarios parseado
+const { Op } = require("sequelize");
 // const products = require("../data/products");
 
 
 module.exports = {
-
-  list: (req, res) => {
-    db.User.findAll({
-        include: ['role']
-    })
-        .then(users => {
-            res.render('panelDeControl', {users})
-        })
-},
-
 addUsersForm: (req, res) => {
 
     res.render("register");
@@ -25,17 +16,21 @@ addUsersForm: (req, res) => {
 
 addUsers: async (req, res) => {
     
-    let errores = validationResult(req); //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
-       //-----
+    let errores = validationResult(req); 
+    
+    //errores es un objeto que guardara los errores del formulario y tiene varias propiedades por ej: isEmpty >DEVUELVE UN BOOLEANO TRUE /FALSE (VALIDACIONES DE EXPRESS-VALIDATOR)
+
+
     if(errores.isEmpty()){
            
     //sino hay errores, pregunto si el email con el que intentan rehistrar existe en la db (validacion a mano). NO DEBE HABER DOS USUARIOS CON UN MISMO EMAIL
 
     //let userInDB = users.findByField('email',req.body.email);
+
     let userInDB = await db.User.findAll({
         where: {
           email: req.body.email, 
-          }
+        }
     });
     
     if (userInDB.length>0) {
@@ -138,20 +133,60 @@ addUsers: async (req, res) => {
   },
 */
   //Lista usuarios cargados en la DB en el panel de control para administradores.
-  listUsers: (req, res) => {
-    db.User.findAll({
-        include: ['role']
-    })
-        .then(users => {
-            res.render('panelDeControl', {users})
-        })
-},
-  /*
+  listUsers: async (req, res) => {
 
+    let users = await db.User.findAll({
+      include: ['role']
+    })
+    
+    if(req.query.search){
+      let search = req.query.search;
+      console.log(search)
+      if(search[0]=='@'){
+        search=search.slice(1);
+        users = await db.User.findAll({
+          include: ['role'],
+          where:{
+            userName: {
+              [Op.like]:`${search}%`
+            }
+          }
+        })
+      }
+      if(search[0]=='#'){
+        search=search.slice(1);
+        let idRole = 0;
+        if(search=="admin"){
+          idRole = 1;
+        }else if(search == "usuario"){
+          idRole = 2;
+        }
+        users = await db.User.findAll({
+          include: ['role'],
+          where:{
+            idRole: {
+              [Op.like]:idRole
+            }
+          }
+        })
+      }
+    }
+
+    users.forEach(user => {
+      user.img = `http://localhost:3000/img/usuarios/${user.img}`
+    });
+
+    res.render('panelDeControl', {
+      users,
+      filter: req.query.search ? true : false,
+    })
+  },
+  /*
   listUsers: (req, res) => {
     const allUsers = users.getUsers();
     res.render("panelDeControl", { allUsers });
-  },*/
+  },
+  */
 
  
   userCarrito: (req, res) => {
