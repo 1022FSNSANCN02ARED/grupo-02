@@ -18,29 +18,38 @@
             </div>
         <% } %>
         <section class="user-cards-container">
-       <% users.forEach(user => { %>
-            <div class="user-card">
-                <div class="user-card-tag">
-                    <% if (user.idRole) { %>
-                        <% if (user.idRole==1) { %>
-                            <p class="admin">#Admin</p>
-                        <% } else { %>
-                            <p class="user">#Usuario</p>
-                        <% } %>
-                    <% } %>
-                </div>
-                <img class="user-card-img" src="<%= user.img %>" alt="Imagen de <%= user.img %>">
-                <div class="user-card-name-container">
-                    <p class="user-card-name"><%= user.firstName %> <%= user.lastName %></p>
-                    <p class="user-card-user">@<%= user.userName %></p>
-                </div>
-                <div class="user-card-button-container">
-                    <a class="button-remove" href="#"><i class="fa-solid fa-trash-can"></i></a>
-                    <a class="button-edit" href="#"><i class="fa-solid fa-pencil"></i></a>
-                </div>
-            </div>
-       <% }) %>
-    </section>
+            
+            <% if (users.length > 0) { %>
+                <% users.forEach(user => { %>
+                    <div class="user-card">
+                        <div class="user-card-tag">
+                            <% if (user.idRole) { %>
+                                <% if (user.idRole==1) { %>
+                                    <p class="admin">#Admin</p>
+                                <% } else { %>
+                                    <p class="user">#Usuario</p>
+                                <% } %>
+                            <% } %>
+                        </div>
+                        <img class="user-card-img" src="<%= user.img %>" alt="Imagen de <%= user.img %>">
+                        <div class="user-card-name-container">
+                            <p class="user-card-name"><%= user.firstName %> <%= user.lastName %></p>
+                            <p class="user-card-user">@<%= user.userName %></p>
+                        </div>
+                        <div class="user-card-button-container">
+                            <a class="button-remove" href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            <a class="button-edit" href="#"><i class="fa-solid fa-pencil"></i></a>
+                        </div>
+                    </div>
+               <% }) %>
+            <% } else {%>
+                <p class="user-empty">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    No se encontraron resultados
+                </p>
+            <% } %>
+
+        </section>
 
     </main>
     <%- include("partials/footer") %>

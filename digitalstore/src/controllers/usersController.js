@@ -138,7 +138,7 @@ addUsers: async (req, res) => {
     let users = await db.User.findAll({
       include: ['role']
     })
-    
+
     if(req.query.search){
       let search = req.query.search;
       console.log(search)
