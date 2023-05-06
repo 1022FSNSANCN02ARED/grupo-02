@@ -104,9 +104,16 @@
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
+                <% if (locals.userLogged && locals.userLogged.idRole == 1) { %>
+                            
+                    <li class="nav-li login-tablet"> <a href="/users/panel">Panel de control</a> </li>
+
+                <% } %>
                 <% if (!locals.isLogged) { %>
-                    <li><a href="/users/login"><i class="fa-solid fa-user"></i> Ingresá</a></li>
-                <% }%>
+                    <li class="nav-li login-tablet"><a href="/users/login"><i class="fa-solid fa-right-from-bracket"></i> Ingresá</a></li>
+                <% } else { %>
+                    <li class="nav-li login-tablet"><a href="/users/logout"><i class="fa-solid fa-user "></i> Cerrar Sesión</a></li>   
+                <% } %>
             </ul>
         </div>
     </nav>

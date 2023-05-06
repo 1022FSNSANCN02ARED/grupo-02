@@ -209,6 +209,8 @@ nav ul {
 }
 
 
+
+
 @media (min-width:768px) {
   
     
@@ -282,6 +284,10 @@ nav ul {
         display: none;
     }
 
+    .login-tablet{
+        display: none;
+    }
+    
     .div-desplegable-header {
         z-index: 3;
         position: fixed;
