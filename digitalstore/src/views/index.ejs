@@ -12,65 +12,58 @@
 
       
         <!-- MELINA Y RUBEN -->
-        <main class="p-1 mx-auto bg-grey ">
-            <section>
-                <%- include("partials/carruselUno")%>
-            </section>
+        <main class="mx-auto bg-grey ">
+            
+            <section class="main-publicidad">
+                <!-- <%- include("partials/carruselUno")%> -->
+                <img src="/img/anuncios/hyperx-brand-banner.jpg" alt="">
+            </section>   
 
-            <section class="mx-auto  flex flex-wrap gap justify-sa categoria-main-container">
+            <section class="main-categories">
                 <!--Carrusel con imagenes en circulo-->
              
-                    <article class="categoria-main">
-                        <form action="/products" id="categorias-form" enctype="application/x-www-form-urlencoded" method="post">
-                        <div class="contenedor-categoria">
-                            <div>
-                                <img src="img/productos/auriculares-redragon.jpg" class="wp-90 ">
-                                <input type="submit" value="" name="auriculares">
-                            </div>
 
-                            <h3>Auriculares</h3>
 
-                        </div>
+                <article >
+                    <a class="categoria-main" href="/products?category=Auriculares">
+                        <img src="img/productos/auriculares-redragon.jpg" class="wp-90 ">
+                        Memorias
+                    </a>
                 </article>
-                <article class="categoria-main">
-                    <div class="contenedor-categoria">
-                        <div><img src="img/productos/memoria-team.jpg" class="wp-90 ">
-                            <input type="submit" value="" name="memorias">
-                        </div>
 
-                            <h3>Memorias RAM</h3>
-                            
-                        </div>
-                    
-                    </article>
-                    <article class="categoria-main ">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/motherasrock.jpg" class="wp-90 ">
-                                <input type="submit" value="" name="motherboard"></div>
 
-                            <h3>Motherboard</h3>
-                            
-                        </div>
-                    
-                    </article>
-                    <article class="categoria-main">
-                        <div class="contenedor-categoria">
-                            <div><img src="img/productos/gabinete.png" class="wp-90 ">
-                                <input type="submit" value="" name="gabinetes"></div>
 
-                        <h3>Gabinetes</h3>
-
-                    </div>
+                <article >
+                    <a class="categoria-main" href="/products?category=Memorias">
+                        <img src="img/productos/memoria-team.jpg" class="wp-90 ">
+                        Memorias
+                    </a>
                 </article>
-                <article class="categoria-main">
-                    <div class="contenedor-categoria">
-                        <div><img src="img/productos/teclado.png" class="wp-90 ">
-                            <input type="submit" value="" name="teclados">
-                        </div>
 
-                        <h3>Teclados</h3>
 
-                    </div>
+                
+                <article >
+                    <a class="categoria-main" href="">
+                        <img src="img/productos/motherasrock.jpg" class="wp-90 ">
+                        Motherboard
+                    </a>
+                </article>
+
+
+
+                <article >
+                   <a class="categoria-main"href="">
+                        <img src="img/productos/gabinete.png" class="wp-90 ">
+                        Gabinetes
+                   </a>
+                </article>
+
+
+                <article >
+                    <a class="categoria-main" href="">
+                        <img src="img/productos/teclado.png" class="wp-90 ">
+                        Teclados
+                    </a>
                 </article>
                 </form>
             </section>
@@ -86,8 +79,11 @@
 
             </section>
             
-               
-               
+            
+            <section class="main-publicidad">
+                <!-- <%- include("partials/carruselUno")%> -->
+                <img src="/img/anuncios/ryzen.jpg" alt="">
+            </section>
           
            
         </main>
