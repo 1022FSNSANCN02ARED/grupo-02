@@ -11,21 +11,22 @@ module.exports = {
             nombre:"lautaro"
         })
     },*/
-    index: (req,res) =>{
-            db.Product
-            .findAll({
-                where: {
-                    discount:{
-                        [Op.gt]: 0, 
-                    }
-                },
-                limit: 4,
-                offset:0,
+    index: async (req,res) =>{
+        
+        const productsOfert = await db.Product.findAll({
+            
+            where: {
+                discount:{
+                    [Op.gt]: 0, 
+                }
+            },
+            limit: 4,
+            offset:0,
 
-            }) // force: true es para asegurar que se ejecute la acción
-            .then(productsOfert => {
-                return res.render('index', {productsOfert})})
-            .catch(error => res.send(error)) 
+        }) // force: true es para asegurar que se ejecute la acción
+
+        const products = await db.Product.findAll({limit:4,offset:10,});
+        res.render('index', {productsOfert,products})
     },
     register: (req,res)=> {
         res.render("register")

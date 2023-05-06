@@ -81,6 +81,25 @@
     
                 </div>
             </section>
+
+            <section class="main-publicidad" style="margin: 4rem 0;">
+                <!-- <%- include("partials/carruselUno")%> -->
+                <img src="/img/anuncios/ryzen.jpg" alt="">
+            </section>   
+
+            <section class="main-oferts">
+                <div class="main-title">
+                    <h2>Nuevos Productos</h2>
+                </div>
+    
+                <div class="section-card p-1 mx-auto flex flex-wrap gap justify-center card-ofert-change">
+    
+                    <% products.forEach(product=> { %>
+                        <%- include("products/productCard",{product}) %>
+                    <% }) %>
+                </div>
+            </section>
+
            
         </main>
 
