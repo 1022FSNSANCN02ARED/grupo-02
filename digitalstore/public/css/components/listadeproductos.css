@@ -71,35 +71,78 @@
 .item-producto{
     width: 100%;
     max-width: 270px;
-    padding: 15px;
     border-radius: 5px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--blanco);
-    height: 350px;
+    height: 400px;
     transition: all .6s;
     color: var(--negro);
 }
 
 .item-producto h4{
-    margin-top: 10px;
+    margin: 10px 0;
     font-weight: 400;
+    padding: 0 14px;
 }
 
 .item-producto img{
-    margin: 0 auto;
+    margin: 1rem auto 0 auto;
+    object-fit: contain;
+    padding: 0 10px;
+
 }
 
 .item-producto:hover{
     box-shadow: 0 0 7px 1px rgba(32, 32, 32, 0.2);
 }
 
-.item-products-text{
-    padding-top: 20px;
-    border-top: 2px solid var(--gris-claro);
+.card-ofert-change .item-producto-container .item-producto{
+    box-shadow: 0 0 7px 1px rgba(32, 32, 32, 0.2);
 }
+
+.item-products-text{
+    padding-top: 15px;
+}
+
+.card-button-view{
+    margin-top: .7rem;
+    height:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: grey;
+    border-radius: 0 0 5px 5px;
+
+}
+
+.card-button-view{
+    background-color: var(--naranja);
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width:769px) {
+    .card-button-view{
+        background-color: var(--naranja);
+        font-weight: bold;
+        color: white;
+    }
+    .item-producto{
+        box-shadow: 0 0 7px 1px rgba(32, 32, 32, 0.2);
+    }
+}
+
+.price-discount-card{
+
+    justify-content: center;
+    display: flex;
+    gap: .6rem;
+    margin-top: 1rem;
+}
+
 
 .switch {
     position: relative;
@@ -197,15 +240,13 @@ input:checked + .slider:before {
 .icons-card{
     display: flex;
 }
-@media (min-width:481px) {
+@media (min-width:551px) {
     .container-products{
         gap:2%;
         
     }
-
     .item-producto-container{
-        width: 49%;
-        margin-bottom: 20px;
+        width: 48%;
     }
 }
 @media (min-width:768px) {
@@ -215,7 +256,6 @@ input:checked + .slider:before {
     }
     .item-producto-container{
         width: 32%;
-        max-width: 270px;
     }
 }
 @media (min-width:1080px) {
@@ -235,12 +275,10 @@ input:checked + .slider:before {
     .container-products{
         gap: 0%;
         display: flex;
-    
     }
 
     .item-producto-container{
         width: 23%;
-        margin: 8px;
     }
 
     .main-listado{
@@ -255,12 +293,9 @@ input:checked + .slider:before {
     }
 
     .h50img{
-
-        height: 50%;
         text-align: center;
     }
     .h50img img{
-
         margin: auto;
     }
 

@@ -18,7 +18,10 @@ module.exports = {
                     discount:{
                         [Op.gt]: 0, 
                     }
-                }
+                },
+                limit: 4,
+                offset:0,
+
             }) // force: true es para asegurar que se ejecute la acción
             .then(productsOfert => {
                 return res.render('index', {productsOfert})})

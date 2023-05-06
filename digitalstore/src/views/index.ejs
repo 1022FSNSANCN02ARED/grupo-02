@@ -12,7 +12,7 @@
 
       
         <!-- MELINA Y RUBEN -->
-        <main class="mx-auto bg-grey ">
+        <main class="mx-auto bg-grey " style="padding-bottom: 3rem;">
             
             <section class="main-publicidad">
                 <!-- <%- include("partials/carruselUno")%> -->
@@ -67,24 +67,20 @@
                 </article>
                 </form>
             </section>
-            <div class="div-categorias-index">
-                <h2 class="categorias-index">Ofertas</h2>
-            </div>
 
-            <section class="section-card p-1 mx-auto flex flex-wrap gap justify-center">
-
-                <% productsOfert.forEach(product=> { %>
-                    <%- include("products/productCard",{product}) %>
-                        <% }) %>
-
+            <section class="main-oferts">
+                <div class="main-title">
+                    <h2>Ofertas</h2>
+                </div>
+    
+                <div class="section-card p-1 mx-auto flex flex-wrap gap justify-center card-ofert-change">
+    
+                    <% productsOfert.forEach(product=> { %>
+                        <%- include("products/productCard",{product}) %>
+                    <% }) %>
+    
+                </div>
             </section>
-            
-            
-            <section class="main-publicidad">
-                <!-- <%- include("partials/carruselUno")%> -->
-                <img src="/img/anuncios/ryzen.jpg" alt="">
-            </section>
-          
            
         </main>
 

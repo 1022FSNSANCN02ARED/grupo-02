@@ -90,10 +90,6 @@
     .section-card {
         flex-direction: row;
     }
-    .section-card a{
-        width: 270px;
-        
-    }
 }
 .div-marquee{
     width: 90%;
@@ -124,4 +120,30 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.main-oferts{
+    width: 95%;
+    box-shadow: 0 0 7px 1px rgba(32, 32, 32, 0.2);
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    padding: 3rem 0 2rem 0;
+
+}
+
+.main-title{
+    position: absolute;
+    top: -1.3rem;
+    left: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: var(--naranja);
+    padding: .5rem 1rem;
+    border-radius:2rem 0 2rem 0;
+}
+
+.main-title h2{
+    font-size: 2rem;
+    color: white;
 }

@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom:20vh;
+    margin:4rem 0;
 }
 
 .main-login {
