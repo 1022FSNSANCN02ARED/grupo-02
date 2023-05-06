@@ -54,18 +54,19 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px;
-    row-gap: 50px;
+    justify-content: space-evenly;
+    padding:  15px ;
+    gap: 2%;
     background-color: var(--gris-claro);
     margin: 0 auto;
-    
 }
 
 .item-producto-container{
     width: 90%;
     display: flex;
     justify-content: center;
+    padding-top: 20px;
+
 }
 
 .item-producto{
@@ -275,10 +276,12 @@ input:checked + .slider:before {
     .container-products{
         gap: 0%;
         display: flex;
+        justify-content: space-evenly;
     }
 
     .item-producto-container{
         width: 23%;
+        margin-bottom: 1.6rem;
     }
 
     .main-listado{
@@ -289,7 +292,6 @@ input:checked + .slider:before {
     .container-categories{
         background-color: var(--gris-claro);
         width: 20%;
-        padding-top: 20px;
     }
 
     .h50img{
