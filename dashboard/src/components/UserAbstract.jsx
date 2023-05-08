@@ -1,7 +1,7 @@
 import React from "react";
 import "./UserAbstract.css";
 
-function ProductAbstract({ title, desc, img, url }) {
+function ProductAbstract({ user, title, desc, img, url }) {
   return (
     <>
       <div>
@@ -14,10 +14,9 @@ function ProductAbstract({ title, desc, img, url }) {
           alt={title}
         />
       </div>
+      <p>{user}</p>
+
       <p>{desc}</p>
-      <a target="_blank" rel="noreferrer" href={url}>
-        Ver detalle del Producto{" "}
-      </a>
     </>
   );
 }

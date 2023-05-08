@@ -8,7 +8,7 @@ function LastProduct() {
     <BigCard title="Ultimo Producto en DB">
       <ProductAbstract
         img={ultimoProducto}
-        title="Auriculares Redragon H120 Ares PC"
+        product="Auriculares Redragon H120 Ares PC"
         desc="Este es un auricular para PC"
         url="/"
       />

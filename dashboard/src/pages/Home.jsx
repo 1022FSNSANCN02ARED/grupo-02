@@ -24,7 +24,7 @@ const myStats = [
 function Home() {
   return (
     <>
-      <div className="row flex-wrap smallcard">
+      <div className="indicadores">
         {myStats.map((stat) => {
           return (
             <SmallCard key={stat.id} title={stat.title} value={stat.value} />
@@ -32,7 +32,7 @@ function Home() {
         })}
       </div>
 
-      <div className="row flex-wrap smallcard ">
+      <div className="indicadores ">
         <div>
           <LastProduct />
         </div>

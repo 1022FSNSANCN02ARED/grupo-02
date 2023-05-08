@@ -8,7 +8,7 @@ function LastUser() {
     <BigCard title="Ultimo Usuario en DB">
       <UserAbstract
         img={ultimoUsuario}
-        title="Georgina Barrios"
+        user="Georgina Barrios"
         desc="Usuario"
         url="/"
       />

@@ -4,7 +4,7 @@ import "./SmallCard.css";
 function SmallCard({ title, value }) {
   return (
     <>
-      <div className="col-md-4 mb-4 ">
+      <div className="mark">
         <div>{title}</div>
 
         <div>{value}</div>

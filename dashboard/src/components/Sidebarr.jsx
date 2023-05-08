@@ -16,12 +16,7 @@ function Sidebar() {
         <li>Digital Store</li>
 
         <li>
-          <Link to="/products">
-            <i class="fa-solid fa-gift"></i>
-            <span>Productos</span>
-          
-          </Link>
-        
+          <Link to="/products">Productos</Link>
         </li>
 
         <li>

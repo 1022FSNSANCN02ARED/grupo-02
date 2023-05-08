@@ -4,11 +4,11 @@ import "./BigCard.css";
 function BigCard({ title, children }) {
   return (
     <>
-      <div>
+      <div className="idCard">
         <h3>{title}</h3>
       </div>
 
-      <div>{children}</div>
+      <div className="descCard">{children}</div>
     </>
   );
 }
