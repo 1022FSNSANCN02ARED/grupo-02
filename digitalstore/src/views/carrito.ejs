@@ -46,37 +46,37 @@
 
                                                         </div>
 
-                                                        <div class="flex">
-                                                             <div class="contadores-carrito">
+                                                        <div class="contenedor-masmenos-carrito">
+                                                            <div class="contadores-carrito">
 
-                                                            <form action="/carrito/remove/<%= item.product.id  %>"
+                                                                <form action="/carrito/remove/<%= item.product.id  %>"
+                                                                    method="post">
+                                                                    <button class="btn menos-carrito">
+                                                                        <i class="fa-solid fa-minus"></i>
+                                                                    </button>
+                                                                </form>
+                                                                <p class="numeroContador-carrito">
+                                                                    <%= item.count %>
+                                                                </p>
+                                                                <form action="/carrito/add/<%= item.product.id  %>"
+                                                                    method="post">
+                                                                    <button class="btn mas-carrito">
+                                                                        <i class="fa-solid fa-plus"></i>
+                                                                    </button>
+                                                                </form>
+
+
+
+
+                                                            </div>
+                                                            <form class="form-tachito-carrito"
+                                                                action="/carrito/carrito/delete/<%= item.product.id %>"
                                                                 method="post">
-                                                                <button class="btn mas-menos">
-                                                                    <i class="fa-solid fa-minus"></i>
-                                                                </button>
+                                                                <button class="btn color-primary btn-eliminar"><i
+                                                                        class="fa-solid fa-trash"></i></button>
                                                             </form>
-                                                            <p class="numeroContador-carrito">
-                                                                <%= item.count %>
-                                                            </p>
-                                                            <form action="/carrito/add/<%= item.product.id  %>"
-                                                                method="post">
-                                                                <button class="btn mas-menos">
-                                                                    <i class="fa-solid fa-plus"></i>
-                                                                </button>
-                                                            </form>
-
-                
-
-
                                                         </div>
-                                                        <form class="form-tachito-carrito"
-                                                            action="/carrito/carrito/delete/<%= item.product.id %>"
-                                                            method="post">
-                                                            <button class="btn color-primary btn-eliminar"><i
-                                                                    class="fa-solid fa-trash"></i></button>
-                                                        </form>
-                                                        </div>
-                                                       
+
 
                                                     </div>
 
@@ -95,8 +95,9 @@
                                                     <h3>Forma de pago</h3>
 
                                                     <div class="radio-carrito">
-                                                        <input type="radio" name="forma-Pago">
-                                                        <label for="">Deposito o transferencia bancaria</label>
+                                                        <input type="radio" name="forma-Pago" class="deposito-carrito">
+                                                        <label for="" class="label-deposito-carrito">Deposito o
+                                                            transferencia bancaria</label>
                                                     </div>
 
                                                     <div class="radio-carrito">
@@ -106,15 +107,20 @@
                                                     </div>
 
                                                 </article>
-                                                <form class="d-flex w-100 justify-content-end p-3" action="/me/cart/buy"
-                                                    method="POST">
-                                                    <button class="btn btn-primary comprar">Comprar</button>
-                                                </form>
-                                                <form action="/carrito/carrito/clear/" method="post">
-                                                    <button class="btn limpiar-carrito">
-                                                        Limpiar Carrito
-                                                    </button>
-                                                </form>
+
+                                                <div class="comprar-limpiar-carrito">
+                                                    <form class=""
+                                                        action="/me/cart/buy" method="POST">
+                                                        <button class="btn btn-primary comprar">Comprar</button>
+                                                    </form>
+                                                    <form action="/carrito/carrito/clear/" method="post">
+                                                        <button class="btn limpiar-carrito">
+                                                           <p class="limpiar-carrito-p">Limpiar Carrito</p> 
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                </div>
+
 
                                             </div>
                                             <% } %>
@@ -126,6 +132,7 @@
 
         <!-- AXEL -->
         <%- include("partials/footer")%>
+
 
 </body>
 
