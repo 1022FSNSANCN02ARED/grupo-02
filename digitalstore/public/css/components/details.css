@@ -175,7 +175,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
         text-align: center;
-        border: 1px solid black;
+        border: 1px solid orange;
     }
 
     .detail-descripcion {
@@ -187,6 +187,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        
     }
 
     .detail-boton button {
@@ -195,6 +196,12 @@
         font-weight: bold;
         border: none;
         border-radius: 10px;
+        cursor: pointer;
+        
+    }
+    .detail-boton button:hover {
+       background-color: rgb(126, 182, 16);
+        transition: 0.5s;
     }
 
 }
