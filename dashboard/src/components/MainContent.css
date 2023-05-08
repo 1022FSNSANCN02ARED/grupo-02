@@ -1,0 +1,15 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+
+.flex-wrap {
+    flex-wrap: wrap ;
+}
+
+  .smallcard {
+      padding: 30px;
+      text-align: center;
+  }
+

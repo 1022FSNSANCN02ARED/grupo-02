@@ -3,4 +3,6 @@
     padding: 1rem 2rem;
     border-bottom: 1px solid gray;
     text-align: center;
+    background-color: orange;
+    font-weight: bold;
 }

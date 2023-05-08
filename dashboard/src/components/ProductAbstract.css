@@ -1,0 +1,16 @@
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.px-3 {
+    padding-right: 1rem 
+}
+
+ .px-sm-4 {
+     padding-right: 1.5rem ;
+ }
+
+ 
