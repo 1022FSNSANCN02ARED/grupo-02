@@ -20,7 +20,7 @@ const UserList = ({users,meta}) => {
                         </div>
                         <div className="user-card-button-container">
                             <a className="button-remove" href=""><i className="fa-solid fa-trash-can"></i></a>
-                            <a className="button-edit" href="#"><i className="fa-solid fa-pencil"></i></a>
+                            <a className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
                         </div>
                     </div>
                 )

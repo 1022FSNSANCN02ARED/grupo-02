@@ -16,10 +16,10 @@ async function userLoggedMiddleware(req, res, next) {
         email: emailInCookie, 
       }
     });
+    var userFromCookie = user[0].dataValues;
   }
   
-  const userFromCookie = user[0].dataValues;
-  console.log(userFromCookie)
+  
 
   if (userFromCookie){// SI ENCONTRE AL USUARIO LO PASO A SESION
         req.session.userLogged = userFromCookie;
