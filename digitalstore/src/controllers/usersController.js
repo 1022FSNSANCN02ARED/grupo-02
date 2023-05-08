@@ -257,7 +257,7 @@ module.exports = {
 
           //si el usuario quiere recordar el usuario creo la cookie guardando el email
           if (req.body.remember) {
-            res.cookie("userEmail", req.body.emailLogin, {
+            res.cookie("userEmail", req.body.email, {
               maxAge: 1000 * 60 * 60,
             });
           }
