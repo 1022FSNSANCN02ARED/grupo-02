@@ -14,13 +14,10 @@
 
     </ul>
 
-
     <script type="text/javascript">
 
         window.addEventListener('load', () => {
             const list = document.querySelector("ul");
-
-           
 
             fetch("http://localhost:3000/api/users")
 
@@ -30,7 +27,7 @@
                     const dt = data.data;
                     for (let i = 0; i < dt.length; i++) {
 
-                        list.innerHTML += `<li> ${dt[i].firstName}   /   ${dt[i].email} <img src="${dt[i].img}" alt="no-imagen" width="50" heigth="50"/></li>`;
+                        list.innerHTML += `<li heigth="60"> ${dt[i].firstName}   /   ${dt[i].email} <img src="${dt[i].img}" alt="no-imagen" width="50" heigth="50"/></li>`;
                     }
                 })
 
