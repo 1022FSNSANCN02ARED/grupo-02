@@ -1,14 +1,14 @@
 .sidebar {
     width: 14rem;
     height: calc(100vh - 52px);
-
+    background-color: lightgray;
     border-right: 1px solid gray;
 
 }
 
 .sidebar ul {
     list-style: none;
-    padding: 1rem 2rem;
+    padding: 1rem ;
 }
 
 .sidebar li {

@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <%- include("partials/head") %>
 
 </head>
+
 <body>
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
 
         <!-- MAIN DE PRODUCTOS DIGITAL STORE -->
-    <main class="main-detail">
-        <div class="img-detail">
-            <img src="/img/productos/<%=producto.image%> " alt="<%= producto.category.name %> ">
-        </div>
-        <div class="detail-product">
-            <h2>
-                <%= producto.name %>
-            </h2>
-            <div class="detail-categoria">
-                <p>
-                    Categoria: <%= producto.category.name %>
-                </p>
+        <main class="main-detail">
+
+            <div class="img-detail">
+                <img src="/img/productos/<%=producto.image%> " alt="<%= producto.category.name %> ">
             </div>
-            <div class="centrar-producto">
-                <p class="detail-precio">
-                    Precio: $<%= producto.price %>
-
-
-                </p>
-                <% if (producto.discount > 0) { %>
-                    <p class="detail-oferta">
-                        <%= producto.discount%>%OFF
+            <div class="detail-product">
+                <h2>
+                    <%= producto.name %>
+                </h2>
+                <div class="detail-categoria">
+                    <p>
+                        Categoria: <%= producto.category.name %>
                     </p>
-                <% } %>
+                </div>
+                <div class="centrar-producto">
+                    <p class="detail-precio">
+                        Precio: $<%= producto.price %>
+
+
+                    </p>
+                    <% if (producto.discount> 0) { %>
+                        <p class="detail-oferta">
+                            <%= producto.discount%>%OFF
+                        </p>
+                        <% } %>
+                </div>
+
+
+                <form action="/carrito/add/<%= producto.id %>" method="POST">
+                    <div class="detail-boton">
+                        <button> Agregar al Carrito </button>
+                    </div>
+                </form>
+                <form action="/favorites/add/<%= producto.id %>" method="POST">
+                    <div class="detail-boton">
+                        <button> Agregar a Favoritos </button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="descripcion-producto">
+                <h3>Descripción:</h3>
+                <p class="detail-descripcion">
+                    <%= producto.description %>
+                </p>
             </div>
 
-
-            <form action="/carrito/add/<%= producto.id %>" method="POST">
-                <div class="detail-boton">
-                    <button> Agregar al Carrito </button>
-                </div>
-            </form>
-            <form action="/favorites/add/<%= producto.id %>" method="POST">
-                <div class="detail-boton">
-                    <button> Agregar a Favoritos </button>
-                </div>
-            </form>
-            
-        </div>
-        <div class="descripcion-producto">
-            <h3>Descripcion:</h3>
-            <p class="detail-descripcion">
-                <%= producto.description %>
-            </p>
-        </div>
-
-    </main>
+        </main>
 
 
-    <!-- AXEL -->
-    <%- include("partials/footer") %>
+        <!-- AXEL -->
+        <%- include("partials/footer") %>
 
-   
+
 
 </body>
 

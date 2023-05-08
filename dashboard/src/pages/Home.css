@@ -1,0 +1,10 @@
+
+
+
+.indicadores{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    text-align: center;
+    justify-content: space-around;
+}

@@ -30,7 +30,7 @@ module.exports = {
     const brands = await db.Brand.findAll();
     let productos = []
     if(req.query.search){
-      const search = req.query.search
+      const search = req.query.search;
       productos = await db.Product.findAll({
         include: ["brand", "category"],
         where: {
@@ -39,7 +39,15 @@ module.exports = {
           }
         },
       })
-    }else{
+    }else if(req.query.category){
+      const category = req.query.category;
+      productos = await db.Product.findAll({
+        include: ["brand", "category"],
+      })
+      console.log(productos[0].category)
+      productos = productos.filter((prod) => { return prod.category.name == category })
+    }
+    else{
       productos = await db.Product.findAll({
         include: ["brand", "category"],
       });
@@ -224,14 +232,7 @@ module.exports = {
         for (let i = 0; i < marca.length; i++) {
           brand[i] = marca[i].dataValues.id;
         }
-        //var brand = marca[0].dataValues.id
-      } /*
-            else{
-                console.log("asd")
-                for (let i = 0; i < brands.length; i++) {
-                    brand[i] = brands[i].dataValues.id;
-                }
-            }  */
+      } 
 
       if (cat.length > 0) {
         for (let i = 0; i < cat.length; i++) {
@@ -248,9 +249,7 @@ module.exports = {
             },
             idBrand: {
               [Op.or]: brand,
-            }, //{
-            // [Op.or]: //props
-            // }
+            }
           },
         });
       } else {
@@ -264,10 +263,6 @@ module.exports = {
             idBrand: {
               [Op.or]: brand,
             },
-            /*
-                        idCategory:{
-                            [Op.or]:props
-                        },*/
             discount: {
               [Op.gt]: 0,
             },
