@@ -6,7 +6,8 @@
 }
 
 .centrar-producto{
-    margin: auto;
+    
+    width: 100%;
 }
 
 .img-detail {
@@ -26,11 +27,8 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 10px;
-}
-
-.detail-product h2 {
-    width: 100%;
-    margin-left: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 .detail-categoria {
@@ -59,6 +57,7 @@
     padding: 5px;
     border-radius: 5px;
     margin: auto;
+    
 
 }
 
@@ -68,12 +67,22 @@
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    border: 1px solid black;
+    border-radius: 5px;
+  border: 1px solid orange;
+   
+}
+.descripcion-producto h3{
+ background-color: orange;
+ width: 100%;
+  
 }
 
 .detail-descripcion {
     margin-left: 10px;
     margin: 20px 0;
+    font-weight: bold;
+ 
+    
 }
 
 .detail-boton {
