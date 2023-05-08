@@ -126,10 +126,8 @@ module.exports= {
                   data: confirm,
                 };
               }
-              res.json(respuesta);
-            })
-            .catch((error) => res.send(error));
-    },
-        
-    
+            res.json(respuesta);
+        })
+        .catch((error) => res.send(error));
+    }  
 }

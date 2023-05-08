@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useRef} from "react";
 import "./Users.css";
 
 const UserList = ({users,meta}) => { 
@@ -19,7 +19,7 @@ const UserList = ({users,meta}) => {
                                     <p className="user-card-user">@{user.userName}</p>
                         </div>
                         <div className="user-card-button-container">
-                            <a className="button-remove" href=""><i className="fa-solid fa-trash-can"></i></a>
+                            <a className="button-remove" href="#"><i className="fa-solid fa-trash-can"></i></a>
                             <a className="button-edit" href="#"><i className="fa-solid fa-pencil"></i></a>
                         </div>
                     </div>
@@ -38,7 +38,7 @@ function Users() {
     const [users,setUsers] = useState()
     const [apiInfo,setApiInfo] = useState()
     const [apiState,setApiState] = useState(false)
-    
+    const searchInput = useRef();
 
     //peticion a la api
     const  apiUserPetition = ()=>{
@@ -59,22 +59,41 @@ function Users() {
             console.log(users)
             console.log(apiInfo)
             }
-        )
-       
+        ) 
+    }
+    //peticion a la api
+    const apiSearch = (value)=>{
+        setApiState(false)
+        fetch("http://localhost:3000/api/users")
+        .then(data => data.json())
+        .then(data=>{
+            if(data.data.length > 0){
+                setUsers(data.data)
+                setApiInfo(data.meta)
+                setApiState(true)
+            }else{
+                setUsers([])
+                setApiInfo([])
+                setApiState(true)
+            }
+            console.log(users)
+            console.log(apiInfo)
+            }
+        ) 
     }
 
     useEffect(() => {
         apiUserPetition();
-     },[])
+    },[])
 
   return (
     <main className="main-panel">  
 
         <h1 style={{textAlign: "center"}}>PANEL DE USUARIOS</h1>
-        <form className="user-panel-search" action="/users/panel" method="get">
-            <input type="search" name="search" id="user" placeholder="@usuario || #role (admin,usuario)"/>
-            <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        <div className="user-panel-search" action="/users/panel" method="get">
+            <input ref={searchInput} type="search" name="search" id="user" placeholder="@usuario || #role (admin,usuario)"/>
+            <button type="submit"><i className="fa-solid fa-magnifying-glass" onClick={()=>{apiSearch(searchInput.current.value)}}></i></button>
+        </div>
         
         {/* 
         <% if (filter) { %>

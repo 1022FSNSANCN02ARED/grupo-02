@@ -21,6 +21,7 @@ router.use("/users", usersRoutes);
 //agrega la ruta hacia /carrito
 const cartRoutes = require('./cartRoutes');
 router.use("/carrito", cartRoutes);
+
 //agrega la ruta hacia /favorites
 const favRoutes = require('./favRoutes');
 router.use("/favorites", favRoutes);
