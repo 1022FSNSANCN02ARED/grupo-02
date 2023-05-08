@@ -251,19 +251,19 @@
     width: 100%;
     background-color: orange;
     border-radius: 5px;
-    border: 1px solid black;
+    
     color: white;
     font-size: 35px;
     padding: 5px;
     cursor: pointer;
-    
+    box-shadow: 0 0 5px black;
   }
   .comprar:hover {
     width: 100%;
     background-color: rgb(9, 204, 9);
     border-radius: 5px;
-    border: 1px solid black;
-    color: black;
+ 
+   box-shadow: 0 3px 5px green ;
     font-size: 35px;
     padding: 5px;
     cursor: pointer;
@@ -279,10 +279,10 @@
     min-height: 50px;
     min-width: 250px;
     cursor: pointer;
-    border: 1px solid black;
+   border: none;
     display: flexbox;
     z-index: -1;
-    
+    box-shadow: 0 0 5px black;
   }
 
   .limpiar-carrito i{
@@ -310,7 +310,7 @@
     display: flex;
     text-align: center;
     justify-content: space-around;
-
+    
   }
   
 
