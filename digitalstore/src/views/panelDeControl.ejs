@@ -7,44 +7,93 @@
     <%- include("partials/header") %>
     <main class="main-panel">  
 
-        <h1>USUARIOS</h1>
-
-
-        <div class="user-contenedor">
+        <h1 style="text-align: center;">PANEL DE USUARIOS</h1>
+        <form class="user-panel-search" action="/users/panel" method="get">
+            <input type="search" name="search" id="user" placeholder="@usuario || #role (admin,usuario)">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <% if (filter) { %>
+            <div class="user-clear-button">
+                <a  href="/users/panel">Limpiar</a>
+            </div>
+        <% } %>
+        <section class="user-cards-container">
             
+            <% if (users.length > 0) { %>
                 <% users.forEach(user => { %>
-                 <div class="user-card">
-                    <p class="id" >
-                    <%= user.id %>
-                </p>
-                        <p class="usuario" >
-                            <%= user.firstName %>
-                        </p>
-                        <p class="usuario" >
-                            <%= user.lastName %>
-                        </p>
-                        <p class="usuario" >
-                            <%= user.email %>
-                        </p>
-                        <p class="usuario" >
-                            <%= user.userName %>
-                        </p>
-                        <p class="usuario" >
-                            <%= user.role.role %>
-                        </p>
-                        <button><a href="/users/edit/<%= user.id %>">Editar</a></button>
-                        <button><a href="/users/delete/<%= user.id %>">Eliminar</a></button>
+                    <div class="user-card">
+                        <div class="user-card-tag">
+                            <% if (user.idRole) { %>
+                                <% if (user.idRole==1) { %>
+                                    <p class="admin">#Admin</p>
+                                <% } else { %>
+                                    <p class="user">#Usuario</p>
+                                <% } %>
+                            <% } %>
+                        </div>
+                        <img class="user-card-img" src="<%= user.img %>" alt="Imagen de <%= user.img %>">
+                        <div class="user-card-name-container">
+                            <p class="user-card-name"><%= user.firstName %> <%= user.lastName %></p>
+                            <p class="user-card-user">@<%= user.userName %></p>
+                        </div>
+                        <div class="user-card-button-container">
+                            <a class="button-remove" href="#"><i class="fa-solid fa-trash-can"></i></a>
+                            <a class="button-edit" href="#"><i class="fa-solid fa-pencil"></i></a>
+                        </div>
                     </div>
-                    <p style="font-size: 20px; font-weight: bold;">
-            
-                    </p>
-                <% }) %>
-            
-        </div>
+               <% }) %>
+            <% } else {%>
+                <p class="user-empty">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                    No se encontraron resultados
+                </p>
+            <% } %>
 
-
+        </section>
 
     </main>
     <%- include("partials/footer") %>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="user-contenedor">
+            
+    <% users.forEach(user => { %>
+     <div class="user-card">
+        <p class="id" ><%= user.id %></p>
+            <p class="usuario" >
+                <%= user.firstName %>
+            </p>
+            <p class="usuario" >
+                <%= user.lastName %>
+            </p>
+            <p class="usuario" >
+                <%= user.email %>
+            </p>
+            <p class="usuario" >
+                <%= user.userName %>
+            </p>
+            <p class="usuario" >
+                <%= user.role.role %>
+            </p>
+            <button><a href="/users/edit/<%= user.id %>">Editar</a></button>
+            <button><a href="/users/delete/<%= user.id %>">Eliminar</a></button>
+        </div>
+        <p style="font-size: 20px; font-weight: bold;">
+
+        </p>
+    <% }) %>
+
+</div> -->

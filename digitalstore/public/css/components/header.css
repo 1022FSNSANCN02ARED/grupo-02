@@ -8,8 +8,6 @@ header {
     background-color: white;
 }
 
-
-
 .usuario-header img {
     width: 40px;
     height: 40px;
@@ -181,8 +179,10 @@ nav ul {
 
 
 .btn-login {
+   
    border: none;
    border-radius: 10px;
+   padding: 10px;
 }
 
 .btn-login a {
@@ -209,12 +209,15 @@ nav ul {
 }
 
 
+
+
 @media (min-width:768px) {
   
     
-.none{
-    display: none;
-}
+    .none{
+        display: none;
+    }
+
     .nav-primary {
         align-items: center;
     }
@@ -281,6 +284,10 @@ nav ul {
         display: none;
     }
 
+    .login-tablet{
+        display: none;
+    }
+    
     .div-desplegable-header {
         z-index: 3;
         position: fixed;
@@ -291,7 +298,6 @@ nav ul {
         display: flex;
         
         background-color: rgba(0, 0, 0, 0.89);
-
 
     }
     .usuarioHeader {
@@ -413,8 +419,7 @@ nav ul {
     }
 
     .btn-login {
-        width: 50%;
-        padding: 10px;
+        display: flex;       
     }
 
     .btn-tienda {

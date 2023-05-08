@@ -1,4 +1,144 @@
+.main-panel{
+    background-color: var(--gris-claro);
+    padding: 2rem 0;
+    
+}
+
+.user-panel-search{
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.user-panel-search input{
+    width: 250px;
+    padding: .4rem 1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .7rem 0 0 .7rem;
+}
+.user-panel-search button{
+    padding: .4rem .4rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-left: none;
+    border-radius: 0 .7rem .7rem 0;
+}
+
+.user-clear-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.user-clear-button a{
+    padding: .4rem .4rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background-color: white;
+    color: grey;
+    font-weight: bold;
+    border-radius: .7rem;
+}
+
+.user-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    width: 95%;
+    margin: 0 auto;
+}
 .user-card{
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.132) ;
+    background-color: white;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+    border-radius: .1rem;
+}
+
+.user-card-tag{
+    margin: .7rem auto 0 .7rem;
+}
+
+.admin, .user{
+    padding: .3rem .5rem;
+    border-radius: 1rem;
+}
+
+.user{
+    background-color: rgb(93, 187, 90);
+}
+
+.admin{
+    background-color: rgb(253, 67, 67);
+}
+
+.user-card-tag{
+    font-weight: bold;
+    color: white;
+}
+
+.user-card-img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .5rem rgba(0, 0, 0, 0.232) ;
+    margin: 1.6rem 0;
+}
+
+.user-card-name-container{
+    text-align: center;
+}
+
+.user-card-name {
+    font-weight: bold;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.user-card-user{
+    color: grey;
+    margin-top: .2rem;
+}
+
+.user-card-button-container{
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+}
+
+.user-card-button-container a{
+    /* width: 50%; */
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.button-edit{
+    padding: .5rem;
+    background-color: rgb(0, 132, 255);
+}
+.button-remove{
+    padding: .5rem;
+    background-color: rgb(252, 51, 51);
+
+}
+
+
+
+.user-empty{
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: grey;
+}
+
+/* .user-card{
     border: solid 2px black;
     border-radius: 5px;
     display: flex;
@@ -66,4 +206,4 @@
     .main-panel{
         margin-bottom: 20vh;
     }
-}
+} */

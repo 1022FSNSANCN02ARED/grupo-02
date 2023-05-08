@@ -4,11 +4,13 @@
             <img src="img/productos/<%= product.image %> " class=" w100 border-radius-10 ">
         </div>
         
-        <div class="item-products-text h50">
-            
+        <div class="item-products-text ">
+
+            <h4><%= product.name %></h4>
+
             <% if (product.discount > 0) {%>
-                <div style="display: flex;gap: 5px;" class="center">
-                    <p style="text-decoration: line-through;">
+                <div class="price-discount-card" >
+                    <p style="text-decoration: line-through;color: grey;">
                         $<%= product.price %> 
                     </p>
                     <p class="descuento_article" style="text-decoration:none;">
@@ -26,7 +28,9 @@
                 </p>
             <% } %>
 
-            <h4><%= product.name %></h4>
+            <div class="card-button-view">
+                <p>Ver más</p>
+            </div>
             
             
         </div>
