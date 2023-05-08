@@ -1,28 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logoDigitalStore from "../images/logo_proyecto.jpg";
+import logoDigitalStore from "../images/icon.png";
 import "./Sidebar.css";
 
 function Sidebar() {
   return (
     <div className="sidebar">
-      <ul>
-        <Link to="/">
-          <div>
-            <img className="w-100" src={logoDigitalStore} alt="DIGITAL STORE" />
+      <Link to="/">
+          <div className="nav-title">
+            <img src={logoDigitalStore} alt="DIGITAL STORE" />
+            <h3>Digital Store</h3>
           </div>
         </Link>
-
-        <li>Digital Store</li>
-
+      <ul>
         <li>
-          <Link to="/products">Productos</Link>
+          <Link to="/"><i class="fa-solid fa-house"></i> Inicio</Link>
+        </li>
+        <li>
+          <Link to="/products"><i class="fa-solid fa-cart-flatbed"></i> Productos</Link>
         </li>
 
         <li>
-          <Link to="/users">Usuarios</Link>
+          <Link to="/users"><i class="fa-regular fa-user"></i> Usuarios</Link>
         </li>
       </ul>
+      <div className="nav-view-page">
+        <a href="http://localhost:3000/" target="_blank" rel="noreferrer">
+          Ver página
+        </a>
+      </div>
     </div>
   );
 }

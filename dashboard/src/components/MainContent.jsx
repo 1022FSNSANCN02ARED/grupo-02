@@ -14,7 +14,6 @@ function MainContent() {
       <Route path="/products" element={<Products />} />
       <Route path="/users" element={<Users />} />
       <Route path="*" element={<Page404 />} />
-   
     </Routes>
   );
 }

@@ -42,7 +42,6 @@ router.get("/profile", authMiddleware, usersController.profile);
 
 router.get ("/logout", usersController.logout);
 
-router.get("/panel", usersController.listUsers);
 router.get('/profile/', authMiddleware, usersController.profile);
 
 router.get("/:id/carrito", usersController.userCarrito);

@@ -10,14 +10,12 @@ import MainContent from "./components/MainContent"
 function App() {
   return (
     <Router>
-      <Header />
       <div className="flex">
          <Sidebar />
           <div className="content">
             <MainContent />
           </div>
       </div>
-      <Footer />
     </Router>
   );
 }
