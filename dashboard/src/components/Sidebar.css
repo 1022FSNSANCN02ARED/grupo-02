@@ -3,7 +3,9 @@
     height: 100vh;
     background-color: lightgray;
     border-right: 1px solid gray;
-
+    position: sticky;
+    left: 0;
+    top: 0;
 }
 
 .sidebar ul {

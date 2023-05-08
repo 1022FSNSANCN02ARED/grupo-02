@@ -85,7 +85,10 @@ function Users() {
         */}
 
         <section className="user-cards-container">
-            { setApiState? (users ? <UserList users={users} meta={apiInfo}/> : <p> No se encontraron Usuarios!</p>) : <p>Cargando Usuarios</p> }
+            { apiState
+            ? (users ? <UserList users={users} meta={apiInfo}/> : <p> No se encontraron Usuarios!</p>) 
+            :<div className="spinner-border text-warning" role="status">
+            </div> }
         </section> 
     </main>
   );
