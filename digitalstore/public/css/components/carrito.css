@@ -85,6 +85,9 @@
 .form-tachito-carrito {
  margin-right: -50%;
 }
+.limpiar-carrito i{
+  display: none;
+}
 .precio {
   font-size: 40px;
   color: forestgreen;
@@ -284,6 +287,7 @@
 
   .limpiar-carrito i{
    display: block;
+   visibility: hidden;
    padding: 10px;
     position: absolute;
     top: -25px;
@@ -294,6 +298,7 @@
     padding: 10px;
     top: 0;
     position: relative;
+    visibility: visible;
   }
   .limpiar-carrito:hover .limpiar-carrito-p{
  display: none;
@@ -313,6 +318,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 60px;
   }
   .contenedor-carrito h3 {
     font-size: 30px;
@@ -323,7 +329,29 @@
     width: 100%;
     margin: 10px;
     text-align: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+  
+    
   }
+  .radio-carrito label {
+    margin-left: 25%;
+
+  }
+#mercadopago-carrito:checked ~ .labe-mercado{
+    color: green;
+font-weight: bold;
+font-size: 1.1rem;
+  }
+  .deposito-carrito:checked ~ .label-deposito-carrito{
+    color: green;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
   .block {
     display: block;
     width: 50%;
