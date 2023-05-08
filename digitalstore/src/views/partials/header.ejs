@@ -58,7 +58,7 @@
                             <h3> <a href="">Cambiar contraseña</a> </h3>
                             <% if (locals.userLogged.idRole == 1) { %>
                             
-                                <h3> <a href="/users/panel">Panel de usuarios</a> </h3>
+                                <h3> <a href="http://localhost:3001/">Panel de usuarios</a> </h3>
 
                             <% } %>
                             <h3 class="h3Cerrar"> <a href="/users/logout">Cerrar sesión</a> </h3>
@@ -106,7 +106,7 @@
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
                 <% if (locals.userLogged && locals.userLogged.idRole == 1) { %>
                             
-                    <li class="nav-li login-tablet"> <a href="/users/panel">Panel de control</a> </li>
+                    <li class="nav-li login-tablet"> <a href="http://localhost:3001/">Panel de control</a> </li>
 
                 <% } %>
                 <% if (!locals.isLogged) { %>
