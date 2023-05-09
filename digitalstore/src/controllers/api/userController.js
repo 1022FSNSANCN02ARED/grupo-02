@@ -38,6 +38,7 @@ module.exports= {
             email: req.body.email,
             img: req.body.img,
             idRole: req.body.id_role
+
         })
         .then((confirm)=>{
             let respuesta;
@@ -129,7 +130,7 @@ module.exports= {
               res.json(respuesta);
             })
             .catch((error) => res.send(error));
-    },
+        },
         
     
 }
