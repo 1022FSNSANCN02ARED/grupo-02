@@ -5,6 +5,7 @@ let usuario = document.querySelector(".usuarioHeader")
 let desplegable = document.querySelector(".div-desplegable-header")
 let cerrarDesplegable = document.querySelector(".cerrarDesplegable")
 let body = document.querySelector("body")
+let cerrarMobile = document.querySelector(".cerrar-desplegable")
 
 
 usuario.addEventListener("click", function(e){
@@ -24,6 +25,11 @@ desplegable.addEventListener("mouseout", function(e){
     desplegable.style.right = "-400px";
     
 })
+
+cerrarMobile.addEventListener("click", function(){
+    desplegable.style.right = "-400px";
+    
+} )
 
 
 

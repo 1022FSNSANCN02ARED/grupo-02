@@ -47,21 +47,28 @@
 
                         <div class="divDetalle">
 
-                            <button class="btn-tienda">
-                                <a href="/carrito">
-                                    <i class="fa-solid fa-cart-shopping"></i>
-                                </a>
-                            </button>
+                            <div class="cerrar-desplegable">
+                                <i class="fa-solid fa-bars fa-rotate-90"></i>
+                            </div>
 
-                            <h3> <a href="">Mis compras</a> </h3>
-                            <h3> <a href="/favorites">Favoritos</a> </h3>
-                            <h3> <a href="">Cambiar contraseña</a> </h3>
-                            <% if (locals.userLogged.idRole == 1) { %>
-                            
-                                <h3> <a href="http://localhost:3001/">Panel de usuarios</a> </h3>
+                            <div class="detalle-mobile-header">
+                                <button class="btn-tienda btn-tienda-mobile">
+                                    <a href="/carrito">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </button>
 
-                            <% } %>
-                            <h3 class="h3Cerrar"> <a href="/users/logout">Cerrar sesión</a> </h3>
+                                <h3> <a href="">Mis compras</a> </h3>
+                                <h3> <a href="/favorites">Favoritos</a> </h3>
+                                <h3> <a href="">Cambiar contraseña</a> </h3>
+                                <% if (locals.userLogged.idRole==1) { %>
+
+                                    <h3> <a href="/users/panel">Panel de usuarios</a> </h3>
+
+                                    <% } %>
+                                        <h3 class="h3Cerrar"> <a href="/users/logout">Cerrar sesión</a> </h3>
+                            </div>
+
                         </div>
 
                     </div>
@@ -94,7 +101,7 @@
     <nav class="nav-principal">
         <div class="nav-div" id="menu-button">
             <i class="fa-solid fa-bars"></i>
-           
+
         </div>
 
 
@@ -104,20 +111,22 @@
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
-                <% if (locals.userLogged && locals.userLogged.idRole == 1) { %>
-                            
-                    <li class="nav-li login-tablet"> <a href="http://localhost:3001/">Panel de control</a> </li>
+                <% if (locals.userLogged && locals.userLogged.idRole==1) { %>
 
-                <% } %>
-                <% if (!locals.isLogged) { %>
-                    <li class="nav-li login-tablet"><a href="/users/login"><i class="fa-solid fa-right-from-bracket"></i> Ingresá</a></li>
-                <% } else { %>
-                    <li class="nav-li login-tablet"><a href="/users/logout"><i class="fa-solid fa-user "></i> Cerrar Sesión</a></li>   
-                <% } %>
+                    <li class="nav-li login-tablet"> <a href="/users/panel">Panel de control</a> </li>
+
+                    <% } %>
+                        <% if (!locals.isLogged) { %>
+                            <li class="nav-li login-tablet"><a href="/users/login"><i
+                                        class="fa-solid fa-right-from-bracket"></i> Ingresá</a></li>
+                            <% } else { %>
+                                <li class="nav-li login-tablet"><a href="/users/logout"><i
+                                            class="fa-solid fa-user "></i> Cerrar Sesión</a></li>
+                                <% } %>
             </ul>
         </div>
     </nav>
-    
+
     <script src="/script/header.js"></script>
 
 </header>
