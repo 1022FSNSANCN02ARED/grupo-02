@@ -3,20 +3,23 @@ const db = require('../database/models');
 
 async function userLoggedMiddleware(req, res, next) {
   res.locals.isLogged = false; //seteo que no tengo ningun usuario en sesion
-
-  let emailInCookie = req.cookies.userEmail; //tenemos a alguien en una cookie?
-  let userFromCookie = users.findByField("email", emailInCookie); //lo pude encontrar de la DB?
-
-//  if(emailInCookie){
-
-//    let user = await db.User.findAll({
-//      where: {
-//        email: emailInCookie, 
-//      }
-//    });
-//  }
   
-  // const userFromCookie = user[0].dataValues;
+  let emailInCookie = req.cookies.userEmail; //tenemos a alguien en una cookie?
+  
+  
+  //lo pude encontrar de la DB?
+
+  if(emailInCookie){
+
+    var user = await db.User.findAll({
+      where: {
+        email: emailInCookie, 
+      }
+    });
+    var userFromCookie = user[0].dataValues;
+  }
+  
+  
 
   if (userFromCookie){// SI ENCONTRE AL USUARIO LO PASO A SESION
         req.session.userLogged = userFromCookie;
@@ -26,8 +29,6 @@ async function userLoggedMiddleware(req, res, next) {
       res.locals.isLogged = true;
       res.locals.userLogged = req.session.userLogged;
     }
-
-
   next();
 }
 

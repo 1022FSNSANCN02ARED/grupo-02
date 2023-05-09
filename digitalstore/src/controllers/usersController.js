@@ -147,7 +147,6 @@ module.exports = {
   },
 
   //CRUD USER
-
   deleteUser: function (req, res) {
     let userId = req.params.id;
     db.User.findByPk(userId)
@@ -156,12 +155,11 @@ module.exports = {
       })
       .catch((error) => res.send(error));
   },
-
   destroyUser: function (req, res) {
     let userId = req.params.id;
     db.User.destroy({ where: { id: userId }, force: true }) // force: true es para asegurar que se ejecute la acción
       .then(() => {
-        return res.redirect("/users/panel");
+        return res.redirect("/");
       })
       .catch((error) => res.send(error));
   },
@@ -257,7 +255,7 @@ module.exports = {
 
           //si el usuario quiere recordar el usuario creo la cookie guardando el email
           if (req.body.remember) {
-            res.cookie("userEmail", req.body.emailLogin, {
+            res.cookie("userEmail", req.body.email, {
               maxAge: 1000 * 60 * 60,
             });
           }

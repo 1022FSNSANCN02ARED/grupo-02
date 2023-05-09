@@ -19,8 +19,12 @@ const UserList = ({users,meta}) => {
                                     <p className="user-card-user">@{user.userName}</p>
                         </div>
                         <div className="user-card-button-container">
-                            <a className="button-remove" href="#"><i className="fa-solid fa-trash-can"></i></a>
-                            <a className="button-edit" href="#"><i className="fa-solid fa-pencil"></i></a>
+                            <a className="button-remove" onClick={() => {
+                                if (window.confirm("Estas seguro de eliminar este usuario?")) {
+                                    alert("USUARIO ELIMINADO!")
+                                  }
+                            }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
+                            <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
                         </div>
                     </div>
                 )
@@ -105,10 +109,36 @@ function Users() {
 
         <section className="user-cards-container">
             { apiState
-            ? (users ? <UserList users={users} meta={apiInfo}/> : <p> No se encontraron Usuarios!</p>) 
+            ? (users 
+                ? users.map(user => {
+                    return(
+                        <div className="user-card" key={user.id}>
+                            <div className="user-card-tag">
+                            {
+                                user.idRole === 1 ? <p className="admin">#Admin</p> : <p className="user">#Usuario</p>
+                            }
+                            </div>
+                            <img className="user-card-img" src={user.img} alt={"imagen de "+ user.firstName}/>
+                            <div className="user-card-name-container">
+                                        <p className="user-card-name">{user.firstName + " " + user.lastName}</p>
+                                        <p className="user-card-user">@{user.userName}</p>
+                            </div>
+                            <div className="user-card-button-container">
+                                <a className="button-remove" onClick={() => {
+                                    if (window.confirm("Estas seguro de eliminar este usuario?")) {
+                                        alert("USUARIO ELIMINADO!")
+                                      }
+                                }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
+                                <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
+                            </div>
+                        </div>
+                    )
+                })
+                : <p> No se encontraron Usuarios!</p>) 
             :<div className="spinner-border text-warning" role="status">
             </div> }
         </section> 
+        
     </main>
   );
 }
