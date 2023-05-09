@@ -144,10 +144,9 @@
 
 @media (min-width: 1080px) {
   .contenedor-producto-carrito {
-    display: flexbox;
+
     margin: auto;
     justify-content: center;
-    width: 100vw;
   
   }
   .contenedor-producto {

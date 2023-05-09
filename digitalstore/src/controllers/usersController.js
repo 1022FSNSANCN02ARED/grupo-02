@@ -120,55 +120,6 @@ module.exports = {
      
     } 
   },
-*/
-  //Lista usuarios cargados en la DB en el panel de control para administradores.
-  listUsers: async (req, res) => {
-    let users = await db.User.findAll({
-      include: ["role"],
-    });
-
-    if (req.query.search) {
-      let search = req.query.search;
-      console.log(search);
-      if (search[0] == "@") {
-        search = search.slice(1);
-        users = await db.User.findAll({
-          include: ["role"],
-          where: {
-            userName: {
-              [Op.like]: `${search}%`,
-            },
-          },
-        });
-      }
-      if (search[0] == "#") {
-        search = search.slice(1);
-        let idRole = 0;
-        if (search == "admin") {
-          idRole = 1;
-        } else if (search == "usuario") {
-          idRole = 2;
-        }
-        users = await db.User.findAll({
-          include: ["role"],
-          where: {
-            idRole: {
-              [Op.like]: idRole,
-            },
-          },
-        });
-      }
-    }
-
-    users.forEach((user) => {
-      user.img = `http://localhost:3000/img/usuarios/${user.img}`;
-    });
-
-    res.render("panelDeControl", {
-      users,
-      filter: req.query.search ? true : false,
-    });
-  },
   /*
   listUsers: (req, res) => {
     const allUsers = users.getUsers();
@@ -306,7 +257,7 @@ module.exports = {
 
           //si el usuario quiere recordar el usuario creo la cookie guardando el email
           if (req.body.remember) {
-            res.cookie("userEmail", req.body.emailLogin, {
+            res.cookie("userEmail", req.body.email, {
               maxAge: 1000 * 60 * 60,
             });
           }
