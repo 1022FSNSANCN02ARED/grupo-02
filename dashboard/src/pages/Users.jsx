@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState,useEffect, useRef} from "react";
 import "./Users.css";
 
 const UserList = ({users,meta}) => { 
@@ -19,8 +19,12 @@ const UserList = ({users,meta}) => {
                                     <p className="user-card-user">@{user.userName}</p>
                         </div>
                         <div className="user-card-button-container">
-                            <a className="button-remove" href=""><i className="fa-solid fa-trash-can"></i></a>
-                            <a className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
+                            <a className="button-remove" onClick={() => {
+                                if (window.confirm("Estas seguro de eliminar este usuario?")) {
+                                    alert("USUARIO ELIMINADO!")
+                                  }
+                            }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
+                            <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
                         </div>
                     </div>
                 )
@@ -38,7 +42,7 @@ function Users() {
     const [users,setUsers] = useState()
     const [apiInfo,setApiInfo] = useState()
     const [apiState,setApiState] = useState(false)
-    
+    const searchInput = useRef();
 
     //peticion a la api
     const  apiUserPetition = ()=>{
@@ -59,22 +63,41 @@ function Users() {
             console.log(users)
             console.log(apiInfo)
             }
-        )
-       
+        ) 
+    }
+    //peticion a la api
+    const apiSearch = (value)=>{
+        setApiState(false)
+        fetch("http://localhost:3000/api/users")
+        .then(data => data.json())
+        .then(data=>{
+            if(data.data.length > 0){
+                setUsers(data.data)
+                setApiInfo(data.meta)
+                setApiState(true)
+            }else{
+                setUsers([])
+                setApiInfo([])
+                setApiState(true)
+            }
+            console.log(users)
+            console.log(apiInfo)
+            }
+        ) 
     }
 
     useEffect(() => {
         apiUserPetition();
-     },[])
+    },[])
 
   return (
     <main className="main-panel">  
 
         <h1 style={{textAlign: "center"}}>PANEL DE USUARIOS</h1>
-        <form className="user-panel-search" action="/users/panel" method="get">
-            <input type="search" name="search" id="user" placeholder="@usuario || #role (admin,usuario)"/>
-            <button type="submit"><i className="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        <div className="user-panel-search" action="/users/panel" method="get">
+            <input ref={searchInput} type="search" name="search" id="user" placeholder="@usuario || #role (admin,usuario)"/>
+            <button type="submit"><i className="fa-solid fa-magnifying-glass" onClick={()=>{apiSearch(searchInput.current.value)}}></i></button>
+        </div>
         
         {/* 
         <% if (filter) { %>
@@ -86,10 +109,36 @@ function Users() {
 
         <section className="user-cards-container">
             { apiState
-            ? (users ? <UserList users={users} meta={apiInfo}/> : <p> No se encontraron Usuarios!</p>) 
+            ? (users 
+                ? users.map(user => {
+                    return(
+                        <div className="user-card" key={user.id}>
+                            <div className="user-card-tag">
+                            {
+                                user.idRole === 1 ? <p className="admin">#Admin</p> : <p className="user">#Usuario</p>
+                            }
+                            </div>
+                            <img className="user-card-img" src={user.img} alt={"imagen de "+ user.firstName}/>
+                            <div className="user-card-name-container">
+                                        <p className="user-card-name">{user.firstName + " " + user.lastName}</p>
+                                        <p className="user-card-user">@{user.userName}</p>
+                            </div>
+                            <div className="user-card-button-container">
+                                <a className="button-remove" onClick={() => {
+                                    if (window.confirm("Estas seguro de eliminar este usuario?")) {
+                                        alert("USUARIO ELIMINADO!")
+                                      }
+                                }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
+                                <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
+                            </div>
+                        </div>
+                    )
+                })
+                : <p> No se encontraron Usuarios!</p>) 
             :<div className="spinner-border text-warning" role="status">
             </div> }
         </section> 
+        
     </main>
   );
 }

@@ -14,13 +14,64 @@ header {
     border-radius: 50%;
 
 }
+.detalle-mobile-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    padding-top: 20px;
+    justify-content: start;
+    background-color: black;
+}
+.detalle-mobile-header h3{
+    width: 100%;
+    color: black;
+    padding: 9%;
+ 
+}
+.detalle-mobile-header h3 a{
+ color: white;
+}
+.divDetalle{
+    display: flex;
+}
+.cerrar-desplegable{
+    width: 10%;
+    height: 86vh;
+    background-color: orange;
+    align-items: center;
+    margin: auto 0;
+    color: black;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.cerrar-desplegable i{
+  margin-top: -30%;
+}
 
+
+.imganduser{
+    display: block;
+}
+.nombreHeader{
+    display: block;
+}
+.imgHeader{
+    display: block;
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
 
 .nombre-header {
     font-size: medium;
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: 5px;
+    color: black;
 }
 
 .nav-principal {
@@ -144,21 +195,37 @@ nav ul {
     color: var(--blanco);
 }
 .imganduser{
-    display: flex;
+    display: block;
     align-items: center;
     width: 100%;
     justify-content: center;
-    background-color: white;
+    background-color: orange;
+    padding: 10px 0;
+}
+.contenedorUsuarioHeader {
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+
+
 }
 
 .nombreHeader{
-    width: 50%;
-    font-size: xx-large;
-    
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    color: black;
 }
 .imgHeader{
-    width: 15%;
-    height: 40px;
+    width: 100px;
+    height: 100px;
    
 }
 
@@ -194,20 +261,43 @@ nav ul {
 .btn-tienda a {
     color: var(--naranja);
     font-size: 20px;
+    
+}
+.btn-tienda{
+width: 100%;
+height: 50px;
 }
 
+
 #nav-buttons-laptop {
-    display: none;
+    display: flex;
 }
 
 .div-desplegable-header {
-    display: none;
+    z-index: 3;
+        position: fixed;
+        width: 90vw;
+        height: 100vh;
+        right: -450px;
+        top: 0px;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.89);
+        justify-content: center;
 }
 
 .usuario-header {
-    display: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+text-align: center;
+align-items: center;
+box-shadow: 0 0 2px black;
+padding: 10px 20px;
+border-radius: 50px;
 }
-
+.btn-tienda-mobile{
+    box-shadow: none;
+}
 
 
 
@@ -217,6 +307,24 @@ nav ul {
     .none{
         display: none;
     }
+    .div-desplegable-header {
+        z-index: 3;
+        position: fixed;
+        width: 400px;
+       
+        right: -400px;
+        top: 0px;
+        display: flex;
+        
+        background-color: rgba(0, 0, 0, 0.89);
+        
+    }
+    
+    .usuario-header {
+        display: none;
+    }
+
+
 
     .nav-primary {
         align-items: center;
@@ -283,6 +391,13 @@ nav ul {
     .none{
         display: none;
     }
+    .detalle-mobile-header{
+        width: 100%;
+        height: 100vh;
+        justify-content: none;
+        justify-content: start;
+        
+    }
 
     .login-tablet{
         display: none;
@@ -337,12 +452,12 @@ nav ul {
         background-color: var(--naranja);
         color: white;
         
-        
 
 
     }
 
     .imgHeader {
+        display: block;
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -350,6 +465,7 @@ nav ul {
     }
 
     .nombreHeader {
+        display: block;
         font-size: 20px;
         text-transform: uppercase;
         display: flex;
@@ -357,6 +473,9 @@ nav ul {
         justify-content: space-around;
         text-align: center;
         
+    }
+    .divDetalle{
+        display: block;
     }
 
 
@@ -468,6 +587,9 @@ nav ul {
     .banner-home img {
         width: 100%;
 
+    }
+    .cerrar-desplegable{
+        display: none;
     }
 
 }

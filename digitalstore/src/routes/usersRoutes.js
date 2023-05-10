@@ -48,7 +48,7 @@ router.get('/profile/', authMiddleware, usersController.profile);
 router.get("/:id/carrito", usersController.userCarrito);
 
 router.get("/delete/:id", usersController.deleteUser);
-router.post("/destroy/:id", usersController.destroyUser);
+router.delete("/destroy/:id", usersController.destroyUser);
 
 router.get("/edit/:id", usersController.edit);
 router.post("/update/:id", usersController.update);
