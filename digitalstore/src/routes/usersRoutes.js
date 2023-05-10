@@ -10,6 +10,7 @@ const validaciones = require("../middlewares/validator");
 const validacionesLogin = require("../middlewares/validatorLogin");
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware");
+const users = require("../data/users");
 
 const storage = multer.diskStorage({
 
@@ -52,4 +53,6 @@ router.post("/destroy/:id", usersController.destroyUser);
 router.get("/edit/:id", usersController.edit);
 router.post("/update/:id", usersController.update);
 
+router.get("/changepassword/:id", usersController.changePasswordForm)
+router.post("/changepassword/:id", usersController.changePassword)
 module.exports = router;
