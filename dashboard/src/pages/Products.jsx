@@ -17,21 +17,33 @@ function Products() {
 
   return (
     <div className="renderProduct">
-      <h1>Productos</h1>
+      <div className="titleProduct">
+        <h1>PANEL DE PRODUCTOS</h1>
+      </div>
 
-      <ul>
-        {/* {valor.length > 0 ? "tiene algo" : "no tiene elementos"} */}
-        {valor.length > 0
-          ? valor.map((item) => {
-              return (
-                <li key={item.id}>
-                  {item.name} {item.price}
-                </li>
-              );
-            })
-          : "No hay elementos"}
-        ;
-      </ul>
+      <table className="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+          </tr>
+        </thead>
+        <tbody>
+          {valor.length > 0
+            ? valor.map((item) => {
+                return (
+                  <th key={item.id}>
+                    {item.id}
+                    {item.name} {"$"} + {item.price} + {item.description}
+                  </th>
+                );
+              })
+            : "No hay elementos"}
+          ;
+        </tbody>
+      </table>
     </div>
   );
 }
