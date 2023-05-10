@@ -17,66 +17,10 @@
                 <!-- Salir</a></button> -->
 
 
-                <div class="usuarioHeader">
-                    <a href="/users/profile" class="usuario-header">
-                        <div class="nombre-header">
-                            <%=locals.userLogged.userName %>
-                        </div>
+                <button class="btn-login boton-off"><a href="/users/logout"><i class="fa-solid fa-power-off"></i>
+                    Cerrar sesión</a></button>
 
-                        <img class="img-user" src="/img/usuarios/<%= locals.userLogged.img %> ">
-                    </a>
-
-
-                </div>
-
-                <div class="div-desplegable-header">
-
-                    <div class="contenedorUsuarioHeader">
-                        <div class="imganduser">
-                            <a href="/users/profile"><img class="imgHeader"
-                                    src="/img/usuarios/<%= locals.userLogged.img %> "></a>
-                            <div class="nombreHeader">
-                                <%=locals.userLogged.userName %>
-
-                            </div>
-
-
-
-                        </div>
-
-
-                        <div class="divDetalle">
-
-                            <div class="cerrar-desplegable">
-                                <i class="fa-solid fa-bars fa-rotate-90"></i>
-                            </div>
-
-                            <div class="detalle-mobile-header">
-                                <button class="btn-tienda btn-tienda-mobile">
-                                    <a href="/carrito">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </a>
-                                </button>
-
-                                <h3> <a href="">Mis compras</a> </h3>
-                                <h3> <a href="/favorites">Favoritos</a> </h3>
-                                <h3> <a href="">Cambiar contraseña</a> </h3>
-                                <% if (locals.userLogged.idRole==1) { %>
-
-                                    <h3> <a href="/users/panel">Panel de usuarios</a> </h3>
-
-                                    <% } %>
-                                        <h3 class="h3Cerrar"> <a href="/users/logout">Cerrar sesión</a> </h3>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-
-                </div>
+                
 
 
 
