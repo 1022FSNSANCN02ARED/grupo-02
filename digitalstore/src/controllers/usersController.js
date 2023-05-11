@@ -216,4 +216,40 @@ module.exports = {
     req.session.destroy();
     return res.redirect("/");
   },
+
+  changePasswordForm: function (req, res) {
+    const userId = req.params.id;
+    db.User.findByPk(userId)
+    .then((user) => {
+      return res.render("changePassword", { user });
+    })
+    .catch((error) => res.send(error));
+  },
+
+  changePassword: async function (req, res) {
+    const userId = req.params.id;
+    let errores = validationResult(req);
+    let user = await db.User.findByPk(userId)
+    const userPass = user.dataValues;
+    if (errores.isEmpty()) {
+      let isOkThePassword = bcryptjs.compareSync(
+      req.body.password,
+      userPass.password
+    );
+    if (isOkThePassword) {
+      db.User.update(
+        {  
+          password: bcryptjs.hashSync(req.body.newPass, 10),
+        },
+        {
+          where: { id: userId },
+        })
+        return res.render("profile", {
+          user: req.session.userLogged,
+        });
+    }
+  }
+
+
+  },
 };

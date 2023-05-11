@@ -7,36 +7,11 @@ window.addEventListener("load", function () {
 
     // }
 
-    // let formulario = document.querySelector(".form-login")
-    // let input = document.querySelectorAll(".form-login input")
+    let enviar = document.querySelector(".boton-enviar")
 
-    // input.forEach((input) => {
-    //     input.addEventListener("keyup")
-    // })
-
-    // formulario.addEventListener("submit", (e) => {
-    //     e.preventDefault()
-    // })
-
-    
-
- 
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //nombre
     let nombreInput = document.querySelector(".nombreInput")
 
 
@@ -92,14 +67,26 @@ window.addEventListener("load", function () {
             contraseña1.style.backgroundColor = "red "
         }
     })
-    contraseña2.addEventListener("keyup", function(){
+    contraseña2.addEventListener("keyup", function(e){
         if(contraseña2.value.length > 0 && contraseña2.value === contraseña1.value){
             contraseña2.style.backgroundColor = "#abf1ab "
             contraseña1.style.backgroundColor = "#abf1ab "
         } else {
             contraseña2.style.backgroundColor = "red"
+
         }
     })
+
+
+    enviar.addEventListener("submit", (e) => {
+        if(contraseña2.value.length == 0 || contraseña2.value !== contraseña1.value){
+            
+            e.preventDefault()
+            contraseña2.style.backgroundColor = "red"
+        } 
+    })
+
+
 
    
 
