@@ -8,7 +8,24 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
-        
+        <div class="nav-buttons" id="nav-buttons-laptop">
+
+            <!-- si estoy logueado  -->
+            <% if (locals.isLogged) { %>
+
+                <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
+                <!-- Salir</a></button> -->
+
+                <a class="btn-login" href="/users/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesion</a>
+
+            <% } else { %>
+
+                <!-- si no estoy logueado solo muestro boton de login -->
+                <a class="btn-login"  href="/users/login"><i class="fa-solid fa-power-off"></i> Iniciar Sesión</a>
+
+            <% } %>
+
+        </div>
     </div>
 
     <nav class="nav-principal">
@@ -32,26 +49,6 @@
                         </ul>
                     </li>
                 <% } %>
-                <li>
-                    <div class="nav-buttons" id="nav-buttons-laptop">
-
-                        <!-- si estoy logueado  -->
-                        <% if (locals.isLogged) { %>
-            
-                            <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
-                            <!-- Salir</a></button> -->
-            
-                            <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesion</a></button>
-            
-                        <% } else { %>
-            
-                            <!-- si no estoy logueado solo muestro boton de login -->
-                            <button class="btn-login"><a href="/users/login"><i class="fa-solid fa-power-off"></i> Iniciar Sesión</a></button>
-            
-                        <% } %>
-            
-                    </div>
-                </li>
             </ul>
         </div>
     </nav>
