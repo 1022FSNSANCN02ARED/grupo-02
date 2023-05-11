@@ -30,18 +30,25 @@ function Products() {
             <th>Descripcion</th>
           </tr>
         </thead>
+
         <tbody>
           {valor.length > 0
             ? valor.map((item) => {
                 return (
-                  <th key={item.id}>
-                    {item.id}
-                    {item.name} {"$"} + {item.price} + {item.description}
-                  </th>
+                  <tr>
+                    <td key={item.id}>{item.id} </td>
+
+                    <td> {item.name} </td>
+
+                    <td>
+                      {"$"} {item.price}{" "}
+                    </td>
+
+                    <td> {item.description}</td>
+                  </tr>
                 );
               })
             : "No hay elementos"}
-          ;
         </tbody>
       </table>
     </div>
