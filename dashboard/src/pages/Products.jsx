@@ -51,10 +51,16 @@ function Products() {
 
                     {/* icono de editar producto */}
                     <td>
-                      <i
-                        class="fa-solid fa-pencil"
-                        style={{ color: "green" }}
-                      ></i>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"http://localhost:3000/products/edit/" + item.id}
+                      >
+                        <i
+                          class="fa-solid fa-pencil"
+                          style={{ color: "green" }}
+                        ></i>
+                      </a>
                     </td>
 
                     {/* icono de eliminar producto */}
