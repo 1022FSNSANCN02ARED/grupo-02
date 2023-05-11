@@ -17,10 +17,66 @@
                 <!-- Salir</a></button> -->
 
 
-                <button class="btn-login boton-off"><a href="/users/logout"><i class="fa-solid fa-power-off"></i>
-                    Cerrar sesión</a></button>
+                <div class="usuarioHeader">
+                    <a href="/users/profile" class="usuario-header">
+                        <div class="nombre-header">
+                            <%=locals.userLogged.userName %>
+                        </div>
 
-                
+                        <img class="img-user" src="/img/usuarios/<%= locals.userLogged.img %> ">
+                    </a>
+
+
+                </div>
+
+                <div class="div-desplegable-header">
+
+                    <div class="contenedorUsuarioHeader">
+                        <div class="imganduser">
+                            <a href="/users/profile"><img class="imgHeader"
+                                    src="/img/usuarios/<%= locals.userLogged.img %> "></a>
+                            <div class="nombreHeader">
+                                <%=locals.userLogged.userName %>
+
+                            </div>
+
+
+
+                        </div>
+
+
+                        <div class="divDetalle">
+
+                            <div class="cerrar-desplegable">
+                                <i class="fa-solid fa-bars fa-rotate-90"></i>
+                            </div>
+
+                            <div class="detalle-mobile-header">
+                                <button class="btn-tienda btn-tienda-mobile">
+                                    <a href="/carrito">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </button>
+
+                                <h3> <a href="">Mis compras</a> </h3>
+                                <h3> <a href="/favorites">Favoritos</a> </h3>
+                                <h3> <a href="">Cambiar contraseña</a> </h3>
+                                <% if (locals.userLogged.idRole==1) { %>
+
+                                    <h3> <a href="/users/panel">Panel de usuarios</a> </h3>
+
+                                    <% } %>
+                                        <h3 class="h3Cerrar"> <a href="/users/logout">Cerrar sesión</a> </h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
 
 
 
@@ -42,65 +98,12 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-          </div>
-        </div>
-      </nav>
-
-
-    <!-- <nav class="nav-principal">
+    <nav class="nav-principal">
         <div class="nav-div" id="menu-button">
             <i class="fa-solid fa-bars"></i>
 
         </div>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-          </nav>
 
         <div class="nav-links show">
             <ul class="nav-ul">
@@ -108,18 +111,18 @@
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
-                <% if (locals.userLogged && locals.userLogged.idRole==1) { %>
-
-                    <li class="nav-li login-tablet"> <a href="/users/panel">Panel de control</a> </li>
-
-                    <% } %>
-                        <% if (!locals.isLogged) { %>
-                            <li class="nav-li login-tablet"><a href="/users/login"><i class="fa-solid fa-right-from-bracket"></i> Ingresá</a></li>
-                        <% } else { %>
-                            <li class="nav-li login-tablet"><a href="/users/logout"><i class="fa-solid fa-user "></i> Cerrar Sesión</a></li>
-                    <% } %>
+                <% if (locals.userLogged) { %>
+                    <li class="nav-li">
+                        <p class="button-dropdown">Perfil</p>
+                        <ul class="dropdown-container">
+                            <li><a href="/user/carrito"></a></li>
+                        </ul>
+                    </li>
+                <% } %>
             </ul>
         </div>
-    </nav> -->
+    </nav>
+
     <script src="/script/header.js"></script>
+
 </header>
