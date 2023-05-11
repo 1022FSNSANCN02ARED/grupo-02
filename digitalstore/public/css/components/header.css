@@ -528,6 +528,20 @@ nav ul {
         width: 60%;
     }
 
+    .boton-off{
+        border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--naranja);
+
+    }
+
+    .boton-off a {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
     .boton-off:hover i {
         color: red;
     }
