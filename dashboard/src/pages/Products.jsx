@@ -27,6 +27,7 @@ function Products() {
             <th>Id</th>
             <th>Nombre</th>
             <th>Precio</th>
+            <th colSpan={3}>Acciones</th>
           </tr>
         </thead>
 
