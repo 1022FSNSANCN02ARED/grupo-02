@@ -76,22 +76,19 @@ header {
 
 .nav-principal {
     width: 100%;
-    background-color: var(--naranja);
+    background-color: rgb(228, 228, 228);
     padding: 10px 0;
-    border-bottom: 2px solid var(--naranja-oscuro);
-
-
 }
 
 .nav-ul {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
     margin: 20px 0;
 }
 
 .nav-li {
-    width: 100%;
     text-align: center;
     padding: 5px;
     font-weight: bold;
@@ -202,37 +199,11 @@ nav ul {
     background-color: orange;
     padding: 10px 0;
 }
-.contenedorUsuarioHeader {
-    
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-   
 
 
-}
-
-.nombreHeader{
-    display: block;
-    font-size: 20px;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-    color: black;
-}
-.imgHeader{
-    width: 100px;
-    height: 100px;
-   
-}
 
 .nav-links {
     margin-top: 10px;
-    border-top: 2px solid var(--naranja-oscuro);
-
 }
 
 .nav-buttons {
@@ -307,24 +278,11 @@ border-radius: 50px;
     .none{
         display: none;
     }
-    .div-desplegable-header {
-        z-index: 3;
-        position: fixed;
-        width: 400px;
-       
-        right: -400px;
-        top: 0px;
-        display: flex;
-        
-        background-color: rgba(0, 0, 0, 0.89);
-        
-    }
+
     
     .usuario-header {
         display: none;
     }
-
-
 
     .nav-primary {
         align-items: center;
@@ -490,13 +448,8 @@ border-radius: 50px;
 
     .divDetalle h3:hover {
         background-color: var(--naranja-oscuro);
-
-
-
     }
 
-  
-    
     .divDetalle h3 a {
         color: black;
     }
@@ -587,10 +540,6 @@ color: red;
 
     .banner-home img {
         width: 100%;
-
-    }
-    .cerrar-desplegable{
-        display: none;
     }
 
 }
