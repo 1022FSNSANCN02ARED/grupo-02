@@ -27,7 +27,6 @@ function Products() {
             <th>Id</th>
             <th>Nombre</th>
             <th>Precio</th>
-            <th>Descripcion</th>
           </tr>
         </thead>
 
@@ -44,7 +43,26 @@ function Products() {
                       {"$"} {item.price}{" "}
                     </td>
 
-                    <td> {item.description}</td>
+                    {/* icono de ver detalle */}
+                    <td>
+                      <i class="fa-solid fa-eye" style={{ color: "blue" }}></i>
+                    </td>
+
+                    {/* icono de editar producto */}
+                    <td>
+                      <i
+                        class="fa-solid fa-pencil"
+                        style={{ color: "green" }}
+                      ></i>
+                    </td>
+
+                    {/* icono de eliminar producto */}
+                    <td>
+                      <i
+                        class="fa-solid fa-trash-can"
+                        style={{ color: "red" }}
+                      ></i>
+                    </td>
                   </tr>
                 );
               })
