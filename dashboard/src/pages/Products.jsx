@@ -27,21 +27,53 @@ function Products() {
             <th>Id</th>
             <th>Nombre</th>
             <th>Precio</th>
-            <th>Descripcion</th>
+            <th colSpan={3}>Acciones</th>
           </tr>
         </thead>
+
         <tbody>
           {valor.length > 0
             ? valor.map((item) => {
                 return (
-                  <th key={item.id}>
-                    {item.id}
-                    {item.name} {"$"} + {item.price} + {item.description}
-                  </th>
+                  <tr>
+                    <td key={item.id}>{item.id} </td>
+
+                    <td> {item.name} </td>
+
+                    <td>
+                      {"$"} {item.price}{" "}
+                    </td>
+
+                    {/* icono de ver detalle */}
+                    <td>
+                      <i class="fa-solid fa-eye" style={{ color: "blue" }}></i>
+                    </td>
+
+                    {/* icono de editar producto */}
+                    <td>
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href={"http://localhost:3000/products/edit/" + item.id}
+                      >
+                        <i
+                          class="fa-solid fa-pencil"
+                          style={{ color: "green" }}
+                        ></i>
+                      </a>
+                    </td>
+
+                    {/* icono de eliminar producto */}
+                    <td>
+                      <i
+                        class="fa-solid fa-trash-can"
+                        style={{ color: "red" }}
+                      ></i>
+                    </td>
+                  </tr>
                 );
               })
             : "No hay elementos"}
-          ;
         </tbody>
       </table>
     </div>

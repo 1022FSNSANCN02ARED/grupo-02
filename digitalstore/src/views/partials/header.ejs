@@ -1,7 +1,7 @@
 <header class="header-partial">
 
     <div class="nav-primary">
-        <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
+        
         <form action="/products" class="serch-bar" method="get">
             <input type="search" placeholder="Buscar productos" name="search" autocomplete="none">
             <button>
@@ -16,47 +16,41 @@
                 <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
                 <!-- Salir</a></button> -->
 
+                <a class="btn-login" href="/users/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesion</a>
 
-                <button class="boton-off"><a href="/users/logout"><i class="fa-solid fa-power-off"></i>
-                    Cerrar sesión</a></button>
+            <% } else { %>
 
+                <!-- si no estoy logueado solo muestro boton de login -->
+                <a class="btn-login"  href="/users/login"><i class="fa-solid fa-power-off"></i> Iniciar Sesión</a>
 
-                <% } else { %>
+            <% } %>
 
-                    <!-- si no estoy logueado solo muestro boton de login -->
-                    <button class="btn-login"><a href="/users/login"><i class="fa-solid fa-power-off"></i>
-                            Ingresá</a></button>
-
-                    <% } %>
+        </div>
+        <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
+        <div class="nav-div" id="menu-button">
+            <i class="fa-solid fa-bars"></i>
 
         </div>
     </div>
 
     <nav class="nav-principal">
-        <div class="nav-div" id="menu-button">
-            <i class="fa-solid fa-bars"></i>
-
-        </div>
-
+        
 
         <div class="nav-links show">
             <ul class="nav-ul">
+                <li class="nav-li"><a href="/">Inicio</a></li>
                 <li class="nav-li"><a href="/products">Productos</a></li>
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
-                <% if (locals.userLogged && locals.userLogged.idRole==1) { %>
-
-                    <li class="nav-li login-tablet"> <a href="/users/panel">Panel de control</a> </li>
-
-                    <% } %>
-                        <% if (!locals.isLogged) { %>
-                            <li class="nav-li login-tablet"><a href="/users/login"><i
-                                        class="fa-solid fa-right-from-bracket"></i> Ingresá</a></li>
-                            <% } else { %>
-                                <li class="nav-li login-tablet"><a href="/users/logout"><i
-                                            class="fa-solid fa-user "></i> Cerrar Sesión</a></li>
-                                <% } %>
+                <% if (locals.userLogged) { %>
+                    <li class="nav-li">
+                        <p class="button-dropdown">Perfil</p>
+                        <ul class="dropdown-container">
+                            <li><a href="/user/carrito"></a></li>
+                        </ul>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </nav>

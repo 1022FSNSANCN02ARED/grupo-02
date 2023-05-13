@@ -1,8 +1,9 @@
 @import url("components/normalize.css");
 @import url("components/universales.css"); 
-@import url("components/header.css");  /*Lau, pablo*/
-@import url("components/main.css");   /*melina, ruben*/
-@import url("components/footer.css");  /*axel*/
+/* @import url("components/header.css");   */
+@import url("components/headerv2.css");  
+@import url("components/main.css");  
+@import url("components/footer.css"); 
 @import url("components/main-login.css");  
 @import url("components/register.css"); 
 @import url("components/carrito.css"); 

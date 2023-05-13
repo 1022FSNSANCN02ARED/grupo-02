@@ -1,41 +1,6 @@
 import React, { useState,useEffect, useRef} from "react";
 import "./Users.css";
 
-const UserList = ({users,meta}) => { 
-    return(
-        <>
-        {
-            users.map(user => {
-                return(
-                    <div className="user-card" key={user.id}>
-                        <div className="user-card-tag">
-                        {
-                            user.idRole === 1 ? <p className="admin">#Admin</p> : <p className="user">#Usuario</p>
-                        }
-                        </div>
-                        <img className="user-card-img" src={user.img} alt={"imagen de "+ user.firstName}/>
-                        <div className="user-card-name-container">
-                                    <p className="user-card-name">{user.firstName + " " + user.lastName}</p>
-                                    <p className="user-card-user">@{user.userName}</p>
-                        </div>
-                        <div className="user-card-button-container">
-                            <a className="button-remove" onClick={() => {
-                                if (window.confirm("Estas seguro de eliminar este usuario?")) {
-                                    alert("USUARIO ELIMINADO!")
-                                  }
-                            }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
-                            <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
-                        </div>
-                    </div>
-                )
-            })
-        }
-        </>
-    )
-}
-
-
-
 function Users() {
 
     //hooks use state para crear un estado para los datos que vienen de la Api
@@ -99,7 +64,7 @@ function Users() {
             <button type="submit"><i className="fa-solid fa-magnifying-glass" onClick={()=>{apiSearch(searchInput.current.value)}}></i></button>
         </div>
         
-        {/* 
+        {/*
         <% if (filter) { %>
             <div className="user-clear-button">
                 <a  href="/users/panel">Limpiar</a>
@@ -138,7 +103,9 @@ function Users() {
             :<div className="spinner-border text-warning" role="status">
             </div> }
         </section> 
-        
+        <div className="confirm-delete">
+            
+        </div>
     </main>
   );
 }
