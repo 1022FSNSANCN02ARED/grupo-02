@@ -7,7 +7,8 @@
 
   <body>
     <%- include("partials/header") %>
-    <form action="/users/update/<%= user.id %>?_method=PUT" method="POST">
+    <form action="/users/update/<%= user.id %>?_method=PUT" method="POST" class="form-edit-user">
+       <p class="admin2">#Admin</p> 
         <label for="title">Nombre </label>
         <p><input type="text" name="firstName" id="" value="<%= user.firstName %>" required></p>
         <label for="rating">Apellido </label>
@@ -20,12 +21,16 @@
         <p>
             <select name="role" id="" required>
                 <% role.forEach(role => { %>
-                <option value="<%= role.id %>" <% if (user.role.id == role.id) { %><%= 'selected' %><% }; %>><%= role.role %></option>
+                <option value="<%= role.id %>" class="op" <% if (user.role.id == role.id) { %><%= 'selected' %><% }; %>><%= role.role %></option>
                 <% }); %>
             </select>
         </p>
         
         <br>
+
+        <div class="actualizar-borrar-userEdit">
+
+        </div>
         <p> <button class="botonAgregar" type="submit">Actualizar</button>
     
         <a  class="botonVolver" href="http://localhost:3001/users">Volver al Panel</a></p>

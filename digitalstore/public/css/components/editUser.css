@@ -1,0 +1,78 @@
+.form-edit-user{
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.132);
+
+    width: 50%;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    margin: 50px auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.548);
+    padding: 1rem;
+    background-color: whitesmoke;
+   
+}
+.form-edit-user input{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+    padding: 0.3rem;
+}
+.form-edit-user label{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.829);
+}
+.form-edit-user select{
+  width: 100%;
+}
+option .op:hover{
+ background-color: orange;
+}
+
+
+.admin2{
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(253, 67, 67);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.actualizar-borrar-userEdit{
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+align-items: center;
+width: 100%;
+border-radius: 2px;
+    
+}
+
+
+.botonAgregar{
+    background-color: rgb(38, 212, 3);
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5em;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+.botonVolver{
+    background-color: rgb(252, 51, 51);
+    border: none;
+    color: white;
+    width: 100%;
+    margin: auto;
+    display: block;
+    padding: 0.5em;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px ;
+}

@@ -125,7 +125,7 @@ module.exports = {
       }
     )
       .then(() => {
-        return res.redirect("/users/panel");
+        return res.redirect("/http://localhost:3001/users");
       })
       .catch((error) => res.send(error));
   },
