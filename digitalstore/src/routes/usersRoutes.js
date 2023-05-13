@@ -8,6 +8,7 @@ const multer = require('multer');
 const validaciones = require("../middlewares/validator");
 //evaluaciones en el login
 const validacionesLogin = require("../middlewares/validatorLogin");
+const validatorChangePassword = require("../middlewares/validatorChangePassword");
 const guestMiddleware = require("../middlewares/guestMiddleware")
 const authMiddleware = require("../middlewares/authMiddleware");
 const users = require("../data/users");
@@ -54,5 +55,5 @@ router.get("/edit/:id", usersController.edit);
 router.post("/update/:id", usersController.update);
 
 router.get("/changepassword/:id", usersController.changePasswordForm)
-router.post("/changepassword/:id", usersController.changePassword)
+router.post("/changepassword/:id", validatorChangePassword, usersController.changePassword)
 module.exports = router;

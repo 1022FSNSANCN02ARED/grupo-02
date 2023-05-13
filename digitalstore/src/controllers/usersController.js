@@ -231,6 +231,7 @@ module.exports = {
     let errores = validationResult(req);
     let user = await db.User.findByPk(userId)
     const userPass = user.dataValues;
+
     if (errores.isEmpty()) {
       let isOkThePassword = bcryptjs.compareSync(
       req.body.password,
@@ -247,9 +248,30 @@ module.exports = {
         return res.render("profile", {
           user: req.session.userLogged,
         });
+    }else{
+      
+      return res.render("changePassword", {
+        user: req.session.userLogged,
+        errores: {
+          password: {
+            msg: "La contraseña no es correcta",
+          },
+        },
+   })
     }
-  }
+  
+} else {
+  console.log(errores.mapped())
+    return res.render("changePassword", {
+    user: req.session.userLogged,
+    errores: errores.mapped(),
+    old: req.body,
+  });
+}
+    
+},
 
-
-  },
 };
+
+
+
