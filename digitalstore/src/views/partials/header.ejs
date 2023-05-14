@@ -17,10 +17,25 @@
                 <!-- si estoy logueado  -->
                 <% if (locals.isLogged) { %>
 
-                    <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
-                    <!-- Salir</a></button> -->
-
-                    <a class="btn-login" href="/users/logout">Cerrar Sesion <i class="fa-solid fa-power-off"></i></a>
+                    <div class="user-dropdown" style="display: none;">
+                        <ul class="user-dropdown-list">
+                            <li class="dropdown-item">
+                                <a href="/user/...">Ver perfil</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/user/...">Carrito</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/user/...">Favoritos</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="/user/...">Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-img-login">
+                        <span><i class="fa-solid fa-user"></i> <%= locals.userLogged.userName %></span>
+                    </div>
 
                 <% } else { %>
                     <!-- si no estoy logueado solo muestro boton de login -->
