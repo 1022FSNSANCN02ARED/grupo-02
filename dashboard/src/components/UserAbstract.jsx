@@ -15,7 +15,6 @@ function ProductAbstract({ user, title, desc, img, url }) {
         />
       </div>
       <p>{user}</p>
-
       <p>{desc}</p>
     </>
   );
