@@ -10,7 +10,6 @@ async function userLoggedMiddleware(req, res, next) {
   //lo pude encontrar de la DB?
 
   if(emailInCookie){
-
     var user = await db.User.findAll({
       where: {
         email: emailInCookie, 
@@ -22,7 +21,7 @@ async function userLoggedMiddleware(req, res, next) {
   
 
   if (userFromCookie){// SI ENCONTRE AL USUARIO LO PASO A SESION
-        req.session.userLogged = userFromCookie;
+    req.session.userLogged = userFromCookie;
   }
 
     if (req.session.userLogged) {

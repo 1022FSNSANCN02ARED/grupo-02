@@ -177,6 +177,8 @@ module.exports = {
             });
           }
 
+          res.cookie("userImg", user.img);
+
           return res.redirect("/");
         }
         return res.render("login", {
