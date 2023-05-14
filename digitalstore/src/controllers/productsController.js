@@ -25,7 +25,7 @@ module.exports = {
         })
     },*/
   listProducts: async (req, res) => {
-    
+    let off = false
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
     let productos = []
@@ -41,11 +41,23 @@ module.exports = {
       })
     }else if(req.query.category){
       const category = req.query.category;
-      productos = await db.Product.findAll({
-        include: ["brand", "category"],
-      })
-      console.log(productos[0].category)
-      productos = productos.filter((prod) => { return prod.category.name == category })
+      if(category == "oferts"){
+        off = true
+        productos = await db.Product.findAll({
+          where:{
+            discount:{
+              [Op.gt]: 0, 
+            }
+          },
+          include: ["brand", "category"],
+        })
+      }else{
+        productos = await db.Product.findAll({
+          include: ["brand", "category"],
+        })
+        console.log(productos[0].category)
+        productos = productos.filter((prod) => { return prod.category.name == category })
+      }
     }
     else{
       productos = await db.Product.findAll({
@@ -56,6 +68,7 @@ module.exports = {
       productos,
       categorias,
       brands,
+      off
     });
   },
   /*
@@ -207,6 +220,7 @@ module.exports = {
           .catch(error => res.send(error))
   },
   filterProducts: async (req, res) => {
+    let off = false
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
     const filter = req.body;
@@ -254,6 +268,7 @@ module.exports = {
         });
       } else {
         props.shift();
+        off = true
         productos = await db.Product.findAll({
           include: ["brand", "category"],
           where: {
@@ -274,6 +289,7 @@ module.exports = {
         productos,
         categorias,
         brands,
+        off
       });
 
     } else {
@@ -285,6 +301,7 @@ module.exports = {
         productos,
         categorias,
         brands,
+        off
       });
     }
   },

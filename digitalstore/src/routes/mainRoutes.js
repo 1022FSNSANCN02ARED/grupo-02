@@ -9,7 +9,6 @@ router.get("/register", guestMiddleware, mainController.register);
 router.get("/login", mainController.login);
 router.get("/ayuda", mainController.ayuda);
 router.get("/contacto", mainController.contacto);
-router.get("/oferta", mainController.oferta);
 
 const productsRoutes = require('./productsRoutes');
 router.use("/products", productsRoutes);

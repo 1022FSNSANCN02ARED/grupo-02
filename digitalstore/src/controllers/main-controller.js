@@ -39,18 +39,5 @@ module.exports = {
     },
     ayuda: (req,res)=>{
         res.render("ayuda")
-    },
-    oferta: (req,res)=>{
-        db.Product
-        .findAll({
-            where: {
-                discount:{
-                    [Op.gt]: 0, 
-                }
-            }
-        }) // force: true es para asegurar que se ejecute la acción
-        .then(productsOfert => {
-            return res.render('oferta', {productsOfert})})
-        .catch(error => res.send(error)) 
-    },
+    }
 }
