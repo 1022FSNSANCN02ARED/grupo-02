@@ -55,6 +55,14 @@ function Users() {
         apiUserPetition();
     },[])
 
+    function deleteUser(user) {
+        fetch("http://localhost:3000/api/users/delete/" + user.id, {
+            method: "delete",
+        }).then(() => {
+            apiUserPetition();
+        });
+    }
+
   return (
     <main className="main-panel">  
 
@@ -89,11 +97,12 @@ function Users() {
                                         <p className="user-card-user">@{user.userName}</p>
                             </div>
                             <div className="user-card-button-container">
-                                <a className="button-remove" onClick={() => {
+                                <button className="button-remove" onClick={() => {
                                     if (window.confirm("Estas seguro de eliminar este usuario?")) {
+                                        deleteUser(user)
                                         alert("USUARIO ELIMINADO!")
                                       }
-                                }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></a>
+                                }}><i className="fa-solid fa-trash-can" target="_blank" rel="noreferrer"></i></button>
                                 <a target="_blank" rel="noreferrer" className="button-edit" href={"http://localhost:3000/users/edit/"+user.id}><i className="fa-solid fa-pencil"></i></a>
                             </div>
                         </div>
