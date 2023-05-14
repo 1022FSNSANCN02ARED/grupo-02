@@ -42,7 +42,6 @@ function Products() {
             <th colSpan={3}>Acciones</th>
           </tr>
         </thead>
-
         <tbody>
           {valor.length > 0
             ? valor.map((item) => {
@@ -94,7 +93,9 @@ function Products() {
                         onClick={() => {
                           if (
                             window.confirm(
-                              "Estas seguro de eliminar este producto?"
+                              "Estas seguro de eliminar el producto\n" +
+                                item.name +
+                                "?"
                             )
                           ) {
                             deleteProduct(item);
@@ -113,7 +114,7 @@ function Products() {
                 );
               })
             : "No hay elementos"}
-        </tbody>
+        </tbody>{" "}
       </table>
     </div>
   );
