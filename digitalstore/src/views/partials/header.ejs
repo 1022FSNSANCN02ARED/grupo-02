@@ -1,13 +1,16 @@
 <header class="header-partial">
 
-    <div class="nav-primary">
+   <nav class="nav-container">
+
+        <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
+
         
-        <form action="/products" class="serch-bar" method="get">
-            <input type="search" placeholder="Buscar productos" name="search" autocomplete="none">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
+        <section class="seach-bar-container">
+            <form action="/products" enctype="application/x-www-form-urlencoded" method="post" class="search-bar">
+                <input type="search" name="search" id="search" autocomplete="off" placeholder="Buscar producto...">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+       </section>
         <div class="nav-buttons" id="nav-buttons-laptop">
 
             <!-- si estoy logueado  -->
@@ -16,45 +19,34 @@
                 <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
                 <!-- Salir</a></button> -->
 
-                <a class="btn-login" href="/users/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesion</a>
+                <a class="btn-login" href="/users/logout">Cerrar Sesion <i class="fa-solid fa-power-off"></i></a>
 
             <% } else { %>
 
                 <!-- si no estoy logueado solo muestro boton de login -->
-                <a class="btn-login"  href="/users/login"><i class="fa-solid fa-power-off"></i> Iniciar Sesión</a>
+                <a class="btn-login"  href="/users/login">Iniciar Sesión <i class="fa-solid fa-power-off"></i></a>
 
             <% } %>
 
         </div>
-        <a href="/" class="nav-img"><img class="nav-img" src="/img/logo.png"></img></a>
-        <div class="nav-div" id="menu-button">
-            <i class="fa-solid fa-bars"></i>
-
-        </div>
-    </div>
-
-    <nav class="nav-principal">
-        
-
-        <div class="nav-links show">
-            <ul class="nav-ul">
-                <li class="nav-li"><a href="/">Inicio</a></li>
-                <li class="nav-li"><a href="/products">Productos</a></li>
-                <li class="nav-li"><a href="/oferta">Ofertas</a></li>
-                <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
-                <li class="nav-li"><a href="/contacto">Contacto</a></li>
-                <% if (locals.userLogged) { %>
-                    <li class="nav-li">
-                        <p class="button-dropdown">Perfil</p>
-                        <ul class="dropdown-container">
-                            <li><a href="/user/carrito"></a></li>
-                        </ul>
-                    </li>
-                <% } %>
-            </ul>
-        </div>
-    </nav>
-
-    <script src="/script/header.js"></script>
+   </nav>
+   
+   <section>
+        <ul class="nav-ul">
+            <li class="nav-li"><a href="/">Inicio</a></li>
+            <li class="nav-li"><a href="/products">Productos</a></li>
+            <li class="nav-li"><a href="/oferta">Ofertas</a></li>
+            <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
+            <li class="nav-li"><a href="/contacto">Contacto</a></li>
+            <% if (locals.userLogged) { %>
+                <li class="nav-li">
+                    <p class="button-dropdown">Perfil</p>
+                    <ul class="dropdown-container">
+                        <li><a href="/user/carrito"></a></li>
+                    </ul>
+                </li>
+            <% } %>
+        </ul>
+   </section>
 
 </header>

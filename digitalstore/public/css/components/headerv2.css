@@ -1,41 +1,83 @@
 @import url("variables.css");
 
-.nav-primary{
+.nav-container{
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-}
-
-.serch-bar{
-    width: 100%;
-    order: 1;
-    border: 1px solid var(--naranja);
-    height: 40px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-.serch-bar input{
-    width: 92%;
-    height: 100%;
-    padding: 0 1rem ;
-    border: none;
-    outline: none;
-}
-.serch-bar button{
-    cursor: pointer;
-    color: var(--naranja);
-    place-items: center;
-    background: none;
-    border: none;
+    width: 100%;
+    height: 6rem;
 }
 
 .nav-img{
-    width: 8rem ;
-    order: 0;
+    margin-left: 1rem;
+    width: 9rem;
 }
 
-.nav-img img{
+.nav-ul{
     width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+    padding-bottom: 1rem;
+}
+
+.nav-li a{
+    color: grey;
+    font-weight: 300;
+}
+
+.nav-li a:hover{
+    color: black;
+}
+
+.btn-login{
+    margin-right: 1rem;
+    background-color: var(--naranja);
+    color:white;
+    padding: .5rem .8rem;
+    border-radius: .7rem 1rem;
+    font-weight: bold;
+}
+
+.seach-bar-container{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar{
+    width: 100%;
+    display: flex;
+    background-color: rgb(226, 226, 226);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+.search-bar input{
+    width: 95%;
+    border: none;
+    font-size: 1rem;
+    background-color: rgb(226, 226, 226);
+    outline: none;
+    color: rgb(88, 88, 88);
+    text-align: center;
+    font-weight: 400;
+}
+
+.search-bar input::-webkit-search-cancel-button{
+    display: none;
+}
+
+.search-bar button{
+    border:none;
+    color: black;
+    background-color: rgb(226, 226, 226);
+}
+
+.search-bar button:hover{
+    color: orange;
+}
+
+@media (max-with: 768px) {
+    
 }
