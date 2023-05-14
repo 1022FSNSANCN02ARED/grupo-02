@@ -1,4 +1,4 @@
-const { Product } = require("../../database/models");
+const { Product, CartProduct } = require("../../database/models");
 
 module.exports = {
   list: async (req, res) => {
@@ -66,6 +66,8 @@ module.exports = {
   },
   destroy: (req, res) => {
     let productId = req.params.id;
+    CartProduct.destroy({ where: { idProduct: productId }, force: true });
+
     Product.destroy({ where: { id: productId }, force: true })
       .then((confirm) => {
         let respuesta;
