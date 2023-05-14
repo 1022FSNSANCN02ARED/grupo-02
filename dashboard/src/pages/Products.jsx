@@ -15,6 +15,18 @@ function Products() {
     console.log(products.data);
   };
 
+  function deleteProduct(product) {
+    fetch("http://localhost:3000/api/products/delete/" + product.id, {
+      method: "delete",
+    })
+      .then((msg) => msg.json())
+      .then((msg) => {
+        obtenerDatos();
+
+        console.log(msg);
+      });
+  }
+
   return (
     <div className="renderProduct">
       <div className="titleProduct">
@@ -44,31 +56,58 @@ function Products() {
                       {"$"} {item.price}{" "}
                     </td>
 
-                    {/* icono de ver detalle */}
+                    {/* boton de ver detalle */}
                     <td>
-                      <i class="fa-solid fa-eye" style={{ color: "blue" }}></i>
-                    </td>
-
-                    {/* icono de editar producto */}
-                    <td>
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href={"http://localhost:3000/products/edit/" + item.id}
+                      <button>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href={
+                            "http://localhost:3000/products/detail/" + item.id
+                          }
+                        >
+                          <i
+                            class="fa-solid fa-eye"
+                            style={{ color: "blue" }}
+                          ></i>
+                        </a>
+                      </button>{" "}
+                      {"    "}
+                      {/* boton de editar producto */}
+                      <button>
+                        <a
+                          target="_blank"
+                          rel="noreferrer"
+                          href={
+                            "http://localhost:3000/products/edit/" + item.id
+                          }
+                        >
+                          <i
+                            class="fa-solid fa-pencil"
+                            style={{ color: "green" }}
+                          ></i>
+                        </a>
+                      </button>
+                      {"    "}
+                      {/* boton de eliminar producto */}
+                      <button
+                        onClick={() => {
+                          if (
+                            window.confirm(
+                              "Estas seguro de eliminar este producto?"
+                            )
+                          ) {
+                            deleteProduct(item);
+                            alert("PRODUCTO ELIMINADO!");
+                          }
+                        }}
                       >
                         <i
-                          class="fa-solid fa-pencil"
-                          style={{ color: "green" }}
+                          className="fa-solid fa-trash-can"
+                          style={{ color: "red" }}
                         ></i>
-                      </a>
-                    </td>
-
-                    {/* icono de eliminar producto */}
-                    <td>
-                      <i
-                        class="fa-solid fa-trash-can"
-                        style={{ color: "red" }}
-                      ></i>
+                      </button>
+                      {"    "}
                     </td>
                   </tr>
                 );

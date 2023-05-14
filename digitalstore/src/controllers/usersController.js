@@ -125,11 +125,10 @@ module.exports = {
       }
     )
       .then(() => {
-        return res.redirect("/http://localhost:3001/users");
+        return res.redirect("http://localhost:3001/users");
       })
       .catch((error) => res.send(error));
   },
-  
 
   login: (req, res) => {
     return res.render("login");
@@ -205,7 +204,7 @@ module.exports = {
       });
     }
   },
- 
+
   profile: (req, res) => {
     return res.render("profile", {
       user: req.session.userLogged,
@@ -220,58 +219,52 @@ module.exports = {
   changePasswordForm: function (req, res) {
     const userId = req.params.id;
     db.User.findByPk(userId)
-    .then((user) => {
-      return res.render("changePassword", { user });
-    })
-    .catch((error) => res.send(error));
+      .then((user) => {
+        return res.render("changePassword", { user });
+      })
+      .catch((error) => res.send(error));
   },
 
   changePassword: async function (req, res) {
     const userId = req.params.id;
     let errores = validationResult(req);
-    let user = await db.User.findByPk(userId)
+    let user = await db.User.findByPk(userId);
     const userPass = user.dataValues;
 
     if (errores.isEmpty()) {
       let isOkThePassword = bcryptjs.compareSync(
-      req.body.password,
-      userPass.password
-    );
-    if (isOkThePassword) {
-      db.User.update(
-        {  
-          password: bcryptjs.hashSync(req.body.newPass, 10),
-        },
-        {
-          where: { id: userId },
-        })
+        req.body.password,
+        userPass.password
+      );
+      if (isOkThePassword) {
+        db.User.update(
+          {
+            password: bcryptjs.hashSync(req.body.newPass, 10),
+          },
+          {
+            where: { id: userId },
+          }
+        );
         return res.render("profile", {
           user: req.session.userLogged,
         });
-    }else{
-      
+      } else {
+        return res.render("changePassword", {
+          user: req.session.userLogged,
+          errores: {
+            password: {
+              msg: "La contraseña no es correcta",
+            },
+          },
+        });
+      }
+    } else {
+      console.log(errores.mapped());
       return res.render("changePassword", {
         user: req.session.userLogged,
-        errores: {
-          password: {
-            msg: "La contraseña no es correcta",
-          },
-        },
-   })
+        errores: errores.mapped(),
+        old: req.body,
+      });
     }
-  
-} else {
-  console.log(errores.mapped())
-    return res.render("changePassword", {
-    user: req.session.userLogged,
-    errores: errores.mapped(),
-    old: req.body,
-  });
-}
-    
-},
-
+  },
 };
-
-
-
