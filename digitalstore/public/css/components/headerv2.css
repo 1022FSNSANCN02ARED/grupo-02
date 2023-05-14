@@ -1,11 +1,14 @@
 @import url("variables.css");
 
+.header-partial{
+    background-color: white;
+}
 .nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 6rem;
+    height: 6rem;  
 }
 
 .nav-img{
@@ -35,11 +38,11 @@
     background-color: var(--naranja);
     color:white;
     padding: .5rem .8rem;
-    border-radius: .7rem 1rem;
+    border-radius:  1rem;
     font-weight: bold;
 }
 
-.seach-bar-container{
+.search-bar-container{
     width: 40%;
     display: flex;
     justify-content: center;
@@ -78,6 +81,71 @@
     color: orange;
 }
 
-@media (max-with: 768px) {
+.button-dropdown{
+    cursor: pointer;
+    color: grey;
+}
+.button-dropdown:hover{
+    cursor: pointer;
+    color: black;
+}
+.phone-icon-menu{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .nav-container{
+        flex-wrap: wrap;
+        height: 10rem;
+        gap: 0;
+        justify-content: space-between;
+        padding:0 1rem;
+    }
+
+    .search-bar-container{
+        width: 100%;
+        order:1
+    }
+
+    .overflow-hidden{
+        overflow: hidden;
+    }
+
+    .nav-buttons{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .phone-icon-menu{
+        display: block;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .nav-ul{
+        position: absolute;
+        top:6rem;
+        left: -100%;
+        flex-direction: column;
+        text-align: center;
+        background-color: white;
+        transition: left .6s;
+        height: calc(100vh - 6rem);
+    }
+
+    .open-nav{
+        left: 0;
+        transition: left .6s;
+    }
     
+    .nav-li a{
+        color: grey;
+        font-weight: 300;
+    }
+    
+    .nav-li a:hover{
+        color: black;
+    }
 }

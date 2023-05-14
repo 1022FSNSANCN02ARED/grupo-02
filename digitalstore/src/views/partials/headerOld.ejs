@@ -7,7 +7,6 @@
 
             <!-- si estoy logueado  -->
             <% if (locals.isLogged) { %>
-
                 <!-- <button class="btn-login"><a href="/users/logout"><i class="fa-solid fa-right-to-bracket"></i> -->
                 <!-- Salir</a></button> -->
 
@@ -37,14 +36,6 @@
                 <li class="nav-li"><a href="/oferta">Ofertas</a></li>
                 <li class="nav-li"><a href="/ayuda">Ayuda</a></li>
                 <li class="nav-li"><a href="/contacto">Contacto</a></li>
-                <% if (locals.userLogged) { %>
-                    <li class="nav-li">
-                        <p class="button-dropdown">Perfil</p>
-                        <ul class="dropdown-container">
-                            <li><a href="/user/carrito"></a></li>
-                        </ul>
-                    </li>
-                <% } %>
             </ul>
         </div>
     </nav>
