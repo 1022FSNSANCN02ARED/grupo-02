@@ -10,42 +10,43 @@
 
 
     <%- include("partials/header") %>
+
+
         <main class="main-profile">
-            <div class="div-img-profile">
 
-                <img src="/img/usuarios/<%=user.img %> ">
-                <div>
-                     <h1>
-                    <%= user.firstName + ' ' + user.lastName%>
-                </h1>
-                <h2>
-                    <%= user.email%>
-                </h2>
-                </div>
-               
+            <h2 class="main-profile-title">Mis datos</h2>
 
-            </div>
+            <section class="main-profile-dates">
+                <h3 class="profile-section-title">Datos de cuenta</h3>
+                <ul class="section-profile-dates">
+                    <li>
+                        <p class="profile-title">Usuario</p>
+                        <p class="profile-date"><%= user.userName %></p>
+                    </li>
+                    <li>
+                        <p class="profile-title">E-mail</p>
+                        <p class="profile-date"><%= user.email %></p>
+                    </li>
+                    <li>
+                        <p class="profile-title">Password</p>
+                        <a class="profile-link" href="#">Cambiar contraseña</a>
+                    </li>
+                </ul>
+            </section>
 
-            <div class="div-detalle-profile">
-                <a href="/users/changePassword/<%=user.id %>" class="w-100"><input type="submit" class="boton-enviar" value="Cambiar contraseña"></a>
-            
-
-
-                    <!-- <div class="div-detalle-profile-2">
-                        <h3> <a href="">Mis compras</a> </h3>
-                        <h3> <a href="">Favoritos</a> </h3>
-                        <h3> <a href="">Cambiar contraseña</a> </h3>
-                        <h3> <a href="">Cerrar sesión</a> </h3>
-                    </div> -->
-                
-
-
-
-
-
-
-
-            </div>
+            <section class="main-profile-dates">
+                <h3 class="profile-section-title">Datos Personales</h3>
+                <ul class="section-profile-dates">
+                    <li>
+                        <p class="profile-title">Nombre</p>
+                        <p class="profile-date"><%= user.firstName %></p>
+                    </li>
+                    <li>
+                        <p class="profile-title">Apellido</p>
+                        <p class="profile-date"><%= user.lastName %></p>
+                    </li>
+                </ul>
+            </section>
 
 
         </main>
