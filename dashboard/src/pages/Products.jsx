@@ -44,15 +44,15 @@ function Products() {
         </thead>
         <tbody>
           {valor.length > 0
-            ? valor.map((item) => {
+            ? valor.map((product) => {
                 return (
                   <tr>
-                    <td key={item.id}>{item.id} </td>
+                    <td key={product.id}>{product.id} </td>
 
-                    <td> {item.name} </td>
+                    <td> {product.name} </td>
 
                     <td>
-                      {"$"} {item.price}{" "}
+                      {"$"} {product.price}{" "}
                     </td>
 
                     {/* boton de ver detalle */}
@@ -62,7 +62,8 @@ function Products() {
                           target="_blank"
                           rel="noreferrer"
                           href={
-                            "http://localhost:3000/products/detail/" + item.id
+                            "http://localhost:3000/products/detail/" +
+                            product.id
                           }
                         >
                           <i
@@ -78,7 +79,7 @@ function Products() {
                           target="_blank"
                           rel="noreferrer"
                           href={
-                            "http://localhost:3000/products/edit/" + item.id
+                            "http://localhost:3000/products/edit/" + product.id
                           }
                         >
                           <i
@@ -94,11 +95,11 @@ function Products() {
                           if (
                             window.confirm(
                               "Estas seguro de eliminar el producto\n" +
-                                item.name +
+                                product.name +
                                 "?"
                             )
                           ) {
-                            deleteProduct(item);
+                            deleteProduct(product);
                             alert("PRODUCTO ELIMINADO!");
                           }
                         }}

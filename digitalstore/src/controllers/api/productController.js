@@ -1,4 +1,4 @@
-const { Product, CartProduct } = require("../../database/models");
+const { Product, CartProduct, Favorite } = require("../../database/models");
 
 module.exports = {
   list: async (req, res) => {
@@ -66,7 +66,11 @@ module.exports = {
   },
   destroy: (req, res) => {
     let productId = req.params.id;
+    // elimino de carrito
     CartProduct.destroy({ where: { idProduct: productId }, force: true });
+    // elimino de favorito
+    Favorite.destroy({ where: { idProduct: productId }, force: true });
+    // elimino de producto
 
     Product.destroy({ where: { id: productId }, force: true })
       .then((confirm) => {
