@@ -35,10 +35,18 @@
                     <% if (producto.discount> 0) { %>
                         <p class="detail-oferta">
                             <%= producto.discount%>%OFF
+                            
+                        </p>
+
+                        <p class="detail-oferta2">
+                            $<%= producto.price - (producto.price * (producto.discount/100)) %>
                         </p>
                         <% } %>
                 </div>
 
+                
+               
+      
 
                 <% if (locals.isLogged) { %>
                     <form action="/carrito/add/<%= producto.id %>" method="POST">
