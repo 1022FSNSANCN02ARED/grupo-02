@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SmallCard from "../components/SmallCard";
 import LastProduct from "../components/LastProduct";
 import LastUser from "../components/LastUser";
 import "./Home.css";
+import {useState} from "react"
 
 // const myStats = [
 //   {
@@ -27,41 +28,63 @@ function Home() {
   const [brandsTotal, setbrandsTotal] = useState(0);
   const [categoryTotal, setcategoryTotal] = useState(0);
 
+  useEffect(() => {
+    apiProduct();
+  },[])
+  
   function apiProduct() {
-    fetch(link)
+    fetch("http://localhost:3000/api/products")
       .then((response) => response.json())
       .then((data) => {
-        myStats[pos].value = data.meta.total;
+        setproductsTotal(data.meta.total)
       })
       .catch((error) => console.error(error));
   }
 
-  function apiBrand() {
-    fetch(link)
-      .then((response) => response.json())
-      .then((data) => {
-        myStats.value = data.meta.total;
-      })
-      .catch((error) => console.error(error));
-  }
+  
+  // function apiProduct() {
+  //   fetch("http://localhost:3000/api/products")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setproductsTotal(data.meta.total)
+  //     })
+  //     .catch((error) => console.error(error));
+  // }
+  // function apiProduct() {
+  //   fetch("http://localhost:3000/api/products")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setproductsTotal(data.meta.total)
+  //     })
+  //     .catch((error) => console.error(error));
+  // }
 
-  function apiCategory() {
-    fetch()
-      .then((response) => response.json())
-      .then((data) => {
-        myStats[pos].value = data.meta.total;
-      })
-      .catch((error) => console.error(error));
-  }
+  // function apiBrand() {
+  //   fetch(link)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+        
+  //     })
+  //     .catch((error) => console.error(error));
+  // }
+
+  // function apiCategory() {
+  //   fetch()
+  //     .then((response) => response.json())
+  //     .then((data) => {
+        
+  //     })
+  //     .catch((error) => console.error(error));
+  // }
 
   return (
     <>
       <div className="indicadores">
-        {myStats.map((stat) => {
-          return (
-            <SmallCard key={stat.id} title={stat.title} value={stat.value} />
-          );
-        })}
+
+        <SmallCard key={productsTotal+"productos"} title={"Total de productos:"} value={productsTotal} />
+        <SmallCard key={productsTotal+"brands"} title={"Total de marcas:"} value={productsTotal} />
+        <SmallCard key={productsTotal+"category"} title={"Total de categorias:"} value={productsTotal} />
+
       </div>
 
       <div className="indicadores ">
