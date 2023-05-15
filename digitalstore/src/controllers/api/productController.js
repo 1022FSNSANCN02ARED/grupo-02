@@ -1,4 +1,4 @@
-const { Product, CartProduct, Favorite } = require("../../database/models");
+const { Product, CartProduct, Favorite, Category } = require("../../database/models");
 
 module.exports = {
   list: async (req, res) => {
@@ -98,4 +98,33 @@ module.exports = {
       })
       .catch((error) => res.send(error));
   },
+
+  categories: async (req, res) => {
+    const promCategories = await Category.findAll();
+    
+    const promProd = await Product.findAll({
+      include: ["brand", "category"],
+    });
+    
+    let totalProd = [];
+    
+    promCategories.forEach(cat=>{
+        
+        productos = promProd.filter(product=>product.idCategory = cat.id)
+        totalProd.push(productos.length)
+
+    })
+    console.log(promCategories)
+      let resp = {
+        meta: {
+          status: 200,
+          total: promCategories.length,
+          url: "api/products/categories/list",
+        },
+        data: promCategories,
+      };
+      res.json(resp);
+    
+  
+  }
 };

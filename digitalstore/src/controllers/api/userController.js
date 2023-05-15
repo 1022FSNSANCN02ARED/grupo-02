@@ -2,10 +2,13 @@ const { User }= require('../../database/models');
 
 module.exports= {
     list: async (req,res)=>{
-       
+           
         const users = await User.findAll()
+        
         users.forEach(user=>{
+                  
             user.img = `http://localhost:3000/img/usuarios/${user.img}`
+            user.password = "";
         })
         let resp = {
                 meta:{
@@ -20,6 +23,7 @@ module.exports= {
     },
     detail: async (req,res)=>{
         const user = await User.findByPk(req.params.id);
+        user.password = "";
         res.json({
             meta: {
                 status: !user ? 404 : 200,
