@@ -31,7 +31,7 @@ function Home() {
   useEffect(() => {
     apiProduct();
   },[])
-  
+
   function apiProduct() {
     fetch("http://localhost:3000/api/products")
       .then((response) => response.json())
@@ -82,8 +82,8 @@ function Home() {
       <div className="indicadores">
 
         <SmallCard key={productsTotal+"productos"} title={"Total de productos:"} value={productsTotal} />
-        <SmallCard key={productsTotal+"brands"} title={"Total de marcas:"} value={productsTotal} />
-        <SmallCard key={productsTotal+"category"} title={"Total de categorias:"} value={productsTotal} />
+        <SmallCard key={productsTotal+"brands"} title={"Total de marcas:"} value={8} />
+        <SmallCard key={productsTotal+"category"} title={"Total de categorias:"} value={5} />
 
       </div>
 
