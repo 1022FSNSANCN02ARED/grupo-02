@@ -17,9 +17,9 @@
             <!-- ACA PONgo EL CONDICIONAL PARA QUE APAREZCA EL BOTON DE AGREGAR PRODUCTO SEGUN SE ESTE LOGUEADO O NO> USO MIDDLEWARE DE APLICACION (userLoggedMiddleware)-->
 
           
-            <% if (locals.isLogged) { %>
-                              
+            <% if (locals.isLogged && locals.userLogged.idRole == 1) { %>
               
+
             <a href="/products/add" class="a-agregarProducto-listProduct">
                 <input type="submit" name="agregaProducto" value="Agregar producto" >
             </a>
