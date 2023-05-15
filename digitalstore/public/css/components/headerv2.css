@@ -199,7 +199,14 @@
     }
 
     .nav-img-login{
-        width: auto;
         padding: 1rem;
+    }
+
+    .nav-img-login{
+        width: 8rem;
+    }
+
+    .user-dropdown{
+        width: 8rem;
     }
 }

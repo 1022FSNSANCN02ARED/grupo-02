@@ -25,7 +25,7 @@ module.exports = {
 
         }) // force: true es para asegurar que se ejecute la acción
 
-        const products = await db.Product.findAll({limit:4,offset:10,});
+        const products = await db.Product.findAll({limit:4,offset:4,});
         res.render('index', {productsOfert,products})
     },
     register: (req,res)=> {
