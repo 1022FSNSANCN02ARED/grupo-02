@@ -232,7 +232,8 @@ input:checked + .slider:before {
 .filters-container{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 1rem;
 }
 .a-agregarProducto-listProduct{
     display: none;
@@ -328,3 +329,4 @@ input:checked + .slider:before {
         width: 100%;
     }
 }
+
