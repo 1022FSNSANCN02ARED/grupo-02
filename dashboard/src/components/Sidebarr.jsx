@@ -23,6 +23,10 @@ function Sidebar() {
         <li>
           <Link to="/users"><i class="fa-regular fa-user"></i> Usuarios</Link>
         </li>
+
+        <li>
+          <Link to="/categories"><i class="fa-regular fa-grid-2"></i> Categorias</Link>
+        </li>
       </ul>
       <div className="nav-view-page">
         <a href="http://localhost:3000/" target="_blank" rel="noreferrer">
