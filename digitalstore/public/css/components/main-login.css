@@ -24,41 +24,32 @@
 
 .form-login {
     display: flex;
-    width: 80%;
+    width: 450px;
     flex-direction: column;
     text-align: center;
     align-items: center;
     margin-top: 50px;
     background-color: white;
-    padding: 10px;
+    padding: 2rem;
     margin: auto;
     margin-bottom: 20px;
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px rgb(194, 194, 194);
     margin-top: 20px;
-
 }
 
-
-
-
-
-.form-login input {
-    width: 60%;
-    padding: 5px;
-    margin: 5px 0;
-
-
+@media (max-width: 560px) {
+    .form-login{
+        width: 100%;
+    }
 }
 
 .form-login input {
-
-    padding: 5px;
-    margin: 5px 0;
+    width: 100%;
+    padding: 1rem;
     border-radius: 5px;
-    background-color: white;
-
-
-
+    background-color: rgb(216, 216, 216);
+    border: none;
+    outline: none;
 }
 
 .w-60 {
@@ -70,93 +61,28 @@
 
 }
 
-
-@media (min-width: 480px) {
-    .body-login {
-        background-color: var(--gris-claro);
-
-    }
-
-
+.label-login {
+    font-size:  1.5rem;
+    font-weight: bold;
 }
 
-@media (min-width: 768px) {
-    .label-login {
-        font-size: x-large;
-        font-weight: bold;
-    }
-
-    .input-login {
-        font-size: large;
-
-    }
-
-    .form-login {
-        padding: 50px;
-        border-radius: 6px;
-    }
-
-    .main-login {
-        background-color: var(--gris-claro);
-    }
-
-    .form-login input {
-        padding: 5px;
-        margin: 5px 0;
-        border-radius: 5px;
-        background-color: white;
-        border: 2px solid gray;
-    }
-
-    .boton-enviar-login {
-        cursor: pointer;
-    }
-
-    .boton-enviar-login:hover {
-        background-color: var(--naranja);
-        transition: 0.3s;
-    }
-
-    .registrate-login {
-        margin-top: 30px;
-        color: black;
-    }
-
-    .rojo-login {
-        color: red;
-    }
-
-    .footer-principal-corto{
-        position: relative;
-    }
+.boton-enviar-login{
+    margin-top: 2rem;
 }
 
-
-@media (min-width: 1020px) {
-    .footer-principal-corto {    
-        
-        bottom: -50px;
-        
-    }
-   
+.registrate-login{
+    color: var(--naranja);
 }
-@media (min-width: 1366px) {
-    .footer-principal-corto {
 
-       
-        position: relative;
-        bottom: 0;
-
-
-    }
+.boton-enviar{
+    margin-top: 2rem;
 }
-@media (min-width: 1600px) {
-    .footer-principal-corto {
 
-       
-        position: absolute;
-        bottom: 0;
-
-
-    }
+.nombreInput,
+.emailInput,
+.apellidoInput,
+.usuarioInput,
+.contraseñaInput1,
+.contraseñaInput2{
+    margin-bottom: 1rem;
 }
