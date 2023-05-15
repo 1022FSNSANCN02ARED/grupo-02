@@ -9,4 +9,11 @@ window.addEventListener("load", function(){
         body.classList.toggle("overflow-hidden");
     })
 
+    const btnUser = document.querySelector(".nav-img-login")
+    const dropdownUser = document.querySelector(".user-dropdown")
+
+    btnUser.addEventListener("click",() => { 
+        btnUser.classList.toggle("border-effect");
+        dropdownUser.classList.toggle("open-user-btn")
+    })
 })

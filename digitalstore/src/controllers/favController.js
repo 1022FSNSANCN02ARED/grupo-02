@@ -7,6 +7,7 @@ module.exports = {
         //Mostrar el carrito
         // mostrar los productos que agregó usuario actual
         const userFav = req.session.userLogged
+        
         const favorites = await db.Favorite.findAll({
             where: {
                 idUser: userFav.id,
@@ -14,6 +15,7 @@ module.exports = {
             include: ["product"],
             
         });
+        console.log(favorites)
         res.render("favorites", {
             fav: favorites,
         });

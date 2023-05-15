@@ -46,7 +46,7 @@ router.get ("/logout", usersController.logout);
 
 router.get('/profile/', authMiddleware, usersController.profile);
 
-router.get("/:id/carrito", usersController.userCarrito);
+// router.get("/:id/carrito", usersController.userCarrito);
 
 router.get("/delete/:id", usersController.deleteUser);
 router.delete("/destroy/:id", usersController.destroyUser);

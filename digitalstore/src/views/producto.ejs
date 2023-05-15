@@ -40,18 +40,27 @@
                 </div>
 
 
-                <form action="/carrito/add/<%= producto.id %>" method="POST">
-                    <div class="detail-boton">
-                        <button> Agregar al Carrito </button>
+                <% if (locals.isLogged) { %>
+                    <form action="/carrito/add/<%= producto.id %>" method="POST">
+                        <div class="detail-boton">
+                            <button> Agregar al Carrito </button>
+                        </div>
+                    </form>
+                    <form action="/favorites/add/<%= producto.id %>" method="POST">
+                        <div class="detail-boton">
+                            <button> Agregar a Favoritos </button>
+                        </div>
+                    </form>
+                <% } else {%>
+                
+                    <div>
+                        <span>
+                            Si desea agregar al Carrito o Favoritos, <a href="/login">inicie sesion</a> o <a href="/register">registrese</a>.
+                        </span>
                     </div>
-                </form>
-                <form action="/favorites/add/<%= producto.id %>" method="POST">
-                    <div class="detail-boton">
-                        <button> Agregar a Favoritos </button>
-                    </div>
-                </form>
-
+                    <% } %>
             </div>
+
             <div class="descripcion-producto">
                 <h3>Descripción:</h3>
                 <p class="detail-descripcion">
