@@ -5,9 +5,11 @@
 
 }
 
-.centrar-producto{
-    
-    width: 100%;
+.centrar-producto {
+
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .img-detail {
@@ -55,9 +57,10 @@
     font-weight: bold;
     background-color: greenyellow;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     margin: auto;
-    
+    box-shadow: 0 0px 5px black;
+
 
 }
 
@@ -68,21 +71,22 @@
     margin-bottom: 20px;
     text-align: center;
     border-radius: 5px;
-  border: 1px solid orange;
-   
+    border: 1px solid orange;
+
 }
-.descripcion-producto h3{
- background-color: orange;
- width: 100%;
-  
+
+.descripcion-producto h3 {
+    background-color: orange;
+    width: 100%;
+
 }
 
 .detail-descripcion {
     margin-left: 10px;
     margin: 20px 0;
     font-weight: bold;
- 
-    
+
+
 }
 
 .detail-boton {
@@ -98,6 +102,15 @@
     border: none;
     border-radius: 10px;
 }
+.detail-oferta2 {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 0 0 5px 5px;
+    margin: auto;
+    font-size: 45px;
+    box-shadow: 0 -1px 5px -1px black;
+
+}
 
 
 
@@ -105,14 +118,14 @@
     .main-detail {
         margin-top: 50px;
         display: flex;
-        flex-wrap: wrap;
+        justify-content: space-around;
 
     }
 
     .img-detail {
-        width: 20%;
-        display: flex;
-        margin: auto;
+        width: 40%;
+
+
     }
 
     .img-detail img {
@@ -122,15 +135,15 @@
     }
 
     .detail-product {
-        width: 100%;
+        width: 40%;
         display: flex;
         text-align: center;
         margin: auto;
-
+        align-items: center;
     }
 
     .centrar-producto {
-        margin: auto;
+        margin: 20px auto;
     }
 
     .detail-product h2 {
@@ -155,8 +168,9 @@
 
     .detail-precio {
         font-weight: bold;
-        margin: auto;
+        margin: 30px auto;
         font-size: xx-large;
+
 
     }
 
@@ -164,8 +178,18 @@
         font-weight: bold;
         background-color: greenyellow;
         padding: 5px;
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         margin: auto;
+        box-shadow: 0 0px 5px black;
+    }
+
+    .detail-oferta2 {
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+        margin: auto;
+        font-size: 45px;
+        box-shadow: 0 0px 5px -1px black;
 
     }
 
@@ -187,7 +211,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        
+
     }
 
     .detail-boton button {
@@ -195,13 +219,10 @@
         padding: 10px;
         font-weight: bold;
         border: none;
+        font-size: large;
         border-radius: 10px;
         cursor: pointer;
-        
-    }
-    .detail-boton button:hover {
-       background-color: rgb(126, 182, 16);
-        transition: 0.5s;
+        text-transform: uppercase;
     }
 
 }
