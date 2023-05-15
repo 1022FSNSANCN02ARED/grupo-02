@@ -12,76 +12,75 @@
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
 
-    <main class="main-carrito">
-        <div class="h2-div">
-            <h2 class="h2-carrito">FAVORITOS</h2>
-        </div>
-
-
-        <section class="section-carrito">
-            
-            <%// carrito.forEach(product => { %>
-                <%-// include('./products/productCarrito.ejs',{product}) %>
-            <% //}) %>
-            <div class="flex-fill d-flex flex-column justify-content-between">
-                <% if (fav.length == 0) { %>
-                <div class="text-center p-5">No hay productos en favoritos</div>
-                <% } %>
-                <div>
-                    <% fav.forEach(item=>{%>
-                        <div class="d-flex">
-                            <div style="width: 80px">
-                            <img class="w-100" src="img/productos/<%= item.product.img %> " alt="" />
-                        </div>
-                        <div class="flex-fill">
-                            <h2 class="fs-4"
-                            ><a href="/products/detail/<%= item.product.id %>"
-                                ><%= item.product.name %></a
-                            ></h2
-                            >
-                            <p>$ <%= item.product.price %></p>
-                            <form
-                            action="/favorites/favorites/delete/<%= item.product.id %>"
-                            method="post"
-                            >
-                            <button class="btn color-primary">Eliminar</button>
-                            </form>
-                        </div>
-                    <div class="d-flex align-items-center">
-            
-                        <p class="fs-4 align-middle m-0 px-3"><%= item.count %></p>
-                       
-                    </div>
-                    <form
-                    class="d-flex w-100 justify-content-end p-3"
-                    action="/carrito/add/<%= item.product.id %>"
-                    method="POST"
-                >
-                    <button class="btn btn-primary">Agregar al Carrito</button>
-                </form>
-                </div>
-                <% }) %>
+        <main class="main-carrito">
+            <div class="h2-div-favoritos">
+                <h2 class="h2-favoritos">FAVORITOS</h2>
             </div>
-            <% if (fav.length > 0) { %>
-            <div>
-           
-                <form action="/favorites/favorites/clear/" method="post">
-                    <button class="btn">
-                        Limpiar Favoritos
-                    </button>
-                </form>
-
-            </div>
-            <% } %>
-        </div>
-           
-        </section>
-    </main>
 
 
-    <!-- AXEL -->
-    <%- include("partials/footer")%>
+            <section class="section-carrito">
 
-    </body>
+                <% // carrito.forEach(product=> { %>
+                    <%- // include('./products/productCarrito.ejs',{product}) %>
+                        <% //}) %>
+                            <div class="flex-fill d-flex flex-column justify-content-between ">
+                                <% if (fav.length==0) { %>
+                                    <div class="text-center p-5">No hay productos en favoritos</div>
+                                    <% } %>
+                                        <div>
+                                            <% fav.forEach(item=>{%>
+                                                <div class="d-flex contenedor-1-favorito">
+                                                    <div class="div-img-favorito">
+                                                        <img class="img-favorito"
+                                                            src="img/productos/<%= item.product.image %> " alt="" />
+                                                    </div>
+                                                    <div class="flex-fill contenedor-nombrePrecio" >
+                                                        <h2 class="fs-4"><a
+                                                                href="/products/detail/<%= item.product.id %>">
+                                                                <%= item.product.name %>
+                                                            </a></h2>
+                                                        <p class="precio-favorito">$ <%= item.product.price %>
+                                                        </p>
+                                                        <form
+                                                            action="/favorites/favorites/delete/<%= item.product.id %>"
+                                                            method="post">
+                                                            <button class="btn color-primary eliminar-favorito">Eliminar</button>
+                                                        </form>
+                                                    </div>
+                                                    <div class="d-flex align-items-center ">
+
+                                                        <p class="fs-4 align-middle m-0 px-3">
+                                                            <%= item.count %>
+                                                        </p>
+
+                                                    </div>
+                                                    <form class="d-flex w-100 justify-content-end p-3"
+                                                        action="/carrito/add/<%= item.product.id %>" method="POST">
+                                                        <button class="btn btn-primary agregar-favorito">Agregar al Carrito</button>
+                                                    </form>
+                                                </div>
+                                                <% }) %>
+                                        </div>
+                                        <% if (fav.length> 0) { %>
+                                            <div>
+
+                                                <form action="/favorites/favorites/clear/" method="post">
+                                                    <button class="btn">
+                                                        Limpiar Favoritos
+                                                    </button>
+                                                </form>
+
+                                            </div>
+                                            <% } %>
+                            </div>
+
+            </section>
+        </main>
+
+
+        <!-- AXEL -->
+        <%- include("partials/footer")%>
+
+</body>
 
 </html>
