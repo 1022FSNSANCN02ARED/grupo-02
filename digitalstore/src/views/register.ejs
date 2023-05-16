@@ -51,6 +51,13 @@
 
                 <label for="" class="w-60">Contraseña</label>
                 <input class="contraseñaInput1" type="password" class="w-60" name="password" placeholder="Ingrese una contraseña">
+
+                <% if (locals.errores && errores.password ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.lastName.msg %>
+                    </div>
+                    <% } %>
+
                 <label for="" class="w-60">Repetir contraseña</label>
                 <input class="contraseñaInput2" type="password" class="w-60" name="" placeholder="Ingrese una contraseña">
 

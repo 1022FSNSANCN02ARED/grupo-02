@@ -1,5 +1,5 @@
-const{body} =require('express-validator');
-const path = require ('path');
+const { body } = require("express-validator");
+const path = require("path");
 
 const validaciones = [
   //validaciones de register
@@ -28,10 +28,13 @@ const validaciones = [
     .withMessage("El usuario debe contener caracteres alfanumericos")
     .bail()
 
-
     .isLength({ max: 13 })
     .withMessage("El usuario no debe contener mas de 13 caracteres"),
-    
+
+  body("password")
+    .notEmpty()
+    .withMessage("La password no puede estar vacia")
+    .bail(),
 
   body("email")
     .notEmpty()
@@ -64,11 +67,6 @@ const validaciones = [
 
     return true;
   }),
-
- 
-
-
 ];
-
 
 module.exports = validaciones;
