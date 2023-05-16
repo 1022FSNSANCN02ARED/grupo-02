@@ -7,25 +7,33 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <Link to="/">
-          <div className="nav-title">
-            <img src={logoDigitalStore} alt="DIGITAL STORE" />
-            <h3>Digital Store</h3>
-          </div>
-        </Link>
+        <div className="nav-title">
+          <img src={logoDigitalStore} alt="DIGITAL STORE" />
+          <h3>Digital Store</h3>
+        </div>
+      </Link>
       <ul>
         <li>
-          <Link to="/"><i class="fa-solid fa-house"></i> Inicio</Link>
+          <Link to="/">
+            <i class="fa-solid fa-house"></i> Inicio
+          </Link>
         </li>
         <li>
-          <Link to="/products"><i class="fa-solid fa-cart-flatbed"></i> Productos</Link>
+          <Link to="/products">
+            <i class="fa-solid fa-cart-flatbed"></i> Productos
+          </Link>
         </li>
 
         <li>
-          <Link to="/users"><i class="fa-regular fa-user"></i> Usuarios</Link>
+          <Link to="/users">
+            <i class="fa-regular fa-user"></i> Usuarios
+          </Link>
         </li>
 
         <li>
-          <Link to="/categories"><i class="fa-regular fa-grid-2"></i> Categorias</Link>
+          <Link to="/categories">
+            <i class="fa-solid fa-square-poll-horizontal"></i> Categorias
+          </Link>
         </li>
       </ul>
       <div className="nav-view-page">

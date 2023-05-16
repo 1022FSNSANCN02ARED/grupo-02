@@ -29,7 +29,7 @@ function Users() {
       });
   };
   //peticion a la api
-  const apiSearch = (value) => {
+  const apiSearch = () => {
     setApiState(false);
     fetch("http://localhost:3000/api/users")
       .then((data) => data.json())
