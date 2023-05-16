@@ -7,17 +7,25 @@ module.exports = {
         //Mostrar el carrito
         // mostrar los productos que agregó usuario actual
         const userFav = req.session.userLogged
-        
+        let products = []
         const favorites = await db.Favorite.findAll({
             where: {
                 idUser: userFav.id,
             },
             include: ["product"],
-            
         });
-        console.log(favorites)
+
+        if(favorites.length > 0){
+
+            favorites.forEach( item => {
+                products.push(item.product)
+            });
+        }
+            
+        console.log(products)
+
         res.render("favorites", {
-            fav: favorites,
+            fav: products,
         });
         
 /*      
