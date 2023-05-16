@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
         if(nombreInput.value.length > 0){
             nombreInput.style.backgroundColor = "#abf1ab "
         } else{
-            nombreInput.style.backgroundColor = "red"
+            nombreInput.style.backgroundColor = "#ed303c"
         }
     })
 
@@ -31,7 +31,7 @@ window.addEventListener("load", function () {
         if(apellidoInput.value.length > 0){
             apellidoInput.style.backgroundColor = "#abf1ab "
         } else{
-            apellidoInput.style.backgroundColor = "red"
+            apellidoInput.style.backgroundColor = "#ed303c"
         }
 
     })
@@ -43,7 +43,7 @@ window.addEventListener("load", function () {
         if(usuarioInput.value.length > 0){
             usuarioInput.style.backgroundColor = "#abf1ab "
         } else{
-            usuarioInput.style.backgroundColor = "red"
+            usuarioInput.style.backgroundColor = "#ed303c"
         }
     })
 
@@ -63,8 +63,8 @@ window.addEventListener("load", function () {
     })
     contraseña2.addEventListener("blur", function(){
         if(!(contraseña2.value.length > 0 && contraseña2.value === contraseña1.value)){
-            contraseña2.style.backgroundColor = "red "
-            contraseña1.style.backgroundColor = "red "
+            contraseña2.style.backgroundColor = "#ed303c "
+            contraseña1.style.backgroundColor = "#ed303c "
         }
     })
     contraseña2.addEventListener("keyup", function(e){
@@ -72,18 +72,29 @@ window.addEventListener("load", function () {
             contraseña2.style.backgroundColor = "#abf1ab "
             contraseña1.style.backgroundColor = "#abf1ab "
         } else {
-            contraseña2.style.backgroundColor = "red"
+            contraseña2.style.backgroundColor = "#ed303c"
 
         }
     })
 
 
     enviar.addEventListener("submit", (e) => {
-        if(contraseña2.value.length == 0 || contraseña2.value !== contraseña1.value){
+        if(contraseña2.value.length == 0 || contraseña2.value !== contraseña1.value || contraseña1.value !== contraseña2.value){
             
             e.preventDefault()
-            contraseña2.style.backgroundColor = "red"
+            contraseña2.style.backgroundColor = "#ed303c"
+            contraseña2.style.backgroundColor = "#ed303c"
         } 
+    })
+
+    contraseña1.addEventListener("keyup", function(e){
+        if(contraseña1.value.length > 0 && contraseña1.value === contraseña2.value){
+            contraseña1.style.backgroundColor = "#abf1ab "
+            contraseña1.style.backgroundColor = "#abf1ab "
+        } else {
+            contraseña1.style.backgroundColor = "#ed303c"
+
+        }
     })
 
 
