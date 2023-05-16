@@ -60,6 +60,12 @@
 
                 <label for="" class="w-60">Repetir contraseña</label>
                 <input class="contraseñaInput2" type="password" class="w-60" name="passwordConfirm" placeholder="Confirme contraseña">
+                <% if (locals.errores && errores.passwordConfirm ) { %>
+                    <div class='feedback is-danger'>
+                        <%= errores.passwordConfirm.msg %>
+                    </div>
+                    <% } %>
+
 
                 <label for="" class="w-60">Email</label>
                 <input class="emailInput" type="email" class="w-60" name="email" placeholder="Ingrese su e-mail. Ej: usuario@usuario.com" value="<%= locals.old && old.email ? old.email : '' %>">

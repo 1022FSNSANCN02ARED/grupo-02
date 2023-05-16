@@ -33,12 +33,12 @@ const validaciones = [
 
   body("password")
     .notEmpty()
-    .withMessage("La password no puede estar vacia")
+    .withMessage("La contraseña no puede estar vacia")
     .bail(),
 
   body("passwordConfirm")
     .notEmpty()
-    .withMessage("La password no puede estar vacia")
+    .withMessage("La contraseña no puede estar vacia")
     .bail(),
 
   body("email")
