@@ -16,6 +16,7 @@
   width: 60%;
   height: 25vh;
   padding: 20px;
+  object-fit: contain;
 }
 .nombre-producto {
   width: 90%;
