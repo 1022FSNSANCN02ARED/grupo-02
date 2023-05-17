@@ -59,20 +59,20 @@ object-fit: contain;
         box-shadow: 0 0 10px rgb(139, 139, 138);
         border-radius: 2rem;
         padding: 1rem;
-    width: 100%;
+    width: 80%;
     min-height: 400px;
     }
     
     .contenedor-User img{
     width: 60%;
-    height: 200px;
+    height: 150px;
     margin: 20px;
     }
     .contenedor-User h3{
-        font-size: xx-large;
+        font-size: x-large;
         color: orange;
         border-bottom: 2px solid grey;
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
     }
     .contenedor-User h3{
         font-size: xx-large;
@@ -81,10 +81,10 @@ object-fit: contain;
         padding-bottom: 1rem;
     }
     .nombre-user{
-        font-size: x-large;
+        font-size: large;
         font-weight: bold;
         color: black;
-        padding: 0.5rem;
+        padding: 0;
     }
     .nombre-user p{
         font-size: x-large;
@@ -92,10 +92,10 @@ object-fit: contain;
         
     }
     .email-user{
-        font-size: x-large;
+        font-size: large;
         font-weight: bold;
         color: black;
-        padding: 0.5rem;
+        padding: 0;
     }
     .email-user p{
         font-size: x-large;
