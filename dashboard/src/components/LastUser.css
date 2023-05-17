@@ -12,6 +12,7 @@ display: block;
 .contenedor-User img{
 width: 100%;
 height: 150px;
+object-fit: contain;
 }
 .contenedor-User h3{
     font-size: xx-large;
