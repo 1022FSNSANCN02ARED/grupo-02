@@ -13,7 +13,7 @@
 }
 .contenedor-product h3{
     font-size: xx-large;
-    color: orange;
+    color: oranq no sno ge;
     border-bottom: 2px solid grey;
     padding-bottom: 1rem;
 }
@@ -29,14 +29,14 @@
         text-align: center;
         box-shadow: 0 0 10px rgb(139, 139, 138);
         border-radius: 2rem;
-        padding: 1rem;
-    width: 100%;
+        padding: 0.5rem;
+    width: 80%;
     min-height: 400px;
     }
     .contenedor-product img{
         width: 100%;
         height: 200px;
-        margin: 40px 0;
+        margin:0;
         object-fit: contain;
     }
     .contenedor-product h3{
@@ -50,7 +50,7 @@
     .contenedor-product p{
         font-size: x-large;
         color: black;
-        padding: 0.5rem;
+        padding: 0;
     }
 
     .nombrePrecio-product{

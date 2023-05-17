@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import './LastProduct.css'
+import "./LastProduct.css";
 
 function LastProduct() {
   const [ultimoValor, setultimoValor] = useState({});
@@ -23,9 +23,8 @@ function LastProduct() {
       <img src={ultimoValor.image} alt="imagen ultimo producto" />
       <div className="nombrePrecio-product">
         <p>{ultimoValor.name}</p>
-      <p> $ {ultimoValor.price} </p>
+        <p> $ {ultimoValor.price} </p>
       </div>
-      
     </div>
   );
 }
