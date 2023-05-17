@@ -4,8 +4,8 @@
     box-shadow: 0 0 10px rgb(139, 139, 138);
     border-radius: 2rem;
     padding: 1rem;
-width: 100%;
-min-height: 400px;
+    width: 100%;
+    min-height: 400px;
 }
 .contenedor-product img{
     width: 100%;

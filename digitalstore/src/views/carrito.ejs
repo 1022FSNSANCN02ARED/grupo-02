@@ -15,13 +15,26 @@
         <main class="main-carrito">
 
 
-
             <section class="section-carrito">
 
                 <% // carrito.forEach(product=> { %>
                     <%- // include('./products/productCarrito.ejs',{product}) %>
                         <% //}) %>
                             <div class="contenedor1-carrito">
+                                 <h1
+                                 style="text-transform: uppercase;
+                                 font-weight: bold;
+                                 text-align: center;
+                                 margin: 0 auto;
+                                 margin-top: 2rem;
+                                 font-size: 1.4rem;
+                                 background-color: var(--naranja);
+                                 color: white;
+                                 padding: .6rem 1rem;
+                                 border-radius: 1rem;
+                                 width: 10rem;"
+                                 ><i class="fa-solid fa-cart-shopping" style="font-size: 1.4rem;"></i> Carrito</h1>
+
                                 <% if (cart.length==0) { %>
                                     <div class="text-center p-5 sin-producto">
                                         <h4>No hay productos en su carrito</h4>
