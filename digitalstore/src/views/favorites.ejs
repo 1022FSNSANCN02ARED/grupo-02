@@ -8,7 +8,11 @@
     <!-- LAUTARO Y PABLO -->
     <%- include("partials/header")%>
 
-    <main class="main-favorito">
+    <main class="main-favorito"
+      <% if (fav.length == 0) { %>
+        style="height: 23rem"
+      <% } %>
+    >
       <div class="h2-div-favoritos">
         <h2 class="h2-favoritos">FAVORITOS</h2>
       </div>
