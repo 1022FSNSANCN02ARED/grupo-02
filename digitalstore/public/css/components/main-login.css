@@ -69,6 +69,10 @@
 .boton-enviar-login{
     margin-top: 2rem;
 }
+.boton-enviar-login:hover{
+    background-color: orange;
+    color: white;
+}
 
 .registrate-login{
     color: var(--naranja);
