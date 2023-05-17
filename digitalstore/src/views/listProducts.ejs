@@ -67,7 +67,7 @@
         
         <!-- cards de productos -->
         <section class="container-products">
-            <% if (productos.lenght > 0) { %>
+            <% if (productos.length > 0) { %>
                 <% productos.forEach(product => { %>
                     <%- include ("products/productCard.ejs",{product}) %> 
                 <% }) %>
