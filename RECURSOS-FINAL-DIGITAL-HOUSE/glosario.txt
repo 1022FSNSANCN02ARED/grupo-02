@@ -1,0 +1,5 @@
+Node.js: es un entorno  de ejecucion de javascript, del lado del servidor, que nos permite agrupar distintas librerias para el desarrollo de aplicaciones.
+
+API: interfaz de programacion de aplicaciones, nos permite comunicarnos entre aplicaciones y compartir informacion.
+ORM: mapeo de objeto relacional, es una herramienta que nos permite convertir las base de datos relacionales en un lenguaje de programacion orientada  a objetos para su manipulacion.
+ CLI: interfaz de linea de comando,
