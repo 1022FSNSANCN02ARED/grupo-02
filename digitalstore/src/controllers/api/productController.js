@@ -2,18 +2,21 @@ const { Product, CartProduct, Favorite, Category } = require("../../database/mod
 
 module.exports = {
   list: async (req, res) => {
-    await Product.findAll().then((product) => {
-      let resp = {
-        meta: {
-          status: 200,
-          total: product.length,
-          url: "api/products",
-        },
-        data: product,
-      };
-      res.json(resp);
+    
+    let product = await Product.findAll()
+    product.forEach((prod) => {
+      prod.image = `http://localhost:3000/img/productos/${prod.image}`;
     });
-  },
+    let resp = {
+      meta: {
+        status: 200,
+        total: product.length,
+        url: "api/products",
+      },
+      data: product,
+    };
+    res.json(resp);
+},
   detail: async (req, res) => {
     const product = await Product.findByPk(req.params.id);
     res.json({
