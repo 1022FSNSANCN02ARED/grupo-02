@@ -12,20 +12,32 @@
       <div class="h2-div-favoritos">
         <h2 class="h2-favoritos">FAVORITOS</h2>
       </div>
-
+     
       <section>
         <div class="fav-container-products">
           <div class="container-products">
-                <% fav.forEach(product=>{%> 
-                <%- include("products/productCard.ejs",{product}) %> 
-                <% }) %>
+            <% if (fav.length > 0) { %>
+              <% fav.forEach(product => { %>
+                  <%- include ("products/productCard.ejs",{product}) %> 
+              <% }) %>
+          <% } else {%>
+              <p style="
+                  text-align: center;
+                  font-weight: bold;
+                  font-size: 1.5rem;
+                  margin-top: 2rem;
+                  ">No se agrego ningun producto a favoritos, mira nuestras <a style="color: orange;" href="/products?category=oferts">Ofertas</a>.</p>
+          <% } %>
           </div>
         </div>
-        <div class="fav-buton-clear">
-          <form action="/favorites/favorites/clear/" method="post">
-            <button class="btn limpiar-favorito">Limpiar Favoritos</button>
-          </form>
-        </div>
+        <% if (fav.length > 0) { %>
+        
+          <div class="fav-buton-clear">
+            <form action="/favorites/favorites/clear/" method="post">
+              <button class="btn limpiar-favorito">Limpiar Favoritos</button>
+            </form>
+          </div>
+        <% } %>
       </section>
     </main>
 

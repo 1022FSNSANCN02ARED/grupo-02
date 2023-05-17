@@ -109,49 +109,106 @@ button:visited{
   margin: 0px 8px;
 }
 @media (min-width: 769px){
-    /*laptop*/
-      .caja-footer{
-        width: 48%;
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      .caja-footer-botones{
-        width: 48%;
-        padding-left: 0;
-        padding-right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-      .iconos{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-items: center;
-       
-      }
-      
-      .contenedor-links p{
-        display: flex;
-      }
-      .iconos i{
-        margin-right: 8px;
-        margin-left: 0px;
-        }
-       .contenedor-links{
-        padding-bottom: 5px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-       }    
-       .footer-principal-corto{
-        position: absolute;
-        bottom: 0;
-       }
-       .img-footer{
-        width: 38%;
-      }
+  .footer-principal{
+    background-color: var(--naranja);
+    padding: 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    border-top: 3px solid var(--naranja-oscuro);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .caja-footer{
+      width: 25%;
+      padding: 10px 20px;
+      text-align:center;
+  }
+  .caja-footer-botones{
+      width: 40%;
+      padding: 10px 20px;
+      text-align:center;
+  }
+  .logo-footer{
+    width: 100%;
+  }
+  
+  .img-footer{
+    width: 38%;
+  }
+  
+  .iconos{
+    width: 25%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 25px;
+      margin-bottom: 0px;
+      justify-content: center;
+  }
+  
+  .iconos div{
+    margin-top: 5px;
+    display: flex;
+  }
+  
+  .iconos i {
+      margin-left: 5px;
+  }
+  
+  .iconos a{
+      color: black;
+  }
+  .contenedor-links p{
+    display: none;
+  }
+  .iconos .facebook:hover{
+    color:#3b5998;
+    transition: color, 0.2s;
+  }
+  
+  .iconos .instagram:hover{
+    color:#dd2a7b; 
+    transition: color, 0.2s;
+  }
+  
+  .iconos .twitter:hover{
+    color: #0fa3dd;
+    transition: color, 0.2s;
+  }
+  
+  button:visited{
+      color:black;
+  }
+  .btn-contactanos{
+    background-color: var(--naranja);
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .btn-contactanos:hover{
+    opacity: 0.8;
+    background-color: white;
+    transition: color, 0.5s;
+  }
+  
+  .btn-contactanos a{
+    color: black;
+  }
+  
+  .copyright{
+ color: orangered;
+ text-align: center;
+ margin: 0 auto;
+  }
+  
+  .contenedor-links{
+    margin: 0px 8px;
+  }
 }

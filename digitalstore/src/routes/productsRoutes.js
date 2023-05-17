@@ -11,9 +11,6 @@ const path = require('path');
 
 const multer  = require('multer');
 
-
-const { getProductTeclado } = require("../data/products");
-
 const storage= multer.diskStorage({
     destination:path.join(__dirname,"../../public/img/productos"),
     filename:(req,file,cb) =>{
@@ -26,7 +23,6 @@ const upload=multer({
 })
 
 router.get("/detail/:id", productsController.productDetail);
-//router.get("/", productsController.listProducts);
 router.get("/", productsController.listProducts);
 router.post("/", productsController.filterProducts);
 //muestra form de agregar producto

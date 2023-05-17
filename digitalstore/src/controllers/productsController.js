@@ -28,8 +28,11 @@ module.exports = {
     let off = false
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
+    let msj = ""
     let productos = []
+    console.log(req.query)
     if(req.query.search){
+      msj=`No se encontro ningun producto con "${req.query.search}"`
       const search = req.query.search;
       productos = await db.Product.findAll({
         include: ["brand", "category"],
@@ -40,8 +43,10 @@ module.exports = {
         },
       })
     }else if(req.query.category){
+      msj=`No se encontro ningun producto con la categoria "${req.query.category}"`
       const category = req.query.category;
       if(category == "oferts"){
+        msj=`No se encontro ningun producto con Descuento"`
         off = true
         productos = await db.Product.findAll({
           where:{
@@ -68,7 +73,8 @@ module.exports = {
       productos,
       categorias,
       brands,
-      off
+      off,
+      msj
     });
   },
   /*
@@ -289,7 +295,8 @@ module.exports = {
         productos,
         categorias,
         brands,
-        off
+        off,
+        msj:"No se encontro ningun producto con su filtro de busqueda, vuelva a realizarla o envíenos su consulta"
       });
 
     } else {
