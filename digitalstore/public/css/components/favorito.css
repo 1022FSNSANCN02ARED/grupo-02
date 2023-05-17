@@ -98,6 +98,7 @@
 
 .main-favorito{
     background-color: var(--gris-claro);
+    min-height: 800px;
 }
 
 .fav-buton-clear{
