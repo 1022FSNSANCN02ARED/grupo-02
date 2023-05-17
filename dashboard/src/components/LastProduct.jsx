@@ -19,7 +19,7 @@ function LastProduct() {
   return (
     <div>
       <h3>Ultimo Producto en DB</h3>
-      <p>{ultimoValor.image}</p>
+      <img src={ultimoValor.image} alt="imagen ultimo producto" />
       <p>{ultimoValor.name}</p>
       <p> $ {ultimoValor.price} </p>
     </div>
