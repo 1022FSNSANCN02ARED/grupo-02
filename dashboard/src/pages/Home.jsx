@@ -38,8 +38,8 @@ function Home() {
       <div className="indicadores">
         <SmallCard
           key={productsTotal + "productos"}
-          title={"Total de productos:"}
-          value={productsTotal}
+          title={"Total de productos: "}
+          value={productsTotal} 
         />
         <SmallCard
           key={usersTotal + "usuarios"}
@@ -48,12 +48,12 @@ function Home() {
         />
       </div>
 
-      <div className="indicadores ">
-        <div>
+      <div className="indicadores2">
+        <div className="lastProduct">
           <LastProduct />
         </div>
 
-        <div>
+        <div className="lastUser">
           <LastUser />
         </div>
       </div>

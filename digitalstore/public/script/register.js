@@ -114,7 +114,7 @@ window.addEventListener("load", function () {
     				email.style.backgroundColor = "#abf1ab"
     			} else {
     				// Si la entrada no es un email válido, mostrar un mensaje de error
-    				email.style.backgroundColor = "red"
+    				email.style.backgroundColor = "#ed303c"
     			}
                 })
 

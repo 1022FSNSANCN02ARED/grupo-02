@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./LastUser.css";
-
 function LastUser() {
   const [ultimoValor, setultimoValor] = useState({});
 
@@ -16,7 +15,7 @@ function LastUser() {
   };
 
   return (
-    <div>
+    <div className="contenedor-User">
       <h3>Ultimo Usuario en DB</h3>
       <img
         className="imglastUser"
@@ -24,9 +23,15 @@ function LastUser() {
         alt="imagen ultimo usuario"
       />
 
-      <p>{ultimoValor.email}</p>
-      <p>
-        {ultimoValor.firstName} {ultimoValor.lastName}{" "}
+      <p className="email-user">
+        {" "}
+        Email: <p>{ultimoValor.email}</p>
+      </p>
+      <p className="nombre-user">
+        Nombre y apellido:{" "}
+        <p>
+          {ultimoValor.firstName} {ultimoValor.lastName}
+        </p>{" "}
       </p>
     </div>
   );

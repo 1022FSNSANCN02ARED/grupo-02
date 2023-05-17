@@ -1,0 +1,23 @@
+.descCard{
+    margin-top: 2rem;
+}
+.idCard{
+    width: 50%;
+    margin: 0 auto;
+    font-size: 5px;
+}
+.idCard h3{
+    font-size: xx-large;
+}
+.descCard{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.bigcard{
+    background-color: rgb(224, 224, 224);
+    width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgb(158, 157, 157);
+}

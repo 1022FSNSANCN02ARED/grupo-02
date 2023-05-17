@@ -5,9 +5,9 @@ function SmallCard({ title, value }) {
   return (
     <>
       <div className="mark">
-        <div>{title}</div>
+        <div className="title">{title}</div>
 
-        <div>{value}</div>
+        <div className="cantidad">{value}</div>
       </div>
     </>
   );

@@ -1,5 +1,24 @@
 .mark {
-    background-color: peru;
+    background-color: rgb(224, 224, 224);
     padding: 10px;
+    width: 100%;
+}
 
+.title {
+    font-size: x-large;
+
+}
+
+.cantidad {
+    font-size: x-large;
+}
+
+.mark {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    margin: 50px auto;
+    justify-content: space-around;
+    box-shadow: 0 0 10px rgb(158, 157, 157);
 }
