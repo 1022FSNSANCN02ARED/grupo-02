@@ -1,13 +1,47 @@
 const { User, CartProduct, Favorite } = require("../../database/models");
-
+const {Op} = require("sequelize")
 module.exports = {
   list: async (req, res) => {
-    const users = await User.findAll();
+
+    let users = await User.findAll();
+
+    if(req.query.search){
+      let search = req.query.search
+      
+      if(search[0]=="@"){
+        search=search.slice(1)
+        users = await User.findAll({
+          where:{
+            userName:{
+              [Op.like]:`${search}%`
+            }
+          }
+        });
+      }
+
+      if(search[0]=="#"){
+        search=search.slice(1)
+        let role = 0;
+        if(search=="admin"){
+          role=1;
+        }else if(search=="user"){
+          role=2;
+        }
+        users = await User.findAll({
+          where:{
+            idRole:{
+              [Op.like]:role
+            }
+          }
+        });
+      }
+    }
 
     users.forEach((user) => {
       user.img = `http://localhost:3000/img/usuarios/${user.img}`;
       user.password = "";
     });
+
     let resp = {
       meta: {
         status: 200,

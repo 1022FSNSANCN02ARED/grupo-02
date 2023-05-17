@@ -29,9 +29,9 @@ function Users() {
       });
   };
   //peticion a la api
-  const apiSearch = () => {
+  const apiSearch = (textinput) => {
     setApiState(false);
-    fetch("http://localhost:3000/api/users")
+    fetch(`http://localhost:3000/api/users?search=${textinput}`)
       .then((data) => data.json())
       .then((data) => {
         if (data.data.length > 0) {
