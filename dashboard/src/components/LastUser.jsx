@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import './LastUser.css'
 function LastUser() {
   const [ultimoValor, setultimoValor] = useState({});
 
@@ -15,7 +15,7 @@ function LastUser() {
   };
 
   return (
-    <div>
+    <div className="contenedor-User">
       <h3>Ultimo Usuario en DB</h3>
       <img src={ultimoValor.img} alt="imagen ultimo usuario" />
 

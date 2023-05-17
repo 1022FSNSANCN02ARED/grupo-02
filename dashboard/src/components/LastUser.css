@@ -1,0 +1,18 @@
+.contenedor-User{
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(139, 139, 138);
+    border-radius: 2rem;
+    padding: 1rem;
+width: 100%;
+}
+.contenedor-User img{
+width: 250px;
+height: 200px;
+}
+.contenedor-User h3{
+    font-size: xx-large;
+    color: orange;
+    border-bottom: 2px solid grey;
+    padding-bottom: 1rem;
+}

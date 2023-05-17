@@ -2,9 +2,27 @@
 
 
 .indicadores{
+    display: flex;
     display: block;
-    flex-wrap: wrap;
     padding: 30px;
     text-align: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.indicadores2{
+    padding: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: space-around;
 }
+.lastProduct{
+   width: 40%; 
+}
+.lasUser{
+   width: 40%;
+    margin: auto;
+    min-height: 200px;
+    background-color: red;
+}
+
