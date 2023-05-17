@@ -35,6 +35,11 @@ function Sidebar() {
             <i class="fa-solid fa-square-poll-horizontal"></i> Categorias
           </Link>
         </li>
+        <li>
+          <Link to="/brands">
+            <i class="fa-solid fa-square-poll-horizontal"></i> Marcas
+          </Link>
+        </li>
       </ul>
       <div className="nav-view-page">
         <a href="http://localhost:3000/" target="_blank" rel="noreferrer">

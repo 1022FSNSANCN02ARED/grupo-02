@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./Categories.css";
+import "./Brands.css";
 
 function Categories() {
   const [valorProd, setValorProd] = useState([]);
-  const [valorCat, setValorCat] = useState([]);
+  const [valorBrand, setValorCat] = useState([]);
   useEffect(() => {
     obtenerDatos();
-    obtenerDatosCat();
+    obtenerDatosBrand();
   }, []);
 
   const obtenerDatos = async () => {
@@ -16,8 +16,8 @@ function Categories() {
     console.log(products.data);
   };
 
-  const obtenerDatosCat = async () => {
-    const data = await fetch(" http://localhost:3000/api/products/categories/list");
+  const obtenerDatosBrand = async () => {
+    const data = await fetch(" http://localhost:3000/api/products/brands/list");
     const categories = await data.json();
     await setValorCat(categories.data);
     console.log(categories.data);
@@ -26,7 +26,7 @@ function Categories() {
   return (
     <div className="renderProduct">
       <div className="titleProduct">
-        <h1>PANEL DE CATEGORIAS</h1>
+        <h1>PANEL DE MARCAS</h1>
       </div>
 
       <table className="table">
@@ -39,14 +39,14 @@ function Categories() {
         </thead>
         <tbody>
           {valorProd.length > 0
-            ? valorCat.map((cat) => {
+            ? valorBrand.map((brand) => {
                 return (
                   <tr>
-                    <td key={cat.id}>{cat.id} </td>
+                  <td key={brand.id}> {brand.id} </td>
 
-                    <td> {cat.name} </td>
+                    <td> {brand.name} </td>
 
-                    <td>{cat.count}</td>
+                    <td>{brand.count}</td>
                  
                     
                   </tr>
