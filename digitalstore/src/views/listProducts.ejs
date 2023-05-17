@@ -67,10 +67,18 @@
         
         <!-- cards de productos -->
         <section class="container-products">
-            <% productos.forEach(product => { %>
-                <%- include ("products/productCard.ejs",{product}) %> 
-            <% }) %>
-          
+            <% if (productos.length > 0) { %>
+                <% productos.forEach(product => { %>
+                    <%- include ("products/productCard.ejs",{product}) %> 
+                <% }) %>
+            <% } else {%>
+                <p style="
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    margin-top: 2rem;
+                    "><%= msj %></p>
+            <% } %>
         </section>
 
        
