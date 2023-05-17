@@ -1,28 +1,54 @@
-
-
-
-.indicadores{
-    display: flex;
+    .indicadores{
     display: block;
     padding: 30px;
     text-align: center;
   justify-content: space-evenly;
   width: 100%;
 }
+
+
 .indicadores2{
     padding: 30px;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .lastProduct{
-   width: 40%; 
+   width:100%; 
+   margin: 20px auto;
 }
-.lasUser{
-   width: 40%;
+.lastUser{
+   width: 100%;
     margin: auto;
     min-height: 200px;
-    background-color: red;
+    
+}
+
+@media (min-width: 768px){
+    .indicadores{
+        display: flex;
+    display: block;
+    padding: 30px;
+    text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.indicadores2{
+    padding: 30px;
+  width: 100%;
+display: flex;
+flex-direction: row-reverse;
+justify-content: space-between;
+}
+.lastProduct{
+   width: 40%; 
+
+
+}
+.lastUser{
+   width: 40%;
+  
+}
+
 }
 

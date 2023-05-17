@@ -21,8 +21,11 @@ function LastProduct() {
     <div className="contenedor-product">
       <h3>Ultimo Producto en DB</h3>
       <img src={ultimoValor.image} alt="imagen ultimo producto" />
-      <p>{ultimoValor.name}</p>
+      <div className="nombrePrecio-product">
+        <p>{ultimoValor.name}</p>
       <p> $ {ultimoValor.price} </p>
+      </div>
+      
     </div>
   );
 }

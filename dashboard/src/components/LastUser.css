@@ -5,14 +5,102 @@
     border-radius: 2rem;
     padding: 1rem;
 width: 100%;
+min-height: 400px;
+display: block;
 }
+
 .contenedor-User img{
-width: 250px;
-height: 200px;
+width: 100%;
+height: 150px;
 }
 .contenedor-User h3{
     font-size: xx-large;
     color: orange;
     border-bottom: 2px solid grey;
     padding-bottom: 1rem;
+    
+}
+.nombre-user{
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    padding: 0.5rem;
+    background-color: rgba(167, 163, 163, 0.356);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px black;
+}
+
+.nombre-user p{
+    font-size: x-large;
+    color: orange;
+    
+}
+.email-user{
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+    padding: 0.5rem;
+    background-color: rgba(167, 163, 163, 0.356);
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px black;
+}
+.email-user p{
+    font-size: x-large;
+    color: orange;
+    
+}
+
+@media (min-width: 768px){
+    .contenedor-User{
+        background-color: white;
+        text-align: center;
+        box-shadow: 0 0 10px rgb(139, 139, 138);
+        border-radius: 2rem;
+        padding: 1rem;
+    width: 100%;
+    min-height: 400px;
+    }
+    
+    .contenedor-User img{
+    width: 60%;
+    height: 200px;
+    margin: 20px;
+    }
+    .contenedor-User h3{
+        font-size: xx-large;
+        color: orange;
+        border-bottom: 2px solid grey;
+        padding-bottom: 1rem;
+    }
+    .contenedor-User h3{
+        font-size: xx-large;
+        color: orange;
+        border-bottom: 2px solid grey;
+        padding-bottom: 1rem;
+    }
+    .nombre-user{
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        padding: 0.5rem;
+    }
+    .nombre-user p{
+        font-size: x-large;
+        color: orange;
+        
+    }
+    .email-user{
+        font-size: x-large;
+        font-weight: bold;
+        color: black;
+        padding: 0.5rem;
+    }
+    .email-user p{
+        font-size: x-large;
+        color: orange;
+        
+    }
+ 
+   
 }

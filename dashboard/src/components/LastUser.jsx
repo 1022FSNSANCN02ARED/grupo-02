@@ -19,9 +19,9 @@ function LastUser() {
       <h3>Ultimo Usuario en DB</h3>
       <img src={ultimoValor.img} alt="imagen ultimo usuario" />
 
-      <p>{ultimoValor.email}</p>
-      <p>
-        {ultimoValor.firstName} {ultimoValor.lastName}{" "}
+      <p className="email-user"> Email: <p>{ultimoValor.email}</p></p>
+      <p className="nombre-user">
+        Nombre y apellido: <p>{ultimoValor.firstName} {ultimoValor.lastName}</p>{" "}
       </p>
     </div>
   );
