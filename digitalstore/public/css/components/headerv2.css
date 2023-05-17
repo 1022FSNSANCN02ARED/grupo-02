@@ -208,5 +208,6 @@
 
     .user-dropdown{
         width: 8rem;
+        z-index: 99;
     }
 }
