@@ -53,9 +53,9 @@ min-height: 400px;
     }
 
     .nombrePrecio-product{
-background-color: rgba(167, 163, 163, 0.356);
+background-color: rgb(224, 224, 224);
 border-radius: 10px;
-box-shadow: 0 2px 4px black;
+box-shadow: 0 2px 4px rgb(158, 157, 157);
     }
 
 
