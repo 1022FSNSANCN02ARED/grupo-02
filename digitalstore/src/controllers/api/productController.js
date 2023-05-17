@@ -103,28 +103,34 @@ module.exports = {
   },
 
   categories: async (req, res) => {
-    const promCategories = await Category.findAll();
-    
-    const promProd = await Product.findAll({
-      include: ["brand", "category"],
+    const promProd = await Product.count({
+      include: ["category"],
+      group:['category.id','category.name']
     });
-    
-    let totalProd = [];
-    
-    promCategories.forEach(cat=>{
-        
-        productos = promProd.filter(product=>product.idCategory = cat.id)
-        totalProd.push(productos.length)
-
-    })
-    console.log(promCategories)
       let resp = {
         meta: {
           status: 200,
-          total: promCategories.length,
+          total: promProd.length,
           url: "api/products/categories/list",
         },
-        data: promCategories,
+        data: promProd,
+      };
+      res.json(resp);
+    
+  
+  },
+  brands: async (req, res) => {
+    const brands = await Product.count({
+      include: ["brand"],
+      group:['brand.id','brand.name']
+    });
+      let resp = {
+        meta: {
+          status: 200,
+          total: brands.length,
+          url: "api/products/brands/list",
+        },
+        data: brands,
       };
       res.json(resp);
     
