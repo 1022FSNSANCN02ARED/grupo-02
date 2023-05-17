@@ -19,8 +19,9 @@ module.exports = {
         });
       }
 
-      if(search[0]=="#"){
+      if(search[0]=='#'){
         search=search.slice(1)
+        console.log(search)
         let role = 0;
         if(search=="admin"){
           role=1;
