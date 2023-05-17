@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "./LastProduct.css";
 function LastProduct() {
   const [ultimoValor, setultimoValor] = useState({});
 
@@ -19,7 +19,11 @@ function LastProduct() {
   return (
     <div>
       <h3>Ultimo Producto en DB</h3>
-      <img src={ultimoValor.image} alt="imagen ultimo producto" />
+      <img
+        className="imglastProduct"
+        src={ultimoValor.image}
+        alt="imagen ultimo producto"
+      />
       <p>{ultimoValor.name}</p>
       <p> $ {ultimoValor.price} </p>
     </div>
