@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SmallCard from "../components/SmallCard";
-// import LastProduct from "../components/LastProduct";
+import LastProduct from "../components/LastProduct";
 import LastUser from "../components/LastUser";
 import "./Home.css";
 import { useState } from "react";
@@ -41,7 +41,6 @@ function Home() {
           title={"Total de productos:"}
           value={productsTotal}
         />
-
         <SmallCard
           key={usersTotal + "usuarios"}
           title={"Total de usuarios:"}
@@ -50,9 +49,9 @@ function Home() {
       </div>
 
       <div className="indicadores ">
-        {/* <div>
+        <div>
           <LastProduct />
-        </div> */}
+        </div>
 
         <div>
           <LastUser />

@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import BigCard from "./BigCard";
-// import ProductAbstract from "./ProductAbstract";
-
 function LastProduct() {
   const [ultimoValor, setultimoValor] = useState({});
 
@@ -14,20 +11,17 @@ function LastProduct() {
     const data = await fetch(" http://localhost:3000/api/products");
     const elements = await data.json();
     // await setValor(products.data);
-    const ultimoValor = elements[elements.length - 1];
+    const ultimoValor = elements.data[elements.data.length - 1];
     // console.log(ultimoValor);
     setultimoValor(ultimoValor);
   };
 
   return (
     <div>
-      <BigCard
-        title="Ultimo Producto en DB"
-        img={ultimoValor.data.image}
-        product={ultimoValor.data.name}
-        desc={ultimoValor.data.discount}
-        url="/"
-      ></BigCard>
+      <h3>Ultimo Producto en DB</h3>
+      <p>{ultimoValor.image}</p>
+      <p>{ultimoValor.name}</p>
+      <p> $ {ultimoValor.price} </p>
     </div>
   );
 }
