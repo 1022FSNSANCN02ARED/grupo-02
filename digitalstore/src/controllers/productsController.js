@@ -29,6 +29,7 @@ module.exports = {
     const categorias = await db.Category.findAll();
     const brands = await db.Brand.findAll();
     let productos = []
+    console.log(req.query)
     if(req.query.search){
       const search = req.query.search;
       productos = await db.Product.findAll({
