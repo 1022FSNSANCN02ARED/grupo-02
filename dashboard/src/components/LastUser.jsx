@@ -1,18 +1,29 @@
-import React from "react";
-import ultimoUsuario from "../images/image-1678824214422.jpeg";
-import BigCard from "./BigCard";
-import UserAbstract from "./UserAbstract";
+import React, { useState, useEffect } from "react";
 
 function LastUser() {
+  const [ultimoValor, setultimoValor] = useState({});
+
+  useEffect(() => {
+    ultimoUsuario();
+  }, []);
+
+  const ultimoUsuario = async () => {
+    const data = await fetch(" http://localhost:3000/api/users");
+    const elements = await data.json();
+    const ultimoValor = elements.data[elements.data.length - 1];
+    setultimoValor(ultimoValor);
+  };
+
   return (
-    <BigCard title="Ultimo Usuario en DB">
-      <UserAbstract
-        img={ultimoUsuario}
-        user="Georgina Barrios"
-        desc="Usuario"
-        url="/"
-      />
-    </BigCard>
+    <div>
+      <h3>Ultimo Usuario en DB</h3>
+      <img src={ultimoValor.img} alt="imagen ultimo usuario" />
+
+      <p>{ultimoValor.email}</p>
+      <p>
+        {ultimoValor.firstName} {ultimoValor.lastName}{" "}
+      </p>
+    </div>
   );
 }
 
