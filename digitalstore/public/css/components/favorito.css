@@ -97,7 +97,8 @@
 }
 
 .main-favorito{
-    background-color: rgb(235, 235, 235);
+    height: 23rem;
+    background-color: var(--gris-claro);
 }
 
 .fav-buton-clear{
