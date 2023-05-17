@@ -142,6 +142,19 @@
   margin: 10px;
   text-align: center;
 }
+.sin-producto {
+  margin-bottom: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sin-producto h4 {
+  margin-top: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
 
 @media (min-width: 1080px) {
   .contenedor-producto-carrito {
